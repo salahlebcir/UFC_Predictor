@@ -1,0 +1,1699 @@
+{
+    "year": 2026,
+    "model_used": "models\\ufc_xgboost_model_v3_calibrated.pkl",
+    "stake_per_bet": 10.0,
+    "ev_threshold": 0.2,
+    "total_fights": 283,
+    "value_bets_count": 187,
+    "win_rate_pct": 91.97860962566845,
+    "total_wagered": 1870.0,
+    "gross_payout": 3254.4999999999995,
+    "net_profit": 1384.4999999999995,
+    "roi_pct": 74.0374331550802,
+    "max_drawdown_pct": 1.0296467246582557,
+    "bets": [
+        {
+            "date": "2026-01-24",
+            "fighter": "Sean O'Malley",
+            "odds": 1.73,
+            "prob": 0.8329095581396478,
+            "ev": 0.44093353558159065,
+            "won": true,
+            "bankroll": 1007.3
+        },
+        {
+            "date": "2026-01-24",
+            "fighter": "Waldo Cortes Acosta",
+            "odds": 1.57,
+            "prob": 0.8612780046268744,
+            "ev": 0.3522064672641929,
+            "won": true,
+            "bankroll": 1013.0
+        },
+        {
+            "date": "2026-01-24",
+            "fighter": "Natalia Silva",
+            "odds": 1.62,
+            "prob": 0.8655373750284084,
+            "ev": 0.4021705475460218,
+            "won": true,
+            "bankroll": 1019.2
+        },
+        {
+            "date": "2026-01-24",
+            "fighter": "Jean Silva",
+            "odds": 2.33,
+            "prob": 0.6564149951496508,
+            "ev": 0.5294469386986864,
+            "won": true,
+            "bankroll": 1032.5
+        },
+        {
+            "date": "2026-01-24",
+            "fighter": "Ty Miller",
+            "odds": 1.99,
+            "prob": 0.7258275068462409,
+            "ev": 0.4443967386240193,
+            "won": true,
+            "bankroll": 1042.4
+        },
+        {
+            "date": "2026-01-24",
+            "fighter": "Nikita Krylov",
+            "odds": 1.76,
+            "prob": 0.8372949554112722,
+            "ev": 0.47363912152383914,
+            "won": true,
+            "bankroll": 1050.0
+        },
+        {
+            "date": "2026-01-24",
+            "fighter": "Alex Perez",
+            "odds": 1.96,
+            "prob": 0.8127119385014077,
+            "ev": 0.592915399462759,
+            "won": true,
+            "bankroll": 1059.6
+        },
+        {
+            "date": "2026-01-24",
+            "fighter": "Umar Nurmagomedov",
+            "odds": 1.74,
+            "prob": 0.8682820830334335,
+            "ev": 0.5108108244781742,
+            "won": true,
+            "bankroll": 1067.0
+        },
+        {
+            "date": "2026-01-31",
+            "fighter": "Alexander Volkanovski",
+            "odds": 3.28,
+            "prob": 0.6183484368345109,
+            "ev": 1.0281828728171956,
+            "won": true,
+            "bankroll": 1089.8
+        },
+        {
+            "date": "2026-01-31",
+            "fighter": "Quillan Salkilld",
+            "odds": 1.4,
+            "prob": 0.8797753784551512,
+            "ev": 0.23168552983721158,
+            "won": true,
+            "bankroll": 1093.8
+        },
+        {
+            "date": "2026-01-31",
+            "fighter": "Benoit Saint Denis",
+            "odds": 2.69,
+            "prob": 0.6396115911922913,
+            "ev": 0.7205551803072634,
+            "won": true,
+            "bankroll": 1110.7
+        },
+        {
+            "date": "2026-01-31",
+            "fighter": "Mauricio Ruffy",
+            "odds": 1.8,
+            "prob": 0.7648072315915694,
+            "ev": 0.376653016864825,
+            "won": true,
+            "bankroll": 1118.7
+        },
+        {
+            "date": "2026-01-31",
+            "fighter": "Tallison Teixeira",
+            "odds": 1.79,
+            "prob": 0.7054092825098823,
+            "ev": 0.26268261569268936,
+            "won": true,
+            "bankroll": 1126.6000000000001
+        },
+        {
+            "date": "2026-01-31",
+            "fighter": "Junior Tafa",
+            "odds": 2.15,
+            "prob": 0.5634451262334086,
+            "ev": 0.21140702140182843,
+            "won": false,
+            "bankroll": 1116.6000000000001
+        },
+        {
+            "date": "2026-01-31",
+            "fighter": "Jacob Malkoun",
+            "odds": 1.84,
+            "prob": 0.7376212867172613,
+            "ev": 0.357223167559761,
+            "won": true,
+            "bankroll": 1125.0000000000002
+        },
+        {
+            "date": "2026-01-31",
+            "fighter": "Yizha",
+            "odds": 1.96,
+            "prob": 0.7648773809182267,
+            "ev": 0.4991596665997242,
+            "won": false,
+            "bankroll": 1115.0000000000002
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Kyoji Horiguchi",
+            "odds": 1.71,
+            "prob": 0.8514565640555878,
+            "ev": 0.4559907245350552,
+            "won": true,
+            "bankroll": 1122.1000000000001
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Rizvan Kuniev",
+            "odds": 1.76,
+            "prob": 0.7040229208683467,
+            "ev": 0.2390803407282902,
+            "won": true,
+            "bankroll": 1129.7
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Michal Oleksiejczuk",
+            "odds": 1.93,
+            "prob": 0.7661442838154298,
+            "ev": 0.4786584677637793,
+            "won": true,
+            "bankroll": 1139.0
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Farid Basharat",
+            "odds": 1.52,
+            "prob": 0.8626209658442173,
+            "ev": 0.3111838680832104,
+            "won": true,
+            "bankroll": 1144.2
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Ketlen Souza",
+            "odds": 2.24,
+            "prob": 0.605234126731054,
+            "ev": 0.3557244438775611,
+            "won": true,
+            "bankroll": 1156.6000000000001
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Javid Basharat",
+            "odds": 1.87,
+            "prob": 0.8466554387665406,
+            "ev": 0.583245670493431,
+            "won": true,
+            "bankroll": 1165.3000000000002
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Wang Cong",
+            "odds": 2.01,
+            "prob": 0.8561073802254626,
+            "ev": 0.7207758342531796,
+            "won": true,
+            "bankroll": 1175.4
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Klaudia Sygula",
+            "odds": 1.84,
+            "prob": 0.8396649182807394,
+            "ev": 0.5449834496365606,
+            "won": true,
+            "bankroll": 1183.8000000000002
+        },
+        {
+            "date": "2026-02-07",
+            "fighter": "Daniil Donchenko",
+            "odds": 1.95,
+            "prob": 0.8739091583695592,
+            "ev": 0.7041228588206403,
+            "won": true,
+            "bankroll": 1193.3000000000002
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Jacobe Smith",
+            "odds": 1.75,
+            "prob": 0.9047356491030272,
+            "ev": 0.5832873859302976,
+            "won": true,
+            "bankroll": 1200.8000000000002
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Sean Strickland",
+            "odds": 4.02,
+            "prob": 0.3172960929877008,
+            "ev": 0.27553029381055705,
+            "won": true,
+            "bankroll": 1231.0000000000002
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Uros Medic",
+            "odds": 2.16,
+            "prob": 0.6898641577371102,
+            "ev": 0.49010658071215807,
+            "won": true,
+            "bankroll": 1242.6000000000001
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Melquizael Costa",
+            "odds": 1.51,
+            "prob": 0.8578370220438186,
+            "ev": 0.29533390328616616,
+            "won": true,
+            "bankroll": 1247.7
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Serghei Spivac",
+            "odds": 1.54,
+            "prob": 0.8490452835177973,
+            "ev": 0.3075297366174079,
+            "won": true,
+            "bankroll": 1253.1000000000001
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Carli Judice",
+            "odds": 1.85,
+            "prob": 0.7946866675084308,
+            "ev": 0.470170334890597,
+            "won": true,
+            "bankroll": 1261.6000000000001
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Alden Coria",
+            "odds": 1.72,
+            "prob": 0.7902828243928878,
+            "ev": 0.35928645795576686,
+            "won": true,
+            "bankroll": 1268.8000000000002
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Joselyne Edwards",
+            "odds": 1.48,
+            "prob": 0.817667023559063,
+            "ev": 0.21014719486741318,
+            "won": true,
+            "bankroll": 1273.6000000000001
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Punahele Soriano",
+            "odds": 1.81,
+            "prob": 0.6859976593182091,
+            "ev": 0.24165576336595862,
+            "won": true,
+            "bankroll": 1281.7
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Jean-Paul Lebosnoyani",
+            "odds": 2.06,
+            "prob": 0.6216228302376738,
+            "ev": 0.28054303028960814,
+            "won": true,
+            "bankroll": 1292.3
+        },
+        {
+            "date": "2026-02-21",
+            "fighter": "Yadier del Valle",
+            "odds": 1.74,
+            "prob": 0.7490108601750649,
+            "ev": 0.30327889670461294,
+            "won": false,
+            "bankroll": 1282.3
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Imanol Rodriguez",
+            "odds": 2.41,
+            "prob": 0.7906789123097543,
+            "ev": 0.9055361786665079,
+            "won": true,
+            "bankroll": 1296.3999999999999
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "David Martinez",
+            "odds": 1.93,
+            "prob": 0.8633310529354112,
+            "ev": 0.6662289321653436,
+            "won": true,
+            "bankroll": 1305.6999999999998
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "King Green",
+            "odds": 1.61,
+            "prob": 0.7574399346903081,
+            "ev": 0.21947829485139625,
+            "won": true,
+            "bankroll": 1311.7999999999997
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Edgar Chairez",
+            "odds": 1.56,
+            "prob": 0.7850402171320096,
+            "ev": 0.224662738725935,
+            "won": true,
+            "bankroll": 1317.3999999999996
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Santiago Luna",
+            "odds": 1.84,
+            "prob": 0.8566775395946413,
+            "ev": 0.57628667285414,
+            "won": true,
+            "bankroll": 1325.7999999999997
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Damian Pinas",
+            "odds": 1.94,
+            "prob": 0.7895130146565057,
+            "ev": 0.531655248433621,
+            "won": true,
+            "bankroll": 1335.1999999999998
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Ailin Perez",
+            "odds": 1.71,
+            "prob": 0.8470758562713503,
+            "ev": 0.448499714224009,
+            "won": true,
+            "bankroll": 1342.2999999999997
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Cristian Quinonez",
+            "odds": 1.85,
+            "prob": 0.8969322464004706,
+            "ev": 0.6593246558408707,
+            "won": true,
+            "bankroll": 1350.7999999999997
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Javier Reyes",
+            "odds": 2.0,
+            "prob": 0.695561694281936,
+            "ev": 0.3911233885638721,
+            "won": true,
+            "bankroll": 1360.7999999999997
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Regina Tarin",
+            "odds": 2.09,
+            "prob": 0.5893123842418471,
+            "ev": 0.23166288306546035,
+            "won": true,
+            "bankroll": 1371.6999999999998
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Francis Marshall",
+            "odds": 1.68,
+            "prob": 0.7184842836482964,
+            "ev": 0.20705359652913802,
+            "won": true,
+            "bankroll": 1378.4999999999998
+        },
+        {
+            "date": "2026-02-28",
+            "fighter": "Ryan Gandra",
+            "odds": 1.82,
+            "prob": 0.8943905669248237,
+            "ev": 0.6277908318031791,
+            "won": true,
+            "bankroll": 1386.6999999999998
+        },
+        {
+            "date": "2026-03-07",
+            "fighter": "Charles Oliveira",
+            "odds": 2.01,
+            "prob": 0.617250627899883,
+            "ev": 0.2406737620787649,
+            "won": true,
+            "bankroll": 1396.7999999999997
+        },
+        {
+            "date": "2026-03-07",
+            "fighter": "Caio Borralho",
+            "odds": 1.6,
+            "prob": 0.8568981666700285,
+            "ev": 0.3710370666720457,
+            "won": true,
+            "bankroll": 1402.7999999999997
+        },
+        {
+            "date": "2026-03-07",
+            "fighter": "Gregory Rodrigues",
+            "odds": 1.54,
+            "prob": 0.8400997687489042,
+            "ev": 0.2937536438733126,
+            "won": true,
+            "bankroll": 1408.1999999999998
+        },
+        {
+            "date": "2026-03-07",
+            "fighter": "Xiao Long",
+            "odds": 2.42,
+            "prob": 0.6374291930218476,
+            "ev": 0.5425786471128713,
+            "won": false,
+            "bankroll": 1398.1999999999998
+        },
+        {
+            "date": "2026-03-07",
+            "fighter": "Alberto Montes",
+            "odds": 1.79,
+            "prob": 0.7449899813228912,
+            "ev": 0.3335320665679753,
+            "won": true,
+            "bankroll": 1406.1
+        },
+        {
+            "date": "2026-03-07",
+            "fighter": "Sumudaerji",
+            "odds": 1.5,
+            "prob": 0.8405905489744683,
+            "ev": 0.2608858234617024,
+            "won": true,
+            "bankroll": 1411.1
+        },
+        {
+            "date": "2026-03-07",
+            "fighter": "Diyar Nurgozhay",
+            "odds": 1.95,
+            "prob": 0.8108424202956211,
+            "ev": 0.5811427195764611,
+            "won": true,
+            "bankroll": 1420.6
+        },
+        {
+            "date": "2026-03-07",
+            "fighter": "Rodolfo Bellato",
+            "odds": 1.81,
+            "prob": 0.8474438452587503,
+            "ev": 0.5338733599183381,
+            "won": true,
+            "bankroll": 1428.6999999999998
+        },
+        {
+            "date": "2026-03-14",
+            "fighter": "Charles Johnson",
+            "odds": 1.6,
+            "prob": 0.8339352700324069,
+            "ev": 0.3342964320518511,
+            "won": true,
+            "bankroll": 1434.6999999999998
+        },
+        {
+            "date": "2026-03-14",
+            "fighter": "Kevin Vallejos",
+            "odds": 1.43,
+            "prob": 0.8842824253486569,
+            "ev": 0.2645238682485793,
+            "won": true,
+            "bankroll": 1438.9999999999998
+        },
+        {
+            "date": "2026-03-14",
+            "fighter": "Jose Delgado",
+            "odds": 2.01,
+            "prob": 0.7523020626116579,
+            "ev": 0.5121271458494321,
+            "won": true,
+            "bankroll": 1449.0999999999997
+        },
+        {
+            "date": "2026-03-14",
+            "fighter": "Marwan Rahiki",
+            "odds": 2.05,
+            "prob": 0.8915500742383349,
+            "ev": 0.8276776521885862,
+            "won": true,
+            "bankroll": 1459.5999999999997
+        },
+        {
+            "date": "2026-03-14",
+            "fighter": "Myktybek Orolbai",
+            "odds": 1.8,
+            "prob": 0.7807983601496533,
+            "ev": 0.4054370482693761,
+            "won": true,
+            "bankroll": 1467.5999999999997
+        },
+        {
+            "date": "2026-03-14",
+            "fighter": "Gillian Robertson",
+            "odds": 1.69,
+            "prob": 0.8367029031591418,
+            "ev": 0.4140279063389496,
+            "won": true,
+            "bankroll": 1474.4999999999998
+        },
+        {
+            "date": "2026-03-14",
+            "fighter": "Bia Mesquita",
+            "odds": 1.59,
+            "prob": 0.8699114841079127,
+            "ev": 0.3831592597315814,
+            "won": true,
+            "bankroll": 1480.3999999999999
+        },
+        {
+            "date": "2026-03-14",
+            "fighter": "Hecher Sosa",
+            "odds": 1.87,
+            "prob": 0.8251762991281494,
+            "ev": 0.5430796793696395,
+            "won": true,
+            "bankroll": 1489.1
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Luke Riley",
+            "odds": 1.78,
+            "prob": 0.7279609930133237,
+            "ev": 0.29577056756371634,
+            "won": true,
+            "bankroll": 1496.8999999999999
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Iwo Baraniewski",
+            "odds": 1.62,
+            "prob": 0.7808006750876869,
+            "ev": 0.26489709364205294,
+            "won": true,
+            "bankroll": 1503.1
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Christian Leroy Duncan",
+            "odds": 1.98,
+            "prob": 0.8470087663644577,
+            "ev": 0.6770773574016262,
+            "won": true,
+            "bankroll": 1512.8999999999999
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Danny Silva",
+            "odds": 1.9,
+            "prob": 0.6640203102116631,
+            "ev": 0.2616385894021598,
+            "won": true,
+            "bankroll": 1521.8999999999999
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Movsar Evloev",
+            "odds": 1.66,
+            "prob": 0.8113102670632959,
+            "ev": 0.34677504332507114,
+            "won": true,
+            "bankroll": 1528.4999999999998
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Mario Pinto",
+            "odds": 1.53,
+            "prob": 0.8543467661315353,
+            "ev": 0.307150552181249,
+            "won": true,
+            "bankroll": 1533.7999999999997
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Mantas Kondratavicius",
+            "odds": 1.7,
+            "prob": 0.9085732718163622,
+            "ev": 0.5445745620878157,
+            "won": true,
+            "bankroll": 1540.7999999999997
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Brando Pericic",
+            "odds": 1.76,
+            "prob": 0.7400154391998706,
+            "ev": 0.30242717299177224,
+            "won": true,
+            "bankroll": 1548.3999999999996
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Abdul-Kareem Al-Selwady",
+            "odds": 1.99,
+            "prob": 0.6803985388948138,
+            "ev": 0.35399309240067955,
+            "won": true,
+            "bankroll": 1558.2999999999997
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Shanelle Dyer",
+            "odds": 1.94,
+            "prob": 0.7868234608895393,
+            "ev": 0.526437514125706,
+            "won": true,
+            "bankroll": 1567.6999999999998
+        },
+        {
+            "date": "2026-03-21",
+            "fighter": "Mason Jones",
+            "odds": 1.93,
+            "prob": 0.6923033277527694,
+            "ev": 0.33614542256284485,
+            "won": true,
+            "bankroll": 1576.9999999999998
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Joe Pyfer",
+            "odds": 1.91,
+            "prob": 0.7912341189365893,
+            "ev": 0.5112571671688857,
+            "won": true,
+            "bankroll": 1586.0999999999997
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Alexa Grasso",
+            "odds": 1.95,
+            "prob": 0.6267610989466224,
+            "ev": 0.2221841429459135,
+            "won": true,
+            "bankroll": 1595.5999999999997
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Lerryan Douglas",
+            "odds": 1.9,
+            "prob": 0.7752420147146819,
+            "ev": 0.4729598279578955,
+            "won": true,
+            "bankroll": 1604.5999999999997
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Yousri Belgaroui",
+            "odds": 2.26,
+            "prob": 0.7850173625831369,
+            "ev": 0.7741392394378892,
+            "won": true,
+            "bankroll": 1617.1999999999996
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Terrance McKinney",
+            "odds": 1.81,
+            "prob": 0.8188304120279881,
+            "ev": 0.48208304577065864,
+            "won": true,
+            "bankroll": 1625.2999999999995
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Tyrell Fortune",
+            "odds": 2.36,
+            "prob": 0.7887522430775971,
+            "ev": 0.861455293663129,
+            "won": true,
+            "bankroll": 1638.8999999999994
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Casey O'Neill",
+            "odds": 1.66,
+            "prob": 0.8597417557821949,
+            "ev": 0.4271713145984435,
+            "won": true,
+            "bankroll": 1645.4999999999993
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Navajo Stirling",
+            "odds": 1.38,
+            "prob": 0.8872852440859302,
+            "ev": 0.22445363683858366,
+            "won": true,
+            "bankroll": 1649.2999999999993
+        },
+        {
+            "date": "2026-03-28",
+            "fighter": "Alexia Thainara",
+            "odds": 1.47,
+            "prob": 0.8746545924592393,
+            "ev": 0.28574225091508176,
+            "won": true,
+            "bankroll": 1653.9999999999993
+        },
+        {
+            "date": "2026-04-04",
+            "fighter": "Abdul Rakhman Yakhyaev",
+            "odds": 1.66,
+            "prob": 0.8920652092239477,
+            "ev": 0.4808282473117531,
+            "won": true,
+            "bankroll": 1660.5999999999992
+        },
+        {
+            "date": "2026-04-04",
+            "fighter": "Ethyn Ewing",
+            "odds": 2.33,
+            "prob": 0.7939914355708269,
+            "ev": 0.8500000448800267,
+            "won": true,
+            "bankroll": 1673.8999999999992
+        },
+        {
+            "date": "2026-04-04",
+            "fighter": "Tommy McMillen",
+            "odds": 1.85,
+            "prob": 0.8968175210500189,
+            "ev": 0.6591124139425351,
+            "won": true,
+            "bankroll": 1682.3999999999992
+        },
+        {
+            "date": "2026-04-04",
+            "fighter": "Jose Delano",
+            "odds": 1.68,
+            "prob": 0.8426123492601132,
+            "ev": 0.4155887467569901,
+            "won": true,
+            "bankroll": 1689.1999999999991
+        },
+        {
+            "date": "2026-04-04",
+            "fighter": "Alessandro Costa",
+            "odds": 1.78,
+            "prob": 0.8269722241257442,
+            "ev": 0.4720105589438248,
+            "won": true,
+            "bankroll": 1696.999999999999
+        },
+        {
+            "date": "2026-04-04",
+            "fighter": "Kai Kamaka III",
+            "odds": 2.23,
+            "prob": 0.669415286010077,
+            "ev": 0.49279608780247175,
+            "won": true,
+            "bankroll": 1709.299999999999
+        },
+        {
+            "date": "2026-04-11",
+            "fighter": "Josh Hokit",
+            "odds": 2.26,
+            "prob": 0.8352481502027546,
+            "ev": 0.8876608194582252,
+            "won": true,
+            "bankroll": 1721.899999999999
+        },
+        {
+            "date": "2026-04-11",
+            "fighter": "Dominick Reyes",
+            "odds": 1.68,
+            "prob": 0.7823479136494917,
+            "ev": 0.314344494931146,
+            "won": true,
+            "bankroll": 1728.699999999999
+        },
+        {
+            "date": "2026-04-11",
+            "fighter": "Aaron Pico",
+            "odds": 1.85,
+            "prob": 0.8691431439652865,
+            "ev": 0.6079148163357802,
+            "won": true,
+            "bankroll": 1737.199999999999
+        },
+        {
+            "date": "2026-04-18",
+            "fighter": "Mike Malott",
+            "odds": 1.54,
+            "prob": 0.8443555301610823,
+            "ev": 0.30030751644806686,
+            "won": true,
+            "bankroll": 1742.599999999999
+        },
+        {
+            "date": "2026-04-18",
+            "fighter": "Jasmine Jasudavicius",
+            "odds": 1.65,
+            "prob": 0.8309944313703646,
+            "ev": 0.3711408117611015,
+            "won": true,
+            "bankroll": 1749.099999999999
+        },
+        {
+            "date": "2026-04-18",
+            "fighter": "Gauge Young",
+            "odds": 1.94,
+            "prob": 0.7433154816599783,
+            "ev": 0.4420320344203579,
+            "won": true,
+            "bankroll": 1758.499999999999
+        },
+        {
+            "date": "2026-04-18",
+            "fighter": "John Yannis",
+            "odds": 2.06,
+            "prob": 0.8754344059488025,
+            "ev": 0.8033948762545333,
+            "won": true,
+            "bankroll": 1769.099999999999
+        },
+        {
+            "date": "2026-04-18",
+            "fighter": "Robert Valentin",
+            "odds": 2.14,
+            "prob": 0.6569787821786852,
+            "ev": 0.4059345938623864,
+            "won": true,
+            "bankroll": 1780.499999999999
+        },
+        {
+            "date": "2026-04-18",
+            "fighter": "Tanner Boser",
+            "odds": 1.9,
+            "prob": 0.6670669022857229,
+            "ev": 0.26742711434287325,
+            "won": false,
+            "bankroll": 1770.499999999999
+        },
+        {
+            "date": "2026-04-18",
+            "fighter": "Melissa Croden",
+            "odds": 2.09,
+            "prob": 0.7540508738046617,
+            "ev": 0.5759663262517429,
+            "won": true,
+            "bankroll": 1781.3999999999992
+        },
+        {
+            "date": "2026-04-18",
+            "fighter": "JJ Aldrich",
+            "odds": 1.66,
+            "prob": 0.7513733077117045,
+            "ev": 0.24727969080142942,
+            "won": true,
+            "bankroll": 1787.999999999999
+        },
+        {
+            "date": "2026-04-25",
+            "fighter": "Joselyne Edwards",
+            "odds": 1.97,
+            "prob": 0.613176081929055,
+            "ev": 0.20795688140023838,
+            "won": true,
+            "bankroll": 1797.6999999999991
+        },
+        {
+            "date": "2026-04-25",
+            "fighter": "Raoni Barcelos",
+            "odds": 1.79,
+            "prob": 0.7007479451214941,
+            "ev": 0.25433882176747447,
+            "won": true,
+            "bankroll": 1805.5999999999992
+        },
+        {
+            "date": "2026-04-25",
+            "fighter": "Rafa Garcia",
+            "odds": 1.66,
+            "prob": 0.8215055977595812,
+            "ev": 0.3636992922809048,
+            "won": true,
+            "bankroll": 1812.1999999999991
+        },
+        {
+            "date": "2026-04-25",
+            "fighter": "Adrian Luna Martinetti",
+            "odds": 2.09,
+            "prob": 0.5878686823763571,
+            "ev": 0.2286455461665864,
+            "won": false,
+            "bankroll": 1802.1999999999991
+        },
+        {
+            "date": "2026-04-25",
+            "fighter": "Francis Marshall",
+            "odds": 2.12,
+            "prob": 0.7008917066148983,
+            "ev": 0.48589041802358457,
+            "won": true,
+            "bankroll": 1813.3999999999992
+        },
+        {
+            "date": "2026-04-25",
+            "fighter": "Jackson McVey",
+            "odds": 2.03,
+            "prob": 0.6428985240040932,
+            "ev": 0.3050840037283091,
+            "won": true,
+            "bankroll": 1823.6999999999991
+        },
+        {
+            "date": "2026-04-25",
+            "fighter": "Michelle Montague",
+            "odds": 1.51,
+            "prob": 0.7965657834200112,
+            "ev": 0.20281433296421691,
+            "won": true,
+            "bankroll": 1828.799999999999
+        },
+        {
+            "date": "2026-04-25",
+            "fighter": "Max Griffin",
+            "odds": 2.21,
+            "prob": 0.6180149243061396,
+            "ev": 0.36581298271656837,
+            "won": false,
+            "bankroll": 1818.799999999999
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Carlos Prates",
+            "odds": 2.17,
+            "prob": 0.7383031584947165,
+            "ev": 0.6021178539335348,
+            "won": true,
+            "bankroll": 1830.499999999999
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Quillan Salkilld",
+            "odds": 2.35,
+            "prob": 0.803576466590561,
+            "ev": 0.8884046964878185,
+            "won": true,
+            "bankroll": 1843.999999999999
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Steve Erceg",
+            "odds": 1.69,
+            "prob": 0.7999452955690948,
+            "ev": 0.35190754951177006,
+            "won": true,
+            "bankroll": 1850.8999999999992
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Marwan Rahiki",
+            "odds": 1.98,
+            "prob": 0.8863214249876388,
+            "ev": 0.7549164214755248,
+            "won": true,
+            "bankroll": 1860.6999999999991
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Brando Pericic",
+            "odds": 1.99,
+            "prob": 0.807631657897159,
+            "ev": 0.6071869992153462,
+            "won": true,
+            "bankroll": 1870.5999999999992
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Louie Sutherland",
+            "odds": 2.04,
+            "prob": 0.6161237759398909,
+            "ev": 0.2568925029173774,
+            "won": true,
+            "bankroll": 1880.9999999999993
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Cam Rowston",
+            "odds": 1.82,
+            "prob": 0.7543026489519853,
+            "ev": 0.37283082109261323,
+            "won": true,
+            "bankroll": 1889.1999999999994
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Junior Tafa",
+            "odds": 2.16,
+            "prob": 0.7084724407679399,
+            "ev": 0.5303004720587503,
+            "won": true,
+            "bankroll": 1900.7999999999993
+        },
+        {
+            "date": "2026-05-02",
+            "fighter": "Jacob Malkoun",
+            "odds": 1.59,
+            "prob": 0.8054930796746602,
+            "ev": 0.2807339966827098,
+            "won": true,
+            "bankroll": 1906.6999999999994
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Joshua Van",
+            "odds": 4.06,
+            "prob": 0.4081918332817306,
+            "ev": 0.657258843123826,
+            "won": true,
+            "bankroll": 1937.2999999999993
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Alexander Volkov",
+            "odds": 1.69,
+            "prob": 0.8227174408984453,
+            "ev": 0.3903924751183725,
+            "won": true,
+            "bankroll": 1944.1999999999994
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Sean Brady",
+            "odds": 1.67,
+            "prob": 0.8427533808174482,
+            "ev": 0.40739814596513857,
+            "won": true,
+            "bankroll": 1950.8999999999994
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "King Green",
+            "odds": 1.55,
+            "prob": 0.793940441079928,
+            "ev": 0.2306076836738884,
+            "won": true,
+            "bankroll": 1956.3999999999994
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Ateba Gautier",
+            "odds": 1.65,
+            "prob": 0.8137815554257488,
+            "ev": 0.3427395664524855,
+            "won": true,
+            "bankroll": 1962.8999999999994
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Sean Strickland",
+            "odds": 7.03,
+            "prob": 0.2217570298533081,
+            "ev": 0.558951919868756,
+            "won": true,
+            "bankroll": 2023.1999999999994
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Jared Gordon",
+            "odds": 2.14,
+            "prob": 0.7368042636469025,
+            "ev": 0.5767611242043715,
+            "won": false,
+            "bankroll": 2013.1999999999994
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Baisangur Susurkaev",
+            "odds": 1.92,
+            "prob": 0.7751611163899907,
+            "ev": 0.4883093434687822,
+            "won": true,
+            "bankroll": 2022.3999999999994
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Jose Ochoa",
+            "odds": 2.16,
+            "prob": 0.6705720071026404,
+            "ev": 0.44843553534170333,
+            "won": true,
+            "bankroll": 2033.9999999999993
+        },
+        {
+            "date": "2026-05-09",
+            "fighter": "Yaroslav Amosov",
+            "odds": 1.71,
+            "prob": 0.7715502910607608,
+            "ev": 0.31935099771390085,
+            "won": true,
+            "bankroll": 2041.0999999999992
+        },
+        {
+            "date": "2026-05-16",
+            "fighter": "Benardo Sopaj",
+            "odds": 1.93,
+            "prob": 0.7297816626163571,
+            "ev": 0.4084786088495693,
+            "won": true,
+            "bankroll": 2050.399999999999
+        },
+        {
+            "date": "2026-05-16",
+            "fighter": "Nikolay Veretennikov",
+            "odds": 2.17,
+            "prob": 0.579697158317386,
+            "ev": 0.2579428335487275,
+            "won": false,
+            "bankroll": 2040.3999999999992
+        },
+        {
+            "date": "2026-05-16",
+            "fighter": "Tommy Gantt",
+            "odds": 1.81,
+            "prob": 0.8677571771650067,
+            "ev": 0.5706404906686622,
+            "won": true,
+            "bankroll": 2048.499999999999
+        },
+        {
+            "date": "2026-05-16",
+            "fighter": "Jacqueline Cavalcanti",
+            "odds": 1.45,
+            "prob": 0.8471645537356448,
+            "ev": 0.22838860291668484,
+            "won": false,
+            "bankroll": 2038.499999999999
+        },
+        {
+            "date": "2026-05-16",
+            "fighter": "Alice Ardelean",
+            "odds": 1.7,
+            "prob": 0.7665574663235099,
+            "ev": 0.3031476927499668,
+            "won": true,
+            "bankroll": 2045.499999999999
+        },
+        {
+            "date": "2026-05-16",
+            "fighter": "Luis Gurule",
+            "odds": 2.23,
+            "prob": 0.6226153087025158,
+            "ev": 0.3884321384066103,
+            "won": true,
+            "bankroll": 2057.7999999999993
+        },
+        {
+            "date": "2026-05-30",
+            "fighter": "Song Yadong",
+            "odds": 1.68,
+            "prob": 0.8161366755646988,
+            "ev": 0.3711096149486939,
+            "won": true,
+            "bankroll": 2064.5999999999995
+        },
+        {
+            "date": "2026-05-30",
+            "fighter": "Jake Matthews",
+            "odds": 1.68,
+            "prob": 0.7525996694688685,
+            "ev": 0.2643674447076989,
+            "won": true,
+            "bankroll": 2071.3999999999996
+        },
+        {
+            "date": "2026-05-30",
+            "fighter": "Cody Haddon",
+            "odds": 1.84,
+            "prob": 0.8838659320771965,
+            "ev": 0.6263133150220417,
+            "won": true,
+            "bankroll": 2079.7999999999997
+        },
+        {
+            "date": "2026-05-30",
+            "fighter": "Rei Tsuruya",
+            "odds": 1.76,
+            "prob": 0.7965107709497291,
+            "ev": 0.4018589568715232,
+            "won": true,
+            "bankroll": 2087.3999999999996
+        },
+        {
+            "date": "2026-05-30",
+            "fighter": "Angela Hill",
+            "odds": 1.59,
+            "prob": 0.8586439578539299,
+            "ev": 0.3652438929877486,
+            "won": true,
+            "bankroll": 2093.2999999999997
+        },
+        {
+            "date": "2026-05-30",
+            "fighter": "Jaqueline Amorim",
+            "odds": 1.68,
+            "prob": 0.757285121589449,
+            "ev": 0.27223900427027425,
+            "won": true,
+            "bankroll": 2100.1
+        },
+        {
+            "date": "2026-05-30",
+            "fighter": "Luis Felipe Dias",
+            "odds": 1.9,
+            "prob": 0.8654446854424169,
+            "ev": 0.644344902340592,
+            "won": true,
+            "bankroll": 2109.1
+        },
+        {
+            "date": "2026-06-06",
+            "fighter": "Gabriel Bonfim",
+            "odds": 2.35,
+            "prob": 0.8226666719794924,
+            "ev": 0.9332666791518072,
+            "won": true,
+            "bankroll": 2122.6
+        },
+        {
+            "date": "2026-06-06",
+            "fighter": "Edmen Shahbazyan",
+            "odds": 9.52,
+            "prob": 0.16466755508927328,
+            "ev": 0.5676351244498816,
+            "won": false,
+            "bankroll": 2112.6
+        },
+        {
+            "date": "2026-06-06",
+            "fighter": "Tom Nolan",
+            "odds": 1.64,
+            "prob": 0.7532259773777222,
+            "ev": 0.23529060289946435,
+            "won": true,
+            "bankroll": 2119.0
+        },
+        {
+            "date": "2026-06-06",
+            "fighter": "Alessandro Costa",
+            "odds": 1.69,
+            "prob": 0.7314460834433382,
+            "ev": 0.23614388101924155,
+            "won": true,
+            "bankroll": 2125.9
+        },
+        {
+            "date": "2026-06-06",
+            "fighter": "Edgar Chairez",
+            "odds": 1.51,
+            "prob": 0.8318909507652249,
+            "ev": 0.25615533565548954,
+            "won": true,
+            "bankroll": 2131.0
+        },
+        {
+            "date": "2026-06-06",
+            "fighter": "Ketlen Souza",
+            "odds": 1.82,
+            "prob": 0.7717483297481218,
+            "ev": 0.40458196014158165,
+            "won": true,
+            "bankroll": 2139.2
+        },
+        {
+            "date": "2026-06-06",
+            "fighter": "Jeisla Chaves",
+            "odds": 1.81,
+            "prob": 0.6852271601080984,
+            "ev": 0.2402611597956581,
+            "won": true,
+            "bankroll": 2147.2999999999997
+        },
+        {
+            "date": "2026-06-06",
+            "fighter": "Marcus McGhee",
+            "odds": 1.46,
+            "prob": 0.8541967567025198,
+            "ev": 0.2471272647856788,
+            "won": true,
+            "bankroll": 2151.8999999999996
+        },
+        {
+            "date": "2026-06-14",
+            "fighter": "Bo Nickal",
+            "odds": 1.77,
+            "prob": 0.8247745519261829,
+            "ev": 0.45985095690934363,
+            "won": true,
+            "bankroll": 2159.5999999999995
+        },
+        {
+            "date": "2026-06-14",
+            "fighter": "Josh Hokit",
+            "odds": 1.83,
+            "prob": 0.8693670716949145,
+            "ev": 0.5909417412016935,
+            "won": true,
+            "bankroll": 2167.8999999999996
+        },
+        {
+            "date": "2026-06-14",
+            "fighter": "Sean O'Malley",
+            "odds": 1.61,
+            "prob": 0.855798724824367,
+            "ev": 0.377835946967231,
+            "won": true,
+            "bankroll": 2173.9999999999995
+        },
+        {
+            "date": "2026-06-14",
+            "fighter": "Ciryl Gane",
+            "odds": 1.71,
+            "prob": 0.8159839236694065,
+            "ev": 0.3953325094746851,
+            "won": true,
+            "bankroll": 2181.0999999999995
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Manel Kape",
+            "odds": 1.83,
+            "prob": 0.8153112118746743,
+            "ev": 0.4920195177306539,
+            "won": true,
+            "bankroll": 2189.3999999999996
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Christian Rodriguez",
+            "odds": 2.11,
+            "prob": 0.6435040751546299,
+            "ev": 0.357793598576269,
+            "won": true,
+            "bankroll": 2200.4999999999995
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Murtazali Magomedov",
+            "odds": 1.97,
+            "prob": 0.6975802292219204,
+            "ev": 0.37423305156718323,
+            "won": true,
+            "bankroll": 2210.1999999999994
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Vinicius Oliveira",
+            "odds": 1.62,
+            "prob": 0.7925589824129583,
+            "ev": 0.2839455515089926,
+            "won": true,
+            "bankroll": 2216.399999999999
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Mitch Raposo",
+            "odds": 1.63,
+            "prob": 0.7565831378157456,
+            "ev": 0.23323051463966515,
+            "won": true,
+            "bankroll": 2222.6999999999994
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Luana Santos",
+            "odds": 1.86,
+            "prob": 0.7208991636733353,
+            "ev": 0.3408724444324036,
+            "won": true,
+            "bankroll": 2231.2999999999993
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Otari Tanzilovi",
+            "odds": 1.97,
+            "prob": 0.6555097863955603,
+            "ev": 0.29135427919925383,
+            "won": false,
+            "bankroll": 2221.2999999999993
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Andre Lima",
+            "odds": 1.96,
+            "prob": 0.7360242664604586,
+            "ev": 0.44260756226249875,
+            "won": false,
+            "bankroll": 2211.2999999999993
+        },
+        {
+            "date": "2026-06-20",
+            "fighter": "Levan Chokheli",
+            "odds": 1.83,
+            "prob": 0.8379395252446041,
+            "ev": 0.5334293311976257,
+            "won": true,
+            "bankroll": 2219.5999999999995
+        },
+        {
+            "date": "2026-06-27",
+            "fighter": "Ikram Aliskerov",
+            "odds": 1.68,
+            "prob": 0.8699052959016808,
+            "ev": 0.4614408971148236,
+            "won": true,
+            "bankroll": 2226.3999999999996
+        },
+        {
+            "date": "2026-06-27",
+            "fighter": "Matheus Camilo",
+            "odds": 2.17,
+            "prob": 0.5635665257152168,
+            "ev": 0.22293936080202048,
+            "won": true,
+            "bankroll": 2238.0999999999995
+        },
+        {
+            "date": "2026-06-27",
+            "fighter": "Abus Magomedov",
+            "odds": 1.81,
+            "prob": 0.8449436094923264,
+            "ev": 0.5293479331811108,
+            "won": true,
+            "bankroll": 2246.1999999999994
+        },
+        {
+            "date": "2026-06-27",
+            "fighter": "Abdul Rakhman Yakhyaev",
+            "odds": 1.66,
+            "prob": 0.8713205868662651,
+            "ev": 0.4463921741979999,
+            "won": true,
+            "bankroll": 2252.7999999999993
+        },
+        {
+            "date": "2026-06-27",
+            "fighter": "Andrey Pulyaev",
+            "odds": 2.07,
+            "prob": 0.5833153669444185,
+            "ev": 0.20746280957494623,
+            "won": false,
+            "bankroll": 2242.7999999999993
+        },
+        {
+            "date": "2026-06-27",
+            "fighter": "Daniil Donchenko",
+            "odds": 1.68,
+            "prob": 0.9077816012618826,
+            "ev": 0.5250730901199627,
+            "won": true,
+            "bankroll": 2249.5999999999995
+        },
+        {
+            "date": "2026-06-27",
+            "fighter": "Jean Matsumoto",
+            "odds": 1.73,
+            "prob": 0.7609232013543418,
+            "ev": 0.3163971383430113,
+            "won": true,
+            "bankroll": 2256.8999999999996
+        },
+        {
+            "date": "2026-07-11",
+            "fighter": "Cory Sandhagen",
+            "odds": 1.77,
+            "prob": 0.686843235563983,
+            "ev": 0.21571252694824983,
+            "won": false,
+            "bankroll": 2246.8999999999996
+        },
+        {
+            "date": "2026-07-11",
+            "fighter": "Gable Steveson",
+            "odds": 1.68,
+            "prob": 0.8637333796991745,
+            "ev": 0.4510720778946131,
+            "won": true,
+            "bankroll": 2253.7
+        },
+        {
+            "date": "2026-07-11",
+            "fighter": "Wang Cong",
+            "odds": 2.32,
+            "prob": 0.6948221640729886,
+            "ev": 0.6119874206493334,
+            "won": true,
+            "bankroll": 2266.8999999999996
+        },
+        {
+            "date": "2026-07-11",
+            "fighter": "Damian Pinas",
+            "odds": 1.89,
+            "prob": 0.7151565788974189,
+            "ev": 0.35164593411612155,
+            "won": true,
+            "bankroll": 2275.7999999999997
+        },
+        {
+            "date": "2026-07-11",
+            "fighter": "Farid Basharat",
+            "odds": 1.38,
+            "prob": 0.8761553359631946,
+            "ev": 0.2090943636292084,
+            "won": true,
+            "bankroll": 2279.6
+        },
+        {
+            "date": "2026-07-11",
+            "fighter": "Ryan Gandra",
+            "odds": 1.98,
+            "prob": 0.8229297141507729,
+            "ev": 0.6294008340185302,
+            "won": true,
+            "bankroll": 2289.4
+        },
+        {
+            "date": "2026-07-11",
+            "fighter": "Alessandro Costa",
+            "odds": 1.81,
+            "prob": 0.7516644583810219,
+            "ev": 0.3605126696696497,
+            "won": true,
+            "bankroll": 2297.5
+        },
+        {
+            "date": "2026-07-11",
+            "fighter": "Adrian Yanez",
+            "odds": 2.01,
+            "prob": 0.6232436026675942,
+            "ev": 0.2527196413618642,
+            "won": true,
+            "bankroll": 2307.6
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Christian Leroy Duncan",
+            "odds": 1.62,
+            "prob": 0.8478324283642017,
+            "ev": 0.3734885339500069,
+            "won": true,
+            "bankroll": 2313.7999999999997
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Chase Hooper",
+            "odds": 1.59,
+            "prob": 0.806277987543746,
+            "ev": 0.2819820001945563,
+            "won": true,
+            "bankroll": 2319.7
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Fatima Kline",
+            "odds": 1.77,
+            "prob": 0.8643230714978449,
+            "ev": 0.5298518365511855,
+            "won": true,
+            "bankroll": 2327.3999999999996
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Tommy McMillen",
+            "odds": 1.82,
+            "prob": 0.8353397739764123,
+            "ev": 0.5203183886370706,
+            "won": true,
+            "bankroll": 2335.5999999999995
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Ezra Elliott",
+            "odds": 1.82,
+            "prob": 0.8470572556777526,
+            "ev": 0.5416442053335098,
+            "won": true,
+            "bankroll": 2343.7999999999993
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Felipe Franco",
+            "odds": 2.1,
+            "prob": 0.8337576067679638,
+            "ev": 0.7508909742127241,
+            "won": true,
+            "bankroll": 2354.7999999999993
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Alden Coria",
+            "odds": 1.73,
+            "prob": 0.8664233088744785,
+            "ev": 0.4989123243528477,
+            "won": true,
+            "bankroll": 2362.0999999999995
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "RJ Harris",
+            "odds": 1.64,
+            "prob": 0.8371309316707167,
+            "ev": 0.37289472793997525,
+            "won": true,
+            "bankroll": 2368.4999999999995
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Dione Barbosa",
+            "odds": 1.79,
+            "prob": 0.8064943806005754,
+            "ev": 0.44362494127503016,
+            "won": true,
+            "bankroll": 2376.3999999999996
+        },
+        {
+            "date": "2026-07-18",
+            "fighter": "Dricus Du Plessis",
+            "odds": 1.81,
+            "prob": 0.7844746473450884,
+            "ev": 0.41989911169461,
+            "won": true,
+            "bankroll": 2384.4999999999995
+        }
+    ]
+}

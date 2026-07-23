@@ -1,0 +1,32 @@
+{
+    "accuracy": 0.6477404403244496,
+    "feature_cols": [
+        "delta_reach_cm",
+        "delta_height_cm",
+        "delta_age",
+        "delta_SlpM",
+        "delta_Str_Acc",
+        "delta_SApM",
+        "delta_Str_Def",
+        "delta_TD_Avg",
+        "delta_TD_Acc",
+        "delta_TD_Def",
+        "delta_Sub_Avg"
+    ],
+    "n_estimators": 100,
+    "learning_rate": 0.05,
+    "max_depth": 4,
+    "feature_importances": {
+        "delta_SlpM": 0.1937793791294098,
+        "delta_Str_Acc": 0.1519884318113327,
+        "delta_SApM": 0.14006434381008148,
+        "delta_TD_Def": 0.09400785714387894,
+        "delta_age": 0.0878363698720932,
+        "delta_Str_Def": 0.08420522511005402,
+        "delta_TD_Avg": 0.06547509878873825,
+        "delta_Sub_Avg": 0.05618344992399216,
+        "delta_TD_Acc": 0.05414227023720741,
+        "delta_reach_cm": 0.038867466151714325,
+        "delta_height_cm": 0.03345005586743355
+    }
+}

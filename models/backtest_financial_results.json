@@ -1,0 +1,22 @@
+{
+    "model_used": "models\\ufc_xgboost_model_v3_calibrated.pkl",
+    "total_test_fights": 1126,
+    "value_bets_count": 911,
+    "win_rate": 68.93523600439077,
+    "flat_betting": {
+        "initial_bankroll": 1000.0,
+        "final_bankroll": 5408.999999999995,
+        "total_wagered": 18220.0,
+        "profit": 4408.999999999995,
+        "roi_pct": 24.198682766190974,
+        "max_drawdown_pct": 6.88301886792453
+    },
+    "kelly_quarter": {
+        "initial_bankroll": 1000.0,
+        "final_bankroll": 33253072.86160168,
+        "total_wagered": 181741851.00221446,
+        "profit": 33252072.86160168,
+        "roi_pct": 18.29632122608706,
+        "max_drawdown_pct": 31.202476048244076
+    }
+}

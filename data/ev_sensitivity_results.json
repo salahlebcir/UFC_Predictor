@@ -1,0 +1,96 @@
+{
+    "model_used": "models\\ufc_xgboost_model_v3_calibrated.pkl",
+    "total_test_fights": 1126,
+    "best_roi_threshold": 0.2,
+    "best_balance_threshold": 0.2,
+    "grid_results": [
+        {
+            "threshold": 0.0,
+            "threshold_pct": "+0.0%",
+            "bets_count": 1023,
+            "pct_bets": 90.85257548845472,
+            "win_rate": 68.03519061583577,
+            "total_wagered": 20460.0,
+            "profit": 4437.999999999998,
+            "roi": 21.691104594330394,
+            "max_drawdown": 9.251590001479078
+        },
+        {
+            "threshold": 0.025,
+            "threshold_pct": "+2.5%",
+            "bets_count": 970,
+            "pct_bets": 86.14564831261102,
+            "win_rate": 68.45360824742268,
+            "total_wagered": 19400.0,
+            "profit": 4396.599999999996,
+            "roi": 22.662886597938122,
+            "max_drawdown": 7.804841823852675
+        },
+        {
+            "threshold": 0.05,
+            "threshold_pct": "+5.0%",
+            "bets_count": 911,
+            "pct_bets": 80.90586145648314,
+            "win_rate": 68.93523600439077,
+            "total_wagered": 18220.0,
+            "profit": 4408.999999999995,
+            "roi": 24.198682766190974,
+            "max_drawdown": 6.88301886792453
+        },
+        {
+            "threshold": 0.075,
+            "threshold_pct": "+7.5%",
+            "bets_count": 857,
+            "pct_bets": 76.1101243339254,
+            "win_rate": 68.84480746791132,
+            "total_wagered": 17140.0,
+            "profit": 4304.599999999995,
+            "roi": 25.114352392065314,
+            "max_drawdown": 6.192800488102504
+        },
+        {
+            "threshold": 0.1,
+            "threshold_pct": "+10.0%",
+            "bets_count": 791,
+            "pct_bets": 70.24866785079928,
+            "win_rate": 69.5322376738306,
+            "total_wagered": 15820.0,
+            "profit": 4297.199999999997,
+            "roi": 27.163084702907693,
+            "max_drawdown": 6.1176825133730155
+        },
+        {
+            "threshold": 0.125,
+            "threshold_pct": "+12.5%",
+            "bets_count": 730,
+            "pct_bets": 64.83126110124334,
+            "win_rate": 70.68493150684931,
+            "total_wagered": 14600.0,
+            "profit": 4337.599999999997,
+            "roi": 29.709589041095867,
+            "max_drawdown": 4.858880612314624
+        },
+        {
+            "threshold": 0.15,
+            "threshold_pct": "+15.0%",
+            "bets_count": 664,
+            "pct_bets": 58.96980461811723,
+            "win_rate": 71.23493975903614,
+            "total_wagered": 13280.0,
+            "profit": 4214.199999999997,
+            "roi": 31.733433734939737,
+            "max_drawdown": 4.717490171895478
+        },
+        {
+            "threshold": 0.2,
+            "threshold_pct": "+20.0%",
+            "bets_count": 543,
+            "pct_bets": 48.223801065719364,
+            "win_rate": 73.29650092081032,
+            "total_wagered": 10860.0,
+            "profit": 4098.599999999999,
+            "roi": 37.7403314917127,
+            "max_drawdown": 4.1938270635357
+        }
+    ]
+}
