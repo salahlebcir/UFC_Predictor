@@ -132,7 +132,7 @@ LANG_DATA = {
         # JURIDIQUE & DISCLAIMERS FR
         "disclaimer_title": "⚖️ Mentions Légales & Exclusions de Responsabilité",
         "disclaimer_ai": "<b>Avertissement IA & Non-garantie :</b> UFC Vision est un outil d'aide à la décision basé sur des modèles statistiques d'intelligence artificielle. Les prédictions et indices de confiance sont fournis à titre purement informatif. Ils ne constituent en aucun cas des conseils financiers ou des incitations aux paris sportifs. Aucun résultat financier n'est garanti, et Aura Dev décline toute responsabilité en cas de pertes liées à l'utilisation des données.",
-        "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictement interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Pour obtenir de l'aide, contactez Joueurs Info Service au 09 74 75 13 13.",
+        "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictly interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Pour obtenir de l'aide, contactez Joueurs Info Service au 09 74 75 13 13.",
         "disclaimer_trademark": "<b>Avertissement de Marque :</b> UFC Vision est un projet d'analyse de données indépendant édité par Aura Dev. Il n'est en aucun cas affilié, associé, autorisé, sponsorisé ou approuvé par l'UFC (Ultimate Fighting Championship) ou TKO Group Holdings.",
         "legal_publisher": "<b>Éditeur du site :</b> UFC Vision est un service édité par Salah Lebcir sous la micro-entreprise Aura Dev (Contact : contact@auradev.fr).",
         "legal_hosting": "<b>Hébergement :</b> Plateforme de déploiement Streamlit Inc. (San Francisco, CA, USA) | Code hébergé sur GitHub Inc. (San Francisco, CA, USA).",
@@ -201,9 +201,9 @@ def render_clean_html(html_str):
     st.markdown(cleaned, unsafe_allow_html=True)
 
 
-# 1. Configuration de la Page Streamlit (Rebranding UFC Vision)
+# 1. Configuration de la Page Streamlit (Étape 1 : Open Graph / Favicon & Titre)
 st.set_page_config(
-    page_title="UFC Vision — High-End MMA Analytics",
+    page_title="UFC Vision - Analytics & Prédictions MMA",
     page_icon="🥊",
     layout="wide",
     initial_sidebar_state="collapsed"
