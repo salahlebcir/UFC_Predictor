@@ -71,7 +71,7 @@ LANG_DATA = {
         "nav_legal": "⚖️ Legal Notice & Privacy Policy",
         "back_home": "← Back to Home",
         "hero_subtitle": "The Premier UFC Prediction Bot",
-        "hero_description": "Designed to predict the outcome of upcoming UFC fights, UFC Vision analyzes over 20 factors per matchup. Drawing on 10 years of UFC data, the algorithm identifies key factors that tip the scale in a fight.",
+        "hero_description": "UFC Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC. Our XGBoost V3 model analyzes over 20 statistical factors per matchup based on 10 years of fight history.",
         "stat_winrate_desc": "Bot Winrate (2015 - 2026)",
         "stat_roi_desc": "Bot ROI (2015 - 2026)",
         "upcoming_title": "🔮 Upcoming UFC Event Predictions",
@@ -102,6 +102,8 @@ LANG_DATA = {
         "a2": "Fight statistics are extracted from official UFC fight archives, while market odds are fetched in real-time through global bookmaker aggregator APIs.",
         "q3": "What is a High Confidence Index?",
         "a3": "A High Confidence Index means the AI-calculated probability shows a significant statistical edge (Value) when matched against published market odds.",
+        "q4": "Is UFC Vision affiliated with the UFC?",
+        "a4": "No. UFC Vision is an independent analytical project created by MMA data enthusiasts. We are not affiliated with, sponsored by, or endorsed by UFC or TKO Group Holdings.",
         "faq_contact": "Have more questions? Feel free to contact us at contact@auradev.fr",
         # JURIDIQUE EN
         "legal_page_title": "⚖️ Legal Notice, Privacy Policy & Cookie Management",
@@ -111,7 +113,7 @@ LANG_DATA = {
         "legal_sec4_title": "4. Data Privacy Policy & GDPR Compliance",
         "legal_sec5_title": "5. AI & Financial Disclaimer",
         "legal_sec6_title": "6. Responsible Gaming (+18)",
-        "legal_sec7_title": "7. Trademark Independence Notice",
+        "legal_sec7_title": "7. Trademark & Independence Notice",
         "legal_sec8_title": "8. Advertising Networks & Monetization",
         "legal_publisher": "<b>Publisher:</b> UFC Vision (https://ufcvision.com) is published by Aura Dev (SIRET: 10542993000016 — Legal Anonymity Protection under Art. 6-III-2 of French LCEN Law n° 2004-575). Contact: contact@auradev.fr",
         "legal_hosting": "<b>Cloud Host:</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, USA | Web: https://www.digitalocean.com | Phone: +1 888-892-2732 | Support: support@digitalocean.com",
@@ -120,7 +122,7 @@ LANG_DATA = {
         "legal_ads": "<b>Advertisements:</b> This platform displays programmatic advertisements and affiliate content. Ad network partners may collect non-identifiable technical browsing data to optimize ad relevancy.",
         "disclaimer_ai": "<b>AI Disclaimer:</b> UFC Vision is an analytical decision-support tool. Predictions are strictly for informational purposes and do not constitute financial advice or sports betting recommendations. No outcome is guaranteed, and Aura Dev disclaims all liability for losses incurred.",
         "disclaimer_gaming": "<b>Responsible Gaming (+18):</b> Sports betting is strictly prohibited for minors. Gambling involves financial debt, isolation, and addiction risks. Please gamble responsibly.",
-        "disclaimer_trademark": "<b>Trademark Notice:</b> UFC Vision is an independent analytics project published by Aura Dev. It is in no way affiliated with, associated with, authorized, sponsored, or endorsed by UFC (Ultimate Fighting Championship) or TKO Group Holdings.",
+        "disclaimer_trademark": "<b>Trademark & Independence Notice:</b> UFC Vision is an independent analytics project created by MMA data enthusiasts, published by Aura Dev. We analyze public UFC data and are in no way affiliated with, authorized, sponsored, or endorsed by UFC or TKO Group Holdings.",
         # COOKIES EN
         "cookie_dialog_title": "🍪 Cookie Preferences & Privacy",
         "cookie_title": "Cookie & Privacy Preferences",
@@ -137,7 +139,7 @@ LANG_DATA = {
         "nav_legal": "⚖️ Mentions Légales & Confidentialité",
         "back_home": "← Retour à l'accueil",
         "hero_subtitle": "Le meilleur bot de prédiction de l'UFC",
-        "hero_description": "Conçu pour prédire l'issue des prochains combats de l'UFC, UFC Vision analyse plus de 20 facteurs par combat. En s'appuyant sur les données des 10 dernières années à l'UFC, l'algorithme identifie ce qui fait la différence pour faire basculer un combat.",
+        "hero_description": "UFC Vision est un projet indépendant conçu par des passionnés de MMA, non affilié à l'UFC. Notre modèle XGBoost V3 analyse plus de 20 facteurs statistiques par combat sur 10 ans d'historique.",
         "stat_winrate_desc": "Winrate du bot (2015 - 2026)",
         "stat_roi_desc": "ROI du bot (2015 - 2026)",
         "upcoming_title": "🔮 Prédictions des Prochains Événements UFC",
@@ -168,6 +170,8 @@ LANG_DATA = {
         "a2": "Les métriques de combat sont issues de l'historique officiel de l'UFC, et les cotes sont récupérées en temps réel via des APIs agrégatrices de bookmakers mondiaux.",
         "q3": "Qu'est-ce que l'Indice de Confiance Élevé ?",
         "a3": "Un indice de confiance élevé indique que la probabilité calculée par l'IA présente un écart significatif (Value) par rapport à la cote proposée sur le marché, détectant une opportunité statistique intéressante.",
+        "q4": "UFC Vision est-il affilié à l'UFC ?",
+        "a4": "Non. UFC Vision est un projet d'analyse indépendant créé par des passionnés de MMA. Il n'est en aucun cas affilié, sponsorisé ou approuvé par l'UFC ou TKO Group Holdings.",
         "faq_contact": "Vous avez d'autres questions ? N'hésitez pas à nous contacter à contact@auradev.fr",
         # JURIDIQUE FR
         "legal_page_title": "⚖️ Mentions Légales, Politique de Confidentialité & Gestion des Cookies",
@@ -177,7 +181,7 @@ LANG_DATA = {
         "legal_sec4_title": "4. Politique de Confidentialité & Conformité RGPD",
         "legal_sec5_title": "5. Avertissement IA & Non-Responsabilité Financière",
         "legal_sec6_title": "6. Jeu Responsable & Protection des Mineurs (+18)",
-        "legal_sec7_title": "7. Indépendance de Marque",
+        "legal_sec7_title": "7. Indépendance de Marque & Passionnés",
         "legal_sec8_title": "8. Régies Publicitaires & Monétisation",
         "legal_publisher": "<b>Éditeur du site :</b> Le site UFC Vision (https://ufcvision.com) est édité par l'entreprise Aura Dev (SIRET : 10542993000016 — Dispositif de protection d'anonymat légal - Art. 6-III-2 de la Loi LCEN n° 2004-575). Contact : contact@auradev.fr",
         "legal_hosting": "<b>Hébergement Cloud :</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, États-Unis | Site : https://www.digitalocean.com | Tél : +1 888-892-2732 | Support : support@digitalocean.com",
@@ -186,7 +190,7 @@ LANG_DATA = {
         "legal_ads": "<b>Annonces Publicitaires :</b> Le site héberge des espaces publicitaires. Les régies partenaires traitent des données techniques d'affichage non identifiables pour adapter la pertinence des publicités.",
         "disclaimer_ai": "<b>Avertissement IA :</b> UFC Vision est un outil d'aide à la décision. Les prédictions sont fournies à titre pur informatif. Aucun gain n'est garanti et Aura Dev décline toute responsabilité en cas de pertes liées à l'utilisation du service.",
         "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictly interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Contactez Joueurs Info Service au 09 74 75 13 13.",
-        "disclaimer_trademark": "<b>Avertissement de Marque :</b> UFC Vision est un projet d'analyse indépendant édité par Aura Dev. Il n'est en aucun cas affilié, associé, autorisé, sponsorisé ou approuvé par l'UFC ou TKO Group Holdings.",
+        "disclaimer_trademark": "<b>Avertissement de Marque & Indépendance :</b> UFC Vision est un projet d'analyse indépendant conçu par des passionnés de MMA et édité par Aura Dev. Nous analysons les données publiques de l'UFC et ne sommes en aucun cas affiliés, autorisés, sponsorisés ou approuvés par l'UFC ou TKO Group Holdings.",
         # COOKIES FR
         "cookie_dialog_title": "🍪 Préférences des Cookies",
         "cookie_title": "Gestion des Cookies & Confidentialité",
@@ -203,7 +207,7 @@ LANG_DATA = {
         "nav_legal": "⚖️ Aviso Legal y Privacidad",
         "back_home": "← Volver al Inicio",
         "hero_subtitle": "El mejor bot de predicción de la UFC",
-        "hero_description": "Diseñado para predecir el resultado de los próximos combates de la UFC, UFC Vision analiza más de 20 factores por pelea. Basándose en los datos de los últimos 10 años en la UFC, el algoritmo identifica qué marca la diferencia para definir un combate.",
+        "hero_description": "UFC Vision es un proyecto independiente creado por apasionados de las MMA, no afiliado a la UFC. Nuestro modelo XGBoost V3 analiza más de 20 factores por pelea basados en 10 años de datos.",
         "stat_winrate_desc": "Tasa de victoria del bot (2015 - 2026)",
         "stat_roi_desc": "ROI del bot (2015 - 2026)",
         "upcoming_title": "🔮 Predicciones de Próximos Eventos UFC",
@@ -234,6 +238,8 @@ LANG_DATA = {
         "a2": "Las estadísticas se extraen de los archivos oficiales de la UFC y las cuotas se recopilan en tiempo real mediante APIs agregadoras internacionales.",
         "q3": "¿Qué significa un Índice de Confianza Elevado?",
         "a3": "Un índice de confianza elevado indica que la probabilidad calculada por la IA ofrece una ventaja estadística (Valor) respecto a la cuota publicada por el mercado.",
+        "q4": "¿Está UFC Vision afiliado a la UFC?",
+        "a4": "No. UFC Vision es un proyecto analítico independiente creado por apasionados de las MMA. No está afiliado, patrocinado ni respaldado por la UFC o TKO Group Holdings.",
         "faq_contact": "¿Tienes más preguntas? No dudes en contactarnos en contact@auradev.fr",
         # JURIDIQUE ES
         "legal_page_title": "⚖️ Aviso Legal, Política de Privacidad y Cookies",
@@ -243,7 +249,7 @@ LANG_DATA = {
         "legal_sec4_title": "4. Privacidad de Datos y Cumplimiento RGPD",
         "legal_sec5_title": "5. Exención de Responsabilidad IA",
         "legal_sec6_title": "6. Juego Responsable (+18)",
-        "legal_sec7_title": "7. Independencia de Marca",
+        "legal_sec7_title": "7. Independencia de Marca y Aficionados",
         "legal_sec8_title": "8. Redes Publicitarias",
         "legal_publisher": "<b>Editor del sitio:</b> UFC Vision (https://ufcvision.com) es editado por Aura Dev (SIRET: 10542993000016 — Protección legal de anonimato Art. 6-III-2 Ley LCEN). Contacto: contact@auradev.fr",
         "legal_hosting": "<b>Alojamiento Cloud:</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, EE. UU. | Web: https://www.digitalocean.com | Tel: +1 888-892-2732 | Contacto: support@digitalocean.com",
@@ -252,7 +258,7 @@ LANG_DATA = {
         "legal_ads": "<b>Anuncios:</b> Este sitio web muestra publicidad programática y enlaces de afiliación para financiar la plataforma.",
         "disclaimer_ai": "<b>Aviso de IA:</b> UFC Vision es una herramienta de soporte analítico. Las predicciones son informativas y no constituyen asesoramiento financiero ni recomendación de apuestas.",
         "disclaimer_gaming": "<b>Juego Responsable (+18):</b> Las apuestas deportivas están prohibidas para menores. El juego conlleva riesgos de adicción y endeudamiento.",
-        "disclaimer_trademark": "<b>Aviso de Marca:</b> UFC Vision es un proyecto independiente editado por Aura Dev. No está afiliado ni respaldado por la UFC o TKO Group Holdings.",
+        "disclaimer_trademark": "<b>Aviso de Marca e Independencia:</b> UFC Vision es un proyecto analítico independiente creado por apasionados de las MMA y editado por Aura Dev. Analizamos datos públicos de la UFC y no estamos en ningún caso afiliados, autorizados, patrocinados ni respaldados por la UFC o TKO Group Holdings.",
         # COOKIES ES
         "cookie_dialog_title": "🍪 Preferencias de Cookies",
         "cookie_title": "Preferencia de Cookies y Privacidad",
@@ -875,6 +881,7 @@ def main():
                     <p style="margin-bottom: 12px;"><b>{t['q1']}</b><br>{t['a1']}</p>
                     <p style="margin-bottom: 12px;"><b>{t['q2']}</b><br>{t['a2']}</p>
                     <p style="margin-bottom: 12px;"><b>{t['q3']}</b><br>{t['a3']}</p>
+                    <p style="margin-bottom: 12px;"><b>{t['q4']}</b><br>{t['a4']}</p>
                     <p style="margin-top: 14px; font-weight: 600; color: #3D3EEA;">{t['faq_contact']}</p>
                 </div>
             </details>
@@ -1185,17 +1192,17 @@ def main():
             <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec5_title']}</h4>
             <p>{t['disclaimer_ai']}</p>
             
-            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec6_title']}</h4>
+            <h4 style="color: #1E293B; margin-top: 1.5rem;">{t['legal_sec6_title']}</h4>
             <p>{t['disclaimer_gaming']}</p>
             
-            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec7_title']}</h4>
+            <h4 style="color: #1E293B; margin-top: 1.5rem;">{t['legal_sec7_title']}</h4>
             <p>{t['disclaimer_trademark']}</p>
             
-            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec8_title']}</h4>
+            <h4 style="color: #1E293B; margin-top: 1.5rem;">{t['legal_sec8_title']}</h4>
             <p>{t['legal_ads']}</p>
             
             <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 20px 0;">
-            <p style="font-weight: 600; color: #D20A0A;">{t['bug_contact']}</p>
+            <p style="font-weight: 600; color: #3D3EEA;">{t['bug_contact']}</p>
         </div>
         """)
 
