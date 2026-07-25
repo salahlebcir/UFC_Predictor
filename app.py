@@ -7,6 +7,7 @@ Interface 100% HTML/CSS pure avec bulles Blanc Pur, sélecteur de langue discret
 import os
 import sys
 import json
+import base64
 import datetime
 import collections
 import joblib
@@ -39,6 +40,18 @@ except ImportError:
     from odds_api import get_cached_or_fresh_odds
     from utils import normalize_fighter_name, fuzzy_match_fighter_name
     from historical_tracker import sync_historical_tracker, deduplicate_card_fights
+
+# Helper pour récupérer l'image logo (logo.jpg) sous forme base64
+def get_logo_data_url():
+    logo_path = os.path.join(project_root, "logo.jpg")
+    if os.path.exists(logo_path):
+        try:
+            with open(logo_path, "rb") as img_f:
+                encoded = base64.b64encode(img_f.read()).decode("utf-8")
+                return f"data:image/jpeg;base64,{encoded}"
+        except Exception:
+            pass
+    return "https://ufcvision.com/logo.jpg"
 
 # DICTIONNAIRE CENTRALISÉ DE TRADUCTIONS ET TEXTES JURIDIQUES / FAQ (EN / FR / ES)
 LANG_DATA = {
@@ -164,7 +177,7 @@ LANG_DATA = {
         "legal_privacy": "<b>Données Personnelles & Cookies :</b> UFC Vision ne requiert la création d'aucun compte et ne collecte aucune donnée nominative directe. Des outils de mesure d'audience (Google Tag Manager, Google Analytics 4) et des régies publicitaires tierces (Google AdSense) utilisent des cookies pour analyser le trafic et diffuser des annonces pertinentes.",
         "legal_ads": "<b>Annonces Publicitaires :</b> Le site héberge des espaces publicitaires. Les régies partenaires traitent des données techniques d'affichage non identifiables pour adapter la pertinence des publicités.",
         "disclaimer_ai": "<b>Avertissement IA :</b> UFC Vision est un outil d'aide à la décision. Les prédictions sont fournies à titre pur informatif. Aucun gain n'est garanti et Aura Dev décline toute responsabilité en cas de pertes liées à l'utilisation du service.",
-        "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictement interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Contactez Joueurs Info Service au 09 74 75 13 13.",
+        "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictly interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Contactez Joueurs Info Service au 09 74 75 13 13.",
         "disclaimer_trademark": "<b>Avertissement de Marque :</b> UFC Vision est un projet d'analyse indépendant édité par Aura Dev. Il n'est en aucun cas affilié, associé, autorisé, sponsorisé ou approuvé par l'UFC ou TKO Group Holdings.",
         # COOKIES FR
         "cookie_dialog_title": "🍪 Préférences des Cookies",
@@ -257,53 +270,70 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Chargement de la source image du Logo (logo.jpg)
+logo_data_url = get_logo_data_url()
+
 # 2. Design System "Aura Dev" CSS
-st.markdown("""
+st.markdown(f"""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
     
     /* Masquer le header et la toolbar Streamlit */
-    [data-testid="stHeader"], header, #MainMenu, footer {
+    [data-testid="stHeader"], header, #MainMenu, footer {{
         display: none !important;
         visibility: hidden !important;
-    }
+    }}
 
     /* Annuler tout le rembourrage supérieur de la page */
     [data-testid="stAppViewContainer"] > .main, 
     .main .block-container, 
-    div[data-testid="stMainBlockContainer"] {
+    div[data-testid="stMainBlockContainer"] {{
         padding-top: 0rem !important;
         margin-top: 0rem !important;
         padding-bottom: 2rem !important;
         max-width: 1050px !important;
         margin-left: auto !important;
         margin-right: auto !important;
-    }
+    }}
     
-    html, body, [class*="css"] {
+    html, body, [class*="css"] {{
         font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
         color: #0F172A;
-    }
+    }}
     
     /* Fond général du site : GRIS CLAIR #F1F5F9 */
     .stApp, 
     [data-testid="stAppViewContainer"], 
-    body {
+    body {{
         background-color: #F1F5F9 !important;
         background: #F1F5F9 !important;
-    }
+    }}
+
+    /* CENTRAGE ET ABAISSEMENT DU POP-UP COOKIE (@st.dialog) */
+    div[data-testid="stDialog"] {{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }}
+    
+    div[data-testid="stDialog"] > div {{
+        margin-top: 18vh !important;
+        border-radius: 28px !important;
+        border: 1px solid #E2E8F0 !important;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18) !important;
+    }}
 
     /* MINI-PILULE DE LANGUE FIXÉE STRICTEMENT AU COIN SUPÉRIEUR DROIT */
-    div[data-testid="stSelectbox"]:has(*[aria-label="lang_select_hidden"]) {
+    div[data-testid="stSelectbox"]:has(*[aria-label="lang_select_hidden"]) {{
         position: fixed !important;
         top: 12px !important;
         right: 20px !important;
         width: 82px !important;
         max-width: 82px !important;
         z-index: 999999 !important;
-    }
+    }}
 
-    div[data-testid="stSelectbox"]:has(*[aria-label="lang_select_hidden"]) > div > div {
+    div[data-testid="stSelectbox"]:has(*[aria-label="lang_select_hidden"]) > div > div {{
         border-radius: 9999px !important;
         background-color: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
@@ -317,14 +347,14 @@ st.markdown("""
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-    }
+    }}
 
-    div[data-testid="stSelectbox"]:has(*[aria-label="lang_select_hidden"]) * {
+    div[data-testid="stSelectbox"]:has(*[aria-label="lang_select_hidden"]) * {{
         font-family: 'Noto Color Emoji', 'Plus Jakarta Sans', sans-serif !important;
-    }
+    }}
 
     /* Style des 3 boutons pilules du header principal */
-    .stButton > button {
+    .stButton > button {{
         border-radius: 9999px !important;
         font-weight: 700 !important;
         font-size: 0.88rem !important;
@@ -341,17 +371,27 @@ st.markdown("""
         width: 100% !important;
         display: block !important;
         text-align: center !important;
-    }
+    }}
 
-    .stButton > button:hover {
+    .stButton > button:hover {{
         border-color: #D20A0A !important;
         color: #D20A0A !important;
         transform: translateY(-1px) !important;
         box-shadow: 0 6px 16px rgba(210, 10, 10, 0.12) !important;
-    }
+    }}
+
+    /* Intégration du Logo dans la pilule de navigation centrale (UFC Vision) */
+    div[data-testid="stColumn"]:has(button[key="btn_nav_home"]) button {{
+        background-image: url("{logo_data_url}") !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        color: transparent !important;
+        min-height: 42px !important;
+    }}
 
     /* CLASSES SPECIFIQUES POUR LES BULLES BLANC PUR #FFFFFF */
-    .fight-card-pure-white, .summary-card-pure-white, .legal-card-pure-white {
+    .fight-card-pure-white, .summary-card-pure-white, .legal-card-pure-white {{
         background-color: #FFFFFF !important;
         background: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
@@ -359,10 +399,10 @@ st.markdown("""
         padding: 24px !important;
         margin-bottom: 20px !important;
         box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
-    }
+    }}
 
     /* ACCORDÉONS HAUTE QUALITÉ */
-    details.aura-accordion {
+    details.aura-accordion {{
         background-color: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
         border-radius: 20px !important;
@@ -370,25 +410,25 @@ st.markdown("""
         margin-top: 14px !important;
         text-align: left !important;
         box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03) !important;
-    }
+    }}
 
-    details.aura-accordion summary {
+    details.aura-accordion summary {{
         font-weight: 800 !important;
         color: #0F172A !important;
         cursor: pointer !important;
         font-size: 0.98rem !important;
         outline: none !important;
-    }
+    }}
 
-    details.aura-accordion p, details.aura-accordion div {
+    details.aura-accordion p, details.aura-accordion div {{
         font-size: 0.88rem !important;
         color: #475569 !important;
         margin-top: 12px !important;
         line-height: 1.6 !important;
-    }
+    }}
 
     /* Badges de combat */
-    .pill-main-red {
+    .pill-main-red {{
         background-color: #D20A0A !important;
         color: #FFFFFF !important;
         font-weight: 800;
@@ -397,9 +437,9 @@ st.markdown("""
         border-radius: 9999px;
         display: inline-block;
         margin-bottom: 0.5rem;
-    }
+    }}
 
-    .pill-comain-dark {
+    .pill-comain-dark {{
         background-color: #0F172A !important;
         color: #FFFFFF !important;
         font-weight: 800;
@@ -408,10 +448,10 @@ st.markdown("""
         border-radius: 9999px;
         display: inline-block;
         margin-bottom: 0.5rem;
-    }
+    }}
 
     /* Action Signal Pills */
-    .signal-pill-rec {
+    .signal-pill-rec {{
         background-color: #ECFDF5 !important;
         border: 1px solid #A7F3D0 !important;
         border-left: 6px solid #10B981 !important;
@@ -420,9 +460,9 @@ st.markdown("""
         border-radius: 18px;
         font-weight: 700;
         margin-top: 0.8rem;
-    }
+    }}
 
-    .signal-pill-no {
+    .signal-pill-no {{
         background-color: #FFF7ED !important;
         border: 1px solid #FFEDD5 !important;
         border-left: 6px solid #F97316 !important;
@@ -431,9 +471,9 @@ st.markdown("""
         border-radius: 18px;
         font-weight: 600;
         margin-top: 0.8rem;
-    }
+    }}
 
-    .signal-pill-wait {
+    .signal-pill-wait {{
         background-color: #FEFCE8 !important;
         border: 1px solid #FEF08A !important;
         border-left: 6px solid #EAB308 !important;
@@ -442,9 +482,9 @@ st.markdown("""
         border-radius: 18px;
         font-weight: 600;
         margin-top: 0.8rem;
-    }
+    }}
 
-    .signal-pill-none {
+    .signal-pill-none {{
         background-color: #F0F9FF !important;
         border: 1px solid #BAE6FD !important;
         border-left: 6px solid #3B82F6 !important;
@@ -453,10 +493,10 @@ st.markdown("""
         border-radius: 18px;
         font-weight: 600;
         margin-top: 0.8rem;
-    }
+    }}
 
     /* Result Pills */
-    .result-pill-win {
+    .result-pill-win {{
         background-color: #ECFDF5 !important;
         border: 1px solid #A7F3D0 !important;
         color: #065F46 !important;
@@ -464,9 +504,9 @@ st.markdown("""
         border-radius: 16px !important;
         font-size: 0.9rem !important;
         margin-top: 0.8rem !important;
-    }
+    }}
 
-    .result-pill-loss {
+    .result-pill-loss {{
         background-color: #FEF2F2 !important;
         border: 1px solid #FCA5A5 !important;
         color: #991B1B !important;
@@ -474,9 +514,9 @@ st.markdown("""
         border-radius: 16px !important;
         font-size: 0.9rem !important;
         margin-top: 0.8rem !important;
-    }
+    }}
 
-    .result-pill-nobet {
+    .result-pill-nobet {{
         background-color: #F8FAFC !important;
         border: 1px solid #E2E8F0 !important;
         color: #475569 !important;
@@ -484,54 +524,55 @@ st.markdown("""
         border-radius: 16px !important;
         font-size: 0.88rem !important;
         margin-top: 0.8rem !important;
-    }
+    }}
 
-    .hero-bubble {
+    /* HERO BUBBLE TEXTE */
+    .hero-bubble-text {{
         background: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
-        border-radius: 40px !important;
-        padding: 4rem 2.5rem 3.5rem 2.5rem !important;
+        border-radius: 36px !important;
+        padding: 2.5rem 2.5rem !important;
         text-align: center !important;
         box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
-        margin: 4.5rem auto 2.5rem auto !important;
-    }
+        margin: 2rem auto 2.5rem auto !important;
+    }}
 
-    .stat-pill {
+    .stat-pill {{
         background: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
         border-radius: 32px !important;
         padding: 2rem 1.5rem !important;
         text-align: center !important;
         box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03) !important;
-    }
+    }}
 
-    .stat-val-huge {
+    .stat-val-huge {{
         font-size: 3.2rem;
         font-weight: 900;
         letter-spacing: -0.04em;
         color: #D20A0A;
         line-height: 1;
         margin-bottom: 0.5rem;
-    }
+    }}
 
-    .stat-desc-clean {
+    .stat-desc-clean {{
         font-size: 0.95rem;
         font-weight: 600;
         color: #475569;
-    }
+    }}
 
-    .footer-aura {
+    .footer-aura {{
         text-align: center;
         padding: 2rem 0 2.5rem 0;
         color: #94A3B8;
         font-size: 0.85rem;
         font-weight: 500;
-    }
+    }}
 </style>
 """, unsafe_allow_html=True)
 
 # =========================================================================
-# FONCTION POP-UP DIALOG COOKIE NATIVE STREAMLIT (OPTION B)
+# FONCTION POP-UP DIALOG COOKIE NATIVE STREAMLIT
 # =========================================================================
 
 @st.dialog("🍪 Cookie Preferences")
@@ -699,7 +740,6 @@ def main():
     <style>
         div[data-testid="stColumn"]:has(button[key="{active_btn_key}"]) button {{
             border-color: #D20A0A !important;
-            color: #D20A0A !important;
             box-shadow: 0 4px 14px rgba(210, 10, 10, 0.18) !important;
             font-weight: 800 !important;
         }}
@@ -709,18 +749,23 @@ def main():
     page = current_page
 
     # =========================================================================
-    # PAGE 1 : 🏠 ACCUEIL (HERO + STATS + FAQ SYSTEM)
+    # PAGE 1 : 🏠 ACCUEIL (BULLE LOGO UNIQUE ALIGNÉE + BULLE TEXTE ÉCARTÉE + STATS + FAQ)
     # =========================================================================
     if page == "home":
+        # BULLE 1 : LE LOGO GÉANT SEUL EN BULLE BLANCHE
         render_clean_html(f"""
-        <div class="hero-bubble">
-            <h1 style="font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em; margin: 0 0 0.4rem 0;">
-                <span style="color:#D20A0A;">UFC</span> <span style="color:#0F172A;">Vision</span>
-            </h1>
-            <p style="font-size: 1.25rem; font-weight: 600; color: #475569; margin: 0;">
+        <div style="background: #FFFFFF !important; border: 1px solid #E2E8F0 !important; border-radius: 36px !important; overflow: hidden !important; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important; margin: 3.5rem auto 2rem auto !important; text-align: center !important;">
+            <img src="{logo_data_url}" alt="UFC Vision Logo" style="width: 100%; height: auto; display: block; border-radius: 36px;">
+        </div>
+        """)
+
+        # BULLE 2 : LE TEXTE DE PRÉSENTATION CLAIREMENT ÉCARTÉ
+        render_clean_html(f"""
+        <div class="hero-bubble-text">
+            <p style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin: 0 0 0.8rem 0;">
                 {t['hero_subtitle']}
             </p>
-            <p style="font-size: 1.02rem; font-weight: 500; color: #64748B; margin: 1.2rem auto 0 auto; max-width: 780px; line-height: 1.6;">
+            <p style="font-size: 1.05rem; font-weight: 500; color: #475569; margin: 0 auto; max-width: 780px; line-height: 1.65;">
                 {t['hero_description']}
             </p>
         </div>
