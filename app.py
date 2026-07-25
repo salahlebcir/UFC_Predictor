@@ -43,10 +43,12 @@ except ImportError:
 # DICTIONNAIRE CENTRALISÉ DE TRADUCTIONS ET TEXTES JURIDIQUES / FAQ (EN / FR / ES)
 LANG_DATA = {
     "EN": {
-        "page_title": "UFC Vision — High-End MMA Analytics",
+        "page_title": "UFC Vision - MMA Analytics & Predictions",
         "nav_past": "📜 Past Fights",
         "nav_home": "🥊 UFC Vision",
         "nav_upcoming": "🔮 Upcoming Fights",
+        "nav_legal": "⚖️ Legal Notice & Privacy Policy",
+        "back_home": "← Back to Home",
         "hero_subtitle": "The Premier UFC Prediction Bot",
         "hero_description": "Designed to predict the outcome of upcoming UFC fights, UFC Vision analyzes over 20 factors per matchup. Drawing on 10 years of UFC data, the algorithm identifies key factors that tip the scale in a fight.",
         "stat_winrate_desc": "Bot Winrate (2015 - 2026)",
@@ -80,22 +82,38 @@ LANG_DATA = {
         "q3": "What is a High Confidence Index?",
         "a3": "A High Confidence Index means the AI-calculated probability shows a significant statistical edge (Value) when matched against published market odds.",
         "faq_contact": "Have more questions? Feel free to contact us at contact@auradev.fr",
-        # JURIDIQUE & DISCLAIMERS EN
-        "disclaimer_title": "⚖️ Disclaimers & Legal Notice",
-        "disclaimer_ai": "<b>AI & Financial Disclaimer:</b> UFC Vision is a decision-support tool powered by AI statistical models. Predictions and confidence indexes are provided strictly for informational purposes and do not constitute financial advice or sports betting recommendations. No financial outcome is guaranteed, and Aura Dev disclaims all liability for losses incurred from using these predictions.",
-        "disclaimer_gaming": "<b>Responsible Gaming (+18):</b> Sports betting is strictly prohibited for minors. Gambling involves risks: financial debt, isolation, and addiction. Please gamble responsibly.",
-        "disclaimer_trademark": "<b>Trademark Disclaimer:</b> UFC Vision is an independent data analysis project published by Aura Dev. It is in no way affiliated with, associated with, authorized, sponsored, or endorsed by the UFC (Ultimate Fighting Championship) or TKO Group Holdings.",
-        "legal_publisher": "<b>Site Publisher:</b> UFC Vision is a service published by Salah Lebcir under the sole proprietorship Aura Dev (Contact: contact@auradev.fr).",
-        "legal_hosting": "<b>Hosting:</b> Deployment Platform: Streamlit Inc. (San Francisco, CA, USA) | Code Repository: GitHub Inc. (San Francisco, CA, USA).",
-        "legal_ip": "<b>Intellectual Property & Scraping:</b> All Machine Learning models, algorithms, UI designs, and codebase powering UFC Vision are the exclusive intellectual property of Salah Lebcir (Aura Dev). Any unauthorized automated scraping or commercial reproduction is strictly prohibited.",
-        "legal_privacy": "<b>Data Privacy & GDPR:</b> UFC Vision does not collect or process personally identifiable information (no user accounts required). Anonymous analytics and technical performance monitoring tools may be deployed.",
-        "footer": "UFC Vision © 2026 — All Rights Reserved | Published by Aura Dev"
+        # JURIDIQUE EN
+        "legal_page_title": "⚖️ Legal Notice, Privacy Policy & Cookie Management",
+        "legal_sec1_title": "1. Site Publisher & Legal Notice",
+        "legal_sec2_title": "2. Cloud Infrastructure & Hosting",
+        "legal_sec3_title": "3. Intellectual Property & Anti-Scraping",
+        "legal_sec4_title": "4. Data Privacy Policy & GDPR Compliance",
+        "legal_sec5_title": "5. AI & Financial Disclaimer",
+        "legal_sec6_title": "6. Responsible Gaming (+18)",
+        "legal_sec7_title": "7. Trademark Independence Notice",
+        "legal_sec8_title": "8. Advertising Networks & Monetization",
+        "legal_publisher": "<b>Publisher:</b> UFC Vision (https://ufcvision.com) is published by Aura Dev (SIRET: 10542993000016 — Legal Anonymity Protection under Art. 6-III-2 of French LCEN Law n° 2004-575). Contact: contact@auradev.fr",
+        "legal_hosting": "<b>Cloud Host:</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, USA | Web: https://www.digitalocean.com | Phone: +1 888-892-2732 | Support: support@digitalocean.com",
+        "legal_ip": "<b>Intellectual Property:</b> All Machine Learning models (XGBoost V3), algorithms, interface designs, and code powering UFC Vision are the exclusive intellectual property of Aura Dev. Automated data scraping or commercial reproduction is strictly prohibited.",
+        "legal_privacy": "<b>Privacy & Cookies:</b> UFC Vision does not require account registration or process direct personal identification data. We utilize Google Tag Manager, Google Analytics 4, and third-party ad networks (such as Google AdSense) that place cookies to measure audience and deliver relevant ads.",
+        "legal_ads": "<b>Advertisements:</b> This platform displays programmatic advertisements and affiliate content. Ad network partners may collect non-identifiable technical browsing data to optimize ad relevancy.",
+        "disclaimer_ai": "<b>AI Disclaimer:</b> UFC Vision is an analytical decision-support tool. Predictions are strictly for informational purposes and do not constitute financial advice or sports betting recommendations. No outcome is guaranteed, and Aura Dev disclaims all liability for losses incurred.",
+        "disclaimer_gaming": "<b>Responsible Gaming (+18):</b> Sports betting is strictly prohibited for minors. Gambling involves financial debt, isolation, and addiction risks. Please gamble responsibly.",
+        "disclaimer_trademark": "<b>Trademark Notice:</b> UFC Vision is an independent analytics project published by Aura Dev. It is in no way affiliated with, associated with, authorized, sponsored, or endorsed by UFC (Ultimate Fighting Championship) or TKO Group Holdings.",
+        # COOKIES EN
+        "cookie_title": "Cookie & Privacy Preferences",
+        "cookie_desc": "UFC Vision uses cookies for essential technical functions, anonymous traffic analytics (Google Analytics / GTM), and tailored advertising.",
+        "cookie_accept": "Accept All Cookies",
+        "cookie_decline": "Essential Only",
+        "footer": "UFC Vision © 2026 — All Rights Reserved | Published by Aura Dev (SIRET: 10542993000016)"
     },
     "FR": {
         "page_title": "UFC Vision — Analyse MMA de Haute Précision",
         "nav_past": "📜 Combats Antérieurs",
         "nav_home": "🥊 UFC Vision",
         "nav_upcoming": "🔮 Combats Futurs",
+        "nav_legal": "⚖️ Mentions Légales & Confidentialité",
+        "back_home": "← Retour à l'accueil",
         "hero_subtitle": "Le meilleur bot de prédiction de l'UFC",
         "hero_description": "Conçu pour prédire l'issue des prochains combats de l'UFC, UFC Vision analyse plus de 20 facteurs par combat. En s'appuyant sur les données des 10 dernières années à l'UFC, l'algorithme identifie ce qui fait la différence pour faire basculer un combat.",
         "stat_winrate_desc": "Winrate du bot (2015 - 2026)",
@@ -129,22 +147,38 @@ LANG_DATA = {
         "q3": "Qu'est-ce que l'Indice de Confiance Élevé ?",
         "a3": "Un indice de confiance élevé indique que la probabilité calculée par l'IA présente un écart significatif (Value) par rapport à la cote proposée sur le marché, détectant une opportunité statistique intéressante.",
         "faq_contact": "Vous avez d'autres questions ? N'hésitez pas à nous contacter à contact@auradev.fr",
-        # JURIDIQUE & DISCLAIMERS FR
-        "disclaimer_title": "⚖️ Mentions Légales & Exclusions de Responsabilité",
-        "disclaimer_ai": "<b>Avertissement IA & Non-garantie :</b> UFC Vision est un outil d'aide à la décision basé sur des modèles statistiques d'intelligence artificielle. Les prédictions et indices de confiance sont fournis à titre purement informatif. Ils ne constituent en aucun cas des conseils financiers ou des incitations aux paris sportifs. Aucun résultat financier n'est garanti, et Aura Dev décline toute responsabilité en cas de pertes liées à l'utilisation des données.",
-        "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictly interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Pour obtenir de l'aide, contactez Joueurs Info Service au 09 74 75 13 13.",
-        "disclaimer_trademark": "<b>Avertissement de Marque :</b> UFC Vision est un projet d'analyse de données indépendant édité par Aura Dev. Il n'est en aucun cas affilié, associé, autorisé, sponsorisé ou approuvé par l'UFC (Ultimate Fighting Championship) ou TKO Group Holdings.",
-        "legal_publisher": "<b>Éditeur du site :</b> UFC Vision est un service édité par Salah Lebcir sous la micro-entreprise Aura Dev (Contact : contact@auradev.fr).",
-        "legal_hosting": "<b>Hébergement :</b> Plateforme de déploiement Streamlit Inc. (San Francisco, CA, USA) | Code hébergé sur GitHub Inc. (San Francisco, CA, USA).",
-        "legal_ip": "<b>Propriété Intellectuelle & Scraping :</b> L'ensemble des modèles de Machine Learning, algorithmes, interfaces et code sont la propriété exclusive de Salah Lebcir (Aura Dev). Toute aspiration automatisée (scraping) ou réutilisation commerciale est strictly interdite.",
-        "legal_privacy": "<b>Données personnelles & RGPD :</b> UFC Vision ne collecte ni ne traite aucune donnée personnelle directement identifiable (aucun compte utilisateur requis). Des outils anonymes de mesure d'audience peuvent être utilisés.",
-        "footer": "UFC Vision © 2026 — Tous droits réservés | Édité par Aura Dev"
+        # JURIDIQUE FR
+        "legal_page_title": "⚖️ Mentions Légales, Politique de Confidentialité & Gestion des Cookies",
+        "legal_sec1_title": "1. Éditeur du site & Mentions Légales",
+        "legal_sec2_title": "2. Hébergement & Infrastructure Cloud",
+        "legal_sec3_title": "3. Propriété Intellectuelle & Protection des Données",
+        "legal_sec4_title": "4. Politique de Confidentialité & Conformité RGPD",
+        "legal_sec5_title": "5. Avertissement IA & Non-Responsabilité Financière",
+        "legal_sec6_title": "6. Jeu Responsable & Protection des Mineurs (+18)",
+        "legal_sec7_title": "7. Indépendance de Marque",
+        "legal_sec8_title": "8. Régies Publicitaires & Monétisation",
+        "legal_publisher": "<b>Éditeur du site :</b> Le site UFC Vision (https://ufcvision.com) est édité par l'entreprise Aura Dev (SIRET : 10542993000016 — Dispositif de protection d'anonymat légal - Art. 6-III-2 de la Loi LCEN n° 2004-575). Contact : contact@auradev.fr",
+        "legal_hosting": "<b>Hébergement Cloud :</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, États-Unis | Site : https://www.digitalocean.com | Tél : +1 888-892-2732 | Support : support@digitalocean.com",
+        "legal_ip": "<b>Propriété Intellectuelle :</b> L'ensemble des modèles de Machine Learning (XGBoost V3), algorithmes, interfaces et code source sont la propriété exclusive d'Aura Dev. Toute aspiration automatisée de données (scraping) ou réutilisation commerciale est strictement interdite.",
+        "legal_privacy": "<b>Données Personnelles & Cookies :</b> UFC Vision ne requiert la création d'aucun compte et ne collecte aucune donnée nominative directe. Des outils de mesure d'audience (Google Tag Manager, Google Analytics 4) et des régies publicitaires tierces (Google AdSense) utilisent des cookies pour analyser le trafic et diffuser des annonces pertinentes.",
+        "legal_ads": "<b>Annonces Publicitaires :</b> Le site héberge des espaces publicitaires. Les régies partenaires traitent des données techniques d'affichage non identifiables pour adapter la pertinence des publicités.",
+        "disclaimer_ai": "<b>Avertissement IA :</b> UFC Vision est un outil d'aide à la décision. Les prédictions sont fournies à titre pur informatif. Aucun gain n'est garanti et Aura Dev décline toute responsabilité en cas de pertes liées à l'utilisation du service.",
+        "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictement interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Contactez Joueurs Info Service au 09 74 75 13 13.",
+        "disclaimer_trademark": "<b>Avertissement de Marque :</b> UFC Vision est un projet d'analyse indépendant édité par Aura Dev. Il n'est en aucun cas affilié, associé, autorisé, sponsorisé ou approuvé par l'UFC ou TKO Group Holdings.",
+        # COOKIES FR
+        "cookie_title": "Gestion des Cookies & Confidentialité",
+        "cookie_desc": "UFC Vision utilise des cookies pour le fonctionnement technique, la mesure d'audience anonyme (Google Analytics / GTM) et la diffusion de publicités pertinentes.",
+        "cookie_accept": "Tout Accepter",
+        "cookie_decline": "Essentiels Uniquement",
+        "footer": "UFC Vision © 2026 — Tous droits réservés | Édité par Aura Dev (SIRET : 10542993000016)"
     },
     "ES": {
         "page_title": "UFC Vision — Analítica de MMA de Alta Gama",
         "nav_past": "📜 Combates Anteriores",
         "nav_home": "🥊 UFC Vision",
         "nav_upcoming": "🔮 Próximos Combates",
+        "nav_legal": "⚖️ Aviso Legal y Privacidad",
+        "back_home": "← Volver al Inicio",
         "hero_subtitle": "El mejor bot de predicción de la UFC",
         "hero_description": "Diseñado para predecir el resultado de los próximos combates de la UFC, UFC Vision analiza más de 20 factores por pelea. Basándose en los datos de los últimos 10 años en la UFC, el algoritmo identifica qué marca la diferencia para definir un combate.",
         "stat_winrate_desc": "Tasa de victoria del bot (2015 - 2026)",
@@ -178,49 +212,60 @@ LANG_DATA = {
         "q3": "¿Qué significa un Índice de Confianza Elevado?",
         "a3": "Un índice de confianza elevado indica que la probabilidad calculada por la IA ofrece una ventaja estadística (Valor) respecto a la cuota publicada por el mercado.",
         "faq_contact": "¿Tienes más preguntas? No dudes en contactarnos en contact@auradev.fr",
-        # JURIDIQUE & DISCLAIMERS ES
-        "disclaimer_title": "⚖️ Avisos Legales y Exención de Responsabilidad",
-        "disclaimer_ai": "<b>Aviso de IA y Exención Financiera:</b> UFC Vision es una herramienta de soporte analítico basada en inteligencia artificial. Las predicciones e índices de confianza se proporcionan con fines meramente informativos y no constituyen asesoramiento financiero ni recomendación de apuestas. Ningún resultado está garantizado, y Aura Dev declina toda responsabilidad por pérdidas económicas.",
-        "disclaimer_gaming": "<b>Juego Responsable (+18):</b> Las apuestas deportivas están prohibidas para menores de edad. El juego conlleva riesgos de adicción y endeudamiento. Juegue con responsabilidad.",
-        "disclaimer_trademark": "<b>Aviso de Marca Registrada:</b> UFC Vision es un proyecto independiente de análisis de datos publicado por Aura Dev. No está de ninguna manera afiliado, asociado, autorizado, patrocinado ni respaldado por la UFC (Ultimate Fighting Championship) o TKO Group Holdings.",
-        "legal_publisher": "<b>Editor del sitio:</b> UFC Vision es un servicio editado por Salah Lebcir bajo la microempresa Aura Dev (Contacto: contact@auradev.fr).",
-        "legal_hosting": "<b>Alojamiento:</b> Plataforma de despliegue Streamlit Inc. (San Francisco, CA, EE. UU.) | Código alojado en GitHub Inc. (San Francisco, CA, EE. UU.).",
-        "legal_ip": "<b>Propiedad Intelectual y Scraping:</b> Todos los modelos de Machine Learning, algoritmos, diseños y código son propiedad exclusiva de Salah Lebcir (Aura Dev). Queda estrictamente prohibida cualquier extracción automatizada (scraping) o reproducción comercial.",
-        "legal_privacy": "<b>Privacidad de Datos y RGPD:</b> UFC Vision no recopila ni procesa datos personales identificables. Se pueden utilizar herramientas analíticas anónimas.",
-        "footer": "UFC Vision © 2026 — Todos los derechos reservados | Editado por Aura Dev"
+        # JURIDIQUE ES
+        "legal_page_title": "⚖️ Aviso Legal, Política de Privacidad y Cookies",
+        "legal_sec1_title": "1. Editor del sitio y Aviso Legal",
+        "legal_sec2_title": "2. Alojamiento e Infraestructura",
+        "legal_sec3_title": "3. Propiedad Intelectual y Scraping",
+        "legal_sec4_title": "4. Privacidad de Datos y Cumplimiento RGPD",
+        "legal_sec5_title": "5. Exención de Responsabilidad IA",
+        "legal_sec6_title": "6. Juego Responsable (+18)",
+        "legal_sec7_title": "7. Independencia de Marca",
+        "legal_sec8_title": "8. Redes Publicitarias",
+        "legal_publisher": "<b>Editor del sitio:</b> UFC Vision (https://ufcvision.com) es editado por Aura Dev (SIRET: 10542993000016 — Protección legal de anonimato Art. 6-III-2 Ley LCEN). Contacto: contact@auradev.fr",
+        "legal_hosting": "<b>Alojamiento Cloud:</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, EE. UU. | Web: https://www.digitalocean.com | Tel: +1 888-892-2732 | Contacto: support@digitalocean.com",
+        "legal_ip": "<b>Propiedad Intelectual:</b> Todos los modelos de Machine Learning (XGBoost V3), algoritmos y código son propiedad exclusiva de Aura Dev. Se prohíbe la extracción automatizada de datos (scraping).",
+        "legal_privacy": "<b>Privacidad y Cookies:</b> UFC Vision no requiere creación de cuenta. Utilizamos Google Tag Manager, Google Analytics 4 y redes publicitarias (Google AdSense) que pueden utilizar cookies para medir el tráfico.",
+        "legal_ads": "<b>Anuncios:</b> Este sitio web muestra publicidad programática y enlaces de afiliación para financiar la plataforma.",
+        "disclaimer_ai": "<b>Aviso de IA:</b> UFC Vision es una herramienta de soporte analítico. Las predicciones son informativas y no constituyen asesoramiento financiero ni recomendación de apuestas.",
+        "disclaimer_gaming": "<b>Juego Responsable (+18):</b> Las apuestas deportivas están prohibidas para menores. El juego conlleva riesgos de adicción y endeudamiento.",
+        "disclaimer_trademark": "<b>Aviso de Marca:</b> UFC Vision es un proyecto independiente editado por Aura Dev. No está afiliado ni respaldado por la UFC o TKO Group Holdings.",
+        # COOKIES ES
+        "cookie_title": "Preferencia de Cookies y Privacidad",
+        "cookie_desc": "UFC Vision utiliza cookies para el funcionamiento técnico, medición de audiencia anónima (Google Analytics / GTM) y anuncios adaptados.",
+        "cookie_accept": "Aceptar Todo",
+        "cookie_decline": "Solo Esenciales",
+        "footer": "UFC Vision © 2026 — Todos los derechos reservados | Editado por Aura Dev (SIRET: 10542993000016)"
     }
 }
 
 
 def render_clean_html(html_str):
-    """
-    Supprime tous les espaces d'indentation au début de chaque ligne HTML.
-    Évite rigoureusement que Markdown n'interprète la ligne comme un bloc de code (règle des 4 espaces).
-    """
+    """Supprime tous les espaces d'indentation au début de chaque ligne HTML."""
     cleaned = "\n".join(line.strip() for line in html_str.splitlines() if line.strip())
     st.markdown(cleaned, unsafe_allow_html=True)
 
 
-# 1. Configuration de la Page Streamlit (Étape 1 : Open Graph / Favicon & Titre)
+# 1. Configuration de la Page Streamlit (Open Graph / Favicon & Titre)
 st.set_page_config(
-    page_title="UFC Vision - Analytics & Prédictions MMA",
+    page_title="UFC Vision - MMA Analytics & Predictions",
     page_icon="🥊",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# 2. Design System "Aura Dev" Glassmorphism & Floating Pills CSS
+# 2. Design System "Aura Dev" CSS
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
     
-    /* 1. Masquer le header et la toolbar Streamlit */
+    /* Masquer le header et la toolbar Streamlit */
     [data-testid="stHeader"], header, #MainMenu, footer {
         display: none !important;
         visibility: hidden !important;
     }
 
-    /* 2. Annuler tout le rembourrage supérieur de la page */
+    /* Annuler tout le rembourrage supérieur de la page */
     [data-testid="stAppViewContainer"] > .main, 
     .main .block-container, 
     div[data-testid="stMainBlockContainer"] {
@@ -302,8 +347,8 @@ st.markdown("""
         box-shadow: 0 6px 16px rgba(210, 10, 10, 0.12) !important;
     }
 
-    /* CLASSES SPECIFIQUES POUR LES BULLES DE COMBAT ET SUMMARY (BLANC PUR #FFFFFF GARANTI) */
-    .fight-card-pure-white {
+    /* CLASSES SPECIFIQUES POUR LES BULLES BLANC PUR #FFFFFF */
+    .fight-card-pure-white, .summary-card-pure-white, .legal-card-pure-white {
         background-color: #FFFFFF !important;
         background: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
@@ -313,17 +358,7 @@ st.markdown("""
         box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
     }
 
-    .summary-card-pure-white {
-        background-color: #FFFFFF !important;
-        background: #FFFFFF !important;
-        border: 1px solid #E2E8F0 !important;
-        border-radius: 24px !important;
-        padding: 24px !important;
-        margin-bottom: 24px !important;
-        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
-    }
-
-    /* ACCORDÉONS JURIDIQUES ET FAQ HAUTE QUALITÉ */
+    /* ACCORDÉONS HAUTE QUALITÉ */
     details.aura-accordion {
         background-color: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
@@ -372,7 +407,7 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
 
-    /* Action Signal Pills (Prochains combats) */
+    /* Action Signal Pills */
     .signal-pill-rec {
         background-color: #ECFDF5 !important;
         border: 1px solid #A7F3D0 !important;
@@ -417,7 +452,7 @@ st.markdown("""
         margin-top: 0.8rem;
     }
 
-    /* Result Pills (Combats passés) */
+    /* Result Pills */
     .result-pill-win {
         background-color: #ECFDF5 !important;
         border: 1px solid #A7F3D0 !important;
@@ -458,7 +493,6 @@ st.markdown("""
         margin: 4.5rem auto 2.5rem auto !important;
     }
 
-    /* Stat Cards (Bulles Blanc Pur Côtes à Côtes) */
     .stat-pill {
         background: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
@@ -485,8 +519,7 @@ st.markdown("""
 
     .footer-aura {
         text-align: center;
-        padding: 4rem 0 2.5rem 0;
-        margin-top: 4rem !important;
+        padding: 2rem 0 2.5rem 0;
         color: #94A3B8;
         font-size: 0.85rem;
         font-weight: 500;
@@ -495,7 +528,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # =========================================================================
-# FONCTIONS DE CACHING STREAMLIT HAUTE PERFORMANCE (NAV INSTANTANÉE)
+# FONCTIONS DE CACHING STREAMLIT HAUTE PERFORMANCE
 # =========================================================================
 
 @st.cache_resource
@@ -506,19 +539,19 @@ def load_all_models_and_data():
 
 @st.cache_data(ttl=7200)
 def get_cached_odds_data():
-    """Mise en cache 2h des cotes The Odds API (Protège le quota de 500 requêtes/mois)."""
+    """Mise en cache 2h des cotes The Odds API."""
     return get_cached_or_fresh_odds()
 
 
 @st.cache_resource
 def get_cached_tracker_data(events, _raw_df, _model, _medians, _all_fighters):
-    """Mise en cache du tracker d'historique et des prédictions des cartes passées & futures."""
+    """Mise en cache du tracker d'historique."""
     return sync_historical_tracker(events, _raw_df, _model, _medians, _all_fighters)
 
 
 @st.cache_resource
 def get_cached_dynamic_states(_raw_df):
-    """Mise en cache du calcul des ELOs et streaks sur les 8,784 combats de l'historique."""
+    """Mise en cache du calcul des ELOs."""
     return compute_fighter_dynamic_states_v3(_raw_df)
 
 
@@ -591,7 +624,7 @@ def main():
     if "current_page" not in st.session_state:
         st.session_state["current_page"] = "home"
 
-    # Chargement Backend Intact Optimisé via Streamlit Cache (0 appel API supplémentaire)
+    # Chargement Backend Intact
     events, from_cache, age_hours = get_cached_odds_data()
     odds_age_mins = max(1, int(age_hours * 60))
 
@@ -604,7 +637,7 @@ def main():
     upcoming_cards, past_cards, fin_summary = get_cached_tracker_data(events, raw_df, model, medians, all_fighters)
     elo_dict, history_dict, win_streak_dict, loss_streak_dict, latest_rank_dict = get_cached_dynamic_states(raw_df)
 
-    # 🏛️ BANDEAU DE NAVIGATION PARFAITEMENT CENTRÉ AU MILIEU EXACT DU SITE (CONTENEUR ISOLÉ)
+    # 🏛️ BANDEAU DE NAVIGATION PARFAITEMENT CENTRÉ AU MILIEU EXACT DU SITE (STRICTEMENT 3 BOUTONS)
     c_pad_l, c_nav_box, c_pad_r = st.columns([0.7, 2.6, 0.7])
 
     with c_nav_box:
@@ -698,12 +731,11 @@ def main():
         """)
 
     # =========================================================================
-    # PAGE 2 : 🔮 COMBATS FUTURS (BULLES BLANC PUR EN PURE HTML TRADUITES)
+    # PAGE 2 : 🔮 COMBATS FUTURS
     # =========================================================================
     elif page == "upcoming":
         st.markdown(f"### {t['upcoming_title']}")
 
-        # Badge de fraîcheur des cotes
         render_clean_html(f"""
         <div style="margin-bottom: 1rem; font-size: 0.85rem; font-weight: 600; color: #64748B;">
             {t['odds_freshness'].format(mins=odds_age_mins)}
@@ -741,14 +773,12 @@ def main():
                 has_full_data = bool(name_a and name_b and profile_a is not None and profile_b is not None)
                 has_valid_odds = bool(odds_a and odds_b and odds_a > 1.0 and odds_b > 1.0)
 
-                # Badge Main Event / Co-Main Event
                 badge_html = ""
                 if fight_label == "MAIN EVENT":
                     badge_html = '<span class="pill-main-red">🔥 MAIN EVENT</span>'
                 elif fight_label == "CO-MAIN EVENT":
                     badge_html = '<span class="pill-comain-dark">⭐ CO-MAIN EVENT</span>'
 
-                # CAS 1 : DONNÉES INSUFFISANTES
                 if not has_full_data:
                     signal_html = f'<div class="signal-pill-none">{t["insufficient_data"]}</div>'
                     html_card = f"""<div class="fight-card-pure-white">
@@ -759,7 +789,6 @@ def main():
                     render_clean_html(html_card)
                     continue
 
-                # CALCUL IA V3 (Intact)
                 try:
                     delta_dict = {}
                     for stat in STAT_COLS_V1:
@@ -788,7 +817,6 @@ def main():
                     pct_a = prob_a_win * 100.0
                     pct_b = prob_b_loss * 100.0
 
-                    # CAS 2 : COTES EN ATTENTE
                     if not has_valid_odds:
                         signal_html = f'<div class="signal-pill-wait">{t["odds_pending"]}</div>'
                         html_card = f"""<div class="fight-card-pure-white">
@@ -817,7 +845,6 @@ def main():
                         render_clean_html(html_card)
                         continue
 
-                    # CAS 3 : COTES DISPONIBLES ET BADGES D'ANALYSE NEUTRE
                     ev_a = (prob_a_win * odds_a) - 1.0
                     ev_b = (prob_b_loss * odds_b) - 1.0
                     best_ev = max(ev_a, ev_b)
@@ -857,7 +884,7 @@ def main():
                     st.error(f"Render Error : {ex}")
 
     # =========================================================================
-    # PAGE 3 : 📜 COMBATS ANTÉRIEURS (BULLES BLANC PUR EN PURE HTML TRADUITES)
+    # PAGE 3 : 📜 COMBATS ANTÉRIEURS
     # =========================================================================
     elif page == "past":
         st.markdown(f"### {t['past_title']}")
@@ -869,7 +896,6 @@ def main():
         v_count = fin_summary.get("value_bets_count", 0)
         v_won = fin_summary.get("value_bets_won", 0)
 
-        # Carte de Bilan Financier en Pure HTML Blanc Pur
         html_summary_card = f"""<div class="summary-card-pure-white">
 <div style="display: flex; gap: 16px; text-align: center;">
 <div style="flex: 1;">
@@ -929,14 +955,12 @@ def main():
                 ev_b_val = fight.get("ev_b")
                 max_ev_val = fight.get("max_ev_pct")
 
-                # Badge Main Event / Co-Main Event
                 badge_html = ""
                 if flabel == "MAIN EVENT":
                     badge_html = '<span class="pill-main-red">🔥 MAIN EVENT</span>'
                 elif flabel == "CO-MAIN EVENT":
                     badge_html = '<span class="pill-comain-dark">⭐ CO-MAIN EVENT</span>'
 
-                # Probabilités et Cotes (si disponibles)
                 metrics_html = ""
                 if pct_a is not None and pct_b is not None:
                     odds_a_str = f"Odds: {fight.get('odds_a', 0.0):.2f}" if fight.get('odds_a') else "Odds: N/A"
@@ -960,7 +984,6 @@ def main():
 </div>
 </div>"""
 
-                # Pavé de Résultat Personnalisé Traduit
                 if is_vb and res_status == "WIN":
                     res_html = f'<div class="result-pill-win">{t["won_pill"].format(gain=f"{net_gain:.2f}", fighter=bet_f, odds=f"{b_odds:.2f}", winner=winner)}</div>'
                 elif is_vb and res_status == "LOSS":
@@ -984,27 +1007,96 @@ def main():
 </div>"""
                 render_clean_html(html_past_card)
 
-    # FOOTER & SECTIONS JURIDIQUES AURA DEV
+    # =========================================================================
+    # PAGE 4 : ⚖️ MENTIONS LÉGALES & CONFIDENTIALITÉ (PAGE DÉDIÉE)
+    # =========================================================================
+    elif page == "legal":
+        if st.button(t["back_home"], key="btn_back_home_top"):
+            st.session_state["current_page"] = "home"
+            st.rerun()
+
+        st.markdown(f"### {t['legal_page_title']}")
+
+        render_clean_html(f"""
+        <div class="legal-card-pure-white">
+            <h4 style="color: #0F172A; margin-top: 0;">{t['legal_sec1_title']}</h4>
+            <p>{t['legal_publisher']}</p>
+            
+            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec2_title']}</h4>
+            <p>{t['legal_hosting']}</p>
+            
+            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec3_title']}</h4>
+            <p>{t['legal_ip']}</p>
+            
+            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec4_title']}</h4>
+            <p>{t['legal_privacy']}</p>
+            
+            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec5_title']}</h4>
+            <p>{t['disclaimer_ai']}</p>
+            
+            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec6_title']}</h4>
+            <p>{t['disclaimer_gaming']}</p>
+            
+            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec7_title']}</h4>
+            <p>{t['disclaimer_trademark']}</p>
+            
+            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec8_title']}</h4>
+            <p>{t['legal_ads']}</p>
+            
+            <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 20px 0;">
+            <p style="font-weight: 600; color: #D20A0A;">{t['bug_contact']}</p>
+        </div>
+        """)
+
+        if st.button(t["back_home"], key="btn_back_home_bottom"):
+            st.session_state["current_page"] = "home"
+            st.rerun()
+
+    # =========================================================================
+    # FOOTER COMMON (BOUTON MENTIONS LÉGALES TOUT EN BAS & FOOTER)
+    # =========================================================================
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    c_f1, c_f2, c_f3 = st.columns([1, 2, 1])
+    with c_f2:
+        if st.button(t["nav_legal"], key="btn_footer_legal_link", use_container_width=True):
+            st.session_state["current_page"] = "legal"
+            st.rerun()
+
     render_clean_html(f"""
-    <div style="margin-top: 5rem;">
-        <details class="aura-accordion">
-            <summary>{t['disclaimer_title']}</summary>
-            <div style="padding-top: 10px;">
-                <p style="margin-bottom: 10px;">{t['disclaimer_ai']}</p>
-                <p style="margin-bottom: 10px;">{t['disclaimer_gaming']}</p>
-                <p style="margin-bottom: 10px;">{t['disclaimer_trademark']}</p>
-                <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 12px 0;">
-                <p style="margin-bottom: 8px;">{t['legal_publisher']}</p>
-                <p style="margin-bottom: 8px;">{t['legal_hosting']}</p>
-                <p style="margin-bottom: 8px;">{t['legal_ip']}</p>
-                <p style="margin-bottom: 8px;">{t['legal_privacy']}</p>
-                <p style="margin-top: 12px; font-weight: 600; color: #D20A0A;">{t['bug_contact']}</p>
+    <div class="footer-aura">
+        {t['footer']}
+    </div>
+    """)
+
+    # =========================================================================
+    # 🍪 VRAI POP-UP DE COOKIES MODAL CENTRÉ AVEC MÉMOIRE LOCALSTORAGE
+    # =========================================================================
+    render_clean_html(f"""
+    <div id="cookie-modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(4px); z-index: 9999999; align-items: center; justify-content: center; padding: 20px;">
+        <div style="background: #FFFFFF; border-radius: 28px; border: 1px solid #E2E8F0; max-width: 500px; width: 100%; padding: 30px; text-align: center; box-shadow: 0 25px 60px rgba(0,0,0,0.3);">
+            <div style="font-size: 2.4rem; margin-bottom: 8px;">🍪</div>
+            <h3 style="font-size: 1.3rem; font-weight: 800; color: #0F172A; margin: 0 0 12px 0;">{t['cookie_title']}</h3>
+            <p style="font-size: 0.92rem; color: #475569; line-height: 1.55; margin-bottom: 24px;">{t['cookie_desc']}</p>
+            <div style="display: flex; gap: 12px; justify-content: center;">
+                <button onclick="saveCookieChoice('declined')" style="flex: 1; background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; border-radius: 9999px; padding: 12px 16px; font-weight: 700; cursor: pointer; font-size: 0.85rem;">{t['cookie_decline']}</button>
+                <button onclick="saveCookieChoice('accepted')" style="flex: 1; background: #D20A0A; color: #FFFFFF; border: none; border-radius: 9999px; padding: 12px 16px; font-weight: 700; cursor: pointer; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(210, 10, 10, 0.25);">{t['cookie_accept']}</button>
             </div>
-        </details>
-        <div class="footer-aura">
-            {t['footer']}
         </div>
     </div>
+
+    <script>
+        function checkCookieConsent() {{
+            var consent = localStorage.getItem('ufcvision_cookie_consent_v1');
+            if (!consent) {{
+                document.getElementById('cookie-modal-overlay').style.display = 'flex';
+            }}
+        }}
+        function saveCookieChoice(choice) {{
+            localStorage.setItem('ufcvision_cookie_consent_v1', choice);
+            document.getElementById('cookie-modal-overlay').style.display = 'none';
+        }}
+        setTimeout(checkCookieConsent, 200);
+    </script>
     """)
 
 
