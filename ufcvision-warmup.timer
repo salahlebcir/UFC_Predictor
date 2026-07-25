@@ -1,0 +1,10 @@
+[Unit]
+Description=Run UFC Vision Cache Warm-up every 1h30 (90 minutes)
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=90min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

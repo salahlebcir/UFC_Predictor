@@ -55,6 +55,17 @@ def check_and_prepare_resources():
     print("-" * 70)
 
 
+def warmup_cache():
+    """Exécute le chauffage initial du cache avant le lancement de Streamlit."""
+    print("\n   [🔥] Exécution du chauffage de cache initial (Odds API & Tracker)...")
+    warmup_script = os.path.join(PROJECT_ROOT, "warmup.py")
+    if os.path.exists(warmup_script):
+        try:
+            subprocess.run([sys.executable, warmup_script], check=False)
+        except Exception as e:
+            print(f"   [!] Avertissement lors du chauffage de cache : {e}")
+
+
 def launch_streamlit_app():
     """Lance le Dashboard Streamlit (app.py)."""
     print("\n   [🚀] Lancement du Dashboard Web Streamlit (http://localhost:8501)...")
@@ -71,6 +82,7 @@ def launch_streamlit_app():
 
 def main():
     check_and_prepare_resources()
+    warmup_cache()
     launch_streamlit_app()
 
 
