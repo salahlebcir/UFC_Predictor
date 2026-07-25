@@ -4,8 +4,8 @@ Exécute en arrière-plan le rafraîchissement autonome de The Odds API,
 la synchronisation de l'historique et le chauffage de l'application Streamlit.
 
 Usage :
-    python warmup.py            # Mode exécution unique (Idéal pour Cron Job toutes les 1h30)
-    python warmup.py --daemon   # Mode démon permanent (Boucle infinie toutes les 90 minutes)
+    python warmup.py            # Mode exécution unique (Idéal pour Cron Job toutes les 2h)
+    python warmup.py --daemon   # Mode démon permanent (Boucle infinie toutes les 2h / 7200s)
     python warmup.py --port 8501 # Spécifier le port de l'application Streamlit
 """
 
@@ -35,10 +35,10 @@ except ImportError:
     from historical_tracker import sync_historical_tracker
 
 
-def run_cache_warmup(port=8501):
+def run_cache_warmup(port=8501, force_refresh=False):
     """
     Exécute le cycle complet de chauffage de cache :
-    1. Force le rafraîchissement de The Odds API et sauvegarde data/odds_cache.json
+    1. Contrôle du cache The Odds API (TTL 2h strict, max 360 requêtes/mois sur le quota de 500)
     2. Récupère le modèle XGBoost V3 et les données dynamiques
     3. Synchronise le tracker d'historique et sauvegarde data/historical_tracker.json
     4. Effectue une requête HTTP vers Streamlit (http://localhost:port) pour pré-charger les caches en mémoire
@@ -48,12 +48,15 @@ def run_cache_warmup(port=8501):
     print(f" 🚀 UFC VISION — CHAUFFAGE DE CACHE EN ARRIÈRE-PLAN [{now_str}]")
     print("=" * 75)
 
-    # 1. Chauffage The Odds API (force_refresh=True)
-    print("\n [1/4] 🔄 Rafraîchissement autonome des cotes (The Odds API)...")
+    # 1. Chauffage des Cotes (TTL 2h strict)
+    print("\n [1/4] 🔄 Contrôle et rafraîchissement des cotes (The Odds API)...")
     try:
-        events, from_cache, age_hours = get_cached_or_fresh_odds(force_refresh=True)
+        events, from_cache, age_hours = get_cached_or_fresh_odds(force_refresh=force_refresh)
         event_count = len(events) if events else 0
-        print(f"   [✓] Cotes actualisées avec succès : {event_count} événements enregistrés dans data/odds_cache.json.")
+        if from_cache:
+            print(f"   [✓] Cache local valide (Âge : {age_hours:.2f}h < 2h). 0 appel API consommé.")
+        else:
+            print(f"   [✓] Cotes actualisées via The Odds API (1 appel API effectué) : {event_count} événements enregistrés.")
     except Exception as e:
         print(f"   [!] Erreur lors du rafraîchissement des cotes : {e}")
         events = None
@@ -101,22 +104,23 @@ def run_cache_warmup(port=8501):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Chauffage de cache autonome pour UFC Vision")
-    parser.add_argument("--daemon", action="store_true", help="Exécuter en mode démon permanent (toutes les 90 min)")
-    parser.add_argument("--interval", type=int, default=5400, help="Intervalle entre les rafraîchissements en secondes (Défaut: 5400s / 1h30)")
+    parser = argparse.ArgumentParser(description="Chauffage de cache autonome pour UFC Vision (Limit strict 2h / Max 360 requêtes par mois)")
+    parser.add_argument("--daemon", action="store_true", help="Exécuter en mode démon permanent (toutes les 2h / 7200s)")
+    parser.add_argument("--force", action="store_true", help="Forcer le rafraîchissement des cotes même si le cache a moins de 2h")
+    parser.add_argument("--interval", type=int, default=7200, help="Intervalle entre les rafraîchissements en secondes (Défaut: 7200s / 2h)")
     parser.add_argument("--port", type=int, default=8501, help="Port local du serveur Streamlit (Défaut: 8501)")
     args = parser.parse_args()
 
     if args.daemon:
-        print(f"🟢 Mode Démon Actif — Exécution de warmup.py toutes les {args.interval // 60} minutes.")
+        print(f"🟢 Mode Démon Actif — Exécution de warmup.py toutes les {args.interval // 3600} heures ({args.interval}s).")
         while True:
             try:
-                run_cache_warmup(port=args.port)
+                run_cache_warmup(port=args.port, force_refresh=args.force)
             except Exception as err:
                 print(f"[!] Erreur inattendue dans la boucle du démon : {err}")
             time.sleep(args.interval)
     else:
-        run_cache_warmup(port=args.port)
+        run_cache_warmup(port=args.port, force_refresh=args.force)
 
 
 if __name__ == "__main__":

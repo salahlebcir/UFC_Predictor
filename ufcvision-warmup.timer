@@ -1,9 +1,9 @@
 [Unit]
-Description=Run UFC Vision Cache Warm-up every 1h30 (90 minutes)
+Description=Run UFC Vision Cache Warm-up strictly every 2 hours (120 minutes - max 360 calls/month)
 
 [Timer]
 OnBootSec=2min
-OnUnitActiveSec=90min
+OnUnitActiveSec=2h
 Persistent=true
 
 [Install]

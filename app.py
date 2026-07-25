@@ -84,7 +84,7 @@ LANG_DATA = {
         "lost_pill": "🔴 LOST (-10.00 €) — Bet placed on {fighter} (Odds: {odds}). Winner: {winner}.",
         "no_bet_eval": "⚪ NO BET — No Value Bet (EV max: {ev}%)",
         "no_bet_desc": "Avoided bet: Insufficient value. Winner: {winner}.",
-        "odds_freshness": "⚡ Odds updated {mins} mins ago",
+        "odds_freshness": "⚡ Odds updated {mins} mins ago from The Odds API",
         "bug_contact": "✉️ Found a bug or have a question? contact@auradev.fr",
         # FAQ EN
         "faq_title": "❓ Frequently Asked Questions (FAQ)",
@@ -150,7 +150,7 @@ LANG_DATA = {
         "lost_pill": "🔴 PERDU (-10.00 €) — Pari engagé sur {fighter} (Cote : {odds}). Vainqueur : {winner}.",
         "no_bet_eval": "⚪ NO BET — Pas de Value Bet (EV max : {ev}%)",
         "no_bet_desc": "Pari évité : Valeur insuffisante. Vainqueur : {winner}.",
-        "odds_freshness": "⚡ Cotes actualisées il y a {mins} min",
+        "odds_freshness": "⚡ Cotes actualisées il y a {mins} min via The Odds API",
         "bug_contact": "✉️ Une question ou une erreur à signaler ? contact@auradev.fr",
         # FAQ FR
         "faq_title": "❓ Foire Aux Questions (FAQ)",
@@ -216,7 +216,7 @@ LANG_DATA = {
         "lost_pill": "🔴 PERDIDO (-10.00 €) — Apuesta realizada en {fighter} (Cuota: {odds}). Ganador: {winner}.",
         "no_bet_eval": "⚪ NO BET — Sin Value Bet (EV máx: {ev}%)",
         "no_bet_desc": "Apuesta evitada: Valor insuficiente. Ganador: {winner}.",
-        "odds_freshness": "⚡ Cuotas actualizadas hace {mins} min",
+        "odds_freshness": "⚡ Cuotas actualizadas hace {mins} min via The Odds API",
         "bug_contact": "✉️ ¿Tienes alguna duda o error que reportar? contact@auradev.fr",
         # FAQ ES
         "faq_title": "❓ Preguntas Frecuentes (FAQ)",
