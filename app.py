@@ -53,6 +53,14 @@ def get_logo_data_url():
             pass
     return "https://ufcvision.com/logo.jpg"
 
+# Helper pour récupérer l'URL de l'image Open Graph avec Cache-Busting automatique (mtime)
+def get_og_image_url():
+    og_path = os.path.join(project_root, "og-image.jpg")
+    if os.path.exists(og_path):
+        mtime = int(os.path.getmtime(og_path))
+        return f"https://ufcvision.com/og-image.jpg?v={mtime}"
+    return "https://ufcvision.com/og-image.jpg?v=1"
+
 # DICTIONNAIRE CENTRALISÉ DE TRADUCTIONS ET TEXTES JURIDIQUES / FAQ (EN / FR / ES)
 LANG_DATA = {
     "EN": {
@@ -298,7 +306,7 @@ st.markdown(f"""
     
     html, body, [class*="css"] {{
         font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-        color: #0F172A;
+        color: #1E293B;
     }}
     
     /* Fond général du site : GRIS CLAIR #F1F5F9 */
@@ -385,10 +393,10 @@ st.markdown(f"""
     }}
 
     .stButton > button:hover {{
-        border-color: #D20A0A !important;
-        color: #D20A0A !important;
+        border-color: #3D3EEA !important;
+        color: #3D3EEA !important;
         transform: translateY(-1px) !important;
-        box-shadow: 0 6px 16px rgba(210, 10, 10, 0.12) !important;
+        box-shadow: 0 6px 16px rgba(61, 62, 234, 0.12) !important;
     }}
 
     /* Intégration du Logo dans la pilule de navigation centrale (UFC Vision) */
@@ -425,7 +433,7 @@ st.markdown(f"""
 
     details.aura-accordion summary {{
         font-weight: 800 !important;
-        color: #0F172A !important;
+        color: #1E293B !important;
         cursor: pointer !important;
         font-size: 0.98rem !important;
         outline: none !important;
@@ -561,7 +569,7 @@ st.markdown(f"""
         font-size: 3.2rem;
         font-weight: 900;
         letter-spacing: -0.04em;
-        color: #D20A0A;
+        color: #3D3EEA;
         line-height: 1;
         margin-bottom: 0.5rem;
     }}
@@ -702,6 +710,38 @@ def main():
     if "current_page" not in st.session_state:
         st.session_state["current_page"] = "home"
 
+    # 🖼️ INJECTION DES BALISES META OPEN GRAPH DYNAMIQUES AVEC CACHE-BUSTING AUTOMATIQUE (?v=timestamp)
+    og_img_url = get_og_image_url()
+    st.components.v1.html(f"""
+    <script>
+    try {{
+        const doc = window.parent.document;
+        const metaTags = [
+            {{ property: 'og:title', content: 'UFC Vision — MMA Analytics & Predictions' }},
+            {{ property: 'og:description', content: 'Premier UFC Prediction Bot powered by XGBoost V3.' }},
+            {{ property: 'og:image', content: '{og_img_url}' }},
+            {{ property: 'og:url', content: 'https://ufcvision.com' }},
+            {{ property: 'og:type', content: 'website' }},
+            {{ name: 'twitter:card', content: 'summary_large_image' }},
+            {{ name: 'twitter:title', content: 'UFC Vision — MMA Analytics & Predictions' }},
+            {{ name: 'twitter:description', content: 'Premier UFC Prediction Bot powered by XGBoost V3.' }},
+            {{ name: 'twitter:image', content: '{og_img_url}' }}
+        ];
+        metaTags.forEach(t => {{
+            let attr = t.property ? 'property' : 'name';
+            let val = t.property || t.name;
+            let elem = doc.querySelector(`meta[${{attr}}="${{val}}"]`);
+            if (!elem) {{
+                elem = doc.createElement('meta');
+                elem.setAttribute(attr, val);
+                doc.head.appendChild(elem);
+            }}
+            elem.setAttribute('content', t.content);
+        }});
+    }} catch(e) {{}}
+    </script>
+    """, height=0, width=0)
+
     # 🍪 SÉCURISATION & PERSISTANCE DU CONSENTEMENT COOKIE (QUERY PARAMS + LOCALSTORAGE)
     if "cookie_consent" in st.query_params:
         st.session_state["cookie_consent"] = st.query_params["cookie_consent"]
@@ -777,8 +817,8 @@ def main():
     st.markdown(f"""
     <style>
         div[data-testid="stColumn"]:has(button[key="{active_btn_key}"]) button {{
-            border-color: #D20A0A !important;
-            box-shadow: 0 4px 14px rgba(210, 10, 10, 0.18) !important;
+            border-color: #3D3EEA !important;
+            box-shadow: 0 4px 14px rgba(61, 62, 234, 0.18) !important;
             font-weight: 800 !important;
         }}
     </style>
@@ -835,7 +875,7 @@ def main():
                     <p style="margin-bottom: 12px;"><b>{t['q1']}</b><br>{t['a1']}</p>
                     <p style="margin-bottom: 12px;"><b>{t['q2']}</b><br>{t['a2']}</p>
                     <p style="margin-bottom: 12px;"><b>{t['q3']}</b><br>{t['a3']}</p>
-                    <p style="margin-top: 14px; font-weight: 600; color: #D20A0A;">{t['faq_contact']}</p>
+                    <p style="margin-top: 14px; font-weight: 600; color: #3D3EEA;">{t['faq_contact']}</p>
                 </div>
             </details>
         </div>

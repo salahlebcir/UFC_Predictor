@@ -1,8 +1,8 @@
 [theme]
-primaryColor = "#D20A0A"
+primaryColor = "#3D3EEA"
 backgroundColor = "#F1F5F9"          # Fond global du site (Gris clair net)
 secondaryBackgroundColor = "#FFFFFF" # Fond natif des conteneurs/bulles st.container() (Blanc pur)
-textColor = "#0F172A"                # Couleur du texte (Noir/Slate très sombre)
+textColor = "#1E293B"                # Couleur du texte (Gris foncé)
 font = "sans serif"
 
 [server]
