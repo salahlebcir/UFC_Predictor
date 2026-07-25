@@ -323,6 +323,17 @@ st.markdown(f"""
         box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18) !important;
     }}
 
+    /* MASQUER STRICTEMENT LA CROIX DE FERMETURE DU POP-UP COOKIE (@st.dialog) */
+    div[data-testid="stDialog"] button[aria-label="Close"],
+    div[data-testid="stDialog"] button[data-testid="stDialogCloseButton"],
+    div[role="dialog"] button[aria-label="Close"],
+    div[data-testid="stDialog"] header button,
+    div[data-testid="stDialog"] [data-testid="stBaseButton-headerNoPadding"] {{
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }}
+
     /* MINI-PILULE DE LANGUE FIXÉE STRICTEMENT AU COIN SUPÉRIEUR DROIT */
     div[data-testid="stSelectbox"]:has(*[aria-label="lang_select_hidden"]) {{
         position: fixed !important;
@@ -585,10 +596,12 @@ def show_cookie_dialog(t):
     with col_dec:
         if st.button(t["cookie_decline"], key="dlg_btn_decline", use_container_width=True):
             st.session_state["cookie_consent"] = "declined"
+            st.query_params["cookie_consent"] = "declined"
             st.rerun()
     with col_acc:
         if st.button(t["cookie_accept"], key="dlg_btn_accept", use_container_width=True):
             st.session_state["cookie_consent"] = "accepted"
+            st.query_params["cookie_consent"] = "accepted"
             st.rerun()
 
 
@@ -689,7 +702,32 @@ def main():
     if "current_page" not in st.session_state:
         st.session_state["current_page"] = "home"
 
-    # 🍪 DECLENCHEMENT POP-UP DIALOG COOKIES NATIVE AU CHARGEMENT INITIAL DU SITE
+    # 🍪 SÉCURISATION & PERSISTANCE DU CONSENTEMENT COOKIE (QUERY PARAMS + LOCALSTORAGE)
+    if "cookie_consent" in st.query_params:
+        st.session_state["cookie_consent"] = st.query_params["cookie_consent"]
+
+    # Script JS de persistance localStorage pour préserver le choix lors de la réactualisation F5
+    st.components.v1.html("""
+    <script>
+    try {
+        const parentWin = window.parent;
+        const urlParams = new URLSearchParams(parentWin.location.search);
+        const consent = urlParams.get('cookie_consent');
+        if (consent) {
+            parentWin.localStorage.setItem('ufc_cookie_consent', consent);
+        } else {
+            const saved = parentWin.localStorage.getItem('ufc_cookie_consent');
+            if (saved) {
+                const url = new URL(parentWin.location.href);
+                url.searchParams.set('cookie_consent', saved);
+                parentWin.location.replace(url.toString());
+            }
+        }
+    } catch(e) {}
+    </script>
+    """, height=0, width=0)
+
+    # DECLENCHEMENT POP-UP DIALOG COOKIES NATIVE SI PAS ENCORE DE CONSENTEMENT ENREGISTRÉ
     if "cookie_consent" not in st.session_state:
         show_cookie_dialog(t)
 
