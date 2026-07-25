@@ -101,8 +101,9 @@ LANG_DATA = {
         "disclaimer_gaming": "<b>Responsible Gaming (+18):</b> Sports betting is strictly prohibited for minors. Gambling involves financial debt, isolation, and addiction risks. Please gamble responsibly.",
         "disclaimer_trademark": "<b>Trademark Notice:</b> UFC Vision is an independent analytics project published by Aura Dev. It is in no way affiliated with, associated with, authorized, sponsored, or endorsed by UFC (Ultimate Fighting Championship) or TKO Group Holdings.",
         # COOKIES EN
+        "cookie_dialog_title": "🍪 Cookie Preferences & Privacy",
         "cookie_title": "Cookie & Privacy Preferences",
-        "cookie_desc": "UFC Vision uses cookies for essential technical functions, anonymous traffic analytics (Google Analytics / GTM), and tailored advertising.",
+        "cookie_desc": "UFC Vision uses essential technical cookies, anonymous audience analytics (Google Analytics / GTM), and advertising cookies to keep the service free.",
         "cookie_accept": "Accept All Cookies",
         "cookie_decline": "Essential Only",
         "footer": "UFC Vision © 2026 — All Rights Reserved | Published by Aura Dev (SIRET: 10542993000016)"
@@ -159,15 +160,16 @@ LANG_DATA = {
         "legal_sec8_title": "8. Régies Publicitaires & Monétisation",
         "legal_publisher": "<b>Éditeur du site :</b> Le site UFC Vision (https://ufcvision.com) est édité par l'entreprise Aura Dev (SIRET : 10542993000016 — Dispositif de protection d'anonymat légal - Art. 6-III-2 de la Loi LCEN n° 2004-575). Contact : contact@auradev.fr",
         "legal_hosting": "<b>Hébergement Cloud :</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, États-Unis | Site : https://www.digitalocean.com | Tél : +1 888-892-2732 | Support : support@digitalocean.com",
-        "legal_ip": "<b>Propriété Intellectuelle :</b> L'ensemble des modèles de Machine Learning (XGBoost V3), algorithmes, interfaces et code source sont la propriété exclusive d'Aura Dev. Toute aspiration automatisée de données (scraping) ou réutilisation commerciale est strictement interdite.",
+        "legal_ip": "<b>Propriété Intellectuelle :</b> L'ensemble des modèles de Machine Learning (XGBoost V3), algorithmes, interfaces et code source sont la propriété exclusive d'Aura Dev. Toute aspiration automatisée de données (scraping) ou réutilisation commerciale est strictly interdite.",
         "legal_privacy": "<b>Données Personnelles & Cookies :</b> UFC Vision ne requiert la création d'aucun compte et ne collecte aucune donnée nominative directe. Des outils de mesure d'audience (Google Tag Manager, Google Analytics 4) et des régies publicitaires tierces (Google AdSense) utilisent des cookies pour analyser le trafic et diffuser des annonces pertinentes.",
         "legal_ads": "<b>Annonces Publicitaires :</b> Le site héberge des espaces publicitaires. Les régies partenaires traitent des données techniques d'affichage non identifiables pour adapter la pertinence des publicités.",
         "disclaimer_ai": "<b>Avertissement IA :</b> UFC Vision est un outil d'aide à la décision. Les prédictions sont fournies à titre pur informatif. Aucun gain n'est garanti et Aura Dev décline toute responsabilité en cas de pertes liées à l'utilisation du service.",
         "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictement interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Contactez Joueurs Info Service au 09 74 75 13 13.",
         "disclaimer_trademark": "<b>Avertissement de Marque :</b> UFC Vision est un projet d'analyse indépendant édité par Aura Dev. Il n'est en aucun cas affilié, associé, autorisé, sponsorisé ou approuvé par l'UFC ou TKO Group Holdings.",
         # COOKIES FR
+        "cookie_dialog_title": "🍪 Préférences des Cookies",
         "cookie_title": "Gestion des Cookies & Confidentialité",
-        "cookie_desc": "UFC Vision utilise des cookies pour le fonctionnement technique, la mesure d'audience anonyme (Google Analytics / GTM) et la diffusion de publicités pertinentes.",
+        "cookie_desc": "UFC Vision utilise des cookies techniques, de mesure d'audience anonyme (Google Analytics / GTM) et publicitaires pour maintenir le service gratuit.",
         "cookie_accept": "Tout Accepter",
         "cookie_decline": "Essentiels Uniquement",
         "footer": "UFC Vision © 2026 — Tous droits réservés | Édité par Aura Dev (SIRET : 10542993000016)"
@@ -185,10 +187,10 @@ LANG_DATA = {
         "stat_roi_desc": "ROI del bot (2015 - 2026)",
         "upcoming_title": "🔮 Predicciones de Próximos Eventos UFC",
         "select_upcoming_card": "Seleccione una cartelera de la UFC:",
-        "insufficient_data": "🔘 DATOS INSUFICIENTES — Historial de UFC incompleto.",
+        "insufficient_data": "🔘 DATOS INSUFFICIENTES — Historial de UFC incompleto.",
         "odds_pending": "⏳ CUOTAS PENDIENTES — Esperando cuotas oficiales.",
         "high_confidence": "🟢 ÍNDICE DE CONFIANZA ELEVADO : {fighter}",
-        "insufficient_confidence": "🚨 ÍNDICE DE CONFIANZA INSUFICIENTE",
+        "insufficient_confidence": "🚨 ÍNDICE DE CONFIANZA INSUFFICIENTE",
         "past_title": "📊 Rendimiento Real (Apuesta Simulada 10 €)",
         "net_profit": "💵 Beneficio Neto Total",
         "roi_yield": "📈 Rendimiento ROI",
@@ -231,8 +233,9 @@ LANG_DATA = {
         "disclaimer_gaming": "<b>Juego Responsable (+18):</b> Las apuestas deportivas están prohibidas para menores. El juego conlleva riesgos de adicción y endeudamiento.",
         "disclaimer_trademark": "<b>Aviso de Marca:</b> UFC Vision es un proyecto independiente editado por Aura Dev. No está afiliado ni respaldado por la UFC o TKO Group Holdings.",
         # COOKIES ES
+        "cookie_dialog_title": "🍪 Preferencias de Cookies",
         "cookie_title": "Preferencia de Cookies y Privacidad",
-        "cookie_desc": "UFC Vision utiliza cookies para el funcionamiento técnico, medición de audiencia anónima (Google Analytics / GTM) y anuncios adaptados.",
+        "cookie_desc": "UFC Vision utiliza cookies técnicas, de medición de audiencia anónima (Google Analytics / GTM) y anuncios adaptados.",
         "cookie_accept": "Aceptar Todo",
         "cookie_decline": "Solo Esenciales",
         "footer": "UFC Vision © 2026 — Todos los derechos reservados | Editado por Aura Dev (SIRET: 10542993000016)"
@@ -528,6 +531,27 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # =========================================================================
+# FONCTION POP-UP DIALOG COOKIE NATIVE STREAMLIT (OPTION B)
+# =========================================================================
+
+@st.dialog("🍪 Cookie Preferences")
+def show_cookie_dialog(t):
+    st.markdown(f"#### {t['cookie_title']}")
+    st.write(t['cookie_desc'])
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    col_dec, col_acc = st.columns(2)
+    with col_dec:
+        if st.button(t["cookie_decline"], key="dlg_btn_decline", use_container_width=True):
+            st.session_state["cookie_consent"] = "declined"
+            st.rerun()
+    with col_acc:
+        if st.button(t["cookie_accept"], key="dlg_btn_accept", use_container_width=True):
+            st.session_state["cookie_consent"] = "accepted"
+            st.rerun()
+
+
+# =========================================================================
 # FONCTIONS DE CACHING STREAMLIT HAUTE PERFORMANCE
 # =========================================================================
 
@@ -623,6 +647,10 @@ def main():
     # Session State Router
     if "current_page" not in st.session_state:
         st.session_state["current_page"] = "home"
+
+    # 🍪 DECLENCHEMENT POP-UP DIALOG COOKIES NATIVE AU CHARGEMENT INITIAL DU SITE
+    if "cookie_consent" not in st.session_state:
+        show_cookie_dialog(t)
 
     # Chargement Backend Intact
     events, from_cache, age_hours = get_cached_odds_data()
@@ -1008,7 +1036,7 @@ def main():
                 render_clean_html(html_past_card)
 
     # =========================================================================
-    # PAGE 4 : ⚖️ MENTIONS LÉGALES & CONFIDENTIALITÉ (PAGE DÉDIÉE)
+    # PAGE 4 : ⚖️ MENTIONS LÉGALES & CONFIDENTIALITÉ (PAGE DÉDIÉE A PART)
     # =========================================================================
     elif page == "legal":
         if st.button(t["back_home"], key="btn_back_home_top"):
@@ -1066,37 +1094,6 @@ def main():
     <div class="footer-aura">
         {t['footer']}
     </div>
-    """)
-
-    # =========================================================================
-    # 🍪 VRAI POP-UP DE COOKIES MODAL CENTRÉ AVEC MÉMOIRE LOCALSTORAGE
-    # =========================================================================
-    render_clean_html(f"""
-    <div id="cookie-modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(4px); z-index: 9999999; align-items: center; justify-content: center; padding: 20px;">
-        <div style="background: #FFFFFF; border-radius: 28px; border: 1px solid #E2E8F0; max-width: 500px; width: 100%; padding: 30px; text-align: center; box-shadow: 0 25px 60px rgba(0,0,0,0.3);">
-            <div style="font-size: 2.4rem; margin-bottom: 8px;">🍪</div>
-            <h3 style="font-size: 1.3rem; font-weight: 800; color: #0F172A; margin: 0 0 12px 0;">{t['cookie_title']}</h3>
-            <p style="font-size: 0.92rem; color: #475569; line-height: 1.55; margin-bottom: 24px;">{t['cookie_desc']}</p>
-            <div style="display: flex; gap: 12px; justify-content: center;">
-                <button onclick="saveCookieChoice('declined')" style="flex: 1; background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; border-radius: 9999px; padding: 12px 16px; font-weight: 700; cursor: pointer; font-size: 0.85rem;">{t['cookie_decline']}</button>
-                <button onclick="saveCookieChoice('accepted')" style="flex: 1; background: #D20A0A; color: #FFFFFF; border: none; border-radius: 9999px; padding: 12px 16px; font-weight: 700; cursor: pointer; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(210, 10, 10, 0.25);">{t['cookie_accept']}</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function checkCookieConsent() {{
-            var consent = localStorage.getItem('ufcvision_cookie_consent_v1');
-            if (!consent) {{
-                document.getElementById('cookie-modal-overlay').style.display = 'flex';
-            }}
-        }}
-        function saveCookieChoice(choice) {{
-            localStorage.setItem('ufcvision_cookie_consent_v1', choice);
-            document.getElementById('cookie-modal-overlay').style.display = 'none';
-        }}
-        setTimeout(checkCookieConsent, 200);
-    </script>
     """)
 
 
