@@ -59,7 +59,7 @@ def get_og_image_url():
     if os.path.exists(og_path):
         mtime = int(os.path.getmtime(og_path))
         return f"https://ufcvision.com/og-image.jpg?v={mtime}"
-    return "https://ufcvision.com/og-image.jpg?v=1"
+    return "https://ufcvision.com/og-image.jpg?v=2"
 
 # DICTIONNAIRE CENTRALISÉ DE TRADUCTIONS ET TEXTES JURIDIQUES / FAQ (EN / FR / ES)
 LANG_DATA = {
