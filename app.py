@@ -301,10 +301,17 @@ st.markdown(f"""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
     
-    /* Masquer le header et la toolbar Streamlit */
-    [data-testid="stHeader"], header, #MainMenu, footer {{
+    /* Masquer le header, la toolbar et TOUS les widgets de statut/spinners Streamlit */
+    [data-testid="stHeader"], header, #MainMenu, footer,
+    [data-testid="stStatusWidget"], div[data-testid="stStatusWidget"],
+    [data-testid="stSpinner"], div[data-testid="stSpinner"], div.stSpinner,
+    .stStatusWidget, [data-testid="stNotification"],
+    div[data-testid="stStatusContainer"] {{
         display: none !important;
         visibility: hidden !important;
+        height: 0px !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
     }}
 
     /* Annuler tout le rembourrage supérieur de la page */
@@ -632,31 +639,61 @@ def show_cookie_dialog(t):
 # FONCTIONS DE CACHING STREAMLIT HAUTE PERFORMANCE
 # =========================================================================
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def load_all_models_and_data():
     """Mise en cache du modèle XGBoost V3 et des structures de données statiques."""
     return load_resources_v3()
 
 
-@st.cache_data(ttl=7200)
+@st.cache_data(ttl=7200, show_spinner=False)
 def get_cached_odds_data():
     """Mise en cache 2h des cotes The Odds API."""
     return get_cached_or_fresh_odds()
 
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def get_cached_tracker_data(events, _raw_df, _model, _medians, _all_fighters):
-    """Mise en cache du tracker d'historique."""
+    """Mise en cache instantanée du tracker d'historique (Lecture directe disque pré-chauffé)."""
+    tracker_path = os.path.join("data", "historical_tracker.json")
+    if os.path.exists(tracker_path):
+        try:
+            with open(tracker_path, "r", encoding="utf-8") as f:
+                tracker_data = json.load(f)
+
+            cards_map = tracker_data.get("cards", {})
+            summary = tracker_data.get("summary", {})
+
+            if cards_map and summary:
+                today_str = datetime.date.today().strftime("%Y-%m-%d")
+                upcoming_cards = collections.OrderedDict()
+                past_cards = collections.OrderedDict()
+
+                sorted_card_keys = sorted(cards_map.keys())
+                for k in sorted_card_keys:
+                    c_info = cards_map[k]
+                    c_date = c_info.get("event_date", "")
+                    is_comp = c_info.get("is_completed", False)
+
+                    if is_comp or c_date < today_str:
+                        past_cards[k] = c_info
+                    else:
+                        upcoming_cards[k] = c_info
+
+                past_cards_reversed = collections.OrderedDict(reversed(list(past_cards.items())))
+                return upcoming_cards, past_cards_reversed, summary
+        except Exception:
+            pass
+
     return sync_historical_tracker(events, _raw_df, _model, _medians, _all_fighters)
 
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def get_cached_dynamic_states(_raw_df):
     """Mise en cache du calcul des ELOs."""
     return compute_fighter_dynamic_states_v3(_raw_df)
 
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def get_cached_fighter_profile(name, _raw_df, _elo_dict, _history_dict, _win_streak_dict, _loss_streak_dict, _latest_rank_dict):
     """Mise en cache du profil et des caractéristiques d'un combattant."""
     return get_latest_fighter_profile_v3(name, _raw_df, _elo_dict, _history_dict, _win_streak_dict, _loss_streak_dict, _latest_rank_dict)
