@@ -71,16 +71,18 @@ LANG_DATA = {
         "nav_legal": "⚖️ Legal Notice & Privacy Policy",
         "back_home": "← Back to Home",
         "hero_subtitle": "The Premier UFC Prediction Bot",
-        "hero_description": "UFC Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC. Our XGBoost V3 model analyzes over 20 statistical factors per matchup based on 10 years of fight history.",
+        "hero_description": "UFC Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC. Our model analyzes over 20 statistical factors per matchup based on 10 years of fight history.",
         "stat_winrate_desc": "Bot Winrate (2015 - 2026)",
         "stat_roi_desc": "Bot ROI (2015 - 2026)",
         "upcoming_title": "🔮 Upcoming UFC Event Predictions",
         "select_upcoming_card": "Select an upcoming UFC card:",
         "insufficient_data": "🔘 INSUFFICIENT DATA — Incomplete UFC history.",
         "odds_pending": "⏳ ODDS PENDING — Awaiting official odds.",
-        "high_confidence": "🟢 HIGH CONFIDENCE INDEX : {fighter}",
-        "insufficient_confidence": "🚨 INSUFFICIENT CONFIDENCE INDEX",
-        "past_title": "📊 Real Performance ($10 Simulated Stake)",
+        "high_confidence": "🟢 VALUE OPPORTUNITY: {fighter}",
+        "insufficient_confidence": "🚨 NO VALUE DETECTED",
+        "global_summary_title": "🌐 Global Performance",
+        "card_summary_title": "📅 Event Performance",
+        "past_title": "📊 Real Performance (10€ Simulated Stake)",
         "net_profit": "💵 Total Net Profit",
         "roi_yield": "📈 ROI Yield",
         "win_rate": "🎯 Win Rate",
@@ -92,6 +94,7 @@ LANG_DATA = {
         "lost_pill": "🔴 LOST (-10.00 €) — Bet placed on {fighter} (Odds: {odds}). Winner: {winner}.",
         "no_bet_eval": "⚪ NO BET — No Value Bet (EV max: {ev}%)",
         "no_bet_desc": "Avoided bet: Insufficient value. Winner: {winner}.",
+        "void_pill": "⚪ CANCELLED / VOID — Fight did not take place (Stake refunded)",
         "odds_freshness": "⚡ Odds updated {mins} mins ago from The Odds API",
         "bug_contact": "✉️ Found a bug or have a question? contact@auradev.fr",
         # FAQ EN
@@ -100,8 +103,8 @@ LANG_DATA = {
         "a1": "Our XGBoost V3 algorithm evaluates over 20 differential statistical factors between two fighters (ELO score gaps, strike output, takedown defense rate, win streaks, recent rankings, etc.) built upon 10 years of historical UFC fight data.",
         "q2": "Where do fight data and odds come from?",
         "a2": "Fight statistics are extracted from official UFC fight archives, while market odds are fetched in real-time through global bookmaker aggregator APIs.",
-        "q3": "What is a High Confidence Index?",
-        "a3": "A High Confidence Index means the AI-calculated probability shows a significant statistical edge (Value) when matched against published market odds.",
+        "q3": "What is a Value Opportunity?",
+        "a3": "A Value Opportunity indicates that the AI-calculated probability shows a significant statistical edge (Value) when matched against published market odds.",
         "q4": "Is UFC Vision affiliated with the UFC?",
         "a4": "No. UFC Vision is an independent analytical project created by MMA data enthusiasts. We are not affiliated with, sponsored by, or endorsed by UFC or TKO Group Holdings.",
         "faq_contact": "Have more questions? Feel free to contact us at contact@auradev.fr",
@@ -139,15 +142,17 @@ LANG_DATA = {
         "nav_legal": "⚖️ Mentions Légales & Confidentialité",
         "back_home": "← Retour à l'accueil",
         "hero_subtitle": "Le meilleur bot de prédiction de l'UFC",
-        "hero_description": "UFC Vision est un projet indépendant conçu par des passionnés de MMA, non affilié à l'UFC. Notre modèle XGBoost V3 analyse plus de 20 facteurs statistiques par combat sur 10 ans d'historique.",
+        "hero_description": "UFC Vision est un projet indépendant conçu par des passionnés de MMA, non affilié à l'UFC. Notre modèle analyse plus de 20 facteurs statistiques par combat sur 10 ans d'historique.",
         "stat_winrate_desc": "Winrate du bot (2015 - 2026)",
         "stat_roi_desc": "ROI du bot (2015 - 2026)",
         "upcoming_title": "🔮 Prédictions des Prochains Événements UFC",
         "select_upcoming_card": "Sélectionnez une carte UFC à venir :",
         "insufficient_data": "🔘 DONNÉES INSUFFISANTES — Historique UFC incomplet.",
         "odds_pending": "⏳ COTES EN ATTENTE — En attente des cotes officielles.",
-        "high_confidence": "🟢 INDICE DE CONFIANCE ÉLEVÉ : {fighter}",
-        "insufficient_confidence": "🚨 INDICE DE CONFIANCE INSUFFISANT",
+        "high_confidence": "🟢 OPPORTUNITÉ DÉTECTÉE : {fighter}",
+        "insufficient_confidence": "🚨 AUCUNE OPPORTUNITÉ INTÉRESSANTE",
+        "global_summary_title": "🌐 Bilan Global",
+        "card_summary_title": "📅 Bilan de cette soirée",
         "past_title": "📊 Performance Réelle (Mise Fictive 10 €)",
         "net_profit": "💵 Profit Net Total",
         "roi_yield": "📈 Rendement ROI",
@@ -160,6 +165,7 @@ LANG_DATA = {
         "lost_pill": "🔴 PERDU (-10.00 €) — Pari engagé sur {fighter} (Cote : {odds}). Vainqueur : {winner}.",
         "no_bet_eval": "⚪ NO BET — Pas de Value Bet (EV max : {ev}%)",
         "no_bet_desc": "Pari évité : Valeur insuffisante. Vainqueur : {winner}.",
+        "void_pill": "⚪ ANNULÉ / VOID — Combat non disputé (Pari remboursé)",
         "odds_freshness": "⚡ Cotes actualisées il y a {mins} min via The Odds API",
         "bug_contact": "✉️ Une question ou une erreur à signaler ? contact@auradev.fr",
         # FAQ FR
@@ -168,11 +174,11 @@ LANG_DATA = {
         "a1": "Notre algorithme XGBoost V3 compare simultanément plus de 20 variables statistiques ajustées entre deux combattants (différentiels d'ELO, volume de coups, efficacité de défense de takedown, séries de victoires, classement récent, etc.) sur les 10 dernières années de combats UFC.",
         "q2": "D'où proviennent les données et les cotes ?",
         "a2": "Les métriques de combat sont issues de l'historique officiel de l'UFC, et les cotes sont récupérées en temps réel via des APIs agrégatrices de bookmakers mondiaux.",
-        "q3": "Qu'est-ce que l'Indice de Confiance Élevé ?",
-        "a3": "Un indice de confiance élevé indique que la probabilité calculée par l'IA présente un écart significatif (Value) par rapport à la cote proposée sur le marché, détectant une opportunité statistique intéressante.",
+        "q3": "Qu'est-ce qu'une Opportunité Détectée (Value Bet) ?",
+        "a3": "Une opportunité détectée indique que la probabilité calculée par l'IA présente un écart statistique avantageux (Value) par rapport à la cote proposée sur le marché.",
         "q4": "UFC Vision est-il affilié à l'UFC ?",
         "a4": "Non. UFC Vision est un projet d'analyse indépendant créé par des passionnés de MMA. Il n'est en aucun cas affilié, sponsorisé ou approuvé par l'UFC ou TKO Group Holdings.",
-        "faq_contact": "Vous avez d'autres questions ? N'hésitez pas à nous contacter à contact@auradev.fr",
+        "faq_contact": "Vous avez d me d'autres questions ? N'hésitez pas à nous contacter à contact@auradev.fr",
         # JURIDIQUE FR
         "legal_page_title": "⚖️ Mentions Légales, Politique de Confidentialité & Gestion des Cookies",
         "legal_sec1_title": "1. Éditeur du site & Mentions Légales",
@@ -207,15 +213,17 @@ LANG_DATA = {
         "nav_legal": "⚖️ Aviso Legal y Privacidad",
         "back_home": "← Volver al Inicio",
         "hero_subtitle": "El mejor bot de predicción de la UFC",
-        "hero_description": "UFC Vision es un proyecto independiente creado por apasionados de las MMA, no afiliado a la UFC. Nuestro modelo XGBoost V3 analiza más de 20 factores por pelea basados en 10 años de datos.",
+        "hero_description": "UFC Vision es un proyecto independiente creado por apasionados de las MMA, no afiliado a la UFC. Nuestro modelo analiza más de 20 factores por pelea basados en 10 años de datos.",
         "stat_winrate_desc": "Tasa de victoria del bot (2015 - 2026)",
         "stat_roi_desc": "ROI del bot (2015 - 2026)",
         "upcoming_title": "🔮 Predicciones de Próximos Eventos UFC",
         "select_upcoming_card": "Seleccione una cartelera de la UFC:",
         "insufficient_data": "🔘 DATOS INSUFFICIENTES — Historial de UFC incompleto.",
         "odds_pending": "⏳ CUOTAS PENDIENTES — Esperando cuotas oficiales.",
-        "high_confidence": "🟢 ÍNDICE DE CONFIANZA ELEVADO : {fighter}",
-        "insufficient_confidence": "🚨 ÍNDICE DE CONFIANZA INSUFFICIENTE",
+        "high_confidence": "🟢 OPORTUNIDAD DETECTADA: {fighter}",
+        "insufficient_confidence": "🚨 SIN OPORTUNIDAD DE VALOR",
+        "global_summary_title": "🌐 Rendimiento Global",
+        "card_summary_title": "📅 Rendimiento de esta velada",
         "past_title": "📊 Rendimiento Real (Apuesta Simulada 10 €)",
         "net_profit": "💵 Beneficio Neto Total",
         "roi_yield": "📈 Rendimiento ROI",
@@ -228,6 +236,7 @@ LANG_DATA = {
         "lost_pill": "🔴 PERDIDO (-10.00 €) — Apuesta realizada en {fighter} (Cuota: {odds}). Ganador: {winner}.",
         "no_bet_eval": "⚪ NO BET — Sin Value Bet (EV máx: {ev}%)",
         "no_bet_desc": "Apuesta evitada: Valor insuficiente. Ganador: {winner}.",
+        "void_pill": "⚪ CANCELADO / VOID — Combate no disputado (Apuesta reembolsada)",
         "odds_freshness": "⚡ Cuotas actualizadas hace {mins} min via The Odds API",
         "bug_contact": "✉️ ¿Tienes alguna duda o error que reportar? contact@auradev.fr",
         # FAQ ES
@@ -236,8 +245,8 @@ LANG_DATA = {
         "a1": "Nuestro algoritmo XGBoost V3 analiza más de 20 variables estadísticas comparativas entre dos peleadores (diferencial de ELO, golpes por minuto, defensa de derribos, racha de victorias, etc.) basándose en 10 años de datos de la UFC.",
         "q2": "¿De dónde proceden los datos y las cuotas?",
         "a2": "Las estadísticas se extraen de los archivos oficiales de la UFC y las cuotas se recopilan en tiempo real mediante APIs agregadoras internacionales.",
-        "q3": "¿Qué significa un Índice de Confianza Elevado?",
-        "a3": "Un índice de confianza elevado indica que la probabilidad calculada por la IA ofrece una ventaja estadística (Valor) respecto a la cuota publicada por el mercado.",
+        "q3": "¿Qué es una Oportunidad de Valor (Value Bet)?",
+        "a3": "Una oportunidad detectada indica que la probabilidad calculada por la IA ofrece una ventaja estadística (Valor) respecto a la cuota publicada por el mercado.",
         "q4": "¿Está UFC Vision afiliado a la UFC?",
         "a4": "No. UFC Vision es un proyecto analítico independiente creado por apasionados de las MMA. No está afiliado, patrocinado ni respaldado por la UFC o TKO Group Holdings.",
         "faq_contact": "¿Tienes más preguntas? No dudes en contactarnos en contact@auradev.fr",
@@ -1054,12 +1063,17 @@ def main():
         v_count = fin_summary.get("value_bets_count", 0)
         v_won = fin_summary.get("value_bets_won", 0)
 
+        global_prof_color = "#10B981" if tot_prof >= 0 else "#EF4444"
+        global_roi_color = "#10B981" if roi_p >= 0 else "#EF4444"
+
         html_summary_card = f"""<div class="summary-card-pure-white">
+<div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
+    {t.get('global_summary_title', '🌐 Global Performance')}
+</div>
 <div style="display: flex; gap: 16px; text-align: center;">
 <div style="flex: 1;">
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['net_profit']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #10B981;">{tot_prof:+.2f} €</div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #10B981;">{roi_p:+.1f}% ROI</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: {global_prof_color};">{tot_prof:+.2f} €</div>
 </div>
 <div style="flex: 1;">
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['roi_yield']}</div>
@@ -1093,6 +1107,71 @@ def main():
 
             p_card_info = past_cards[selected_past_key]
             p_fights = deduplicate_card_fights(p_card_info.get("fights", []))
+
+            # Calcul dynamique spécifique à la carte sélectionnée
+            card_staked = 0.0
+            card_profit = 0.0
+            card_vb_count = 0
+            card_vb_won = 0
+
+            for fight in p_fights:
+                res_status = fight.get("result_status")
+                net_gain = fight.get("net_gain", 0.0)
+                winner = fight.get("winner")
+                pf1 = fight.get("f1", "")
+                pf2 = fight.get("f2", "")
+
+                is_f1_win = bool(winner and fuzzy_match_fighter_name(winner, [pf1], threshold=0.70))
+                is_f2_win = bool(winner and fuzzy_match_fighter_name(winner, [pf2], threshold=0.70))
+                is_void = (
+                    res_status == "VOID" or
+                    not winner or
+                    str(winner).upper().strip() in ["N/A", "NONE", "DRAW/NC", "NC", "CANCELLED", "VOID", "DRAW"] or
+                    (not is_f1_win and not is_f2_win)
+                )
+
+                if fight.get("is_value_bet") and not is_void:
+                    card_staked += 10.0
+                    card_vb_count += 1
+                    if res_status == "WIN" or net_gain > 0:
+                        card_vb_won += 1
+                        card_profit += net_gain
+                    elif res_status == "LOSS" or net_gain < 0:
+                        card_profit += net_gain
+
+            card_roi = (card_profit / card_staked * 100.0) if card_staked > 0 else 0.0
+            card_win_rate = (card_vb_won / card_vb_count * 100.0) if card_vb_count > 0 else 0.0
+
+            card_prof_color = "#10B981" if card_profit >= 0 else "#EF4444"
+            card_roi_color = "#10B981" if card_roi >= 0 else "#EF4444"
+
+            html_card_summary = f"""<div class="summary-card-pure-white" style="margin-top: 12px; margin-bottom: 24px;">
+<div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
+    {t.get('card_summary_title', '📅 Event Performance')}
+</div>
+<div style="display: flex; gap: 16px; text-align: center;">
+<div style="flex: 1;">
+<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['net_profit']}</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: {card_prof_color};">{card_profit:+.2f} €</div>
+</div>
+<div style="flex: 1;">
+<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['roi_yield']}</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_roi:.1f}%</div>
+</div>
+<div style="flex: 1;">
+<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate']}</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_win_rate:.1f}%</div>
+<div style="font-size: 0.8rem; font-weight: 600; color: #64748B;">{card_vb_won}/{card_vb_count} {t['won_text']}</div>
+</div>
+<div style="flex: 1;">
+<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['staked_vol']}</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_staked:.0f} €</div>
+<div style="font-size: 0.8rem; font-weight: 600; color: #64748B;">{card_vb_count} {t['bets_text']}</div>
+</div>
+</div>
+</div>"""
+            render_clean_html(html_card_summary)
+
 
             for idx, fight in enumerate(p_fights, 1):
                 pf1 = fight.get("f1", "")
@@ -1142,7 +1221,17 @@ def main():
 </div>
 </div>"""
 
-                if is_vb and res_status == "WIN":
+                is_f1_win = bool(winner and fuzzy_match_fighter_name(winner, [pf1], threshold=0.70))
+                is_f2_win = bool(winner and fuzzy_match_fighter_name(winner, [pf2], threshold=0.70))
+                is_void = (
+                    res_status == "VOID" or
+                    (winner and str(winner).upper().strip() in ["N/A", "NONE", "DRAW/NC", "NC", "CANCELLED", "VOID", "DRAW"]) or
+                    (winner and not is_f1_win and not is_f2_win)
+                )
+
+                if res_status == "VOID" or is_void:
+                    res_html = f'<div class="result-pill-nobet">{t["void_pill"]}</div>'
+                elif is_vb and res_status == "WIN":
                     res_html = f'<div class="result-pill-win">{t["won_pill"].format(gain=f"{net_gain:.2f}", fighter=bet_f, odds=f"{b_odds:.2f}", winner=winner)}</div>'
                 elif is_vb and res_status == "LOSS":
                     res_html = f'<div class="result-pill-loss">{t["lost_pill"].format(fighter=bet_f, odds=f"{b_odds:.2f}", winner=winner)}</div>'

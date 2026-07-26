@@ -401,15 +401,31 @@ def sync_historical_tracker(cache_events, raw_df, model, medians, all_fighters):
             c_data["is_completed"] = True
 
         for fight in all_fights:
-            if fight.get("is_value_bet") and fight.get("winner"):
+            winner = fight.get("winner")
+            f1_name = fight.get("f1", "")
+            f2_name = fight.get("f2", "")
+
+            # Vérification si le combat est annulé / no contest / sans vainqueur valide
+            is_f1_win = bool(winner and fuzzy_match_fighter_name(winner, [f1_name], threshold=0.70))
+            is_f2_win = bool(winner and fuzzy_match_fighter_name(winner, [f2_name], threshold=0.70))
+
+            is_void_or_cancelled = (
+                not winner or
+                str(winner).upper().strip() in ["N/A", "NONE", "DRAW/NC", "NC", "CANCELLED", "VOID", "DRAW"] or
+                (not is_f1_win and not is_f2_win)
+            )
+
+            if is_void_or_cancelled:
+                fight["result_status"] = "VOID"
+                fight["net_gain"] = 0.0
+            elif fight.get("is_value_bet"):
                 bet_f = fight.get("bet_fighter")
                 b_odds = fight.get("bet_odds") or 1.0
-                winner = fight.get("winner")
 
                 total_staked += 10.0
                 value_bets_count += 1
 
-                is_win = (fuzzy_match_fighter_name(winner, [bet_f], threshold=0.75) is not None)
+                is_win = bool(bet_f and fuzzy_match_fighter_name(winner, [bet_f], threshold=0.75))
                 if is_win:
                     value_bets_won += 1
                     gain_net = 10.0 * (b_odds - 1.0)
