@@ -28,7 +28,7 @@ except ImportError:
     )
 
 TRACKER_FILE_PATH = os.path.join("data", "historical_tracker.json")
-BASELINE_DATE = "2026-07-18"  # Baseline officielle du 18/19 Juillet 2026 (UFC Du Plessis vs. Usman)
+BASELINE_DATE = "2026-06-20"  # Baseline officielle incluant 5 cartes passées (du 20 Juin 2026 au 25 Juillet 2026)
 OFFICIAL_UFC_API_URL = "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard"
 
 
@@ -140,6 +140,40 @@ def deduplicate_card_fights(fights):
                     break
 
     return unique_fights
+
+
+def deduplicate_upcoming_cards(cards_dict):
+    """
+    Dédouble les cartes à venir en fusionnant les événements ayant la même date.
+    Conserve le titre le plus complet et fusionne les combats sans doublons.
+    """
+    date_to_key = {}
+    deduped_cards = collections.OrderedDict()
+
+    for key, card in cards_dict.items():
+        date_str = card.get("event_date") or key.split("|")[0].strip()
+        title = card.get("event_title") or key.split("|")[-1].strip()
+
+        if date_str not in date_to_key:
+            date_to_key[date_str] = key
+            card["fights"] = deduplicate_card_fights(card.get("fights", []))
+            deduped_cards[key] = card
+        else:
+            existing_key = date_to_key[date_str]
+            existing_card = deduped_cards[existing_key]
+
+            all_fights = existing_card.get("fights", []) + card.get("fights", [])
+            existing_card["fights"] = deduplicate_card_fights(all_fights)
+
+            existing_title = existing_card.get("event_title", "")
+            if len(title) > len(existing_title):
+                existing_card["event_title"] = title
+                new_key = f"{date_str} | {title}"
+                del deduped_cards[existing_key]
+                deduped_cards[new_key] = existing_card
+                date_to_key[date_str] = new_key
+
+    return deduped_cards
 
 
 def sync_historical_tracker(cache_events, raw_df, model, medians, all_fighters):
@@ -470,4 +504,4 @@ def sync_historical_tracker(cache_events, raw_df, model, medians, all_fighters):
 
     past_cards_reversed = collections.OrderedDict(reversed(list(past_cards.items())))
 
-    return upcoming_cards, past_cards_reversed, summary
+    return deduplicate_upcoming_cards(upcoming_cards), past_cards_reversed, summary

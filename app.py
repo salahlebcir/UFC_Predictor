@@ -31,7 +31,7 @@ try:
     )
     from src.odds_api import get_cached_or_fresh_odds
     from src.utils import normalize_fighter_name, fuzzy_match_fighter_name
-    from src.historical_tracker import sync_historical_tracker, deduplicate_card_fights
+    from src.historical_tracker import sync_historical_tracker, deduplicate_card_fights, deduplicate_upcoming_cards
 except ImportError:
     from predict import (
         load_resources_v3, resolve_fighter_name, compute_fighter_dynamic_states_v3,
@@ -53,6 +53,9 @@ def get_logo_data_url():
             pass
     return "https://ufcvision.com/logo.jpg"
 
+def get_logo_base64():
+    return get_logo_data_url()
+
 # Helper pour récupérer l'URL de l'image Open Graph avec Cache-Busting automatique (mtime)
 def get_og_image_url():
     og_path = os.path.join(project_root, "og-image.jpg")
@@ -71,7 +74,7 @@ LANG_DATA = {
         "nav_legal": "⚖️ Legal Notice & Privacy Policy",
         "back_home": "← Back to Home",
         "hero_subtitle": "The Premier UFC Prediction Bot",
-        "hero_description": "UFC Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC. Our model analyzes over 20 statistical factors per matchup based on 10 years of fight history.",
+        "hero_description": "UFC Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC. Our model analyzes over 20 statistical factors per matchup based on 10 years of fight history. <b>We are not responsible for your bets; we analyze data and compare it against bookmakers' odds.</b>",
         "stat_winrate_desc": "Bot Winrate (2015 - 2026)",
         "stat_roi_desc": "Bot ROI (2015 - 2026)",
         "upcoming_title": "🔮 Upcoming UFC Event Predictions",
@@ -142,7 +145,7 @@ LANG_DATA = {
         "nav_legal": "⚖️ Mentions Légales & Confidentialité",
         "back_home": "← Retour à l'accueil",
         "hero_subtitle": "Le meilleur bot de prédiction de l'UFC",
-        "hero_description": "UFC Vision est un projet indépendant conçu par des passionnés de MMA, non affilié à l'UFC. Notre modèle analyse plus de 20 facteurs statistiques par combat sur 10 ans d'historique.",
+        "hero_description": "UFC Vision est un projet indépendant mené par des passionnés de data MMA, non affilié à l'UFC. Notre modèle analyse plus de 20 facteurs statistiques par affrontement sur 10 ans d'historique. <b>Nous ne sommes pas responsables de vos paris : nous analysons des données et les comparons à celles des bookmakers.</b>",
         "stat_winrate_desc": "Winrate du bot (2015 - 2026)",
         "stat_roi_desc": "ROI du bot (2015 - 2026)",
         "upcoming_title": "🔮 Prédictions des Prochains Événements UFC",
@@ -213,7 +216,7 @@ LANG_DATA = {
         "nav_legal": "⚖️ Aviso Legal y Privacidad",
         "back_home": "← Volver al Inicio",
         "hero_subtitle": "El mejor bot de predicción de la UFC",
-        "hero_description": "UFC Vision es un proyecto independiente creado por apasionados de las MMA, no afiliado a la UFC. Nuestro modelo analiza más de 20 factores por pelea basados en 10 años de datos.",
+        "hero_description": "UFC Vision es un proyecto independiente creado por entusiastas de los datos de MMA, no afiliado a la UFC. Nuestro modelo analiza más de 20 factores estadísticos por combate en 10 años de historial. <b>No somos responsables de sus apuestas; analizamos datos y los comparamos con las casas de apuestas.</b>",
         "stat_winrate_desc": "Tasa de victoria del bot (2015 - 2026)",
         "stat_roi_desc": "ROI del bot (2015 - 2026)",
         "upcoming_title": "🔮 Predicciones de Próximos Eventos UFC",
@@ -680,7 +683,7 @@ def get_cached_tracker_data(events, _raw_df, _model, _medians, _all_fighters):
                         upcoming_cards[k] = c_info
 
                 past_cards_reversed = collections.OrderedDict(reversed(list(past_cards.items())))
-                return upcoming_cards, past_cards_reversed, summary
+                return deduplicate_upcoming_cards(upcoming_cards), past_cards_reversed, summary
         except Exception:
             pass
 
@@ -857,7 +860,7 @@ def main():
                 st.session_state["current_page"] = "upcoming"
                 st.rerun()
 
-    # Stylisation dynamique de la pilule active
+    # Stylisation dynamique de la pilule active & intégration du logo dans le bouton Accueil
     current_page = st.session_state.get("current_page", "home")
     if current_page == "past":
         active_btn_key = "btn_nav_past"
@@ -866,12 +869,25 @@ def main():
     else:
         active_btn_key = "btn_nav_home"
 
+    logo_data_url = get_logo_base64()
+
     st.markdown(f"""
     <style>
         div[data-testid="stColumn"]:has(button[key="{active_btn_key}"]) button {{
             border-color: #3D3EEA !important;
             box-shadow: 0 4px 14px rgba(61, 62, 234, 0.18) !important;
             font-weight: 800 !important;
+        }}
+        div[data-testid="stColumn"]:has(button[key="btn_nav_home"]) button {{
+            background-image: url("{logo_data_url}") !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+        }}
+        div[data-testid="stColumn"]:has(button[key="btn_nav_home"]) button p,
+        div[data-testid="stColumn"]:has(button[key="btn_nav_home"]) button div {{
+            opacity: 0 !important;
+            font-size: 0px !important;
         }}
     </style>
     """, unsafe_allow_html=True)
