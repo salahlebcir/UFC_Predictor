@@ -727,6 +727,20 @@ st.markdown(f"""
         font-size: 0.85rem;
         font-weight: 500;
     }}
+
+    /* GRILLE RESPONSIVE MOBILE POUR LES PANNEAUX DE PERFORMANCE (BILAN GLOBAL & BILAN SOIRÉE) */
+    .perf-stats-grid {{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        text-align: center;
+    }}
+    @media (max-width: 640px) {{
+        .perf-stats-grid {{
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 16px 8px !important;
+        }}
+    }}
 </style>
 """, unsafe_allow_html=True)
 
@@ -1354,22 +1368,22 @@ def main():
 <div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
     {t.get('global_summary_title', '🌐 Global Performance')}
 </div>
-<div style="display: flex; gap: 16px; text-align: center;">
-<div style="flex: 1;">
+<div class="perf-stats-grid">
+<div>
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['net_profit']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: {global_prof_color};">{tot_prof:+.2f} €</div>
 <div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{t['volume_sub'].format(staked=tot_stake, bets=v_count)}</div>
 </div>
-<div style="flex: 1;">
+<div>
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['roi_yield']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{global_roi_formatted}</div>
 </div>
-<div style="flex: 1;">
+<div>
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate_value']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{win_r:.1f}%</div>
 <div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{v_won}/{v_count} {t['won_text']}</div>
 </div>
-<div style="flex: 1;">
+<div>
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['accuracy_all']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{overall_acc:.1f}%</div>
 <div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{tot_correct}/{tot_valid} {t['correct_text']}</div>
@@ -1444,22 +1458,22 @@ def main():
 <div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
     {t.get('card_summary_title', '📅 Event Performance')}
 </div>
-<div style="display: flex; gap: 16px; text-align: center;">
-<div style="flex: 1;">
+<div class="perf-stats-grid">
+<div>
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['net_profit']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: {card_prof_color};">{card_profit:+.2f} €</div>
 <div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{t['volume_sub'].format(staked=card_staked, bets=card_vb_count)}</div>
 </div>
-<div style="flex: 1;">
+<div>
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['roi_yield']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_roi_formatted}</div>
 </div>
-<div style="flex: 1;">
+<div>
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate_value']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_win_rate:.1f}%</div>
 <div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{card_vb_won}/{card_vb_count} {t['won_text']}</div>
 </div>
-<div style="flex: 1;">
+<div>
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['accuracy_all']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_accuracy:.1f}%</div>
 <div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{card_correct_count}/{card_total_valid_fights} {t['correct_text']}</div>
@@ -1554,6 +1568,19 @@ def main():
     # PAGE 4 : ⚖️ MENTIONS LÉGALES & CONFIDENTIALITÉ (PAGE DÉDIÉE A PART)
     # =========================================================================
     elif page == "legal":
+        # Force le navigateur à remonter tout en haut dès l'affichage des mentions légales
+        st.components.v1.html(
+            """
+            <script>
+                try {
+                    window.parent.scrollTo({top: 0, behavior: 'instant'});
+                } catch(e) {}
+            </script>
+            """,
+            height=0,
+            width=0
+        )
+
         if st.button(t["back_home"], key="btn_back_home_top"):
             st.session_state["current_page"] = "home"
             st.rerun()
