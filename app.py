@@ -728,6 +728,16 @@ st.markdown(f"""
         font-weight: 500;
     }}
 
+    /* CONTENEUR FIXE DE NOM POUR ALIGNEMENT PARFAIT DES BARRES DE POURCENTAGE */
+    .fighter-name-box {{
+        min-height: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 8px;
+    }}
+
     /* GRILLE RESPONSIVE MOBILE POUR LES PANNEAUX DE PERFORMANCE (BILAN GLOBAL & BILAN SOIRÉE) */
     .perf-stats-grid {{
         display: grid;
@@ -998,7 +1008,7 @@ def main():
     """, height=0, width=0)
 
     # DECLENCHEMENT POP-UP DIALOG COOKIES NATIVE SI PAS ENCORE DE CONSENTEMENT ENREGISTRÉ
-    if "cookie_consent" not in st.session_state:
+    if not st.session_state.get("cookie_consent") and "cookie_consent" not in st.query_params:
         show_cookie_dialog(t)
 
     # Chargement Backend Intact
@@ -1264,16 +1274,20 @@ def main():
 {badge_html}
 <h3 style="margin: 8px 0 20px 0; font-size: 1.4rem; font-weight: 800; color: #0F172A;">{f1_raw} vs {f2_raw}</h3>
 <div style="display: flex; gap: 20px; margin-bottom: 16px;">
-<div style="flex: 1;">
-<div style="font-size: 0.9rem; font-weight: 700; color: #64748B; margin-bottom: 4px;">🔴 {f1_raw}</div>
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+<div class="fighter-name-box">
+    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔴 {f1_raw}</span>
+</div>
 <div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_a:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: #94A3B8; margin: 4px 0 8px 0;">Odds: N/A</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
 <div style="width: {pct_a:.1f}%; background-color: #D20A0A; height: 100%; border-radius: 9999px;"></div>
 </div>
 </div>
-<div style="flex: 1;">
-<div style="font-size: 0.9rem; font-weight: 700; color: #64748B; margin-bottom: 4px;">🔵 {f2_raw}</div>
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+<div class="fighter-name-box">
+    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔵 {f2_raw}</span>
+</div>
 <div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_b:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: #94A3B8; margin: 4px 0 8px 0;">Odds: N/A</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
@@ -1300,16 +1314,20 @@ def main():
 {badge_html}
 <h3 style="margin: 8px 0 20px 0; font-size: 1.4rem; font-weight: 800; color: #0F172A;">{f1_raw} vs {f2_raw}</h3>
 <div style="display: flex; gap: 20px; margin-bottom: 16px;">
-<div style="flex: 1;">
-<div style="font-size: 0.9rem; font-weight: 700; color: #64748B; margin-bottom: 4px;">🔴 {f1_raw}</div>
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+<div class="fighter-name-box">
+    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔴 {f1_raw}</span>
+</div>
 <div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_a:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: #10B981; margin: 4px 0 8px 0;">Odds: {odds_a:.2f}</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
 <div style="width: {pct_a:.1f}%; background-color: #D20A0A; height: 100%; border-radius: 9999px;"></div>
 </div>
 </div>
-<div style="flex: 1;">
-<div style="font-size: 0.9rem; font-weight: 700; color: #64748B; margin-bottom: 4px;">🔵 {f2_raw}</div>
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+<div class="fighter-name-box">
+    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔵 {f2_raw}</span>
+</div>
 <div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_b:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: #10B981; margin: 4px 0 8px 0;">Odds: {odds_b:.2f}</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
@@ -1513,16 +1531,20 @@ def main():
                     odds_a_str = f"Odds: {fight.get('odds_a', 0.0):.2f}" if fight.get('odds_a') else "Odds: N/A"
                     odds_b_str = f"Odds: {fight.get('odds_b', 0.0):.2f}" if fight.get('odds_b') else "Odds: N/A"
                     metrics_html = f"""<div style="display: flex; gap: 20px; margin-bottom: 16px;">
-<div style="flex: 1;">
-<div style="font-size: 0.9rem; font-weight: 700; color: #64748B; margin-bottom: 4px;">🔴 {pf1}</div>
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+<div class="fighter-name-box">
+    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔴 {pf1}</span>
+</div>
 <div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_a:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: #10B981; margin: 4px 0 8px 0;">{odds_a_str}</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
 <div style="width: {pct_a:.1f}%; background-color: #D20A0A; height: 100%; border-radius: 9999px;"></div>
 </div>
 </div>
-<div style="flex: 1;">
-<div style="font-size: 0.9rem; font-weight: 700; color: #64748B; margin-bottom: 4px;">🔵 {pf2}</div>
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+<div class="fighter-name-box">
+    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔵 {pf2}</span>
+</div>
 <div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_b:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: #10B981; margin: 4px 0 8px 0;">{odds_b_str}</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
@@ -1573,6 +1595,7 @@ def main():
             """
             <script>
                 try {
+                    window.parent.scrollTo(0, 0);
                     window.parent.scrollTo({top: 0, behavior: 'instant'});
                 } catch(e) {}
             </script>
