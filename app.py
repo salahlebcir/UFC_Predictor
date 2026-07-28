@@ -103,6 +103,9 @@ LANG_DATA = {
         "void_pill": "⚪ CANCELLED / VOID — Fight did not take place (Stake refunded)",
         "odds_freshness": "⚡ Odds updated {mins} mins ago from The Odds API",
         "bug_contact": "✉️ Found a bug or have a question? contact@auradev.fr",
+        # FEATURE IMPORTANCE EN
+        "feature_importance_title": "📊 Which factors are the most important in our AI model?",
+        "feature_importance_desc": "Our predictive AI analyzes differential statistical variables per fight. Here is the exact weight of each factor in the model's decision-making process:",
         # FAQ EN
         "faq_title": "❓ Frequently Asked Questions (FAQ)",
         "q1": "How does UFC Vision's AI work?",
@@ -177,6 +180,9 @@ LANG_DATA = {
         "void_pill": "⚪ ANNULÉ / VOID — Combat non disputé (Pari remboursé)",
         "odds_freshness": "⚡ Cotes actualisées il y a {mins} min via The Odds API",
         "bug_contact": "✉️ Une question ou une erreur à signaler ? contact@auradev.fr",
+        # FEATURE IMPORTANCE FR
+        "feature_importance_title": "📊 Quels sont les facteurs les plus importants dans notre modèle IA ?",
+        "feature_importance_desc": "Notre IA prédictive analyse des variables statistiques différentielles par affrontement. Voici le poids exact de chaque facteur dans la prise de décision du modèle :",
         # FAQ FR
         "faq_title": "❓ Foire Aux Questions (FAQ)",
         "q1": "Comment fonctionne l'intelligence artificielle d'UFC Vision ?",
@@ -245,6 +251,9 @@ LANG_DATA = {
         "won_text": "ganados",
         "correct_text": "aciertos",
         "bets_text": "apuestas",
+        # FEATURE IMPORTANCE ES
+        "feature_importance_title": "📊 ¿Cuáles son los factores más importantes en nuestro modelo IA?",
+        "feature_importance_desc": "Nuestra IA predictiva analiza variables estadísticas diferenciales por combate. Aquí está el peso exacto de cada factor en la toma de decisiones del modelo:",
         "won_pill": "🟢 GANADO (+{gain} €) — Apuesta con éxito en {fighter} (Cuota: {odds}). Ganador: {winner}.",
         "lost_pill": "🔴 PERDIDO (-10.00 €) — Apuesta realizada en {fighter} (Cuota: {odds}). Ganador: {winner}.",
         "no_bet_eval": "⚪ NO BET — Sin Value Bet (EV máx: {ev}%)",
@@ -290,6 +299,106 @@ LANG_DATA = {
         "footer": "UFC Vision © 2026 — Todos los derechos reservados | Editado por Aura Dev (SIRET: 10542993000016)"
     }
 }
+
+FEATURE_LABELS_MAP = {
+    "EN": {
+        "delta_rank": "Official UFC Ranking Gap",
+        "is_ranked_f1": "Fighter 1 Ranked in Top 15",
+        "is_ranked_f2": "Fighter 2 Ranked in Top 15",
+        "delta_Str_Acc": "Significant Strike Accuracy Gap (%)",
+        "delta_SApM": "Strikes Absorbed Per Minute Gap",
+        "delta_age": "Age Difference between Fighters",
+        "delta_Str_Def": "Striking Defense Rate Gap (%)",
+        "delta_TD_Def": "Takedown Defense Rate Gap (%)",
+        "delta_SlpM": "Significant Strikes Landed / Min",
+        "delta_ufc_win_rate": "Career UFC Win Rate Gap (%)",
+        "delta_SlpM_3y": "3-Year Striking Output Trend",
+        "delta_elo": "Dynamic ELO Rating Gap",
+        "delta_TD_Acc": "Takedown Accuracy Gap (%)",
+        "delta_Sub_Avg": "Submissions Attempted / 15 Min",
+        "delta_TD_Def_3y": "3-Year Takedown Defense Trend",
+        "delta_TD_Avg": "Takedowns Landed / 15 Min",
+        "delta_win_rate_3y": "3-Year Recent Win Rate",
+        "delta_SApM_3y": "3-Year Recent Damage Absorbed",
+        "delta_win_streak": "Current Win Streak Gap",
+        "delta_win_rate_last_5": "Recent Form (Last 5 Fights)",
+        "delta_reach_cm": "Reach Advantage (cm)",
+        "delta_ufc_fights": "UFC Octagon Experience Gap",
+        "delta_loss_streak": "Current Loss Streak Gap",
+        "delta_height_cm": "Height Advantage (cm)"
+    },
+    "FR": {
+        "delta_rank": "Écart de Classement Officiel (Rank)",
+        "is_ranked_f1": "Combattant 1 Classé Top 15",
+        "is_ranked_f2": "Combattant 2 Classé Top 15",
+        "delta_Str_Acc": "Précision des Coups Significatifs (%)",
+        "delta_SApM": "Coups Absorbés / Min (Défense)",
+        "delta_age": "Différence d'Âge entre Combattants",
+        "delta_Str_Def": "Défense aux Coups Debout (%)",
+        "delta_TD_Def": "Défense contre les Takedowns (%)",
+        "delta_SlpM": "Coups Significatifs Connectés / Min",
+        "delta_ufc_win_rate": "Taux de Victoire UFC en Carrière (%)",
+        "delta_SlpM_3y": "Volume de Coups sur 3 Ans (Tendance)",
+        "delta_elo": "Différentiel de Score ELO Dynamique",
+        "delta_TD_Acc": "Précision des Takedowns Réussis (%)",
+        "delta_Sub_Avg": "Soumissions Tentées / 15 Min",
+        "delta_TD_Def_3y": "Défense aux Takedowns sur 3 Ans",
+        "delta_TD_Avg": "Takedowns Réussis / 15 Min",
+        "delta_win_rate_3y": "Taux de Victoire Récent sur 3 Ans",
+        "delta_SApM_3y": "Dommages Absorbés Récent sur 3 Ans",
+        "delta_win_streak": "Série de Victoires Consecutives",
+        "delta_win_rate_last_5": "Forme Récente (5 Derniers Combats)",
+        "delta_reach_cm": "Avantage d'Allonge (Reach en cm)",
+        "delta_ufc_fights": "Expérience Réelle dans l'Octogone UFC",
+        "delta_loss_streak": "Série de Défaites Consécutives",
+        "delta_height_cm": "Avantage de Taille (Hauteur en cm)"
+    },
+    "ES": {
+        "delta_rank": "Brecha de Clasificación Oficial",
+        "is_ranked_f1": "Peleador 1 Clasificado Top 15",
+        "is_ranked_f2": "Peleador 2 Clasificado Top 15",
+        "delta_Str_Acc": "Precisión de Golpes Significativos (%)",
+        "delta_SApM": "Golpes Absorbidos por Minuto",
+        "delta_age": "Diferencia de Edad entre Peleadores",
+        "delta_Str_Def": "Defensa de Golpes de Pie (%)",
+        "delta_TD_Def": "Defensa de Derribos / Takedowns (%)",
+        "delta_SlpM": "Golpes Significativos Conectados / Min",
+        "delta_ufc_win_rate": "Tasa de Victorias en UFC en Carrera (%)",
+        "delta_SlpM_3y": "Tendencia de Golpes en 3 Años",
+        "delta_elo": "Brecha de Puntuación ELO Dinámica",
+        "delta_TD_Acc": "Precisión de Derribos (%)",
+        "delta_Sub_Avg": "Promedio de Sumisiones / 15 Min",
+        "delta_TD_Def_3y": "Defensa de Derribos en 3 Años",
+        "delta_TD_Avg": "Promedio de Derribos / 15 Min",
+        "delta_win_rate_3y": "Tasa de Victorias Reciente en 3 Años",
+        "delta_SApM_3y": "Daño Absorbido Reciente en 3 Años",
+        "delta_win_streak": "Racha Actual de Victorias",
+        "delta_win_rate_last_5": "Forma Reciente (Últimos 5 Combates)",
+        "delta_reach_cm": "Ventaja de Alcance (en cm)",
+        "delta_ufc_fights": "Experiencia en el Octágono de la UFC",
+        "delta_loss_streak": "Racha Actual de Derrotas",
+        "delta_height_cm": "Ventaja de Estatura (en cm)"
+    }
+}
+
+
+def get_model_feature_importances(model_obj, feature_cols):
+    """Calcule dynamiquement les pourcentages d'importance des variables IA (Total = 100%)."""
+    try:
+        if hasattr(model_obj, "calibrated_classifiers_"):
+            all_imps = [clf.estimator.feature_importances_ for clf in model_obj.calibrated_classifiers_]
+            mean_imps = np.mean(all_imps, axis=0)
+        elif hasattr(model_obj, "feature_importances_"):
+            mean_imps = model_obj.feature_importances_
+        else:
+            mean_imps = np.ones(len(feature_cols))
+
+        total = float(sum(mean_imps)) if sum(mean_imps) > 0 else 1.0
+        pcts = [(col, float(imp / total * 100.0)) for col, imp in zip(feature_cols, mean_imps)]
+        sorted_pcts = sorted(pcts, key=lambda x: x[1], reverse=True)
+        return sorted_pcts
+    except Exception:
+        return [(col, float(100.0 / len(feature_cols))) for col in feature_cols]
 
 
 def render_clean_html(html_str):
@@ -912,19 +1021,11 @@ def main():
     page = current_page
 
     # =========================================================================
-    # PAGE 1 : 🏠 ACCUEIL (BULLE LOGO UNIQUE ALIGNÉE + BULLE TEXTE ÉCARTÉE + STATS + FAQ)
+    # PAGE 1 : 🏠 ACCUEIL (BULLE TEXTE + STACK STATS + ACCORDÉON FACTEURS IA + FAQ)
     # =========================================================================
     if page == "home":
-        # BULLE 1 : LE LOGO GÉANT SEUL EN BULLE BLANCHE
         render_clean_html(f"""
-        <div style="background: #FFFFFF !important; border: 1px solid #E2E8F0 !important; border-radius: 36px !important; overflow: hidden !important; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important; margin: 3.5rem auto 2rem auto !important; text-align: center !important;">
-            <img src="{logo_data_url}" alt="UFC Vision Logo" style="width: 100%; height: auto; display: block; border-radius: 36px;">
-        </div>
-        """)
-
-        # BULLE 2 : LE TEXTE DE PRÉSENTATION CLAIREMENT ÉCARTÉ
-        render_clean_html(f"""
-        <div class="hero-bubble-text">
+        <div class="hero-bubble-text" style="margin-top: 1.5rem;">
             <p style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin: 0 0 0.8rem 0;">
                 {t['hero_subtitle']}
             </p>
@@ -951,9 +1052,36 @@ def main():
             </div>
             """)
 
-        # SECTION FAQ
+        # CALCUL DYNAMIQUE DU POIDS DES VARIABLES IA
+        sorted_feat_importances = get_model_feature_importances(model, FEATURE_COLS_V3)
+        lang_feat_map = FEATURE_LABELS_MAP.get(current_lang, FEATURE_LABELS_MAP["EN"])
+
+        feat_items_list = []
+        for rank, (col, pct) in enumerate(sorted_feat_importances, 1):
+            readable_name = lang_feat_map.get(col, col)
+            feat_items_list.append(f"""
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: #F8FAFC; border-radius: 12px; border: 1px solid #E2E8F0;">
+                <span style="font-weight: 700; color: #0F172A; font-size: 0.9rem;">#{rank} {readable_name}</span>
+                <span style="font-weight: 800; color: #3D3EEA; font-size: 0.92rem;">{pct:.1f}%</span>
+            </div>
+            """)
+        feature_items_html = "\n".join(feat_items_list)
+
+        # SECTION ACCORDÉONS (FACTEURS IA & FAQ)
         render_clean_html(f"""
         <div style="margin-top: 3.5rem;">
+            <details class="aura-accordion" style="margin-bottom: 1.25rem;">
+                <summary><b>{t['feature_importance_title']}</b></summary>
+                <div style="padding-top: 14px;">
+                    <p style="margin-bottom: 16px; color: #475569; font-size: 0.95rem; line-height: 1.6;">
+                        {t['feature_importance_desc']}
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        {feature_items_html}
+                    </div>
+                </div>
+            </details>
+
             <details class="aura-accordion">
                 <summary><b>{t['faq_title']}</b></summary>
                 <div style="padding-top: 10px;">
