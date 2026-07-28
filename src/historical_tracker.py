@@ -425,6 +425,8 @@ def sync_historical_tracker(cache_events, raw_df, model, medians, all_fighters):
     total_profit = 0.0
     value_bets_count = 0
     value_bets_won = 0
+    total_correct_predictions = 0
+    total_valid_fights = 0
 
     for c_key, c_data in cards_map.items():
         c_date = c_data.get("event_date", "")
@@ -452,27 +454,37 @@ def sync_historical_tracker(cache_events, raw_df, model, medians, all_fighters):
             if is_void_or_cancelled:
                 fight["result_status"] = "VOID"
                 fight["net_gain"] = 0.0
-            elif fight.get("is_value_bet"):
-                bet_f = fight.get("bet_fighter")
-                b_odds = fight.get("bet_odds") or 1.0
+            else:
+                pct_a = fight.get("pct_a")
+                pct_b = fight.get("pct_b")
+                if pct_a is not None and pct_b is not None:
+                    total_valid_fights += 1
+                    model_favors_f1 = (pct_a >= pct_b)
+                    if (model_favors_f1 and is_f1_win) or (not model_favors_f1 and is_f2_win):
+                        total_correct_predictions += 1
 
-                total_staked += 10.0
-                value_bets_count += 1
+                if fight.get("is_value_bet"):
+                    bet_f = fight.get("bet_fighter")
+                    b_odds = fight.get("bet_odds") or 1.0
 
-                is_win = bool(bet_f and fuzzy_match_fighter_name(winner, [bet_f], threshold=0.75))
-                if is_win:
-                    value_bets_won += 1
-                    gain_net = 10.0 * (b_odds - 1.0)
-                    total_profit += gain_net
-                    fight["result_status"] = "WIN"
-                    fight["net_gain"] = gain_net
-                else:
-                    total_profit -= 10.0
-                    fight["result_status"] = "LOSS"
-                    fight["net_gain"] = -10.0
+                    total_staked += 10.0
+                    value_bets_count += 1
+
+                    is_win = bool(bet_f and fuzzy_match_fighter_name(winner, [bet_f], threshold=0.75))
+                    if is_win:
+                        value_bets_won += 1
+                        gain_net = 10.0 * (b_odds - 1.0)
+                        total_profit += gain_net
+                        fight["result_status"] = "WIN"
+                        fight["net_gain"] = gain_net
+                    else:
+                        total_profit -= 10.0
+                        fight["result_status"] = "LOSS"
+                        fight["net_gain"] = -10.0
 
     roi_pct = (total_profit / total_staked * 100.0) if total_staked > 0 else 0.0
     win_rate_pct = (value_bets_won / value_bets_count * 100.0) if value_bets_count > 0 else 0.0
+    overall_accuracy_pct = (total_correct_predictions / total_valid_fights * 100.0) if total_valid_fights > 0 else 0.0
 
     summary = {
         "total_profit": total_profit,
@@ -480,7 +492,10 @@ def sync_historical_tracker(cache_events, raw_df, model, medians, all_fighters):
         "roi_pct": roi_pct,
         "win_rate_pct": win_rate_pct,
         "value_bets_count": value_bets_count,
-        "value_bets_won": value_bets_won
+        "value_bets_won": value_bets_won,
+        "total_correct_predictions": total_correct_predictions,
+        "total_valid_fights": total_valid_fights,
+        "overall_accuracy_pct": overall_accuracy_pct
     }
 
     tracker_data["cards"] = cards_map

@@ -5480,11 +5480,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5501,11 +5501,11 @@
                         {
                             "key": "winamax_fr",
                             "title": "Winamax (FR)",
-                            "last_update": "2026-07-28T08:00:12Z",
+                            "last_update": "2026-07-28T12:36:14Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:12Z",
+                                    "last_update": "2026-07-28T12:36:14Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5522,11 +5522,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5547,11 +5547,11 @@
                         {
                             "key": "marathonbet",
                             "title": "Marathon Bet",
-                            "last_update": "2026-07-28T08:00:22Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:22Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5568,11 +5568,11 @@
                         {
                             "key": "betclic_fr",
                             "title": "Betclic (FR)",
-                            "last_update": "2026-07-28T07:59:37Z",
+                            "last_update": "2026-07-28T12:34:56Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:37Z",
+                                    "last_update": "2026-07-28T12:34:56Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5589,11 +5589,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:37Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5610,11 +5610,11 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5631,19 +5631,19 @@
                         {
                             "key": "sport888",
                             "title": "888sport",
-                            "last_update": "2026-07-28T08:00:51Z",
+                            "last_update": "2026-07-28T12:36:25Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:51Z",
+                                    "last_update": "2026-07-28T12:36:25Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
-                                            "price": 3.8
+                                            "price": 4.0
                                         },
                                         {
                                             "name": "Uro\u0161 Medi\u0107",
-                                            "price": 1.27
+                                            "price": 1.25
                                         }
                                     ]
                                 }
@@ -5652,19 +5652,40 @@
                         {
                             "key": "betmgm",
                             "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "last_update": "2026-07-28T12:35:52Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
-                                            "price": 3.9
+                                            "price": 4.1
                                         },
                                         {
                                             "name": "Uro\u0161 Medi\u0107",
-                                            "price": 1.27
+                                            "price": 1.25
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Daniel Rodriguez",
+                                            "price": 3.85
+                                        },
+                                        {
+                                            "name": "Uro\u0161 Medi\u0107",
+                                            "price": 1.29
                                         }
                                     ]
                                 }
@@ -5673,15 +5694,15 @@
                         {
                             "key": "unibet_fr",
                             "title": "Unibet (FR)",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
-                                            "price": 3.45
+                                            "price": 3.5
                                         },
                                         {
                                             "name": "Uro\u0161 Medi\u0107",
@@ -5694,11 +5715,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5715,19 +5736,19 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
-                                            "price": 4.1
+                                            "price": 4.15
                                         },
                                         {
                                             "name": "Uro\u0161 Medi\u0107",
-                                            "price": 1.26
+                                            "price": 1.25
                                         }
                                     ]
                                 }
@@ -5736,11 +5757,11 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5757,11 +5778,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5778,11 +5799,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
@@ -5797,87 +5818,31 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Daniel Rodriguez",
-                                            "price": 4.45
-                                        },
-                                        {
-                                            "name": "Uro\u0161 Medi\u0107",
-                                            "price": 1.23
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
-                                            "price": 4.5
+                                            "price": 4.2
                                         },
                                         {
                                             "name": "Uro\u0161 Medi\u0107",
-                                            "price": 1.18
+                                            "price": 1.25
                                         }
                                     ]
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Daniel Rodriguez",
-                                            "price": 6.4
-                                        },
-                                        {
-                                            "name": "Uros Medic",
-                                            "price": 1.27
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Daniel Rodriguez",
-                                            "price": 4.3
-                                        },
-                                        {
-                                            "name": "Uro\u0161 Medi\u0107",
-                                            "price": 1.22
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Daniel Rodriguez",
-                                            "price": 5.5
+                                            "price": 4.9
                                         },
                                         {
                                             "name": "Uros Medic",
@@ -5914,11 +5879,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -5935,11 +5900,11 @@
                         {
                             "key": "betclic_fr",
                             "title": "Betclic (FR)",
-                            "last_update": "2026-07-28T07:59:37Z",
+                            "last_update": "2026-07-28T12:34:56Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:37Z",
+                                    "last_update": "2026-07-28T12:34:56Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -5956,11 +5921,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -5981,11 +5946,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6002,11 +5967,11 @@
                         {
                             "key": "sport888",
                             "title": "888sport",
-                            "last_update": "2026-07-28T08:00:51Z",
+                            "last_update": "2026-07-28T12:36:25Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:51Z",
+                                    "last_update": "2026-07-28T12:36:24Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6023,11 +5988,11 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6042,13 +6007,34 @@
                             ]
                         },
                         {
-                            "key": "betmgm",
-                            "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Jan Blachowicz",
+                                            "price": 3.45
+                                        },
+                                        {
+                                            "name": "Navajo Stirling",
+                                            "price": 1.33
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "betmgm",
+                            "title": "BetMGM",
+                            "last_update": "2026-07-28T12:35:52Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6065,11 +6051,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6086,11 +6072,11 @@
                         {
                             "key": "unibet_fr",
                             "title": "Unibet (FR)",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6107,11 +6093,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6128,11 +6114,11 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6149,11 +6135,11 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6170,11 +6156,11 @@
                         {
                             "key": "marathonbet",
                             "title": "Marathon Bet",
-                            "last_update": "2026-07-28T08:00:22Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:22Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6191,11 +6177,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6212,11 +6198,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6231,34 +6217,13 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Jan Blachowicz",
-                                            "price": 3.64
-                                        },
-                                        {
-                                            "name": "Navajo Stirling",
-                                            "price": 1.31
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "winamax_fr",
                             "title": "Winamax (FR)",
-                            "last_update": "2026-07-28T08:00:12Z",
+                            "last_update": "2026-07-28T12:36:14Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:12Z",
+                                    "last_update": "2026-07-28T12:36:14Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6275,11 +6240,11 @@
                         {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6287,13 +6252,13 @@
                                         },
                                         {
                                             "name": "Navajo Stirling",
-                                            "price": 1.28
+                                            "price": 1.27
                                         }
                                     ]
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Jan Blachowicz",
@@ -6301,42 +6266,7 @@
                                         },
                                         {
                                             "name": "Navajo Stirling",
-                                            "price": 1.38
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Jan Blachowicz",
-                                            "price": 3.55
-                                        },
-                                        {
-                                            "name": "Navajo Stirling",
-                                            "price": 1.29
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Jan Blachowicz",
-                                            "price": 4.4
-                                        },
-                                        {
-                                            "name": "Navajo Stirling",
-                                            "price": 1.39
+                                            "price": 1.37
                                         }
                                     ]
                                 }
@@ -6369,11 +6299,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6390,11 +6320,11 @@
                         {
                             "key": "winamax_fr",
                             "title": "Winamax (FR)",
-                            "last_update": "2026-07-28T08:00:12Z",
+                            "last_update": "2026-07-28T12:36:14Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:12Z",
+                                    "last_update": "2026-07-28T12:36:14Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6411,11 +6341,11 @@
                         {
                             "key": "betclic_fr",
                             "title": "Betclic (FR)",
-                            "last_update": "2026-07-28T07:59:37Z",
+                            "last_update": "2026-07-28T12:34:56Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:37Z",
+                                    "last_update": "2026-07-28T12:34:56Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6432,11 +6362,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6457,11 +6387,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6478,11 +6408,11 @@
                         {
                             "key": "sport888",
                             "title": "888sport",
-                            "last_update": "2026-07-28T08:00:51Z",
+                            "last_update": "2026-07-28T12:36:25Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:51Z",
+                                    "last_update": "2026-07-28T12:36:24Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6499,11 +6429,11 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6518,13 +6448,34 @@
                             ]
                         },
                         {
-                            "key": "betmgm",
-                            "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Aleksandar Rakic",
+                                            "price": 1.29
+                                        },
+                                        {
+                                            "name": "Marcin Tybura",
+                                            "price": 3.75
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "betmgm",
+                            "title": "BetMGM",
+                            "last_update": "2026-07-28T12:35:52Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6532,7 +6483,7 @@
                                         },
                                         {
                                             "name": "Marcin Tybura",
-                                            "price": 3.9
+                                            "price": 4.0
                                         }
                                     ]
                                 }
@@ -6541,11 +6492,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6562,11 +6513,11 @@
                         {
                             "key": "unibet_fr",
                             "title": "Unibet (FR)",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6583,11 +6534,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6604,11 +6555,11 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6625,11 +6576,11 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6646,11 +6597,11 @@
                         {
                             "key": "marathonbet",
                             "title": "Marathon Bet",
-                            "last_update": "2026-07-28T08:00:22Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:22Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6667,11 +6618,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6688,11 +6639,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
@@ -6707,56 +6658,35 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Aleksandar Rakic",
-                                            "price": 1.27
-                                        },
-                                        {
-                                            "name": "Marcin Tybura",
-                                            "price": 3.97
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
-                                            "price": 1.22
+                                            "price": 1.25
                                         },
                                         {
                                             "name": "Marcin Tybura",
-                                            "price": 4.0
+                                            "price": 3.85
                                         }
                                     ]
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Aleksandar Rakic",
-                                            "price": 1.32
+                                            "price": 1.34
                                         },
                                         {
                                             "name": "Marcin Tybura",
-                                            "price": 5.8
+                                            "price": 5.0
                                         }
                                     ]
                                 }
@@ -6789,11 +6719,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6810,11 +6740,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6835,11 +6765,11 @@
                         {
                             "key": "betclic_fr",
                             "title": "Betclic (FR)",
-                            "last_update": "2026-07-28T07:59:37Z",
+                            "last_update": "2026-07-28T12:34:56Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:37Z",
+                                    "last_update": "2026-07-28T12:34:56Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6856,11 +6786,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6877,11 +6807,11 @@
                         {
                             "key": "sport888",
                             "title": "888sport",
-                            "last_update": "2026-07-28T08:00:51Z",
+                            "last_update": "2026-07-28T12:36:25Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:51Z",
+                                    "last_update": "2026-07-28T12:36:25Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6898,11 +6828,11 @@
                         {
                             "key": "winamax_fr",
                             "title": "Winamax (FR)",
-                            "last_update": "2026-07-28T08:00:12Z",
+                            "last_update": "2026-07-28T12:36:14Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:12Z",
+                                    "last_update": "2026-07-28T12:36:14Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6919,11 +6849,11 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6938,13 +6868,34 @@
                             ]
                         },
                         {
-                            "key": "betmgm",
-                            "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Du\u0161ko Todorovi\u0107",
+                                            "price": 2.3
+                                        },
+                                        {
+                                            "name": "Robert Valentin",
+                                            "price": 1.65
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "betmgm",
+                            "title": "BetMGM",
+                            "last_update": "2026-07-28T12:35:52Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6952,7 +6903,7 @@
                                         },
                                         {
                                             "name": "Robert Valentin",
-                                            "price": 1.57
+                                            "price": 1.56
                                         }
                                     ]
                                 }
@@ -6961,11 +6912,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -6982,11 +6933,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -7003,11 +6954,11 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -7024,11 +6975,11 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -7045,11 +6996,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -7066,11 +7017,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -7085,34 +7036,13 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Du\u0161ko Todorovi\u0107",
-                                            "price": 2.43
-                                        },
-                                        {
-                                            "name": "Robert Valentin",
-                                            "price": 1.6
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "unibet_fr",
                             "title": "Unibet (FR)",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -7129,11 +7059,11 @@
                         {
                             "key": "marathonbet",
                             "title": "Marathon Bet",
-                            "last_update": "2026-07-28T08:00:22Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:22Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
@@ -7150,25 +7080,25 @@
                         {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Du\u0161ko Todorovi\u0107",
-                                            "price": 2.36
+                                            "price": 2.34
                                         },
                                         {
                                             "name": "Robert Valentin",
-                                            "price": 1.67
+                                            "price": 1.52
                                         }
                                     ]
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Dusko Todorovic",
@@ -7176,42 +7106,7 @@
                                         },
                                         {
                                             "name": "Robert Valentin",
-                                            "price": 1.73
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Du\u0161ko Todorovi\u0107",
-                                            "price": 2.4
-                                        },
-                                        {
-                                            "name": "Robert Valentin",
-                                            "price": 1.58
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Dusko Todorovic",
-                                            "price": 2.7
-                                        },
-                                        {
-                                            "name": "Robert Valentin",
-                                            "price": 1.71
+                                            "price": 1.74
                                         }
                                     ]
                                 }
@@ -7244,11 +7139,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7265,11 +7160,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7290,19 +7185,19 @@
                         {
                             "key": "betclic_fr",
                             "title": "Betclic (FR)",
-                            "last_update": "2026-07-28T07:59:37Z",
+                            "last_update": "2026-07-28T12:34:56Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:37Z",
+                                    "last_update": "2026-07-28T12:34:56Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
-                                            "price": 3.45
+                                            "price": 3.6
                                         },
                                         {
                                             "name": "Vlasto \u010cepo",
-                                            "price": 1.27
+                                            "price": 1.25
                                         }
                                     ]
                                 }
@@ -7311,11 +7206,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7332,11 +7227,11 @@
                         {
                             "key": "winamax_fr",
                             "title": "Winamax (FR)",
-                            "last_update": "2026-07-28T08:00:12Z",
+                            "last_update": "2026-07-28T12:36:14Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:12Z",
+                                    "last_update": "2026-07-28T12:36:14Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7353,19 +7248,19 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
-                                            "price": 3.58
+                                            "price": 3.61
                                         },
                                         {
                                             "name": "Vlasto \u010cepo",
-                                            "price": 1.32
+                                            "price": 1.31
                                         }
                                     ]
                                 }
@@ -7374,19 +7269,40 @@
                         {
                             "key": "betmgm",
                             "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "last_update": "2026-07-28T12:35:52Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
-                                            "price": 3.4
+                                            "price": 3.75
                                         },
                                         {
                                             "name": "Vlasto \u010cepo",
-                                            "price": 1.33
+                                            "price": 1.29
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Gilbert Urbina",
+                                            "price": 3.65
+                                        },
+                                        {
+                                            "name": "Vlasto \u010cepo",
+                                            "price": 1.3
                                         }
                                     ]
                                 }
@@ -7395,11 +7311,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7416,11 +7332,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7437,19 +7353,19 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
-                                            "price": 3.55
+                                            "price": 3.6
                                         },
                                         {
                                             "name": "Vlasto \u010cepo",
-                                            "price": 1.32
+                                            "price": 1.31
                                         }
                                     ]
                                 }
@@ -7458,11 +7374,11 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7479,11 +7395,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7500,11 +7416,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7519,34 +7435,13 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Gilbert Urbina",
-                                            "price": 3.48
-                                        },
-                                        {
-                                            "name": "Vlasto \u010cepo",
-                                            "price": 1.33
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "unibet_fr",
                             "title": "Unibet (FR)",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7563,11 +7458,11 @@
                         {
                             "key": "marathonbet",
                             "title": "Marathon Bet",
-                            "last_update": "2026-07-28T08:00:22Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:22Z",
+                                    "last_update": "2026-07-28T12:32:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7584,15 +7479,15 @@
                         {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
-                                            "price": 3.1
+                                            "price": 2.88
                                         },
                                         {
                                             "name": "Vlasto \u010cepo",
@@ -7602,7 +7497,7 @@
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Gilbert Urbina",
@@ -7610,42 +7505,7 @@
                                         },
                                         {
                                             "name": "Vlasto Cepo",
-                                            "price": 1.48
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Gilbert Urbina",
-                                            "price": 3.4
-                                        },
-                                        {
-                                            "name": "Vlasto \u010cepo",
-                                            "price": 1.33
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Gilbert Urbina",
-                                            "price": 4.0
-                                        },
-                                        {
-                                            "name": "Vlasto Cepo",
-                                            "price": 1.42
+                                            "price": 1.53
                                         }
                                     ]
                                 }
@@ -7678,11 +7538,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7690,7 +7550,7 @@
                                         },
                                         {
                                             "name": "Tofiq Musayev",
-                                            "price": 2.92
+                                            "price": 2.95
                                         }
                                     ]
                                 }
@@ -7699,19 +7559,19 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
-                                            "price": 1.45
+                                            "price": 1.44
                                         },
                                         {
                                             "name": "Tofiq Musayev",
-                                            "price": 2.65
+                                            "price": 2.7
                                         },
                                         {
                                             "name": "Draw",
@@ -7724,11 +7584,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7745,11 +7605,11 @@
                         {
                             "key": "sport888",
                             "title": "888sport",
-                            "last_update": "2026-07-28T08:00:51Z",
+                            "last_update": "2026-07-28T12:36:25Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:51Z",
+                                    "last_update": "2026-07-28T12:36:25Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7766,11 +7626,11 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7778,7 +7638,28 @@
                                         },
                                         {
                                             "name": "Tofiq Musayev",
-                                            "price": 2.9
+                                            "price": 2.94
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Ludovit Klein",
+                                            "price": 1.45
+                                        },
+                                        {
+                                            "name": "Tofiq Musayev",
+                                            "price": 2.85
                                         }
                                     ]
                                 }
@@ -7787,11 +7668,11 @@
                         {
                             "key": "betmgm",
                             "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "last_update": "2026-07-28T12:35:52Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7808,11 +7689,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7829,11 +7710,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7850,11 +7731,11 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7871,11 +7752,11 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7883,7 +7764,7 @@
                                         },
                                         {
                                             "name": "Tofiq Musayev",
-                                            "price": 2.8
+                                            "price": 2.85
                                         }
                                     ]
                                 }
@@ -7892,11 +7773,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7913,11 +7794,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7932,34 +7813,13 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Ludovit Klein",
-                                            "price": 1.46
-                                        },
-                                        {
-                                            "name": "Tofiq Musayev",
-                                            "price": 2.83
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Ludovit Klein",
@@ -7973,7 +7833,7 @@
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "L'udovit Klein",
@@ -7982,41 +7842,6 @@
                                         {
                                             "name": "Tofiq Musayev",
                                             "price": 3.15
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Ludovit Klein",
-                                            "price": 1.45
-                                        },
-                                        {
-                                            "name": "Tofiq Musayev",
-                                            "price": 2.8
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "L'udovit Klein",
-                                            "price": 1.56
-                                        },
-                                        {
-                                            "name": "Tofiq Musayev",
-                                            "price": 3.2
                                         }
                                     ]
                                 }
@@ -8049,11 +7874,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8070,11 +7895,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8095,11 +7920,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8116,11 +7941,11 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8137,11 +7962,11 @@
                         {
                             "key": "betmgm",
                             "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "last_update": "2026-07-28T12:35:52Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8156,13 +7981,34 @@
                             ]
                         },
                         {
-                            "key": "betrivers",
-                            "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Michael Oliveira",
+                                            "price": 1.3
+                                        },
+                                        {
+                                            "name": "Oban Elliott",
+                                            "price": 3.65
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "betrivers",
+                            "title": "BetRivers",
+                            "last_update": "2026-07-28T12:36:34Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8179,11 +8025,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8200,11 +8046,11 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8221,11 +8067,11 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8242,11 +8088,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8263,11 +8109,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8282,34 +8128,13 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Michael Oliveira",
-                                            "price": 1.29
-                                        },
-                                        {
-                                            "name": "Oban Elliott",
-                                            "price": 3.76
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8323,7 +8148,7 @@
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Michael Oliveira",
@@ -8332,41 +8157,6 @@
                                         {
                                             "name": "Oban Elliott",
                                             "price": 4.8
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Michael Oliveira",
-                                            "price": 1.28
-                                        },
-                                        {
-                                            "name": "Oban Elliott",
-                                            "price": 3.7
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Michael Oliveira",
-                                            "price": 1.38
-                                        },
-                                        {
-                                            "name": "Oban Elliott",
-                                            "price": 4.5
                                         }
                                     ]
                                 }
@@ -8422,11 +8212,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8443,11 +8233,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8468,11 +8258,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8489,11 +8279,11 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8508,13 +8298,34 @@
                             ]
                         },
                         {
-                            "key": "betmgm",
-                            "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Bogdan Grad",
+                                            "price": 1.5
+                                        },
+                                        {
+                                            "name": "Dennis Buzukja",
+                                            "price": 2.7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "betmgm",
+                            "title": "BetMGM",
+                            "last_update": "2026-07-28T12:35:52Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8531,11 +8342,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8552,11 +8363,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8573,11 +8384,11 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8594,11 +8405,11 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8615,11 +8426,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:26Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8636,11 +8447,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8655,38 +8466,17 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Bogdan Grad",
-                                            "price": 1.49
-                                        },
-                                        {
-                                            "name": "Dennis Buzukja",
-                                            "price": 2.72
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
-                                            "price": 1.44
+                                            "price": 1.45
                                         },
                                         {
                                             "name": "Dennis Buzukja",
@@ -8696,7 +8486,7 @@
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Bogdan Grad",
@@ -8705,41 +8495,6 @@
                                         {
                                             "name": "Dennis Buzukja",
                                             "price": 3.3
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Bogdan Grad",
-                                            "price": 1.48
-                                        },
-                                        {
-                                            "name": "Dennis Buzukja",
-                                            "price": 2.7
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Bogdan Grad",
-                                            "price": 1.59
-                                        },
-                                        {
-                                            "name": "Dennis Buzukja",
-                                            "price": 3.1
                                         }
                                     ]
                                 }
@@ -8772,15 +8527,36 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
-                                            "price": 4.0
+                                            "price": 4.5
+                                        },
+                                        {
+                                            "name": "Nina Milo\u0161evi\u0107",
+                                            "price": 1.22
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Hailey Cowan",
+                                            "price": 4.15
                                         },
                                         {
                                             "name": "Nina Milo\u0161evi\u0107",
@@ -8793,15 +8569,36 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
-                                            "price": 4.21
+                                            "price": 4.33
+                                        },
+                                        {
+                                            "name": "Nina Milo\u0161evi\u0107",
+                                            "price": 1.23
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "draftkings",
+                            "title": "DraftKings",
+                            "last_update": "2026-07-28T12:36:37Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Hailey Cowan",
+                                            "price": 4.3
                                         },
                                         {
                                             "name": "Nina Milo\u0161evi\u0107",
@@ -8812,34 +8609,13 @@
                             ]
                         },
                         {
-                            "key": "draftkings",
-                            "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Hailey Cowan",
-                                            "price": 4.1
-                                        },
-                                        {
-                                            "name": "Nina Milo\u0161evi\u0107",
-                                            "price": 1.25
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
@@ -8856,11 +8632,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
@@ -8877,19 +8653,19 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
-                                            "price": 4.15
+                                            "price": 4.3
                                         },
                                         {
                                             "name": "Nina Milo\u0161evi\u0107",
-                                            "price": 1.25
+                                            "price": 1.24
                                         }
                                     ]
                                 }
@@ -8898,19 +8674,19 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
-                                            "price": 3.65
+                                            "price": 3.85
                                         },
                                         {
                                             "name": "Nina Milo\u0161evi\u0107",
-                                            "price": 1.25
+                                            "price": 1.22
                                         }
                                     ]
                                 }
@@ -8919,11 +8695,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:26Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
@@ -8940,11 +8716,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
@@ -8959,73 +8735,17 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Hailey Cowan",
-                                            "price": 4.48
-                                        },
-                                        {
-                                            "name": "Nina Milo\u0161evi\u0107",
-                                            "price": 1.23
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
                                             "price": 4.5
-                                        },
-                                        {
-                                            "name": "Nina Milo\u0161evi\u0107",
-                                            "price": 1.18
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Hailey Cowan",
-                                            "price": 7.0
-                                        },
-                                        {
-                                            "name": "Nina Milo\u0161evi\u0107",
-                                            "price": 1.29
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Hailey Cowan",
-                                            "price": 4.3
                                         },
                                         {
                                             "name": "Nina Milo\u0161evi\u0107",
@@ -9035,15 +8755,15 @@
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Hailey Cowan",
-                                            "price": 5.6
+                                            "price": 5.8
                                         },
                                         {
                                             "name": "Nina Milo\u0161evi\u0107",
-                                            "price": 1.3
+                                            "price": 1.29
                                         }
                                     ]
                                 }
@@ -9101,19 +8821,19 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
-                                            "price": 4.5
+                                            "price": 5.0
                                         },
                                         {
                                             "name": "Mateusz R\u0119becki",
-                                            "price": 1.2
+                                            "price": 1.18
                                         }
                                     ]
                                 }
@@ -9122,11 +8842,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
@@ -9147,19 +8867,19 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
-                                            "price": 4.6
+                                            "price": 4.9
                                         },
                                         {
                                             "name": "Mateusz R\u0119becki",
-                                            "price": 1.21
+                                            "price": 1.19
                                         }
                                     ]
                                 }
@@ -9168,15 +8888,36 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
-                                            "price": 4.69
+                                            "price": 4.99
+                                        },
+                                        {
+                                            "name": "Mateusz R\u0119becki",
+                                            "price": 1.18
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
+                            "markets": [
+                                {
+                                    "key": "h2h",
+                                    "last_update": "2026-07-28T12:36:36Z",
+                                    "outcomes": [
+                                        {
+                                            "name": "Kyle Prepolec",
+                                            "price": 4.8
                                         },
                                         {
                                             "name": "Mateusz R\u0119becki",
@@ -9189,11 +8930,11 @@
                         {
                             "key": "betmgm",
                             "title": "BetMGM",
-                            "last_update": "2026-07-28T08:01:01Z",
+                            "last_update": "2026-07-28T12:35:52Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:01Z",
+                                    "last_update": "2026-07-28T12:35:52Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
@@ -9210,11 +8951,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
@@ -9231,11 +8972,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
@@ -9252,19 +8993,19 @@
                         {
                             "key": "bovada",
                             "title": "Bovada",
-                            "last_update": "2026-07-28T08:00:45Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:45Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
-                                            "price": 4.85
+                                            "price": 4.95
                                         },
                                         {
                                             "name": "Mateusz R\u0119becki",
-                                            "price": 1.2
+                                            "price": 1.19
                                         }
                                     ]
                                 }
@@ -9273,36 +9014,15 @@
                         {
                             "key": "betanysports",
                             "title": "BetAnything",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:02Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:02Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
-                                            "price": 4.2
-                                        },
-                                        {
-                                            "name": "Mateusz R\u0119becki",
-                                            "price": 1.2
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Kyle Prepolec",
-                                            "price": 5.29
+                                            "price": 4.4
                                         },
                                         {
                                             "name": "Mateusz R\u0119becki",
@@ -9315,15 +9035,15 @@
                         {
                             "key": "betfair_ex_eu",
                             "title": "Betfair",
-                            "last_update": "2026-07-28T08:00:52Z",
+                            "last_update": "2026-07-28T12:36:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
-                                            "price": 5.1
+                                            "price": 4.9
                                         },
                                         {
                                             "name": "Mateusz R\u0119becki",
@@ -9333,7 +9053,7 @@
                                 },
                                 {
                                     "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:00:52Z",
+                                    "last_update": "2026-07-28T12:36:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Kyle Prepolec",
@@ -9342,41 +9062,6 @@
                                         {
                                             "name": "Mateusz Rebecki",
                                             "price": 1.24
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "key": "matchbook",
-                            "title": "Matchbook",
-                            "last_update": "2026-07-28T08:01:02Z",
-                            "markets": [
-                                {
-                                    "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Kyle Prepolec",
-                                            "price": 5.1
-                                        },
-                                        {
-                                            "name": "Mateusz R\u0119becki",
-                                            "price": 1.17
-                                        }
-                                    ]
-                                },
-                                {
-                                    "key": "h2h_lay",
-                                    "last_update": "2026-07-28T08:01:02Z",
-                                    "outcomes": [
-                                        {
-                                            "name": "Kyle Prepolec",
-                                            "price": 6.8
-                                        },
-                                        {
-                                            "name": "Mateusz Rebecki",
-                                            "price": 1.25
                                         }
                                     ]
                                 }
@@ -9584,11 +9269,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:37Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9605,11 +9290,11 @@
                         {
                             "key": "betclic_fr",
                             "title": "Betclic (FR)",
-                            "last_update": "2026-07-28T07:59:37Z",
+                            "last_update": "2026-07-28T12:34:56Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:37Z",
+                                    "last_update": "2026-07-28T12:34:56Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9626,11 +9311,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9647,11 +9332,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9668,11 +9353,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9693,11 +9378,11 @@
                         {
                             "key": "winamax_fr",
                             "title": "Winamax (FR)",
-                            "last_update": "2026-07-28T08:00:12Z",
+                            "last_update": "2026-07-28T12:36:14Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:12Z",
+                                    "last_update": "2026-07-28T12:36:14Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9714,11 +9399,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9735,11 +9420,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9754,21 +9439,21 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
-                                            "price": 3.41
+                                            "price": 3.55
                                         },
                                         {
                                             "name": "Islam Makhachev",
-                                            "price": 1.34
+                                            "price": 1.32
                                         }
                                     ]
                                 }
@@ -9777,11 +9462,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9798,11 +9483,11 @@
                         {
                             "key": "sport888",
                             "title": "888sport",
-                            "last_update": "2026-07-28T08:00:51Z",
+                            "last_update": "2026-07-28T12:36:25Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:51Z",
+                                    "last_update": "2026-07-28T12:36:25Z",
                                     "outcomes": [
                                         {
                                             "name": "Ian Machado Garry",
@@ -9843,11 +9528,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:37Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -9864,11 +9549,11 @@
                         {
                             "key": "betclic_fr",
                             "title": "Betclic (FR)",
-                            "last_update": "2026-07-28T07:59:37Z",
+                            "last_update": "2026-07-28T12:34:56Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:37Z",
+                                    "last_update": "2026-07-28T12:34:56Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -9885,11 +9570,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -9906,11 +9591,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -9931,11 +9616,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -9952,11 +9637,11 @@
                         {
                             "key": "winamax_fr",
                             "title": "Winamax (FR)",
-                            "last_update": "2026-07-28T08:00:12Z",
+                            "last_update": "2026-07-28T12:36:14Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:12Z",
+                                    "last_update": "2026-07-28T12:36:14Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -9973,11 +9658,11 @@
                         {
                             "key": "marathonbet",
                             "title": "Marathon Bet",
-                            "last_update": "2026-07-28T08:00:22Z",
+                            "last_update": "2026-07-28T12:32:28Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:22Z",
+                                    "last_update": "2026-07-28T12:32:28Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -9994,11 +9679,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -10015,11 +9700,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -10034,21 +9719,21 @@
                             ]
                         },
                         {
-                            "key": "pinnacle",
-                            "title": "Pinnacle",
-                            "last_update": "2026-07-28T08:01:13Z",
+                            "key": "coolbet",
+                            "title": "Coolbet",
+                            "last_update": "2026-07-28T12:36:36Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:13Z",
+                                    "last_update": "2026-07-28T12:36:36Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
-                                            "price": 3.07
+                                            "price": 3.0
                                         },
                                         {
                                             "name": "Mackenzie Dern",
-                                            "price": 1.4
+                                            "price": 1.41
                                         }
                                     ]
                                 }
@@ -10057,11 +9742,11 @@
                         {
                             "key": "unibet_fr",
                             "title": "Unibet (FR)",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -10078,11 +9763,11 @@
                         {
                             "key": "betrivers",
                             "title": "BetRivers",
-                            "last_update": "2026-07-28T08:00:32Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:32Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -10099,11 +9784,11 @@
                         {
                             "key": "sport888",
                             "title": "888sport",
-                            "last_update": "2026-07-28T08:00:51Z",
+                            "last_update": "2026-07-28T12:36:25Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:51Z",
+                                    "last_update": "2026-07-28T12:36:25Z",
                                     "outcomes": [
                                         {
                                             "name": "Gillian Robertson",
@@ -10526,11 +10211,11 @@
                         {
                             "key": "betonlineag",
                             "title": "BetOnline.ag",
-                            "last_update": "2026-07-28T08:00:54Z",
+                            "last_update": "2026-07-28T12:34:45Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:54Z",
+                                    "last_update": "2026-07-28T12:34:45Z",
                                     "outcomes": [
                                         {
                                             "name": "Song Yadong",
@@ -10547,11 +10232,11 @@
                         {
                             "key": "betclic_fr",
                             "title": "Betclic (FR)",
-                            "last_update": "2026-07-28T07:59:37Z",
+                            "last_update": "2026-07-28T12:34:56Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:37Z",
+                                    "last_update": "2026-07-28T12:34:56Z",
                                     "outcomes": [
                                         {
                                             "name": "Song Yadong",
@@ -10568,11 +10253,11 @@
                         {
                             "key": "onexbet",
                             "title": "1xBet",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:35:42Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:35:42Z",
                                     "outcomes": [
                                         {
                                             "name": "Song Yadong",
@@ -10593,11 +10278,11 @@
                         {
                             "key": "nordicbet",
                             "title": "Nordic Bet",
-                            "last_update": "2026-07-28T07:59:52Z",
+                            "last_update": "2026-07-28T12:35:33Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T07:59:52Z",
+                                    "last_update": "2026-07-28T12:35:33Z",
                                     "outcomes": [
                                         {
                                             "name": "Song Yadong",
@@ -10614,11 +10299,11 @@
                         {
                             "key": "betsson",
                             "title": "Betsson",
-                            "last_update": "2026-07-28T08:01:02Z",
+                            "last_update": "2026-07-28T12:36:27Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:02Z",
+                                    "last_update": "2026-07-28T12:36:27Z",
                                     "outcomes": [
                                         {
                                             "name": "Song Yadong",
@@ -10635,11 +10320,11 @@
                         {
                             "key": "betus",
                             "title": "BetUS",
-                            "last_update": "2026-07-28T08:00:42Z",
+                            "last_update": "2026-07-28T12:36:34Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:42Z",
+                                    "last_update": "2026-07-28T12:36:34Z",
                                     "outcomes": [
                                         {
                                             "name": "Song Yadong",
@@ -10656,11 +10341,11 @@
                         {
                             "key": "draftkings",
                             "title": "DraftKings",
-                            "last_update": "2026-07-28T08:00:21Z",
+                            "last_update": "2026-07-28T12:36:37Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:00:21Z",
+                                    "last_update": "2026-07-28T12:36:37Z",
                                     "outcomes": [
                                         {
                                             "name": "Song Yadong",
@@ -10677,11 +10362,11 @@
                         {
                             "key": "fanduel",
                             "title": "FanDuel",
-                            "last_update": "2026-07-28T08:01:03Z",
+                            "last_update": "2026-07-28T12:36:13Z",
                             "markets": [
                                 {
                                     "key": "h2h",
-                                    "last_update": "2026-07-28T08:01:03Z",
+                                    "last_update": "2026-07-28T12:36:13Z",
                                     "outcomes": [
                                         {
                                             "name": "Song Yadong",
@@ -12161,7 +11846,10 @@
         "roi_pct": 39.8421052631579,
         "win_rate_pct": 73.68421052631578,
         "value_bets_count": 19,
-        "value_bets_won": 14
+        "value_bets_won": 14,
+        "total_correct_predictions": 49,
+        "total_valid_fights": 58,
+        "overall_accuracy_pct": 84.48275862068965
     },
-    "last_updated": "2026-07-28 10:01:33"
+    "last_updated": "2026-07-28 14:51:45"
 }

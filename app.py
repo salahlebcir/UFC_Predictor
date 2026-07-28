@@ -87,11 +87,13 @@ LANG_DATA = {
         "card_summary_title": "📅 Event Performance",
         "past_title": "📊 Real Performance (10€ Simulated Stake)",
         "net_profit": "💵 Total Net Profit",
+        "volume_sub": "{staked:.0f}€ staked ({bets} bets)",
         "roi_yield": "📈 ROI Yield",
-        "win_rate": "🎯 Win Rate",
-        "staked_vol": "💶 Volume Staked",
-        "select_past_card": "Select a past UFC event:",
+        "win_rate_value": "🎯 Opportunity Win Rate",
+        "opportunity_info": "💡 <b>Note:</b> A <i>Value Opportunity</i> does <b>NOT necessarily mean the fighter is the favorite</b> to win. It indicates an Expected Value (EV) greater than +20% relative to market odds, which maximizes long-term ROI based on our historical backtests.",
+        "accuracy_all": "🔮 Prediction Accuracy (All Fights)",
         "won_text": "gained",
+        "correct_text": "correct",
         "bets_text": "bets",
         "won_pill": "🟢 WON (+{gain} €) — Successful bet on {fighter} (Odds: {odds}). Winner: {winner}.",
         "lost_pill": "🔴 LOST (-10.00 €) — Bet placed on {fighter} (Odds: {odds}). Winner: {winner}.",
@@ -158,11 +160,13 @@ LANG_DATA = {
         "card_summary_title": "📅 Bilan de cette soirée",
         "past_title": "📊 Performance Réelle (Mise Fictive 10 €)",
         "net_profit": "💵 Profit Net Total",
+        "volume_sub": "{staked:.0f} € misés ({bets} paris)",
         "roi_yield": "📈 Rendement ROI",
-        "win_rate": "🎯 Taux de Réussite",
-        "staked_vol": "💶 Volume Misé",
-        "select_past_card": "Sélectionnez une soirée UFC passée :",
+        "win_rate_value": "🎯 Taux de Réussite (Opportunités)",
+        "opportunity_info": "💡 <b>Note :</b> Une <i>Opportunité Détectée</i> ne signifie <b>PAS FORCÉMENT que le combattant est favori</b>. Cela indique une espérance mathématique supérieure à +20% au vu des cotes, ce qui permet de maximiser le ROI à long terme selon nos tests historiques.",
+        "accuracy_all": "🔮 Précision Pronos (Tous Combats)",
         "won_text": "gagnés",
+        "correct_text": "justes",
         "bets_text": "paris",
         "won_pill": "🟢 GAGNÉ (+{gain} €) — Pari réussi sur {fighter} (Cote : {odds}). Vainqueur : {winner}.",
         "lost_pill": "🔴 PERDU (-10.00 €) — Pari engagé sur {fighter} (Cote : {odds}). Vainqueur : {winner}.",
@@ -229,11 +233,14 @@ LANG_DATA = {
         "card_summary_title": "📅 Rendimiento de esta velada",
         "past_title": "📊 Rendimiento Real (Apuesta Simulada 10 €)",
         "net_profit": "💵 Beneficio Neto Total",
+        "volume_sub": "{staked:.0f} € apostados ({bets} apuestas)",
         "roi_yield": "📈 Rendimiento ROI",
-        "win_rate": "🎯 Tasa de Acierto",
-        "staked_vol": "💶 Volumen Apostado",
+        "win_rate_value": "🎯 Tasa de Acierto (Oportunidades)",
+        "opportunity_info": "💡 <b>Nota:</b> Una <i>Oportunidad Detectada</i> <b>NO significa necesariamente que el peleador sea el favorito</b>. Indica una esperanza matemática superior al +20% respecto a las cuotas, lo que permite maximizar el ROI a largo plazo según nuestras pruebas históricas.",
+        "accuracy_all": "🔮 Precisión Pronósticos (Todos)",
         "select_past_card": "Seleccione un evento pasado de UFC:",
         "won_text": "ganados",
+        "correct_text": "aciertos",
         "bets_text": "apuestas",
         "won_pill": "🟢 GANADO (+{gain} €) — Apuesta con éxito en {fighter} (Cuota: {odds}). Ganador: {winner}.",
         "lost_pill": "🔴 PERDIDO (-10.00 €) — Apuesta realizada en {fighter} (Cuota: {odds}). Ganador: {winner}.",
@@ -964,8 +971,11 @@ def main():
         st.markdown(f"### {t['upcoming_title']}")
 
         render_clean_html(f"""
-        <div style="margin-bottom: 1rem; font-size: 0.85rem; font-weight: 600; color: #64748B;">
+        <div style="margin-bottom: 0.75rem; font-size: 0.85rem; font-weight: 600; color: #64748B;">
             {t['odds_freshness'].format(mins=odds_age_mins)}
+        </div>
+        <div style="background-color: #FFFFFF; border: 1px solid #E2E8F0; border-left: 5px solid #3D3EEA; border-radius: 16px; padding: 14px 18px; margin-bottom: 20px; font-size: 0.88rem; color: #334155; line-height: 1.5; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);">
+            {t['opportunity_info']}
         </div>
         """)
 
@@ -1122,9 +1132,33 @@ def main():
         win_r = fin_summary.get("win_rate_pct", 0.0)
         v_count = fin_summary.get("value_bets_count", 0)
         v_won = fin_summary.get("value_bets_won", 0)
+        tot_correct = fin_summary.get("total_correct_predictions", 0)
+        tot_valid = fin_summary.get("total_valid_fights", 0)
+        overall_acc = fin_summary.get("overall_accuracy_pct", 0.0)
+
+        if tot_valid == 0 and past_cards:
+            for _, c_info in past_cards.items():
+                for fight in c_info.get("fights", []):
+                    winner = fight.get("winner")
+                    pf1 = fight.get("f1", "")
+                    pf2 = fight.get("f2", "")
+                    pct_a = fight.get("pct_a")
+                    pct_b = fight.get("pct_b")
+                    is_f1 = bool(winner and fuzzy_match_fighter_name(winner, [pf1], threshold=0.70))
+                    is_f2 = bool(winner and fuzzy_match_fighter_name(winner, [pf2], threshold=0.70))
+                    is_void = (
+                        not winner or
+                        str(winner).upper().strip() in ["N/A", "NONE", "DRAW/NC", "NC", "CANCELLED", "VOID", "DRAW"] or
+                        (not is_f1 and not is_f2)
+                    )
+                    if not is_void and pct_a is not None and pct_b is not None:
+                        tot_valid += 1
+                        if (pct_a >= pct_b and is_f1) or (pct_b > pct_a and is_f2):
+                            tot_correct += 1
+            overall_acc = (tot_correct / tot_valid * 100.0) if tot_valid > 0 else 0.0
 
         global_prof_color = "#10B981" if tot_prof >= 0 else "#EF4444"
-        global_roi_color = "#10B981" if roi_p >= 0 else "#EF4444"
+        global_roi_formatted = f"+{roi_p:.1f}%" if roi_p >= 0 else f"{roi_p:.1f}%"
 
         html_summary_card = f"""<div class="summary-card-pure-white">
 <div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
@@ -1134,20 +1168,21 @@ def main():
 <div style="flex: 1;">
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['net_profit']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: {global_prof_color};">{tot_prof:+.2f} €</div>
+<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{t['volume_sub'].format(staked=tot_stake, bets=v_count)}</div>
 </div>
 <div style="flex: 1;">
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['roi_yield']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{roi_p:.1f}%</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{global_roi_formatted}</div>
 </div>
 <div style="flex: 1;">
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate']}</div>
+<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate_value']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{win_r:.1f}%</div>
-<div style="font-size: 0.8rem; font-weight: 600; color: #64748B;">{v_won}/{v_count} {t['won_text']}</div>
+<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{v_won}/{v_count} {t['won_text']}</div>
 </div>
 <div style="flex: 1;">
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['staked_vol']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{tot_stake:.0f} €</div>
-<div style="font-size: 0.8rem; font-weight: 600; color: #64748B;">{v_count} {t['bets_text']}</div>
+<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['accuracy_all']}</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{overall_acc:.1f}%</div>
+<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{tot_correct}/{tot_valid} {t['correct_text']}</div>
 </div>
 </div>
 </div>"""
@@ -1159,7 +1194,7 @@ def main():
             past_keys = list(past_cards.keys())
 
             selected_past_key = st.selectbox(
-                t["select_past_card"],
+                t.get("select_past_card", "Select a past UFC event:"),
                 past_keys,
                 format_func=lambda k: f"📜 {k} ({len(deduplicate_card_fights(past_cards[k].get('fights', [])))} fights)",
                 key="sb_past"
@@ -1173,6 +1208,8 @@ def main():
             card_profit = 0.0
             card_vb_count = 0
             card_vb_won = 0
+            card_correct_count = 0
+            card_total_valid_fights = 0
 
             for fight in p_fights:
                 res_status = fight.get("result_status")
@@ -1180,6 +1217,8 @@ def main():
                 winner = fight.get("winner")
                 pf1 = fight.get("f1", "")
                 pf2 = fight.get("f2", "")
+                pct_a = fight.get("pct_a")
+                pct_b = fight.get("pct_b")
 
                 is_f1_win = bool(winner and fuzzy_match_fighter_name(winner, [pf1], threshold=0.70))
                 is_f2_win = bool(winner and fuzzy_match_fighter_name(winner, [pf2], threshold=0.70))
@@ -1189,6 +1228,11 @@ def main():
                     str(winner).upper().strip() in ["N/A", "NONE", "DRAW/NC", "NC", "CANCELLED", "VOID", "DRAW"] or
                     (not is_f1_win and not is_f2_win)
                 )
+
+                if not is_void and pct_a is not None and pct_b is not None:
+                    card_total_valid_fights += 1
+                    if (pct_a >= pct_b and is_f1_win) or (pct_b > pct_a and is_f2_win):
+                        card_correct_count += 1
 
                 if fight.get("is_value_bet") and not is_void:
                     card_staked += 10.0
@@ -1201,9 +1245,10 @@ def main():
 
             card_roi = (card_profit / card_staked * 100.0) if card_staked > 0 else 0.0
             card_win_rate = (card_vb_won / card_vb_count * 100.0) if card_vb_count > 0 else 0.0
+            card_accuracy = (card_correct_count / card_total_valid_fights * 100.0) if card_total_valid_fights > 0 else 0.0
 
             card_prof_color = "#10B981" if card_profit >= 0 else "#EF4444"
-            card_roi_color = "#10B981" if card_roi >= 0 else "#EF4444"
+            card_roi_formatted = f"+{card_roi:.1f}%" if card_roi >= 0 else f"{card_roi:.1f}%"
 
             html_card_summary = f"""<div class="summary-card-pure-white" style="margin-top: 12px; margin-bottom: 24px;">
 <div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
@@ -1213,20 +1258,21 @@ def main():
 <div style="flex: 1;">
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['net_profit']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: {card_prof_color};">{card_profit:+.2f} €</div>
+<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{t['volume_sub'].format(staked=card_staked, bets=card_vb_count)}</div>
 </div>
 <div style="flex: 1;">
 <div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['roi_yield']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_roi:.1f}%</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_roi_formatted}</div>
 </div>
 <div style="flex: 1;">
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate']}</div>
+<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate_value']}</div>
 <div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_win_rate:.1f}%</div>
-<div style="font-size: 0.8rem; font-weight: 600; color: #64748B;">{card_vb_won}/{card_vb_count} {t['won_text']}</div>
+<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{card_vb_won}/{card_vb_count} {t['won_text']}</div>
 </div>
 <div style="flex: 1;">
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['staked_vol']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_staked:.0f} €</div>
-<div style="font-size: 0.8rem; font-weight: 600; color: #64748B;">{card_vb_count} {t['bets_text']}</div>
+<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['accuracy_all']}</div>
+<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_accuracy:.1f}%</div>
+<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{card_correct_count}/{card_total_valid_fights} {t['correct_text']}</div>
 </div>
 </div>
 </div>"""
