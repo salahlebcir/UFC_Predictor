@@ -851,9 +851,13 @@ def extract_fight_odds(ev, name_a, name_b):
 
 
 def main():
-    # 🌐 SÉLECTEUR DE LANGUE ISOLÉ (Drapeaux uniquement, pilule discrète tout en haut à droite)
+    # 🌐 SÉLECTEUR DE LANGUE ISOLÉ AVEC PERSISTENCE LOCALSTORAGE & QUERY PARAMS
     lang_map = {"🇬🇧": "EN", "🇫🇷": "FR", "🇪🇸": "ES"}
     reverse_lang_map = {"EN": "🇬🇧", "FR": "🇫🇷", "ES": "🇪🇸"}
+
+    # Récupération de la langue depuis query_params ou session_state
+    if "lang" in st.query_params and st.query_params["lang"] in ["EN", "FR", "ES"]:
+        st.session_state["lang"] = st.query_params["lang"]
 
     current_lang = st.session_state.get("lang", "EN")
     default_flag = reverse_lang_map.get(current_lang, "🇬🇧")
@@ -865,7 +869,12 @@ def main():
         label_visibility="collapsed",
         key="sb_language_flags"
     )
-    st.session_state["lang"] = lang_map[selected_flag]
+
+    new_lang = lang_map[selected_flag]
+    if st.session_state.get("lang") != new_lang:
+        st.session_state["lang"] = new_lang
+        st.query_params["lang"] = new_lang
+        st.rerun()
 
     current_lang = st.session_state["lang"]
     t = LANG_DATA.get(current_lang, LANG_DATA["EN"])
@@ -873,6 +882,19 @@ def main():
     # Session State Router
     if "current_page" not in st.session_state:
         st.session_state["current_page"] = "home"
+
+    # 📜 SCRIPT DE SCROLL TO TOP AUTOMATIQUE LORS DE TOUT CHANGEMENT DE PAGE
+    st.components.v1.html(
+        """
+        <script>
+            try {
+                window.parent.scrollTo({top: 0, behavior: 'instant'});
+            } catch(e) {}
+        </script>
+        """,
+        height=0,
+        width=0
+    )
 
     # 🖼️ INJECTION DES BALISES META OPEN GRAPH DYNAMIQUES AVEC CACHE-BUSTING AUTOMATIQUE (?v=timestamp)
     og_img_url = get_og_image_url()
@@ -906,28 +928,50 @@ def main():
     </script>
     """, height=0, width=0)
 
-    # 🍪 SÉCURISATION & PERSISTANCE DU CONSENTEMENT COOKIE (QUERY PARAMS + LOCALSTORAGE)
+    # 🍪 SÉCURISATION & PERSISTANCE DU CONSENTEMENT COOKIE + NETTOYAGE STRICT DE L'URL
     if "cookie_consent" in st.query_params:
         st.session_state["cookie_consent"] = st.query_params["cookie_consent"]
+        try:
+            st.query_params.pop("cookie_consent", None)
+        except Exception:
+            pass
 
-    # Script JS de persistance localStorage pour préserver le choix lors de la réactualisation F5
-    st.components.v1.html("""
+    # Script JS pour persistance localStorage (Langue + Cookies) & Nettoyage URL sans paramètre indésirable
+    st.components.v1.html(f"""
     <script>
-    try {
+    try {{
         const parentWin = window.parent;
         const urlParams = new URLSearchParams(parentWin.location.search);
+
+        // 1. Sauvegarde & Nettoyage Cookie Consent dans l'URL
         const consent = urlParams.get('cookie_consent');
-        if (consent) {
+        if (consent) {{
             parentWin.localStorage.setItem('ufc_cookie_consent', consent);
-        } else {
-            const saved = parentWin.localStorage.getItem('ufc_cookie_consent');
-            if (saved) {
-                const url = new URL(parentWin.location.href);
-                url.searchParams.set('cookie_consent', saved);
-                parentWin.location.replace(url.toString());
-            }
-        }
-    } catch(e) {}
+            urlParams.delete('cookie_consent');
+            const cleanSearch = urlParams.toString() ? ('?' + urlParams.toString()) : '';
+            const cleanUrl = parentWin.location.pathname + cleanSearch + parentWin.location.hash;
+            parentWin.history.replaceState({{}}, parentWin.document.title, cleanUrl);
+        }} else {{
+            const savedConsent = parentWin.localStorage.getItem('ufc_cookie_consent');
+            if (savedConsent && !urlParams.has('cookie_consent')) {{
+                // Consentement disponible dans localStorage
+            }}
+        }}
+
+        // 2. Persistance de la Langue au Rafraîchissement (F5)
+        let currentLang = '{current_lang}';
+        if (currentLang) {{
+            parentWin.localStorage.setItem('ufc_lang', currentLang);
+        }}
+        if (!urlParams.has('lang')) {{
+            const savedLang = parentWin.localStorage.getItem('ufc_lang');
+            if (savedLang && ['EN', 'FR', 'ES'].includes(savedLang) && savedLang !== currentLang) {{
+                urlParams.set('lang', savedLang);
+                const newUrl = parentWin.location.pathname + '?' + urlParams.toString();
+                parentWin.location.replace(newUrl);
+            }}
+        }}
+    }} catch(e) {{}}
     </script>
     """, height=0, width=0)
 
