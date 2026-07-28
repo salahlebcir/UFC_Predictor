@@ -102,6 +102,8 @@ LANG_DATA = {
         "no_bet_desc": "Avoided bet: Insufficient value. Winner: {winner}.",
         "void_pill": "⚪ CANCELLED / VOID — Fight did not take place (Stake refunded)",
         "odds_freshness": "⚡ Odds updated {mins} mins ago from The Odds API",
+        "odds_updated_mins": "⚡ Odds updated {mins} mins ago from The Odds API",
+        "odds_updated_hours": "⚡ Odds updated {hours}h {mins}m ago from The Odds API",
         "bug_contact": "✉️ Found a bug or have a question? contact@auradev.fr",
         # FEATURE IMPORTANCE EN
         "feature_importance_title": "📊 Which factors are the most important in our AI model?",
@@ -179,6 +181,8 @@ LANG_DATA = {
         "no_bet_desc": "Pari évité : Valeur insuffisante. Vainqueur : {winner}.",
         "void_pill": "⚪ ANNULÉ / VOID — Combat non disputé (Pari remboursé)",
         "odds_freshness": "⚡ Cotes actualisées il y a {mins} min via The Odds API",
+        "odds_updated_mins": "⚡ Cotes mises à jour il y a {mins} min depuis The Odds API",
+        "odds_updated_hours": "⚡ Cotes mises à jour il y a {hours}h {mins}min depuis The Odds API",
         "bug_contact": "✉️ Une question ou une erreur à signaler ? contact@auradev.fr",
         # FEATURE IMPORTANCE FR
         "feature_importance_title": "📊 Quels sont les facteurs les plus importants dans notre modèle IA ?",
@@ -260,6 +264,8 @@ LANG_DATA = {
         "no_bet_desc": "Apuesta evitada: Valor insuficiente. Ganador: {winner}.",
         "void_pill": "⚪ CANCELADO / VOID — Combate no disputado (Apuesta reembolsada)",
         "odds_freshness": "⚡ Cuotas actualizadas hace {mins} min via The Odds API",
+        "odds_updated_mins": "⚡ Cuotas actualizadas hace {mins} min desde The Odds API",
+        "odds_updated_hours": "⚡ Cuotas actualizadas hace {hours}h {mins}min desde The Odds API",
         "bug_contact": "✉️ ¿Tienes alguna duda o error que reportar? contact@auradev.fr",
         # FAQ ES
         "faq_title": "❓ Preguntas Frecuentes (FAQ)",
@@ -737,13 +743,15 @@ def show_cookie_dialog(t):
     col_dec, col_acc = st.columns(2)
     with col_dec:
         if st.button(t["cookie_decline"], key="dlg_btn_decline", use_container_width=True):
-            st.session_state["cookie_consent"] = "declined"
-            st.query_params["cookie_consent"] = "declined"
+            st.session_state["cookie_consent"] = "essentials"
+            st.query_params["cookie_consent"] = "essentials"
+            st.components.v1.html("<script>try{window.parent.localStorage.setItem('ufc_cookie_consent', 'essentials');}catch(e){}</script>", height=0, width=0)
             st.rerun()
     with col_acc:
         if st.button(t["cookie_accept"], key="dlg_btn_accept", use_container_width=True):
             st.session_state["cookie_consent"] = "accepted"
             st.query_params["cookie_consent"] = "accepted"
+            st.components.v1.html("<script>try{window.parent.localStorage.setItem('ufc_cookie_consent', 'accepted');}catch(e){}</script>", height=0, width=0)
             st.rerun()
 
 
@@ -1145,9 +1153,16 @@ def main():
     elif page == "upcoming":
         st.markdown(f"### {t['upcoming_title']}")
 
+        if odds_age_mins < 60:
+            freshness_str = t["odds_updated_mins"].format(mins=odds_age_mins)
+        else:
+            h_val = odds_age_mins // 60
+            m_val = odds_age_mins % 60
+            freshness_str = t["odds_updated_hours"].format(hours=h_val, mins=m_val)
+
         render_clean_html(f"""
         <div style="margin-bottom: 0.75rem; font-size: 0.85rem; font-weight: 600; color: #64748B;">
-            {t['odds_freshness'].format(mins=odds_age_mins)}
+            {freshness_str}
         </div>
         <div style="background-color: #FFFFFF; border: 1px solid #E2E8F0; border-left: 5px solid #3D3EEA; border-radius: 16px; padding: 14px 18px; margin-bottom: 20px; font-size: 0.88rem; color: #334155; line-height: 1.5; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);">
             {t['opportunity_info']}

@@ -8,6 +8,7 @@ import os
 import sys
 import json
 import time
+from datetime import datetime, timezone
 import requests
 from dotenv import load_dotenv
 
@@ -123,27 +124,51 @@ def match_odds_to_fight(f1: str, f2: str, raw_odds_events: list) -> list:
 
 def get_cached_or_fresh_odds(force_refresh=False):
     """
-    STRATÉGIE CACHE-FIRST (2 HEURES) :
-    1. Si data/odds_cache.json a moins de 2 heures et not force_refresh -> 0 APPEL RÉSEAU.
-    2. Si le cache a expiré (> 2h) -> EXÉCUTER EXCLUSIVEMENT 1 SEUL APPEL BATCH GLOBAL à The Odds API.
+    STRATÉGIE SERVEUR PASSIF / CLIENT SANS AUCUN APPEL RÉSEAU :
+    1. Si not force_refresh -> Lire STRICTEMENT et EXCLUSIVEMENT le fichier local data/upcoming_odds.json / data/odds_cache.json (0 appel réseau client).
+    2. Si force_refresh=True (tâche de fond / cron / warmup) -> Effectuer 1 SEUL appel API batch à The Odds API et mettre à jour le cache local avec last_updated_utc.
     """
     current_time = time.time()
+    cache_file_primary = os.path.join("data", "upcoming_odds.json")
+    cache_file_secondary = CACHE_FILE_PATH
 
-    # 1. Stratégie Cache-First (0 appel réseau si cache < 2h)
-    if not force_refresh and os.path.exists(CACHE_FILE_PATH):
+    target_cache_path = cache_file_primary if os.path.exists(cache_file_primary) else cache_file_secondary
+
+    # 1. Mode Client Passif (not force_refresh) : 0 appel réseau
+    if not force_refresh and os.path.exists(target_cache_path):
         try:
-            with open(CACHE_FILE_PATH, "r", encoding="utf-8") as f:
+            with open(target_cache_path, "r", encoding="utf-8") as f:
                 cache_data = json.load(f)
 
-            timestamp = cache_data.get("timestamp", 0)
+            last_utc_str = cache_data.get("last_updated_utc")
+            if last_utc_str:
+                try:
+                    dt = datetime.fromisoformat(last_utc_str.replace("Z", "+00:00"))
+                    timestamp = dt.timestamp()
+                except Exception:
+                    timestamp = cache_data.get("timestamp", current_time)
+            else:
+                timestamp = cache_data.get("timestamp", current_time)
+
             age_hours = (current_time - timestamp) / 3600.0
-
-            if age_hours < 2.0 and "events" in cache_data and len(cache_data["events"]) > 0:
-                return cache_data["events"], True, age_hours
+            if "events" in cache_data and len(cache_data["events"]) > 0:
+                return cache_data["events"], True, max(0.0, age_hours)
         except Exception as e:
-            print(f"[!] Erreur de lecture du cache local ({e}). Tentative de rafraîchissement...")
+            print(f"[!] Erreur de lecture du cache local ({e}).")
 
-    # 2. Requête API unique globale batch si le cache est absent ou périmé (> 2h)
+    # Si le fichier local n'existe pas du tout et force_refresh est False, essayer le fichier secondaire
+    if not force_refresh and os.path.exists(cache_file_secondary):
+        try:
+            with open(cache_file_secondary, "r", encoding="utf-8") as f:
+                cache_data = json.load(f)
+            timestamp = cache_data.get("timestamp", current_time)
+            age_hours = (current_time - timestamp) / 3600.0
+            if "events" in cache_data:
+                return cache_data["events"], True, max(0.0, age_hours)
+        except Exception:
+            pass
+
+    # 2. Mode Rafraîchissement Arrière-Plan (force_refresh=True)
     api_key = os.getenv("ODDS_API_KEY")
     if not api_key or api_key.strip() == "votre_cle_api_ici":
         print("\n[!] Clé ODDS_API_KEY non configurée dans le fichier .env.")
@@ -198,25 +223,31 @@ def get_cached_or_fresh_odds(force_refresh=False):
 
         print(f"   [+] Pipeline V3 terminé : {len(official_cards)} cartes UFC futures ({len(all_processed_events)} combats, {matched_fights_count} cotes réelles).")
 
-        # Sauvegarde du cache assaini multi-événements
+        now_utc = datetime.now(timezone.utc)
         cache_to_save = {
             "timestamp": current_time,
+            "last_updated_utc": now_utc.isoformat(),
             "datetime": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(current_time)),
             "cards_count": len(official_cards),
             "events_count": len(all_processed_events),
             "events": all_processed_events
         }
 
-        os.makedirs(os.path.dirname(CACHE_FILE_PATH), exist_ok=True)
-        with open(CACHE_FILE_PATH, "w", encoding="utf-8") as f:
-            json.dump(cache_to_save, f, indent=4)
+        for save_path in [cache_file_primary, cache_file_secondary]:
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            with open(save_path, "w", encoding="utf-8") as f:
+                json.dump(cache_to_save, f, indent=4)
 
         return all_processed_events, False, 0.0
 
     except Exception as e:
         print(f"\n[!] Impossible de contacter The Odds API : {e}")
-        if os.path.exists(CACHE_FILE_PATH):
-            with open(CACHE_FILE_PATH, "r", encoding="utf-8") as f:
+        if os.path.exists(cache_file_primary):
+            with open(cache_file_primary, "r", encoding="utf-8") as f:
+                cache_data = json.load(f)
+            return cache_data.get("events", None), True, 999.0
+        elif os.path.exists(cache_file_secondary):
+            with open(cache_file_secondary, "r", encoding="utf-8") as f:
                 cache_data = json.load(f)
             return cache_data.get("events", None), True, 999.0
         return None, False, 0.0
