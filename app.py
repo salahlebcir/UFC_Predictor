@@ -424,16 +424,6 @@ st.markdown(f"""
         box-shadow: 0 6px 16px rgba(61, 62, 234, 0.12) !important;
     }}
 
-    /* Intégration du Logo dans la pilule de navigation centrale (UFC Vision) */
-    div[data-testid="stColumn"]:has(button[key="btn_nav_home"]) button {{
-        background-image: url("{logo_data_url}") !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        color: transparent !important;
-        min-height: 42px !important;
-    }}
-
     /* CLASSES SPECIFIQUES POUR LES BULLES BLANC PUR #FFFFFF */
     .fight-card-pure-white, .summary-card-pure-white, .legal-card-pure-white {{
         background-color: #FFFFFF !important;
@@ -873,21 +863,38 @@ def main():
 
     st.markdown(f"""
     <style>
-        div[data-testid="stColumn"]:has(button[key="{active_btn_key}"]) button {{
+        /* 1. Stylisation de la pilule active dans le menu supérieur */
+        button[data-testid="stBaseButton-{active_btn_key}"] {{
             border-color: #3D3EEA !important;
             box-shadow: 0 4px 14px rgba(61, 62, 234, 0.18) !important;
             font-weight: 800 !important;
         }}
-        div[data-testid="stColumn"]:has(button[key="btn_nav_home"]) button {{
+
+        /* 2. Ciblage NATIVEMENT ISOLÉ du bouton d'accueil via sa key Streamlit */
+        div[data-testid="stKey-btn_nav_home"] button,
+        .st-key-btn_nav_home button {{
             background-image: url("{logo_data_url}") !important;
             background-size: contain !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
+            background-color: #FFFFFF !important;
+            border: 1px solid #E2E8F0 !important;
+            border-radius: 9999px !important;
+            height: 42px !important;
+            min-height: 42px !important;
+            padding: 6px 16px !important;
         }}
-        div[data-testid="stColumn"]:has(button[key="btn_nav_home"]) button p,
-        div[data-testid="stColumn"]:has(button[key="btn_nav_home"]) button div {{
+
+        /* 3. Masquer le texte du bouton d'accueil sans toucher aux autres boutons */
+        div[data-testid="stKey-btn_nav_home"] button p,
+        div[data-testid="stKey-btn_nav_home"] button span,
+        div[data-testid="stKey-btn_nav_home"] button div,
+        .st-key-btn_nav_home button p {{
             opacity: 0 !important;
             font-size: 0px !important;
+            color: transparent !important;
+            visibility: hidden !important;
+            display: none !important;
         }}
     </style>
     """, unsafe_allow_html=True)
