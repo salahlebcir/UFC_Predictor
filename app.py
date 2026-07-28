@@ -81,6 +81,7 @@ LANG_DATA = {
         "select_upcoming_card": "Select an upcoming UFC card:",
         "insufficient_data": "🔘 INSUFFICIENT DATA — Incomplete UFC history.",
         "odds_pending": "⏳ ODDS PENDING — Awaiting official odds.",
+        "no_odds_archived": "⚪ NO ODDS ARCHIVED — Historical odds missing.",
         "high_confidence": "🟢 VALUE OPPORTUNITY: {fighter}",
         "insufficient_confidence": "🚨 NO VALUE DETECTED",
         "global_summary_title": "🌐 Global Performance",
@@ -154,6 +155,7 @@ LANG_DATA = {
         "select_upcoming_card": "Sélectionnez une carte UFC à venir :",
         "insufficient_data": "🔘 DONNÉES INSUFFISANTES — Historique UFC incomplet.",
         "odds_pending": "⏳ COTES EN ATTENTE — En attente des cotes officielles.",
+        "no_odds_archived": "⚪ NO ODDS ARCHIVED — Cotes historiques non archivées.",
         "high_confidence": "🟢 OPPORTUNITÉ DÉTECTÉE : {fighter}",
         "insufficient_confidence": "🚨 AUCUNE OPPORTUNITÉ INTÉRESSANTE",
         "global_summary_title": "🌐 Bilan Global",
@@ -227,6 +229,7 @@ LANG_DATA = {
         "select_upcoming_card": "Seleccione una cartelera de la UFC:",
         "insufficient_data": "🔘 DATOS INSUFFICIENTES — Historial de UFC incompleto.",
         "odds_pending": "⏳ CUOTAS PENDIENTES — Esperando cuotas oficiales.",
+        "no_odds_archived": "⚪ NO ODDS ARCHIVED — Cuotas históricas no archivadas.",
         "high_confidence": "🟢 OPORTUNIDAD DETECTADA: {fighter}",
         "insufficient_confidence": "🚨 SIN OPORTUNIDAD DE VALOR",
         "global_summary_title": "🌐 Rendimiento Global",
@@ -1345,7 +1348,7 @@ def main():
                     if not has_full:
                         res_html = f'<div class="result-pill-nobet">{t["insufficient_data"]}<br><span style="font-size:0.82rem; color:#64748B;">Winner: <b>{winner or "N/A"}</b>.</span></div>'
                     elif not has_odds:
-                        res_html = f'<div class="result-pill-nobet">{t["odds_pending"]}<br><span style="font-size:0.82rem; color:#64748B;">Winner: <b>{winner or "N/A"}</b>.</span></div>'
+                        res_html = f'<div class="result-pill-nobet">{t["no_odds_archived"]}<br><span style="font-size:0.82rem; color:#64748B;">Winner: <b>{winner or "N/A"}</b>.</span></div>'
                     else:
                         if max_ev_val is None:
                             best_ev_f = max(ev_a_val, ev_b_val) if (ev_a_val is not None and ev_b_val is not None) else 0.0
