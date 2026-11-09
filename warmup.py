@@ -16,6 +16,13 @@ import argparse
 import urllib.request
 from datetime import datetime
 
+# Forcer l'encodage UTF-8 sous Windows
+try:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 # Garantie d'inclusion du dossier racine et du dossier src dans sys.path
 project_root = os.path.dirname(os.path.abspath(__file__))
 src_dir = os.path.join(project_root, "src")

@@ -8,10 +8,7 @@ cd "$PROJECT_DIR" || exit 1
 
 echo "🚀 Début du déploiement de UFC Vision..."
 
-# 1. Annuler les modifications locales sur les fichiers de données régénérés par le bot
-git checkout -- data/historical_tracker.json data/odds_cache.json 2>/dev/null || true
-
-# 2. Récupérer le dernier code depuis GitHub
+# 1. Récupérer le dernier code source depuis GitHub (Zéro conflit car les fichiers mutables sont dans .gitignore)
 echo "📥 Récupération du code Git..."
 git pull origin main
 

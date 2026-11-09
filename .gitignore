@@ -1,14 +1,26 @@
 # Environment variables
 .env
 
-# Local Odds Cache
+# Local Runtime Caches, Trackers & Simulation Results (NEVER TRACK IN GIT)
 data/odds_cache.json
+data/upcoming_odds.json
+data/historical_tracker.json
+data/*.tmp
+data/backtest_*.json
+data/ev_sensitivity_results.json
 
-# Virtual environment
+# Scratch & Temporary Testing Scripts
+scratch/
+
+# Virtual environment & Caches
 venv/
+.venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# OS files
+# OS & Logs
 .DS_Store
 Thumbs.db
+*.log
