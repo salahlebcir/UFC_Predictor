@@ -172,7 +172,238 @@ HISTORICAL_CLOSING_ODDS = {
     ("Ismael Bonfim", "Axel Sola"): (2.72, 1.50),
     ("Brendson Ribeiro", "Magomed Tuchalov"): (8.00, 1.10),
     ("Mike Davis", "Nurullo Aliev"): (3.00, 1.41),
-    ("Cody Gibson", "Abdul Hussein"): (5.00, 1.18)
+    ("Cody Gibson", "Abdul Hussein"): (5.00, 1.18),
+
+    # Card 11: 2026-08-01 | UFC Fight Night: Medić vs. Rodriguez
+    ("Daniel Rodriguez", "Uroš Medić"): (4.12, 1.26),
+    ("Jan Blachowicz", "Navajo Stirling"): (3.40, 1.36),
+    ("Marcin Tybura", "Aleksandar Rakic"): (3.50, 1.33),
+    ("Duško Todorović", "Robert Valentin"): (2.25, 1.69),
+    ("Gilbert Urbina", "Vlasto Čepo"): (3.80, 1.29),
+    ("Ludovit Klein", "Tofiq Musayev"): (1.52, 2.68),
+    ("Oban Elliott", "Michael Oliveira"): (3.77, 1.29),
+    ("Josias Musasa", "Mark Vologdin"): (1.83, 2.01),
+    ("Dennis Buzukja", "Bogdan Grad"): (2.70, 1.54),
+    ("Hailey Cowan", "Nina Milošević"): (4.40, 1.23),
+    ("Jovan Leka", "Max Gimenis"): (1.90, 1.90),
+    ("Kyle Prepolec", "Mateusz Rębecki"): (3.73, 1.29),
+    ("Milos Janicic", "Noah Gugnon"): (2.10, 1.75),
+    ("Borislav Nikolic", "Mark Vologdin"): (2.30, 1.65),
+    ("Alexander Poppeck", "Jovan Leka"): (1.60, 2.40),
+    ("Stephanie Luciano", "Marina Spasić"): (1.70, 2.20),
+
+    # Card 12: 2026-08-08 | UFC Fight Night: Gamrot vs Salkilld
+    ("Mateusz Gamrot", "Quillan Salkilld"): (1.30, 3.65),
+    ("Amanda Lemos", "Alexia Thainara"): (1.65, 2.30),
+    ("Bruno Lopes", "Diyar Nurgozhay"): (2.40, 1.60),
+    ("Louie Sutherland", "José Montanha"): (1.75, 2.10),
+    ("Diego Ferreira", "Billy Quarantillo"): (1.85, 1.95),
+    ("Steven Asplund", "Guilherme Pat"): (1.55, 2.50),
+    ("Henrique da Silva Lopes", "Louie Sutherland"): (2.10, 1.75),
+    ("Darren Elkins", "Yadier del Valle"): (2.80, 1.45),
+    ("Billy Ray Goff", "Ty Miller"): (2.35, 1.62),
+    ("Manoel Sousa", "Richie Miranda"): (1.60, 2.40),
+    ("Miles Johns", "Gianni Vazquez"): (1.45, 2.80),
+    ("Juliana Miller", "Ravena Oliveira"): (1.70, 2.20),
+    ("Gigi Canuto", "Carol Foro"): (1.90, 1.90),
+
+    # Card 13: 2026-08-15 | UFC 330: Makhachev vs. Machado Garry
+    ("Islam Makhachev", "Ian Machado Garry"): (1.28, 3.91),
+    ("Mackenzie Dern", "Gillian Robertson"): (1.41, 3.00),
+    ("Erin Blanchfield", "Jasmine Jasudavicius"): (1.50, 2.70),
+    ("Jalin Turner", "Kauê Fernandes"): (1.45, 2.85),
+    ("Dustin Stoltzfus", "Mansur Abdul-Malik"): (2.60, 1.53),
+    ("Edson Barboza", "Esteban Ribovics"): (2.75, 1.48),
+    ("Jeremiah Wells", "Myktybek Orolbai"): (3.10, 1.38),
+    ("Chidi Njokuani", "Geoff Neal"): (2.50, 1.55),
+    ("Vicente Luque", "Tresean Gore"): (1.75, 2.10),
+    ("Neil Magny", "Ramiz Brahimaj"): (1.60, 2.40),
+    ("Chidi Njokuani", "Joel Álvarez"): (2.20, 1.70),
+    ("Charles Johnson", "Eduardo Chapolin"): (1.40, 3.00),
+    ("Eric McConico", "Donte Johnson"): (2.10, 1.75),
+    ("Lucas Fernando", "Rafael Tobias"): (1.65, 2.30),
+
+    # Card 14: 2026-08-22 | UFC Fight Night: Hernandez vs. Rodrigues
+    ("Anthony Hernandez", "Gregory Rodrigues"): (1.55, 2.50),
+    ("Roman Dolidze", "Reinier de Ridder"): (2.10, 1.75),
+    ("Serghei Spivac", "Vitor Petrino"): (1.70, 2.20),
+    ("Kennedy Nzechukwu", "Shamil Gaziev"): (2.40, 1.60),
+    ("Carli Judice", "Jeisla Chaves"): (1.80, 2.05),
+    ("Wes Schultz", "Jackson McVey"): (1.75, 2.10),
+    ("Elise Reed", "Shanelle Dyer"): (2.50, 1.55),
+    ("Gauge Young", "Kody Steele"): (2.20, 1.70),
+    ("Mason Jones", "MarQuel Mederos"): (1.65, 2.30),
+    ("Anthony Wint", "Terrance Chatman"): (1.70, 2.20),
+    ("Jamall Emmers", "Lerryan Douglas"): (1.50, 2.65),
+    ("Chris Padilla", "Nasrat Haqparast"): (2.60, 1.53),
+    ("Marcio Barbosa", "Ryan Kuse"): (1.85, 1.95),
+    ("Gauge Young", "Stan Dorsainvil"): (2.00, 1.80),
+
+    # Card 15: 2026-08-29 | UFC Fight Night: Nurmagomedov vs. Song
+    ("Song Yadong", "Umar Nurmagomedov"): (4.60, 1.21),
+    ("Yan Xiaonan", "Denise Gomes"): (1.65, 2.30),
+    ("Alex Perez", "Sumudaerji"): (1.60, 2.40),
+    ("Rei Tsuruya", "Kevin Borjas"): (1.30, 3.60),
+    ("Kai Asakura", "Aoriqileng"): (1.35, 3.30),
+    ("Junior Tafa", "Ce Liu"): (1.80, 2.05),
+    ("Liu Ce", "Levi Rodrigues Jr."): (1.75, 2.10),
+    ("Bilal Hasan", "Nilson Rojas"): (1.70, 2.20),
+    ("Namsrai Batbayar", "Andre Lima"): (2.60, 1.53),
+    ("Sean Woodson", "Jack Jenkins"): (1.60, 2.40),
+    ("Xiao Long", "Francesco Nuzzi"): (2.10, 1.75),
+    ("Lawrence Lui", "Hector Santiago"): (1.90, 1.90),
+    ("Jingnan Xiong", "Julia Polastri"): (1.85, 1.95),
+    ("Ding Meng", "Cam Nelson"): (2.20, 1.70),
+
+    # Card 16: 2026-09-05 | UFC Fight Night: Hooker vs. Parnasse
+    ("Dan Hooker", "Salahdine Parnasse"): (2.40, 1.60),
+    ("Michael Page", "Nursulton Ruziboev"): (1.65, 2.30),
+    ("Trevor Peek", "Kurtis Campbell"): (1.70, 2.20),
+    ("Ryan Spann", "Mario Pinto"): (2.10, 1.75),
+    ("Farés Ziam", "Axel Sola"): (1.80, 2.05),
+    ("Punahele Soriano", "Daniil Donchenko"): (1.60, 2.40),
+    ("Muhammad Naimov", "Losene Keita"): (2.30, 1.65),
+    ("Morgan Charrière", "Felipe Lima"): (1.95, 1.85),
+    ("Modestas Bukauskas", "Oumar Sy"): (2.80, 1.45),
+    ("Nathaniel Wood", "Pavel Andrusca"): (1.40, 3.00),
+    ("Michael Aljarouj", "Fabia Sintes"): (1.75, 2.10),
+    ("Nora Cornolle", "Klaudia Syguła"): (1.60, 2.40),
+    ("Luis Felipe Dias", "Matthieu Letho Duclos"): (1.70, 2.20),
+    ("Sofia Montenegro", "Delphine Benouaich"): (1.90, 1.90),
+
+    # Card 17: 2026-09-12 | Noche UFC: Silva vs. Delgado
+    ("Jean Silva", "Jose Miguel Delgado"): (1.45, 2.80),
+    ("Brandon Moreno", "Joseph Morales"): (1.25, 4.00),
+    ("Tommy McMillen", "Marwan Rahiki"): (1.60, 2.40),
+    ("Alexa Grasso", "Manon Fiorot"): (2.10, 1.75),
+    ("Curtis Blaydes", "Waldo Cortes Acosta"): (1.40, 3.00),
+    ("Dan Ige", "David Martinez"): (1.90, 1.90),
+    ("Tim Elliott", "Édgar Cháirez"): (1.75, 2.10),
+    ("Muslim Salikhov", "Ignacio Bahamondes"): (2.50, 1.55),
+    ("Yousri Belgaroui", "Djorden Santos"): (1.65, 2.30),
+    ("Drakkar Klose", "Tommy Gantt"): (1.80, 2.05),
+    ("Rafa Garcia", "Rongzhu"): (1.70, 2.20),
+    ("Jessie Rosas", "Sean King III"): (2.20, 1.70),
+    ("JJ Aldrich", "Regina Tarin"): (1.55, 2.50),
+
+    # Card 18: 2026-09-19 | UFC 331: Van vs. Pantoja 2
+    ("Alexandre Pantoja", "Joshua Van"): (1.40, 3.00),
+    ("Arman Tsarukyan", "Mauricio Ruffy"): (1.25, 4.00),
+    ("Patricio Pitbull", "Dooho Choi"): (1.65, 2.30),
+    ("Gable Steveson", "Sean Sharaf"): (1.15, 5.50),
+    ("Alonzo Menifield", "Iwo Baraniewski"): (1.70, 2.20),
+    ("Marlon Vera", "Charles Jourdain"): (1.60, 2.40),
+    ("Tai Tuivasa", "Robelis Despaigne"): (2.40, 1.60),
+    ("Michael Aswell", "JooSang Yoo"): (1.75, 2.10),
+    ("Ozzy Diaz", "Ryan Gandra"): (1.90, 1.90),
+    ("Edmen Shahbazyan", "Brunno Ferreira"): (1.85, 1.95),
+    ("Casey O'Neill", "Eduarda Moura"): (2.10, 1.75),
+    ("Giga Chikadze", "Joanderson Brito"): (2.30, 1.65),
+
+    # Card 19: 2026-09-26 | UFC Fight Night: Rosas Jr. vs. Barcelos
+    ("Raoni Barcelos", "Raul Rosas Jr."): (3.00, 1.40),
+    ("Norma Dumont", "Ailin Perez"): (1.65, 2.30),
+    ("Sedriques Dumas", "Luis Hernandez"): (1.80, 2.05),
+    ("Ilimbek Akylbek Uulu", "Mehemmedeli Osmanli"): (1.70, 2.20),
+    ("Tina Black", "Melissa Amaya"): (1.90, 1.90),
+    ("Brady Hiestand", "Rinya Nakamura"): (2.50, 1.55),
+    ("Robert Bryczek", "Rodolfo Vieira"): (2.20, 1.70),
+    ("Christian Edwards", "Rodolfo Bellato"): (1.75, 2.10),
+    ("Elves Brener", "Josiah Harrell"): (1.60, 2.40),
+    ("Ricky Simon", "Montel Jackson"): (2.30, 1.65),
+    ("Alatengheili", "John Castaneda"): (2.10, 1.75),
+    ("Vanessa Demopoulos", "Yazmin Jauregui"): (3.20, 1.36),
+
+    # Card 20: 2026-10-03 | UFC 332: Silva vs. Wang
+    ("Natalia Silva", "Wang Cong"): (1.60, 2.40),
+    ("Deiveson Figueiredo", "Payton Talbott"): (2.50, 1.55),
+    ("King Green", "Esteban Ribovics"): (2.40, 1.60),
+    ("Roberto Soldić", "Khaos Williams"): (1.65, 2.30),
+    ("Roman Kopylov", "Ateba Gautier"): (1.55, 2.50),
+    ("Alden Coria", "Imanol Rodriguez"): (1.80, 2.05),
+    ("Andrey Pulyaev", "Damian Pinas"): (1.75, 2.10),
+    ("Anthony Romero", "Marcus McGhee"): (2.60, 1.53),
+    ("Anthony Wint", "Lucas Armand"): (1.70, 2.20),
+    ("Johnny Walker", "Mick Parkin"): (2.10, 1.75),
+    ("Jacobe Smith", "Bruce Whitehead"): (1.35, 3.30),
+    ("Rafael Dos Anjos", "Alexander Hernandez"): (2.20, 1.70),
+    ("Marvin Vettori", "Ismail Naurdiev"): (1.50, 2.65),
+    ("Court McGee", "Eric Nolan"): (2.30, 1.65),
+
+    # Card 21: 2026-10-10 | UFC Fight Night: Allen vs. Duncan
+    ("Brendan Allen", "Christian Leroy Duncan"): (1.55, 2.50),
+    ("Jai Herbert", "Matheus Camilo"): (1.80, 2.05),
+    ("Ketlen Souza", "Loopy Godínez"): (2.20, 1.70),
+    ("Andre Fili", "Kai Kamaka III"): (1.75, 2.10),
+    ("Otari Tanzilovi", "Malcolm Wellmaker"): (1.85, 1.95),
+    ("Gerald Meerschaert", "Julius Walker"): (2.10, 1.75),
+    ("Ismael Bonfim", "Francisco Prado"): (1.45, 2.80),
+    ("Niko Price", "Leon Shahbazyan"): (2.25, 1.67),
+    ("Brendson Ribeiro", "Felipe Franco"): (1.65, 2.30),
+    ("Allen Frye Jr.", "RJ Harris"): (1.75, 2.10),
+    ("Daria Zhelezniakova", "Alice Pereira"): (1.50, 2.65),
+    ("Melissa Gatto", "Ernesta Kareckaite"): (1.70, 2.20),
+
+    # Card 22: 2026-10-17 | UFC Fight Night: Buckley vs. Malott
+    ("Mike Malott", "Joaquin Buckley"): (2.30, 1.65),
+    ("Erin Blanchfield", "Jasmine Jasudavicius"): (1.45, 2.80),
+    ("Kyle Nelson", "Cristian Pérez"): (1.80, 2.05),
+    ("Kyle Daukaus", "Marc-Andre Barriault"): (2.10, 1.75),
+    ("Louis Jourdain", "Timmy Cuamba"): (1.90, 1.90),
+    ("Nate Landwehr", "Mandel Nallo"): (1.60, 2.40),
+    ("Tanner Boser", "Jhonata Diniz"): (2.30, 1.65),
+    ("Julien LeBlanc", "Nick Galanti"): (1.70, 2.20),
+    ("Javad Mahjoub", "Joel Faglier"): (1.85, 1.95),
+    ("Katlyn Cerminara", "Mackenzie Stiller"): (1.40, 3.00),
+    ("Chad Anheliger", "Steven Koslow"): (2.20, 1.70),
+    ("Chelsea Chandler", "Melissa Croden"): (1.55, 2.50),
+    ("SuYoung You", "Cody Chovancek"): (1.65, 2.30),
+
+    # Card 23: 2026-10-24 | UFC 333: Volkanovski vs. Evloev
+    ("Alexander Volkanovski", "Movsar Evloev"): (1.70, 2.20),
+    ("Merab Dvalishvili", "Petr Yan"): (1.65, 2.30),
+    ("Ramazan Temirov", "Lone'er Kavanagh"): (1.80, 2.05),
+    ("Alexander Volkov", "Rizvan Kuniev"): (1.50, 2.65),
+    ("Aaron Pico", "Losene Keita"): (1.60, 2.40),
+    ("Azamat Murzakanov", "Dominick Reyes"): (2.40, 1.60),
+    ("Nikita Krylov", "Abdul-Rakhman Yakhyaev"): (1.75, 2.10),
+    ("Abus Magomedov", "Cam Rowston"): (1.35, 3.30),
+    ("Grant Dawson", "Nurullo Aliev"): (1.55, 2.50),
+    ("Colby Thicknesse", "Asaf Chopurov"): (1.90, 1.90),
+    ("Abubakar Vagaev", "Jacob Malkoun"): (2.10, 1.75),
+    ("Daniel Santos", "Bolaji Oki"): (1.65, 2.30),
+    ("Noah Gugnon", "Kody Steele"): (2.30, 1.65),
+    ("Nicolle Caliari", "Iasmin Lucindo"): (3.50, 1.30),
+
+    # Card 24: 2026-10-31 | UFC Fight Night: Moicano vs. Nolan
+    ("Renato Moicano", "Tom Nolan"): (1.65, 2.30),
+    ("Randy Brown", "Jacobe Smith"): (2.40, 1.60),
+    ("Ode' Osbourne", "Cody Durden"): (2.30, 1.65),
+    ("Yana Santos", "Luana Santos"): (2.50, 1.55),
+    ("Jean-Paul Lebosnoyani", "Farman Hasanov"): (1.70, 2.20),
+    ("Dakota Hope", "Francis Marshall"): (2.10, 1.75),
+    ("Theodor Berggren", "Rodrigo Sezinando"): (1.80, 2.05),
+    ("Julian Erosa", "JeongYeong Lee"): (2.20, 1.70),
+    ("Mickey Gall", "Zach Reese"): (3.40, 1.33),
+    ("Joe Kropschot", "Nick Klein"): (1.85, 1.95),
+    ("Piera Rodriguez", "Talita Alencar"): (1.60, 2.40),
+    ("Tainara Lisboa", "Lucia Szabová"): (1.90, 1.90),
+
+    # Card 25: 2026-11-07 | UFC Fight Night: Cortes Acosta vs. Walker
+    ("Johnny Walker", "Waldo Cortes Acosta"): (2.15, 1.72),
+    ("Tatiana Suarez", "Virna Jandiroba"): (1.28, 3.80),
+    ("Davey Grant", "Elijah Smith"): (1.75, 2.10),
+    ("Billy Elekana", "Lucas Fernando"): (2.20, 1.70),
+    ("Priscila Cachoeira", "Nina Milošević"): (2.40, 1.60),
+    ("Mitch Raposo", "Marcos Degli"): (1.65, 2.30),
+    ("Keiichiro Nakamura", "Ollie Schmid"): (1.80, 2.05),
+    ("Thomas Petersen", "Gabriel Lorenço"): (1.55, 2.50),
+    ("Karine Silva", "Gabriella Fernandes"): (1.35, 3.30),
+    ("Jose Delano", "Murtazali Magomedov"): (2.50, 1.55),
+    ("Austin Bashi", "Carlos Calderon"): (1.40, 3.00),
+    ("Andre Petroski", "Mantas Kondratavičius"): (1.45, 2.80),
+    ("Wellington Turman", "Seokhyeon Ko"): (2.30, 1.65),
+    ("Jonny Parsons", "José Souza"): (1.60, 2.40)
 }
 
 
@@ -578,6 +809,16 @@ def sync_historical_tracker(cache_events, raw_df, model, medians, all_fighters):
     for c_k in list(cards_map.keys()):
         raw_f = cards_map[c_k].get("fights", [])
         cards_map[c_k]["fights"] = deduplicate_card_fights(raw_f)
+
+    # Purge des stubs / doublons vides sans résultats
+    ghost_stubs = [
+        "2026-09-05 | UFC Fight Night: Paris",
+        "2026-09-12 | Noche UFC",
+        "2026-10-17 | UFC Fight Night: Edmonton"
+    ]
+    for ghost in ghost_stubs:
+        if ghost in cards_map:
+            del cards_map[ghost]
 
     # 4. Calcul du Bilan Financier et Précision (Point-In-Time Strict sans Data Leakage)
     total_staked = 0.0
