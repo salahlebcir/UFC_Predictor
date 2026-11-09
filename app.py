@@ -3,7 +3,7 @@ UFC Vision — High-End MMA Analytics & Prediction Platform
 Couche Frontend Découplée Ultra-Moderne (Streamlit).
 Consomme exclusivement la couche de service backend (src.services) en mode 100% passif.
 ZÉRO calcul ML lourd, ZÉRO appel réseau sortant lors des sessions utilisateur.
-Design System Épuré : Glassmorphism, Micro-Animations, Typographie Haute Précision, Responsive Mobile.
+Design System 2026 : Open Atmosphere, Glassmorphism, Micro-Animations Hover, Bento Grid, Typographie Apple/Linear.
 """
 
 import os
@@ -73,7 +73,6 @@ LANG_DATA = {
         "nav_upcoming": "🔮 Upcoming Fights",
         "nav_legal": "⚖️ Legal Notice & Privacy Policy",
         "back_home": "← Back to Home",
-        "hero_badge": "AI PREDICTIVE ENGINE V3 • 10 YEARS OF MMA DATA",
         "hero_subtitle": "The Premier UFC Prediction Bot",
         "hero_description": "UFC Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC. Our model analyzes over 20 statistical factors per matchup based on 10 years of fight history. <b>We are not responsible for your bets; we analyze data and compare it against bookmakers' odds.</b>",
         "stat_winrate_desc": "Bot Winrate (2015 - 2026)",
@@ -149,7 +148,6 @@ LANG_DATA = {
         "nav_upcoming": "🔮 Combats Futurs",
         "nav_legal": "⚖️ Mentions Légales & Confidentialité",
         "back_home": "← Retour à l'Accueil",
-        "hero_badge": "MOTEUR PRÉDICTIF IA V3 • 10 ANS DE DONNÉES MMA",
         "hero_subtitle": "Le Meilleur Bot de Pronostics UFC",
         "hero_description": "UFC Vision est un projet indépendant créé par des passionnés de données MMA, non affilié à l'UFC. Notre modèle analyse plus de 20 facteurs statistiques par combat sur 10 ans d'historique. <b>Nous ne sommes pas responsables de vos paris ; nous analysons les données et les comparons aux cotes des bookmakers.</b>",
         "stat_winrate_desc": "Taux de Victoire du Bot (2015 - 2026)",
@@ -225,7 +223,6 @@ LANG_DATA = {
         "nav_upcoming": "🔮 Próximas Peleas",
         "nav_legal": "⚖️ Aviso Legal y Privacidad",
         "back_home": "← Volver al Inicio",
-        "hero_badge": "MOTOR PREDICTIVO IA V3 • 10 AÑOS DE DATOS MMA",
         "hero_subtitle": "El Mejor Bot de Pronósticos de la UFC",
         "hero_description": "UFC Vision es un proyecto independiente creado por entusiastas de los datos de MMA, no afiliado a la UFC. Nuestro modelo analiza más de 20 factores estadísticos por combate en 10 años de historial. <b>No somos responsables de sus apuestas; analizamos datos y los comparamos con las casas de apuestas.</b>",
         "stat_winrate_desc": "Tasa de Acierto del Bot (2015 - 2026)",
@@ -304,7 +301,7 @@ def render_clean_html(html_str):
 
 
 # =========================================================================
-# CONFIGURATION STREAMLIT & STYLES CSS DESIGN SYSTEM ULTRA-MODERNE
+# CONFIGURATION STREAMLIT & DESIGN SYSTEM ULTRA-MODERNE 2026 (OPEN BENTO)
 # =========================================================================
 
 st.set_page_config(
@@ -319,26 +316,31 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
 
     :root {
-        --brand-primary: #3D3EEA;
-        --brand-glow: rgba(61, 62, 234, 0.16);
+        --brand-indigo: #3D3EEA;
+        --brand-glow: rgba(61, 62, 234, 0.22);
         --corner-red: #D20A0A;
-        --corner-red-gradient: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
         --corner-blue: #2563EB;
-        --corner-blue-gradient: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
         --emerald-win: #10B981;
         --slate-dark: #0F172A;
+        --slate-body: #475569;
         --slate-muted: #64748B;
-        --slate-subtle: #94A3B8;
-        --border-card: rgba(226, 232, 240, 0.9);
-        --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.03);
-        --card-hover-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+        --card-border: rgba(226, 232, 240, 0.85);
+        --card-shadow-ambient: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
+    }
+
+    * {
+        letter-spacing: -0.015em;
+        box-sizing: border-box;
     }
 
     html, body, [class*="css"] {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
         color: #0F172A;
-        background-color: #F8FAFC !important;
-        background-image: radial-gradient(circle at 50% 0%, rgba(61, 62, 234, 0.035) 0%, transparent 65%) !important;
+        background-color: #FAFAFC !important;
+        background-image: 
+            radial-gradient(at 50% 0%, rgba(61, 62, 234, 0.07) 0px, transparent 55%),
+            radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.04) 0px, transparent 40%),
+            radial-gradient(at 0% 50%, rgba(220, 38, 38, 0.025) 0px, transparent 40%) !important;
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
     }
@@ -350,16 +352,16 @@ st.markdown("""
     }
 
     .main .block-container {
-        max-width: 960px !important;
-        padding-top: 1.2rem !important;
-        padding-bottom: 2.5rem !important;
+        max-width: 980px !important;
+        padding-top: 1rem !important;
+        padding-bottom: 3rem !important;
     }
 
-    /* ANIMATION FLUIDE D'APPARITION */
-    @keyframes fadeInUp {
+    /* FLUIDE ANIMATION ENTRÉE DE PAGE */
+    @keyframes fadeInUpSmooth {
         from {
             opacity: 0;
-            transform: translateY(10px);
+            transform: translateY(12px);
         }
         to {
             opacity: 1;
@@ -367,295 +369,295 @@ st.markdown("""
         }
     }
     .anim-fade-in {
-        animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: fadeInUpSmooth 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* SÉLECTEURS STREAMLIT STYLISÉS CAPSULE MODERNE */
-    div[data-testid="stSelectbox"] div[data-baseweb="select"] {
+    /* SÉLECTEUR DE LANGUE DISCRET EN HAUT À DROITE */
+    div[data-testid="stSelectbox"]:has(div[data-testid="stKey-sb_language_flags"]) div[data-baseweb="select"] {
         border-radius: 9999px !important;
-        border: 1px solid var(--border-card) !important;
-        background: #FFFFFF !important;
-        color: #0F172A !important;
+        border: 1px solid rgba(226, 232, 240, 0.9) !important;
+        background: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(14px) !important;
         font-weight: 700 !important;
-        font-size: 0.88rem !important;
+        font-size: 0.86rem !important;
         box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
-        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        transition: all 0.25s ease !important;
     }
-    div[data-testid="stSelectbox"] div[data-baseweb="select"]:hover {
+    div[data-testid="stSelectbox"]:has(div[data-testid="stKey-sb_language_flags"]) div[data-baseweb="select"]:hover {
         border-color: #CBD5E1 !important;
-        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06) !important;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
+        transform: translateY(-1px);
     }
 
-    /* BOUTONS STREAMLIT NATIVE EN CAPSULES GLASS */
+    /* DOCK DE NAVIGATION FLOTTANT (STYLE SEGMENTED CONTROL) */
     div[data-testid="stBaseButton-secondary"] button {
         border-radius: 9999px !important;
-        border: 1px solid var(--border-card) !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        backdrop-filter: blur(12px) !important;
-        color: #0F172A !important;
+        border: 1px solid rgba(226, 232, 240, 0.9) !important;
+        background: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(16px) !important;
+        color: #475569 !important;
         font-weight: 700 !important;
-        font-size: 0.9rem !important;
-        padding: 8px 18px !important;
+        font-size: 0.92rem !important;
+        padding: 9px 20px !important;
         box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02) !important;
-        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
     div[data-testid="stBaseButton-secondary"] button:hover {
         border-color: #CBD5E1 !important;
         background: #FFFFFF !important;
-        transform: translateY(-1.5px) !important;
-        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06) !important;
+        color: #0F172A !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08) !important;
     }
 
-    /* TOP BARRE / NAVIGATION CAPSULE FLOTTANTE */
-    .top-header-capsule {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1.5rem;
+    /* SÉLECTEURS DE VELADES (DROPDOWN) */
+    div[data-testid="stSelectbox"]:not(:has(div[data-testid="stKey-sb_language_flags"])) div[data-baseweb="select"] {
+        border-radius: 9999px !important;
+        border: 1px solid var(--card-border) !important;
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+        font-weight: 700 !important;
+        font-size: 0.9rem !important;
+        box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03) !important;
+        transition: all 0.25s ease !important;
+    }
+    div[data-testid="stSelectbox"]:not(:has(div[data-testid="stKey-sb_language_flags"])) div[data-baseweb="select"]:hover {
+        border-color: #CBD5E1 !important;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.07) !important;
+        transform: translateY(-1px);
     }
 
-    /* BADGE D'ENTÊTE HERO AVEC LOGO COMPACT ET ÉPURÉ */
-    .hero-container-modern {
-        background: #FFFFFF;
-        border: 1px solid var(--border-card);
-        border-radius: 32px;
-        padding: 2.4rem 2rem;
-        text-align: center;
-        box-shadow: var(--card-shadow);
-        margin: 1rem 0 2rem 0;
-        position: relative;
-        overflow: hidden;
-    }
-    .hero-container-modern::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #3D3EEA 0%, #2563EB 50%, #10B981 100%);
+    /* HERO STAGE OUVERT (ZÉRO BULLE GÉANTE, RESPIRANT, CENTRAGE PARFAIT) */
+    .hero-stage-modern {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 2rem auto 2.6rem auto !important;
+        padding: 0 1rem !important;
+        max-width: 780px !important;
     }
 
-    .hero-logo-badge {
-        width: 64px;
-        height: 64px;
-        border-radius: 18px;
+    .hero-logo-avatar {
+        width: 68px;
+        height: 68px;
+        border-radius: 20px;
         object-fit: cover;
-        box-shadow: 0 6px 18px rgba(61, 62, 234, 0.16);
+        box-shadow: 0 10px 25px rgba(61, 62, 234, 0.18), 0 2px 6px rgba(15, 23, 42, 0.04);
         border: 2px solid #FFFFFF;
-        margin: 0 auto 14px auto;
+        margin: 0 auto 18px auto;
         display: inline-block;
-        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        animation: floatBreath 4s ease-in-out infinite;
     }
-    .hero-logo-badge:hover {
-        transform: scale(1.06) rotate(-2deg);
+    .hero-logo-avatar:hover {
+        transform: scale(1.1) rotate(4deg);
+        box-shadow: 0 16px 36px rgba(61, 62, 234, 0.3);
     }
-
-    .hero-chip-status {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: #F1F5F9;
-        border: 1px solid #E2E8F0;
-        color: #334155;
-        border-radius: 9999px;
-        padding: 4px 12px;
-        font-size: 0.72rem;
-        font-weight: 800;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        margin-bottom: 14px;
-    }
-    .pulse-dot-green {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background-color: #10B981;
-        box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
-        animation: pulseDot 2s infinite;
-    }
-    @keyframes pulseDot {
-        0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
-        70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    @keyframes floatBreath {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
     }
 
     .hero-title-modern {
-        font-size: 2.2rem;
-        font-weight: 900;
-        color: #0F172A;
-        letter-spacing: -0.025em;
-        line-height: 1.15;
-        margin: 0 0 10px 0;
-    }
-    .hero-desc-modern {
-        font-size: 1.02rem;
-        font-weight: 500;
-        color: #475569;
-        line-height: 1.65;
-        max-width: 740px;
-        margin: 0 auto;
+        font-size: 2.85rem !important;
+        font-weight: 900 !important;
+        color: #0F172A !important;
+        letter-spacing: -0.038em !important;
+        line-height: 1.15 !important;
+        margin: 0 0 14px 0 !important;
+        text-align: center !important;
+        width: 100% !important;
     }
 
-    /* CARTES DE STATISTIQUES ACCUEIL */
-    .stat-card-modern {
-        background: #FFFFFF;
-        border: 1px solid var(--border-card);
+    .hero-desc-centered {
+        font-size: 1.05rem !important;
+        font-weight: 500 !important;
+        color: #475569 !important;
+        line-height: 1.72 !important;
+        text-align: center !important;
+        max-width: 660px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+    }
+
+    /* BENTO CARDS KPI AVEC EFFETS HOVER 3D ET GRADIENT GLOW */
+    .bento-card-interactive {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(226, 232, 240, 0.85);
         border-radius: 26px;
-        padding: 1.8rem 1.4rem;
+        padding: 30px 24px;
         text-align: center;
-        box-shadow: var(--card-shadow);
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: var(--card-shadow-ambient);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         position: relative;
         overflow: hidden;
+        cursor: default;
     }
-    .stat-card-modern:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--card-hover-shadow);
-        border-color: #CBD5E1;
+    .bento-card-interactive:hover {
+        transform: translateY(-6px) scale(1.015);
+        border-color: rgba(61, 62, 234, 0.32);
+        box-shadow: 0 20px 42px -12px rgba(61, 62, 234, 0.16), 0 4px 12px rgba(15, 23, 42, 0.04);
     }
-    .stat-card-modern::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 20%;
-        right: 20%;
-        height: 3px;
-        border-radius: 9999px;
-        background: #3D3EEA;
-        opacity: 0.85;
+    .bento-card-green:hover {
+        border-color: rgba(16, 185, 129, 0.38) !important;
+        box-shadow: 0 20px 42px -12px rgba(16, 185, 129, 0.2), 0 4px 12px rgba(15, 23, 42, 0.04) !important;
     }
-    .stat-card-green::after {
-        background: #10B981 !important;
-    }
-    .stat-badge-sub {
-        display: inline-block;
-        font-size: 0.72rem;
+
+    .bento-chip-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.74rem;
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
-        padding: 3px 10px;
+        letter-spacing: 0.06em;
+        padding: 4px 12px;
         border-radius: 9999px;
-        margin-bottom: 10px;
         background: #F1F5F9;
         color: #475569;
+        margin-bottom: 12px;
+        transition: all 0.25s ease;
     }
-    .stat-num-huge {
-        font-size: 3rem;
+    .bento-card-interactive:hover .bento-chip-pill {
+        background: #EEF2FF;
+        color: #3D3EEA;
+    }
+    .bento-card-green:hover .bento-chip-pill {
+        background: #ECFDF5;
+        color: #059669;
+    }
+
+    .bento-val-huge {
+        font-size: 3.4rem;
         font-weight: 900;
         color: #0F172A;
         line-height: 1;
-        letter-spacing: -0.03em;
-        margin-bottom: 6px;
+        letter-spacing: -0.04em;
+        margin-bottom: 8px;
         font-variant-numeric: tabular-nums;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .stat-num-green {
+    .bento-card-interactive:hover .bento-val-huge {
+        transform: scale(1.04);
+    }
+    .bento-val-green {
         color: #10B981 !important;
     }
-    .stat-label-modern {
-        font-size: 0.82rem;
+
+    .bento-label-clean {
+        font-size: 0.85rem;
         font-weight: 700;
-        color: var(--slate-muted);
+        color: #64748B;
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
 
-    /* CONTENEUR DE COMBAT & SOIRÉE */
+    /* CARTES DE COMBATS AVEC MICRO-ÉLÉVATION AU SURVOL */
     .fight-card-modern {
         background: #FFFFFF;
-        border: 1px solid var(--border-card);
+        border: 1px solid var(--card-border);
         border-radius: 24px;
-        padding: 22px 24px;
-        margin-bottom: 20px;
-        box-shadow: var(--card-shadow);
-        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 24px 26px;
+        margin-bottom: 22px;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.02), 0 1px 3px rgba(15, 23, 42, 0.02);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
     }
     .fight-card-modern:hover {
+        transform: translateY(-4px);
         border-color: #CBD5E1;
-        box-shadow: var(--card-hover-shadow);
-        transform: translateY(-2px);
+        box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.07), 0 2px 6px rgba(15, 23, 42, 0.03);
     }
 
     .summary-card-modern {
         background: #FFFFFF;
-        border: 1px solid var(--border-card);
+        border: 1px solid var(--card-border);
         border-radius: 28px;
-        padding: 24px;
-        margin-bottom: 24px;
-        box-shadow: var(--card-shadow);
+        padding: 26px;
+        margin-bottom: 26px;
+        box-shadow: var(--card-shadow-ambient);
     }
 
-    /* BADGES DE COMBAT (MAIN EVENT, CO-MAIN) */
+    /* BADGES ÉVÉNEMENT */
     .pill-main-red {
         background: #FEF2F2;
         border: 1px solid #FCA5A5;
         color: #DC2626;
         border-radius: 9999px;
-        padding: 4px 12px;
+        padding: 5px 14px;
         font-size: 0.74rem;
         font-weight: 800;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.05em;
         display: inline-block;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
     .pill-comain-dark {
         background: #F8FAFC;
         border: 1px solid #CBD5E1;
         color: #0F172A;
         border-radius: 9999px;
-        padding: 4px 12px;
+        padding: 5px 14px;
         font-size: 0.74rem;
         font-weight: 800;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.05em;
         display: inline-block;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
-    /* SIGNAUX DE PRONOSTIC FUTUR */
+    /* SIGNAUX DE PARI ET RECOMMANDATIONS AVEC GLOW VIBRANT */
     .signal-pill-rec {
         background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
         border: 1px solid #6EE7B7;
         color: #065F46;
         border-radius: 9999px;
-        padding: 11px 20px;
+        padding: 12px 22px;
         font-size: 0.94rem;
         font-weight: 800;
         text-align: center;
-        margin-top: 16px;
-        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.12);
+        margin-top: 18px;
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.16);
+        transition: all 0.25s ease;
+    }
+    .signal-pill-rec:hover {
+        transform: scale(1.01);
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.26);
     }
     .signal-pill-no {
         background: #F8FAFC;
         border: 1px solid #E2E8F0;
         color: #64748B;
         border-radius: 9999px;
-        padding: 10px 18px;
+        padding: 11px 20px;
         font-size: 0.88rem;
         font-weight: 700;
         text-align: center;
-        margin-top: 16px;
+        margin-top: 18px;
     }
     .signal-pill-wait {
         background: #FFFBEB;
         border: 1px solid #FDE68A;
         color: #92400E;
         border-radius: 9999px;
-        padding: 10px 18px;
+        padding: 11px 20px;
         font-size: 0.88rem;
         font-weight: 800;
         text-align: center;
-        margin-top: 16px;
+        margin-top: 18px;
     }
     .signal-pill-none {
         background: #F8FAFC;
         border: 1px solid #E2E8F0;
         color: #64748B;
         border-radius: 9999px;
-        padding: 10px 18px;
+        padding: 11px 20px;
         font-size: 0.88rem;
         font-weight: 700;
         text-align: center;
-        margin-top: 16px;
+        margin-top: 18px;
     }
 
     /* RÉSULTATS COMBATS PASSÉS */
@@ -664,44 +666,46 @@ st.markdown("""
         border: 1px solid #A7F3D0;
         color: #065F46;
         border-radius: 14px;
-        padding: 11px 18px;
+        padding: 12px 20px;
         font-size: 0.92rem;
         font-weight: 700;
-        margin-top: 14px;
+        margin-top: 16px;
     }
     .result-pill-loss {
         background: #FEF2F2;
         border: 1px solid #FECACA;
         color: #991B1B;
         border-radius: 14px;
-        padding: 11px 18px;
+        padding: 12px 20px;
         font-size: 0.92rem;
         font-weight: 700;
-        margin-top: 14px;
+        margin-top: 16px;
     }
     .result-pill-nobet {
         background: #F8FAFC;
         border: 1px solid #E2E8F0;
         color: #64748B;
         border-radius: 14px;
-        padding: 11px 18px;
+        padding: 12px 20px;
         font-size: 0.9rem;
         font-weight: 600;
-        margin-top: 14px;
+        margin-top: 16px;
     }
 
-    /* ACCORDÉONS ULTRA-MODERNES */
+    /* ACCORDÉONS STYLE SAAS MODERNE */
     details.aura-accordion {
         background: #FFFFFF;
-        border: 1px solid var(--border-card);
-        border-radius: 20px;
-        padding: 18px 22px;
-        margin-bottom: 14px;
-        box-shadow: var(--card-shadow);
-        transition: all 0.25s ease;
+        border: 1px solid var(--card-border);
+        border-radius: 22px;
+        padding: 20px 24px;
+        margin-bottom: 16px;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.02);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     details.aura-accordion:hover {
         border-color: #CBD5E1;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+        transform: translateY(-1px);
     }
     details.aura-accordion summary {
         font-size: 1.05rem;
@@ -720,45 +724,53 @@ st.markdown("""
     }
     details.aura-accordion summary::after {
         content: "▾";
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         color: #64748B;
-        transition: transform 0.2s ease;
+        transition: transform 0.25s ease;
     }
     details.aura-accordion[open] summary::after {
         transform: rotate(180deg);
-        color: var(--brand-primary);
+        color: var(--brand-indigo);
     }
 
-    /* BARRES DE PROGRESSION ÉLÉGANTES DES VARIABLES IA */
+    /* JAUGES PROGRESSIVES DES 20 VARIABLES IA AVEC HOVER GLOW */
     .feat-meter-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 14px;
-        padding: 10px 14px;
-        background: #F8FAFC;
+        padding: 11px 16px;
+        background: #FFFFFF;
         border-radius: 14px;
         border: 1px solid #E2E8F0;
-        transition: background 0.2s ease;
+        box-shadow: 0 1px 3px rgba(15, 23, 42, 0.02);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .feat-meter-row:hover {
-        background: #F1F5F9;
+        background: #F8FAFC;
+        border-color: #CBD5E1;
+        transform: translateX(4px);
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
     }
     .feat-bar-bg {
         flex: 1;
-        height: 6px;
-        background: #E2E8F0;
+        height: 7px;
+        background: #F1F5F9;
         border-radius: 9999px;
         overflow: hidden;
-        margin: 0 10px;
+        margin: 0 12px;
     }
     .feat-bar-fill {
         height: 100%;
         background: linear-gradient(90deg, #4F46E5, #3D3EEA);
         border-radius: 9999px;
+        transition: all 0.5s ease;
+    }
+    .feat-meter-row:hover .feat-bar-fill {
+        filter: brightness(1.15);
     }
 
-    /* CONTENEURS D'ALIGNEMENT */
+    /* CONTENEUR DE NOM DE COMBATTANT FIXE POUR ALIGNEMENT PARFAIT */
     .fighter-name-box {
         min-height: 2.8rem;
         display: flex;
@@ -768,40 +780,40 @@ st.markdown("""
         margin-bottom: 8px;
     }
 
-    /* GRILLE RESPONSIVE MOBILE 4 COLS -> 2X2 SUR ÉCRANS < 640PX */
+    /* RESPONSIVE MOBILE 4 COLS -> 2X2 SUR ÉCRANS < 640PX */
     .perf-stats-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
+        gap: 18px;
         text-align: center;
     }
     @media (max-width: 640px) {
         .perf-stats-grid {
             grid-template-columns: repeat(2, 1fr) !important;
-            gap: 16px 8px !important;
+            gap: 16px 10px !important;
         }
         .hero-title-modern {
-            font-size: 1.8rem !important;
+            font-size: 2.1rem !important;
         }
-        .stat-num-huge {
-            font-size: 2.4rem !important;
+        .bento-val-huge {
+            font-size: 2.6rem !important;
         }
     }
 
     .legal-card-modern {
         background: #FFFFFF;
-        border: 1px solid var(--border-card);
+        border: 1px solid var(--card-border);
         border-radius: 28px;
-        padding: 34px 30px;
+        padding: 36px 32px;
         margin: 20px 0;
-        box-shadow: var(--card-shadow);
+        box-shadow: var(--card-shadow-ambient);
         line-height: 1.75;
         color: #334155;
     }
 
     .footer-aura {
         text-align: center;
-        padding: 2.5rem 0 2rem 0;
+        padding: 2.8rem 0 2rem 0;
         color: #94A3B8;
         font-size: 0.82rem;
         font-weight: 500;
@@ -839,7 +851,7 @@ def show_cookie_dialog(t):
 # =========================================================================
 
 def main():
-    # 🌐 SÉLECTEUR DE LANGUE DISCRET & PERSISTANT
+    # 🌐 SÉLECTEUR DE LANGUE DISCRET & PERSISTANT (Coin Supérieur Droit)
     lang_map = {"🇬🇧": "EN", "🇫🇷": "FR", "🇪🇸": "ES"}
     reverse_lang_map = {"EN": "🇬🇧", "FR": "🇫🇷", "ES": "🇪🇸"}
 
@@ -849,8 +861,7 @@ def main():
     current_lang = st.session_state.get("lang", "EN")
     default_flag = reverse_lang_map.get(current_lang, "🇬🇧")
 
-    # Barre de commande supérieure : Sélecteur de langue en coin supérieur droit
-    col_top_pad, col_top_lang = st.columns([5.2, 1.2])
+    col_top_pad, col_top_lang = st.columns([5.4, 1.0])
     with col_top_lang:
         selected_flag = st.selectbox(
             "lang_select_hidden",
@@ -1001,14 +1012,21 @@ def main():
 
     logo_data_url = get_logo_base64()
 
+    # Stylisation dynamique de l'onglet actif en pilule pleine vibrante
     st.markdown(f"""
     <style>
+        div[data-testid="stKey-{active_btn_key}"] button,
         button[data-testid="stBaseButton-{active_btn_key}"] {{
+            background: linear-gradient(135deg, #4F46E5 0%, #3D3EEA 100%) !important;
+            color: #FFFFFF !important;
             border-color: #3D3EEA !important;
-            background: #FFFFFF !important;
-            box-shadow: 0 4px 16px rgba(61, 62, 234, 0.18) !important;
-            color: #3D3EEA !important;
+            box-shadow: 0 6px 20px rgba(61, 62, 234, 0.32) !important;
             font-weight: 800 !important;
+            transform: translateY(-1.5px) !important;
+        }}
+        div[data-testid="stKey-{active_btn_key}"] button p,
+        div[data-testid="stKey-{active_btn_key}"] button span {{
+            color: #FFFFFF !important;
         }}
     </style>
     """, unsafe_allow_html=True)
@@ -1019,45 +1037,40 @@ def main():
     # PAGE 1 : 🏠 ACCUEIL
     # =========================================================================
     if page == "home":
-        # HERO SECTION ÉPURÉE : Logo compact, badge de statut et typographie haute précision
+        # HERO SECTION OUVERTE : Logo compact en apesanteur, typographie percutante, centrage parfait
         render_clean_html(f"""
-        <div class="hero-container-modern anim-fade-in">
-            <img src="{logo_data_url}" alt="UFC Vision" class="hero-logo-badge">
-            <br>
-            <div class="hero-chip-status">
-                <span class="pulse-dot-green"></span>
-                <span>{t['hero_badge']}</span>
-            </div>
+        <div class="hero-stage-modern anim-fade-in">
+            <img src="{logo_data_url}" alt="UFC Vision" class="hero-logo-avatar">
             <h1 class="hero-title-modern">
                 {t['hero_subtitle']}
             </h1>
-            <p class="hero-desc-modern">
+            <p class="hero-desc-centered">
                 {t['hero_description']}
             </p>
         </div>
         """)
 
-        # CARTES DE STATISTIQUES ACCUEIL ULTRA-ÉPURÉES
+        # BENTO CARDS KPI AVEC EFFETS HOVER 3D
         col_m1, col_m2 = st.columns(2)
         with col_m1:
             render_clean_html(f"""
-            <div class="stat-card-modern anim-fade-in">
-                <span class="stat-badge-sub">{t['verified_badge']}</span>
-                <div class="stat-num-huge">69 %</div>
-                <div class="stat-label-modern">{t['stat_winrate_desc']}</div>
+            <div class="bento-card-interactive anim-fade-in">
+                <span class="bento-chip-pill">{t['verified_badge']}</span>
+                <div class="bento-val-huge">69 %</div>
+                <div class="bento-label-clean">{t['stat_winrate_desc']}</div>
             </div>
             """)
 
         with col_m2:
             render_clean_html(f"""
-            <div class="stat-card-modern stat-card-green anim-fade-in">
-                <span class="stat-badge-sub">{t['cumulative_edge']}</span>
-                <div class="stat-num-huge stat-num-green">+31 %</div>
-                <div class="stat-label-modern">{t['stat_roi_desc']}</div>
+            <div class="bento-card-interactive bento-card-green anim-fade-in">
+                <span class="bento-chip-pill">{t['cumulative_edge']}</span>
+                <div class="bento-val-huge bento-val-green">+31 %</div>
+                <div class="bento-label-clean">{t['stat_roi_desc']}</div>
             </div>
             """)
 
-        # 📊 ACCORDÉON DES 20 VARIABLES IA AVEC BARRES DE JAUGE PROGRESSIVES
+        # 📊 ACCORDÉON DES 20 VARIABLES IA AVEC JAUGES PROGRESSIVES ET EFFET HOVER GLIDE
         feat_importances = get_feature_importances(current_lang)
         feat_items_list = []
         max_pct = max([p for _, _, p in feat_importances]) if feat_importances else 100.0
@@ -1066,7 +1079,7 @@ def main():
             bar_width = min(100.0, (pct / max_pct) * 100.0) if max_pct > 0 else 50.0
             feat_items_list.append(f"""
             <div class="feat-meter-row">
-                <span style="font-weight: 800; font-size: 0.8rem; color: #64748B; width: 28px;">#{rank:02d}</span>
+                <span style="font-weight: 800; font-size: 0.8rem; color: #64748B; width: 30px;">#{rank:02d}</span>
                 <span style="font-weight: 700; color: #0F172A; font-size: 0.88rem; flex: 1.2;">{label}</span>
                 <div class="feat-bar-bg">
                     <div class="feat-bar-fill" style="width: {bar_width:.1f}%;"></div>
@@ -1123,7 +1136,6 @@ def main():
     elif page == "upcoming":
         st.markdown(f"### {t['upcoming_title']}")
 
-        # Horodatage dynamique de fraîcheur des cotes
         if odds_age_hours >= 1:
             freshness_str = t["odds_updated_hours"].format(hours=odds_age_hours, mins=odds_remaining_mins)
         else:
@@ -1282,7 +1294,6 @@ def main():
             p_card_info = past_cards[selected_past_key]
             p_fights = deduplicate_card_fights(p_card_info.get("fights", []))
 
-            # Métriques de performance pré-calculées par le backend (zéro calcul frontend)
             perf = p_card_info.get("performance", {})
             card_staked = perf.get("staked", 0.0)
             card_profit = perf.get("profit", 0.0)
@@ -1406,7 +1417,6 @@ def main():
     # PAGE 4 : ⚖️ MENTIONS LÉGALES & CONFIDENTIALITÉ
     # =========================================================================
     elif page == "legal":
-        # Force le navigateur à remonter tout en haut dès l'affichage des mentions légales
         st.components.v1.html(
             """
             <script>
@@ -1462,7 +1472,7 @@ def main():
             st.rerun()
 
     # =========================================================================
-    # FOOTER COMMUN (BOUTON MENTIONS LÉGALES TOUT EN BAS & FOOTER)
+    # FOOTER COMMUN (BOUTON MENTIONS LÉGALES & FOOTER)
     # =========================================================================
     st.markdown("<br><br>", unsafe_allow_html=True)
     c_f1, c_f2, c_f3 = st.columns([1, 2, 1])
