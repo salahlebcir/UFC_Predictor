@@ -1,9 +1,9 @@
 """
 UFC Vision — High-End MMA Analytics & Prediction Platform
-Couche Frontend Découplée (Streamlit).
+Couche Frontend Découplée Ultra-Moderne (Streamlit).
 Consomme exclusivement la couche de service backend (src.services) en mode 100% passif.
 ZÉRO calcul ML lourd, ZÉRO appel réseau sortant lors des sessions utilisateur.
-Interface Pure White, responsive mobile (grille 2x2), alignement horizontal strict (.fighter-name-box).
+Design System Épuré : Glassmorphism, Micro-Animations, Typographie Haute Précision, Responsive Mobile.
 """
 
 import os
@@ -67,237 +67,226 @@ def get_og_image_url():
 # DICTIONNAIRE CENTRALISÉ DE TRADUCTIONS ET TEXTES JURIDIQUES / FAQ (EN / FR / ES)
 LANG_DATA = {
     "EN": {
-        "page_title": "UFC Vision - MMA Analytics & Predictions",
+        "page_title": "UFC Vision — MMA Analytics & Predictions",
         "nav_past": "📜 Past Fights",
         "nav_home": "🥊 UFC Vision",
         "nav_upcoming": "🔮 Upcoming Fights",
         "nav_legal": "⚖️ Legal Notice & Privacy Policy",
         "back_home": "← Back to Home",
+        "hero_badge": "AI PREDICTIVE ENGINE V3 • 10 YEARS OF MMA DATA",
         "hero_subtitle": "The Premier UFC Prediction Bot",
         "hero_description": "UFC Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC. Our model analyzes over 20 statistical factors per matchup based on 10 years of fight history. <b>We are not responsible for your bets; we analyze data and compare it against bookmakers' odds.</b>",
         "stat_winrate_desc": "Bot Winrate (2015 - 2026)",
         "stat_roi_desc": "Bot ROI (2015 - 2026)",
+        "verified_badge": "Verified Track Record",
+        "cumulative_edge": "Cumulative Yield",
         "upcoming_title": "🔮 Upcoming UFC Event Predictions",
-        "select_upcoming_card": "Select an upcoming UFC card:",
-        "insufficient_data": "🔘 INSUFFICIENT DATA — Incomplete UFC history.",
-        "odds_pending": "⏳ ODDS PENDING — Awaiting official odds.",
-        "no_odds_archived": "⚪ NO ODDS ARCHIVED — Historical odds missing.",
-        "high_confidence": "🟢 VALUE OPPORTUNITY: {fighter}",
-        "insufficient_confidence": "🚨 NO VALUE DETECTED",
-        "global_summary_title": "🌐 Global Performance",
-        "card_summary_title": "📅 Event Performance",
-        "past_title": "📊 Real Performance (10€ Simulated Stake)",
-        "net_profit": "💵 Total Net Profit",
-        "volume_sub": "{staked:.0f}€ staked ({bets} bets)",
-        "roi_yield": "📈 ROI Yield",
-        "win_rate_value": "🎯 Opportunity Win Rate",
-        "opportunity_info": "💡 <b>Note:</b> A <i>Value Opportunity</i> does <b>NOT necessarily mean the fighter is the favorite</b> to win. It indicates an Expected Value (EV) greater than +20% relative to market odds, which maximizes long-term ROI based on our historical backtests.",
-        "accuracy_all": "🔮 Prediction Accuracy (All Fights)",
-        "won_text": "gained",
+        "select_upcoming_card": "Select an upcoming UFC event:",
+        "odds_updated_hours": "🕒 Odds updated {hours}h {mins}m ago • Auto Sync 2h",
+        "odds_updated_mins": "🕒 Odds updated {mins}m ago • Auto Sync 2h",
+        "odds_pending": "⏳ Odds Pending • Awaiting Bookmaker Lines",
+        "insufficient_data": "⚠️ Insufficient UFC Data for one or both fighters (Debutant protected)",
+        "insufficient_confidence": "⚪ Insufficient confidence (Expected Value below threshold)",
+        "high_confidence": "🎯 High confidence on {fighter} (Expected Value > +20%)",
+        "past_title": "📜 Past Fights & Historical Track Record",
+        "global_summary_title": "🌐 Global Historical Performance",
+        "card_summary_title": "📅 Event Historical Performance",
+        "select_past_card": "Select an archived UFC event:",
+        "net_profit": "Net Profit",
+        "roi_yield": "ROI / Yield",
+        "win_rate_value": "Value Bet Win Rate",
+        "accuracy_all": "Prediction Accuracy (All Fights)",
+        "volume_sub": "Volume: {staked:.0f} € ({bets} bets placed)",
+        "won_text": "won",
         "correct_text": "correct",
-        "bets_text": "bets",
-        "won_pill": "🟢 WON (+{gain} €) — Successful bet on {fighter} (Odds: {odds}). Winner: {winner}.",
-        "lost_pill": "🔴 LOST (-10.00 €) — Bet placed on {fighter} (Odds: {odds}). Winner: {winner}.",
-        "no_bet_eval": "⚪ NO BET — No Value Bet (EV max: {ev}%)",
-        "no_bet_desc": "Avoided bet: Insufficient value. Winner: {winner}.",
-        "void_pill": "⚪ CANCELLED / VOID — Fight did not take place (Stake refunded)",
-        "odds_freshness": "⚡ Odds updated {mins} mins ago from The Odds API",
-        "odds_updated_mins": "⚡ Odds updated {mins} mins ago from The Odds API",
-        "odds_updated_hours": "⚡ Odds updated {hours}h {mins}m ago from The Odds API",
-        "bug_contact": "✉️ Found a bug or have a question? contact@auradev.fr",
-        # FEATURE IMPORTANCE EN
-        "feature_importance_title": "📊 Which factors are the most important in our AI model?",
-        "feature_importance_desc": "Our predictive AI analyzes differential statistical variables per fight. Here is the exact weight of each factor in the model's decision-making process:",
-        # FAQ EN
-        "faq_title": "❓ Frequently Asked Questions (FAQ)",
-        "q1": "How does UFC Vision's AI work?",
+        "won_pill": "✅ WON: +{gain} € on {fighter} (Odds: {odds}) — Winner: {winner}",
+        "lost_pill": "❌ LOST: -10.00 € on {fighter} (Odds: {odds}) — Winner: {winner}",
+        "void_pill": "⚪ VOID: Fight Cancelled / No Contest (0.00 €)",
+        "no_odds_archived": "⚪ NO BET: No archived odds available for this bout.",
+        "no_bet_eval": "⚪ NO BET: Evaluated (Max EV {ev}%)",
+        "no_bet_desc": "EV below +20% threshold. Official Winner: <b>{winner}</b>.",
+        "feature_importance_title": "🧠 Which factors are the most important in our AI model?",
+        "feature_importance_desc": "Our predictive AI analyzes differential statistical variables per fight. Here is the exact relative weight of each factor in the model's decision-making process:",
+        "faq_title": "💬 Frequently Asked Questions (FAQ)",
+        "q1": "How does UFC Vision predict fights?",
         "a1": "Our predictive AI algorithm evaluates over 20 differential statistical factors between two fighters (ELO score gaps, strike output, takedown defense rate, win streaks, recent rankings, etc.) built upon 10 years of historical UFC fight data.",
-        "q2": "Where do fight data and odds come from?",
-        "a2": "Fight statistics are extracted from official UFC fight archives, while market odds are fetched periodically through global bookmaker aggregator APIs in background mode.",
-        "q3": "What is a Value Opportunity?",
-        "a3": "A Value Opportunity indicates that the AI-calculated probability shows a significant statistical edge (Value > +20% EV) when matched against published market odds.",
-        "q4": "Is UFC Vision affiliated with the UFC?",
-        "a4": "No. UFC Vision is an independent analytical project created by MMA data enthusiasts. We are not affiliated with, sponsored by, or endorsed by UFC or TKO Group Holdings.",
-        "faq_contact": "Have more questions? Feel free to contact us at contact@auradev.fr",
-        # JURIDIQUE EN
-        "legal_page_title": "⚖️ Legal Notice, Privacy Policy & Cookie Management",
-        "legal_sec1_title": "1. Site Publisher & Legal Notice",
-        "legal_sec2_title": "2. Cloud Infrastructure & Hosting",
-        "legal_sec3_title": "3. Intellectual Property & Anti-Scraping",
-        "legal_sec4_title": "4. Data Privacy Policy & GDPR Compliance",
-        "legal_sec5_title": "5. AI & Financial Disclaimer",
-        "legal_sec6_title": "6. Responsible Gaming (+18)",
-        "legal_sec7_title": "7. Trademark & Independence Notice",
-        "legal_sec8_title": "8. Advertising Networks & Monetization",
-        "legal_publisher": "<b>Publisher:</b> UFC Vision (https://ufcvision.com) is published by Aura Dev (SIRET: 10542993000016 — Legal Anonymity Protection under Art. 6-III-2 of French LCEN Law n° 2004-575). Contact: contact@auradev.fr",
-        "legal_hosting": "<b>Cloud Host:</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, USA | Web: https://www.digitalocean.com | Phone: +1 888-892-2732 | Support: support@digitalocean.com",
+        "q2": "What is a 'Value Bet'?",
+        "a2": "A Value Bet occurs when our AI's predicted probability of a fighter winning is significantly higher than the probability implied by bookmakers' odds. We only flag bets with an Expected Value (EV) strictly greater than +20.0%, ensuring long-term profitability.",
+        "q3": "How often are odds and predictions updated?",
+        "a3": "Odds are synchronized every 2 hours via official sports betting data providers. Predictions adapt dynamically as soon as official opening and closing lines are confirmed.",
+        "q4": "Are predictions financial advice?",
+        "a4": "No. UFC Vision is an analytical tool built for sports enthusiasts and researchers. Past performance is not indicative of future results. Never bet more than you can comfortably afford to lose.",
+        "faq_contact": "Questions or inquiries? Contact us at: aura.dev.contact@gmail.com",
+        "legal_page_title": "⚖️ Legal Notice & Privacy Policy",
+        "legal_sec1_title": "1. Site Publisher",
+        "legal_publisher": "<b>Website Name:</b> UFC Vision (ufcvision.com)<br><b>Legal Status:</b> Micro-entrepreneur / Aura Dev<br><b>SIRET:</b> 10542993000016<br><b>Headquarters:</b> Paris, France<br><b>Email:</b> aura.dev.contact@gmail.com",
+        "legal_sec2_title": "2. Web Hosting",
+        "legal_hosting": "<b>Host:</b> Hostinger International Ltd.<br><b>Address:</b> 61 Lordou Vironos Street, 6023 Larnaca, Cyprus<br><b>Website:</b> https://www.hostinger.com",
+        "legal_sec3_title": "3. Intellectual Property",
         "legal_ip": "<b>Intellectual Property:</b> All Machine Learning models, algorithms, interface designs, and code powering UFC Vision are the exclusive intellectual property of Aura Dev. Automated data scraping or commercial reproduction is strictly prohibited.",
-        "legal_privacy": "<b>Privacy & Cookies:</b> UFC Vision does not require account registration or process direct personal identification data. We utilize Google Tag Manager, Google Analytics 4, and third-party ad networks (such as Google AdSense) that place cookies to measure audience and deliver relevant ads.",
-        "legal_ads": "<b>Advertisements:</b> This platform displays programmatic advertisements and affiliate content. Ad network partners may collect non-identifiable technical browsing data to optimize ad relevancy.",
+        "legal_sec4_title": "4. Privacy & Personal Data (GDPR)",
+        "legal_privacy": "UFC Vision does not require user registration or personal account creation. We do not collect or sell personal identifying information. Anonymous usage telemetry and Google Analytics may be used strictly for performance optimization and technical stability.",
+        "legal_sec5_title": "5. AI & Statistical Disclaimer",
         "disclaimer_ai": "<b>AI Disclaimer:</b> UFC Vision is an analytical decision-support tool. Predictions are strictly for informational purposes and do not constitute financial advice or sports betting recommendations. No outcome is guaranteed, and Aura Dev disclaims all liability for losses incurred.",
-        "disclaimer_gaming": "<b>Responsible Gaming (+18):</b> Sports betting is strictly prohibited for minors. Gambling involves financial debt, isolation, and addiction risks. Please gamble responsibly.",
-        "disclaimer_trademark": "<b>Trademark & Independence Notice:</b> UFC Vision is an independent analytics project created by MMA data enthusiasts, published by Aura Dev. We analyze public UFC data and are in no way affiliated with, authorized, sponsored, or endorsed by UFC or TKO Group Holdings.",
-        # COOKIES EN
-        "cookie_dialog_title": "🍪 Cookie Preferences & Privacy",
-        "cookie_title": "Cookie & Privacy Preferences",
-        "cookie_desc": "UFC Vision uses essential technical cookies, anonymous audience analytics (Google Analytics / GTM), and advertising cookies to keep the service free.",
-        "cookie_accept": "Accept All Cookies",
-        "cookie_decline": "Essential Only",
+        "legal_sec6_title": "6. Responsible Gambling Notice",
+        "disclaimer_gaming": "<b>Responsible Gambling:</b> Sports betting involves financial risks and potential addiction. Gambling is strictly restricted to individuals of legal age (18+ in most jurisdictions). If you or someone you know is struggling with gambling addiction, please seek support from dedicated helpline organizations.",
+        "legal_sec7_title": "7. Non-Affiliation Trademark Disclaimer",
+        "disclaimer_trademark": "<b>Trademark Disclaimer:</b> UFC, Ultimate Fighting Championship, and related marks are registered trademarks of Zuffa, LLC. UFC Vision is an independent analytics project and is not affiliated, endorsed, or associated with the UFC or Zuffa, LLC.",
+        "legal_sec8_title": "8. Advertising Disclosure",
+        "legal_ads": "UFC Vision may display commercial sponsorships or contextual affiliate banners. All external advertising links are clearly demarcated in compliance with digital consumer transparency standards.",
+        "bug_contact": "Bug reports or legal inquiries: aura.dev.contact@gmail.com",
+        "cookie_dialog_title": "🍪 Cookie Preferences",
+        "cookie_title": "Cookie Management & Privacy",
+        "cookie_desc": "UFC Vision uses essential technical cookies and anonymous analytics to ensure website stability and optimize performance.",
+        "cookie_accept": "Accept All",
+        "cookie_decline": "Essentials Only",
         "footer": "UFC Vision © 2026 — All Rights Reserved | Published by Aura Dev (SIRET: 10542993000016)"
     },
     "FR": {
-        "page_title": "UFC Vision — Analyse MMA de Haute Précision",
-        "nav_past": "📜 Combats Antérieurs",
+        "page_title": "UFC Vision — Pronostics & Analytics MMA",
+        "nav_past": "📜 Combats Passés",
         "nav_home": "🥊 UFC Vision",
         "nav_upcoming": "🔮 Combats Futurs",
         "nav_legal": "⚖️ Mentions Légales & Confidentialité",
-        "back_home": "← Retour à l'accueil",
-        "hero_subtitle": "Le meilleur bot de prédiction de l'UFC",
-        "hero_description": "UFC Vision est un projet indépendant mené par des passionnés de data MMA, non affilié à l'UFC. Notre modèle analyse plus de 20 facteurs statistiques par affrontement sur 10 ans d'historique. <b>Nous ne sommes pas responsables de vos paris : nous analysons des données et les comparons à celles des bookmakers.</b>",
-        "stat_winrate_desc": "Winrate du bot (2015 - 2026)",
-        "stat_roi_desc": "ROI du bot (2015 - 2026)",
-        "upcoming_title": "🔮 Prédictions des Prochains Événements UFC",
-        "select_upcoming_card": "Sélectionnez une carte UFC à venir :",
-        "insufficient_data": "🔘 DONNÉES INSUFFISANTES — Historique UFC incomplet.",
-        "odds_pending": "⏳ COTES EN ATTENTE — En attente des cotes officielles.",
-        "no_odds_archived": "⚪ COTES HISTORIQUES NON ARCHIVÉES — Cotes manquantes.",
-        "high_confidence": "🟢 OPPORTUNITÉ DÉTECTÉE : {fighter}",
-        "insufficient_confidence": "🚨 AUCUNE OPPORTUNITÉ INTÉRESSANTE",
-        "global_summary_title": "🌐 Bilan Global",
-        "card_summary_title": "📅 Bilan de cette soirée",
-        "past_title": "📊 Performance Réelle (Mise Fictive 10 €)",
-        "net_profit": "💵 Profit Net Total",
-        "volume_sub": "{staked:.0f} € misés ({bets} paris)",
-        "roi_yield": "📈 Rendement ROI",
-        "win_rate_value": "🎯 Taux de Réussite (Opportunités)",
-        "opportunity_info": "💡 <b>Note :</b> Une <i>Opportunité Détectée</i> ne signifie <b>PAS FORCÉMENT que le combattant est favori</b>. Cela indique une espérance mathématique supérieure à +20% au vu des cotes, ce qui permet de maximiser le ROI à long terme selon nos tests historiques.",
-        "accuracy_all": "🔮 Précision Pronos (Tous Combats)",
-        "select_past_card": "Sélectionnez un événement passé de l'UFC :",
+        "back_home": "← Retour à l'Accueil",
+        "hero_badge": "MOTEUR PRÉDICTIF IA V3 • 10 ANS DE DONNÉES MMA",
+        "hero_subtitle": "Le Meilleur Bot de Pronostics UFC",
+        "hero_description": "UFC Vision est un projet indépendant créé par des passionnés de données MMA, non affilié à l'UFC. Notre modèle analyse plus de 20 facteurs statistiques par combat sur 10 ans d'historique. <b>Nous ne sommes pas responsables de vos paris ; nous analysons les données et les comparons aux cotes des bookmakers.</b>",
+        "stat_winrate_desc": "Taux de Victoire du Bot (2015 - 2026)",
+        "stat_roi_desc": "ROI du Bot (2015 - 2026)",
+        "verified_badge": "Historique Certifié",
+        "cumulative_edge": "Rendement Cumulé",
+        "upcoming_title": "🔮 Pronostics des Prochains Événements UFC",
+        "select_upcoming_card": "Sélectionnez un événement UFC à venir :",
+        "odds_updated_hours": "🕒 Cotes actualisées il y a {hours}h {mins}m • Sync Auto 2h",
+        "odds_updated_mins": "🕒 Cotes actualisées il y a {mins}m • Sync Auto 2h",
+        "odds_pending": "⏳ Cotes en Attente • En attente des lignes bookmakers",
+        "insufficient_data": "⚠️ Données UFC insuffisantes pour l'un des combattants (Débutant protégé)",
+        "insufficient_confidence": "⚪ Confiance insuffisante (Espérance mathématique sous le seuil)",
+        "high_confidence": "🎯 Forte confiance sur {fighter} (Espérance mathématique > +20%)",
+        "past_title": "📜 Combats Passés & Historique des Performances",
+        "global_summary_title": "🌐 Bilan Historique Global",
+        "card_summary_title": "📅 Bilan Historique de la Soirée",
+        "select_past_card": "Sélectionnez une soirée UFC passée :",
+        "net_profit": "Bénéfice Net",
+        "roi_yield": "Rendement (ROI)",
+        "win_rate_value": "Taux de Victoire Value Bets",
+        "accuracy_all": "Précision Globale (Tous Combats)",
+        "volume_sub": "Volume : {staked:.0f} € ({bets} paris engagés)",
         "won_text": "gagnés",
-        "correct_text": "justes",
-        "bets_text": "paris",
-        "won_pill": "🟢 GAGNÉ (+{gain} €) — Pari réussi sur {fighter} (Cote : {odds}). Vainqueur : {winner}.",
-        "lost_pill": "🔴 PERDU (-10.00 €) — Pari engagé sur {fighter} (Cote : {odds}). Vainqueur : {winner}.",
-        "no_bet_eval": "⚪ NO BET — Pas de Value Bet (EV max : {ev}%)",
-        "no_bet_desc": "Pari évité : Valeur insuffisante. Vainqueur : {winner}.",
-        "void_pill": "⚪ ANNULÉ / VOID — Combat non disputé (Pari remboursé)",
-        "odds_freshness": "⚡ Cotes actualisées il y a {mins} min via The Odds API",
-        "odds_updated_mins": "⚡ Cotes mises à jour il y a {mins} min depuis The Odds API",
-        "odds_updated_hours": "⚡ Cotes mises à jour il y a {hours}h {mins}min depuis The Odds API",
-        "bug_contact": "✉️ Une question ou une erreur à signaler ? contact@auradev.fr",
-        # FEATURE IMPORTANCE FR
-        "feature_importance_title": "📊 Quels sont les facteurs les plus importants dans notre modèle IA ?",
-        "feature_importance_desc": "Notre IA prédictive analyse des variables statistiques différentielles par affrontement. Voici le poids exact de chaque facteur dans la prise de décision du modèle :",
-        # FAQ FR
-        "faq_title": "❓ Foire Aux Questions (FAQ)",
-        "q1": "Comment fonctionne l'intelligence artificielle d'UFC Vision ?",
-        "a1": "Notre algorithme d'IA prédictive compare simultanément plus de 20 variables statistiques ajustées entre deux combattants (différentiels d'ELO, volume de coups, efficacité de défense de takedown, séries de victoires, classement récent, etc.) sur les 10 dernières années de combats UFC.",
-        "q2": "D'où proviennent les données et les cotes ?",
-        "a2": "Les métriques de combat sont issues de l'historique officiel de l'UFC, et les cotes sont actualisées régulièrement en arrière-plan via des APIs agrégatrices de bookmakers mondiaux.",
-        "q3": "Qu'est-ce qu'une Opportunité Détectée (Value Bet) ?",
-        "a3": "Une opportunité détectée indique que la probabilité calculée par l'IA présente un avantage statistique significatif (Value > +20% d'EV) par rapport à la cote proposée sur le marché.",
-        "q4": "UFC Vision est-il affilié à l'UFC ?",
-        "a4": "Non. UFC Vision est un projet d'analyse indépendant conçu par des passionnés de MMA. Il n'est en aucun cas affilié, sponsorisé ou approuvé par l'UFC ou TKO Group Holdings.",
-        "faq_contact": "Vous avez d'autres questions ? N'hésitez pas à nous contacter à contact@auradev.fr",
-        # JURIDIQUE FR
-        "legal_page_title": "⚖️ Mentions Légales, Politique de Confidentialité & Gestion des Cookies",
-        "legal_sec1_title": "1. Éditeur du site & Mentions Légales",
-        "legal_sec2_title": "2. Hébergement & Infrastructure Cloud",
-        "legal_sec3_title": "3. Propriété Intellectuelle & Protection des Données",
-        "legal_sec4_title": "4. Politique de Confidentialité & Conformité RGPD",
-        "legal_sec5_title": "5. Avertissement IA & Non-Responsabilité Financière",
-        "legal_sec6_title": "6. Jeu Responsable & Protection des Mineurs (+18)",
-        "legal_sec7_title": "7. Indépendance de Marque & Passionnés",
-        "legal_sec8_title": "8. Régies Publicitaires & Monétisation",
-        "legal_publisher": "<b>Éditeur du site :</b> Le site UFC Vision (https://ufcvision.com) est édité par l'entreprise Aura Dev (SIRET : 10542993000016 — Dispositif de protection d'anonymat légal - Art. 6-III-2 de la Loi LCEN n° 2004-575). Contact : contact@auradev.fr",
-        "legal_hosting": "<b>Hébergement Cloud :</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, États-Unis | Site : https://www.digitalocean.com | Tél : +1 888-892-2732 | Support : support@digitalocean.com",
-        "legal_ip": "<b>Propriété Intellectuelle :</b> L'ensemble des modèles de Machine Learning, algorithmes, interfaces et code source sont la propriété exclusive d'Aura Dev. Toute aspiration automatisée de données (scraping) ou réutilisation commerciale est strictement interdite.",
-        "legal_privacy": "<b>Données Personnelles & Cookies :</b> UFC Vision ne requiert la création d'aucun compte et ne collecte aucune donnée nominative directe. Des outils de mesure d'audience (Google Tag Manager, Google Analytics 4) et des régies publicitaires tierces (Google AdSense) utilisent des cookies pour analyser le trafic et diffuser des annonces pertinentes.",
-        "legal_ads": "<b>Annonces Publicitaires :</b> Le site héberge des espaces publicitaires. Les régies partenaires traitent des données techniques d'affichage non identifiables pour adapter la pertinence des publicités.",
-        "disclaimer_ai": "<b>Avertissement IA :</b> UFC Vision est un outil d'aide à la décision. Les prédictions sont fournies à titre purement informatif. Aucun gain n'est garanti et Aura Dev décline toute responsabilité en cas de pertes liées à l'utilisation du service.",
-        "disclaimer_gaming": "<b>Jeu Responsable (+18) :</b> Les paris sportifs sont strictement interdits aux mineurs. Jouer comporte des risques : endettement, isolement, dépendance. Contactez Joueurs Info Service au 09 74 75 13 13.",
-        "disclaimer_trademark": "<b>Avertissement de Marque & Indépendance :</b> UFC Vision est un projet d'analyse indépendant conçu par des passionnés de MMA et édité par Aura Dev. Nous analysons les données publiques de l'UFC et ne sommes en aucun cas affiliés, autorisés, sponsorisés ou approuvés par l'UFC ou TKO Group Holdings.",
-        # COOKIES FR
-        "cookie_dialog_title": "🍪 Préférences des Cookies",
-        "cookie_title": "Gestion des Cookies & Confidentialité",
-        "cookie_desc": "UFC Vision utilise des cookies techniques, de mesure d'audience anonyme (Google Analytics / GTM) et publicitaires pour maintenir le service gratuit.",
+        "correct_text": "corrects",
+        "won_pill": "✅ GAGNÉ : +{gain} € sur {fighter} (Cote : {odds}) — Vainqueur : {winner}",
+        "lost_pill": "❌ PERDU : -10.00 € sur {fighter} (Cote : {odds}) — Vainqueur : {winner}",
+        "void_pill": "⚪ ANNULÉ : Combat Annulé / No Contest (0.00 €)",
+        "no_odds_archived": "⚪ PAS DE PARI : Aucune cote archivée disponible pour ce combat.",
+        "no_bet_eval": "⚪ PAS DE PARI : Évalué (EV max {ev}%)",
+        "no_bet_desc": "Espérance mathématique inférieure au seuil de +20%. Vainqueur officiel : <b>{winner}</b>.",
+        "feature_importance_title": "🧠 Quels facteurs sont les plus importants dans notre modèle IA ?",
+        "feature_importance_desc": "Notre Intelligence Artificielle analyse des variables statistiques différentielles par combat. Voici le poids exact de chaque facteur dans la prise de décision du modèle :",
+        "faq_title": "💬 Foire Aux Questions (FAQ)",
+        "q1": "Comment UFC Vision calcule-t-il ses pronostics ?",
+        "a1": "Notre algorithme d'IA prédictive évalue plus de 20 facteurs statistiques différentiels entre les deux combattants (différentiel de score ELO, volume de frappe, défense de takedown, séries de victoires, classement récent, etc.) entraînés sur 10 ans d'historique UFC.",
+        "q2": "Qu'est-ce qu'un 'Value Bet' ?",
+        "a2": "Un Value Bet survient lorsque la probabilité calculée par notre IA est significativement plus élevée que la probabilité implicite de la cote proposée par le bookmaker. Nous ne retenons que les paris avec une espérance mathématique strictement supérieure à +20.0%.",
+        "q3": "À quelle fréquence les cotes et données sont-elles mises à jour ?",
+        "a3": "Les cotes sont synchronisées toutes les 2 heures via les fournisseurs officiels de données sportives. Les pronostics s'adaptent dynamiquement dès publication des cotes d'ouverture et de fermeture.",
+        "q4": "Les prédictions constituent-elles un conseil financier ?",
+        "a4": "Non. UFC Vision est un outil d'aide à la décision à vocation purement analytique et statistique. Les performances passées ne préjugent pas des résultats futurs. Ne pariez jamais plus que ce que vous pouvez vous permettre de perdre.",
+        "faq_contact": "Questions ou partenariats ? Écrivez-nous à : aura.dev.contact@gmail.com",
+        "legal_page_title": "⚖️ Mentions Légales & Politique de Confidentialité",
+        "legal_sec1_title": "1. Éditeur du Site",
+        "legal_publisher": "<b>Nom du site :</b> UFC Vision (ufcvision.com)<br><b>Statut :</b> Micro-entrepreneur / Aura Dev<br><b>SIRET :</b> 10542993000016<br><b>Siège social :</b> Paris, France<br><b>Email :</b> aura.dev.contact@gmail.com",
+        "legal_sec2_title": "2. Hébergement",
+        "legal_hosting": "<b>Hébergeur :</b> Hostinger International Ltd.<br><b>Adresse :</b> 61 Lordou Vironos Street, 6023 Larnaca, Chypre<br><b>Site Web :</b> https://www.hostinger.fr",
+        "legal_sec3_title": "3. Propriété Intellectuelle",
+        "legal_ip": "<b>Propriété Intellectuelle :</b> L'ensemble des modèles de Machine Learning, algorithmes, interfaces graphiques et code source sont la propriété exclusive d'Aura Dev. Toute reproduction ou extraction automatisée est strictement interdite.",
+        "legal_sec4_title": "4. Données Personnelles & RGPD",
+        "legal_privacy": "UFC Vision ne propose aucun compte utilisateur et ne collecte aucune donnée personnelle nominative. Seuls des cookies techniques et des traceurs de mesure d'audience anonymes peuvent être utilisés pour assurer la stabilité et les performances.",
+        "legal_sec5_title": "5. Avertissement IA & Données Statistiques",
+        "disclaimer_ai": "<b>Avertissement IA :</b> UFC Vision est un outil d'analyse décisionnelle. Les pronostics n'ont aucune valeur de certitude et ne constituent en aucun cas des conseils en investissement financier ou en paris sportifs.",
+        "legal_sec6_title": "6. Prévention des Jeux d'Argent & Addiction",
+        "disclaimer_gaming": "<b>Jeu Responsable :</b> Les paris sportifs comportent des risques d'endettement et d'addiction. Interdit aux mineurs (-18 ans). En cas de difficulté, contactez Joueurs Info Service au 09 74 75 13 13 (appel non surtaxé).",
+        "legal_sec7_title": "7. Avertissement de Marque & Non-Affiliation",
+        "disclaimer_trademark": "<b>Marques :</b> UFC, Ultimate Fighting Championship et les noms associés sont des marques déposées de Zuffa, LLC. UFC Vision est un outil d'analyse indépendant et n'est affilié, sponsorisé ni approuvé par l'UFC ou Zuffa, LLC.",
+        "legal_sec8_title": "8. Transparence Publicitaire",
+        "legal_ads": "UFC Vision peut afficher des partenariats commerciaux ou des liens d'affiliation avec des bookmakers légaux. Ces mentions sont toujours clairement identifiées conformément aux exigences légales.",
+        "bug_contact": "Signalement de bug ou contact juridique : aura.dev.contact@gmail.com",
+        "cookie_dialog_title": "🍪 Préférences Cookies",
+        "cookie_title": "Gestion des Cookies et de la Confidentialité",
+        "cookie_desc": "UFC Vision utilise des cookies techniques indispensables et des outils d'analyse anonymes pour garantir la fluidité de navigation et le suivi des performances.",
         "cookie_accept": "Tout Accepter",
         "cookie_decline": "Essentiels Uniquement",
         "footer": "UFC Vision © 2026 — Tous droits réservés | Édité par Aura Dev (SIRET : 10542993000016)"
     },
     "ES": {
-        "page_title": "UFC Vision — Analítica de MMA de Alta Gama",
-        "nav_past": "📜 Combates Anteriores",
+        "page_title": "UFC Vision — Pronósticos y Analítica MMA",
+        "nav_past": "📜 Peleas Pasadas",
         "nav_home": "🥊 UFC Vision",
-        "nav_upcoming": "🔮 Próximos Combates",
+        "nav_upcoming": "🔮 Próximas Peleas",
         "nav_legal": "⚖️ Aviso Legal y Privacidad",
         "back_home": "← Volver al Inicio",
-        "hero_subtitle": "El mejor bot de predicción de la UFC",
+        "hero_badge": "MOTOR PREDICTIVO IA V3 • 10 AÑOS DE DATOS MMA",
+        "hero_subtitle": "El Mejor Bot de Pronósticos de la UFC",
         "hero_description": "UFC Vision es un proyecto independiente creado por entusiastas de los datos de MMA, no afiliado a la UFC. Nuestro modelo analiza más de 20 factores estadísticos por combate en 10 años de historial. <b>No somos responsables de sus apuestas; analizamos datos y los comparamos con las casas de apuestas.</b>",
-        "stat_winrate_desc": "Tasa de victoria del bot (2015 - 2026)",
-        "stat_roi_desc": "ROI del bot (2015 - 2026)",
-        "upcoming_title": "🔮 Predicciones de Próximos Eventos UFC",
-        "select_upcoming_card": "Seleccione una cartelera de la UFC:",
-        "insufficient_data": "🔘 DATOS INSUFFICIENTES — Historial de UFC incompleto.",
-        "odds_pending": "⏳ CUOTAS PENDIENTES — Esperando cuotas oficiales.",
-        "no_odds_archived": "⚪ SIN CUOTAS ARCHIVADAS — Cuotas históricas no disponibles.",
-        "high_confidence": "🟢 OPORTUNIDAD DETECTADA: {fighter}",
-        "insufficient_confidence": "🚨 SIN OPORTUNIDAD DE VALOR",
-        "global_summary_title": "🌐 Rendimiento Global",
-        "card_summary_title": "📅 Rendimiento de esta velada",
-        "past_title": "📊 Rendimiento Real (Apuesta Simulada 10 €)",
-        "net_profit": "💵 Beneficio Neto Total",
-        "volume_sub": "{staked:.0f} € apostados ({bets} apuestas)",
-        "roi_yield": "📈 Rendimiento ROI",
-        "win_rate_value": "🎯 Tasa de Acierto (Oportunidades)",
-        "opportunity_info": "💡 <b>Nota:</b> Una <i>Oportunidad Detectada</i> <b>NO significa necesariamente que el peleador sea el favorito</b>. Indica una esperanza matemática superior al +20% respecto a las cuotas, lo que permite maximizar el ROI a largo plazo según nuestras pruebas históricas.",
-        "accuracy_all": "🔮 Precisión Pronósticos (Todos)",
-        "select_past_card": "Seleccione un evento pasado de UFC:",
-        "won_text": "ganados",
-        "correct_text": "aciertos",
-        "bets_text": "apuestas",
-        "won_pill": "🟢 GANADO (+{gain} €) — Apuesta con éxito en {fighter} (Cuota: {odds}). Ganador: {winner}.",
-        "lost_pill": "🔴 PERDIDO (-10.00 €) — Apuesta realizada en {fighter} (Cuota: {odds}). Ganador: {winner}.",
-        "no_bet_eval": "⚪ NO BET — Sin Value Bet (EV máx: {ev}%)",
-        "no_bet_desc": "Apuesta evitada: Valor insuficiente. Ganador: {winner}.",
-        "void_pill": "⚪ CANCELADO / VOID — Combate no disputado (Apuesta reembolsada)",
-        "odds_freshness": "⚡ Cuotas actualizadas hace {mins} min via The Odds API",
-        "odds_updated_mins": "⚡ Cuotas actualizadas hace {mins} min desde The Odds API",
-        "odds_updated_hours": "⚡ Cuotas actualizadas hace {hours}h {mins}min desde The Odds API",
-        "bug_contact": "✉️ ¿Tienes alguna duda o error que reportar? contact@auradev.fr",
-        # FEATURE IMPORTANCE ES
-        "feature_importance_title": "📊 ¿Cuáles son los factores más importantes en nuestro modelo IA?",
+        "stat_winrate_desc": "Tasa de Acierto del Bot (2015 - 2026)",
+        "stat_roi_desc": "ROI del Bot (2015 - 2026)",
+        "verified_badge": "Historial Verificado",
+        "cumulative_edge": "Rendimiento Acumulado",
+        "upcoming_title": "🔮 Pronósticos de Próximos Eventos UFC",
+        "select_upcoming_card": "Selecciona un evento UFC próximo:",
+        "odds_updated_hours": "🕒 Cuotas actualizadas hace {hours}h {mins}m • Sync Auto 2h",
+        "odds_updated_mins": "🕒 Cuotas actualizadas hace {mins}m • Sync Auto 2h",
+        "odds_pending": "⏳ Cuotas Pendientes • Esperando líneas de apertura",
+        "insufficient_data": "⚠️ Datos insuficientes en UFC para uno de los peleadores (Debutante protegido)",
+        "insufficient_confidence": "⚪ Confianza insuficiente (Valor Esperado por debajo del umbral)",
+        "high_confidence": "🎯 Alta confianza en {fighter} (Valor Esperado > +20%)",
+        "past_title": "📜 Peleas Pasadas e Historial de Resultados",
+        "global_summary_title": "🌐 Balance Histórico Global",
+        "card_summary_title": "📅 Balance Histórico de la Velada",
+        "select_past_card": "Selecciona una velada UFC archivada:",
+        "net_profit": "Beneficio Neto",
+        "roi_yield": "Rendimiento (ROI)",
+        "win_rate_value": "Tasa de Victoria en Value Bets",
+        "accuracy_all": "Precisión Global (Todas las Peleas)",
+        "volume_sub": "Volumen: {staked:.0f} € ({bets} apuestas realizadas)",
+        "won_text": "ganadas",
+        "correct_text": "correctas",
+        "won_pill": "✅ GANADA: +{gain} € por {fighter} (Cuota: {odds}) — Ganador: {winner}",
+        "lost_pill": "❌ PERDIDA: -10.00 € por {fighter} (Cuota: {odds}) — Ganador: {winner}",
+        "void_pill": "⚪ NULA: Pelea Cancelada / Sin Resultado (0.00 €)",
+        "no_odds_archived": "⚪ SIN APUESTA: Sin cuotas archivadas para esta pelea.",
+        "no_bet_eval": "⚪ SIN APUESTA: Evaluada (EV máx {ev}%)",
+        "no_bet_desc": "Valor esperado inferior al umbral de +20%. Ganador oficial: <b>{winner}</b>.",
+        "feature_importance_title": "🧠 ¿Cuáles son los factores más importantes en nuestro modelo IA?",
         "feature_importance_desc": "Nuestra IA predictiva analiza variables estadísticas diferenciales por combate. Aquí está el peso exacto de cada factor en la toma de decisiones del modelo:",
-        # FAQ ES
-        "faq_title": "❓ Preguntas Frecuentes (FAQ)",
-        "q1": "¿Cómo funciona la IA de UFC Vision?",
+        "faq_title": "💬 Preguntas Frecuentes (FAQ)",
+        "q1": "¿Cómo predice UFC Vision los combates?",
         "a1": "Nuestro algoritmo de IA predictiva analiza más de 20 variables estadísticas comparativas entre dos peleadores (diferencial de ELO, golpes por minuto, defensa de derribos, racha de victorias, etc.) basándose en 10 años de datos de la UFC.",
-        "q2": "¿De dónde proceden los datos y las cuotas?",
-        "a2": "Las estadísticas se extraen de los archivos oficiales de la UFC y las cuotas se actualizan periódicamente en segundo plano mediante APIs agregadoras internacionales.",
-        "q3": "¿Qué es una Oportunidad de Valor (Value Bet)?",
-        "a3": "Una oportunidad detectada indica que la probabilidad calculada por la IA ofrece una ventaja estadística sustancial (Valor > +20% EV) respecto a la cuota publicada por el mercado.",
-        "q4": "¿Está UFC Vision afiliado a la UFC?",
-        "a4": "No. UFC Vision es un proyecto analítico independiente creado por aficionados a las MMA. No está afiliado, patrocinado ni respaldado de ningún modo por UFC o TKO Group Holdings.",
-        "faq_contact": "¿Tienes más preguntas? Contáctanos en contact@auradev.fr",
-        # JURIDIQUE ES
-        "legal_page_title": "⚖️ Aviso Legal, Privacidad y Política de Cookies",
-        "legal_sec1_title": "1. Titular del Sitio y Aviso Legal",
-        "legal_sec2_title": "2. Infraestructura y Alojamiento Cloud",
+        "q2": "¿Qué es una 'Value Bet'?",
+        "a2": "Una Value Bet ocurre cuando la probabilidad calculada por nuestra IA es significativamente mayor que la probabilidad implícita de la cuota del bookmaker. Solo seleccionamos apuestas con una ventaja matemática superior a +20.0%.",
+        "q3": "¿Con qué frecuencia se actualizan las cuotas?",
+        "a3": "Las cuotas se actualizan automáticamente cada 2 horas a través de proveedores oficiales de datos. Los pronósticos se ajustan dinámicamente con las cuotas oficiales de cierre.",
+        "q4": "¿Son estos pronósticos asesoramiento financiero?",
+        "a4": "No. UFC Vision es una herramienta estadística analítica para aficionados. Los resultados pasados no garantizan beneficios futuros. Nunca apueste dinero que no pueda permitirse perder.",
+        "faq_contact": "¿Dudas o consultas? Contáctenos en: aura.dev.contact@gmail.com",
+        "legal_page_title": "⚖️ Aviso Legal y Política de Privacidad",
+        "legal_sec1_title": "1. Titular del Sitio Web",
+        "legal_publisher": "<b>Sitio Web:</b> UFC Vision (ufcvision.com)<br><b>Titular:</b> Microempresa / Aura Dev<br><b>SIRET:</b> 10542993000016<br><b>Sede:</b> París, Francia<br><b>Email:</b> aura.dev.contact@gmail.com",
+        "legal_sec2_title": "2. Alojamiento Web",
+        "legal_hosting": "<b>Proveedor:</b> Hostinger International Ltd.<br><b>Dirección:</b> 61 Lordou Vironos Street, 6023 Larnaca, Chipre<br><b>Web:</b> https://www.hostinger.es",
         "legal_sec3_title": "3. Propiedad Intelectual",
-        "legal_sec4_title": "4. Política de Privacidad y RGPD",
-        "legal_sec5_title": "5. Descargo de Responsabilidad de IA",
-        "legal_sec6_title": "6. Juego Responsable (+18)",
-        "legal_sec7_title": "7. Independencia de Marca",
-        "legal_sec8_title": "8. Redes Publicitarias",
-        "legal_publisher": "<b>Titular:</b> UFC Vision (https://ufcvision.com) es propiedad de Aura Dev (SIRET: 10542993000016). Contacto: contact@auradev.fr",
-        "legal_hosting": "<b>Alojamiento Cloud:</b> DigitalOcean LLC | 101 Avenue of the Americas, 10th Floor, New York, NY 10013, EE.UU.",
         "legal_ip": "<b>Propiedad Intelectual:</b> Todos los modelos de Inteligencia Artificial, algoritmos e interfaz pertenecen en exclusiva a Aura Dev. Queda prohibida su extracción automatizada o copia comercial.",
-        "legal_privacy": "<b>Privacidad:</b> No recopilamos datos personales directos sin su consentimiento.",
-        "legal_ads": "<b>Publicidad:</b> Esta plataforma utiliza redes publicitarias automatizadas para financiar su mantenimiento.",
-        "disclaimer_ai": "<b>Descargo IA:</b> UFC Vision es una herramienta analítica orientada exclusivamente a fines informativos. No nos hacemos responsables de las decisiones de apuestas.",
-        "disclaimer_gaming": "<b>Juego Responsable (+18):</b> Las apuestas deportivas están prohibidas para menores de edad. Juegue con responsabilidad.",
-        "disclaimer_trademark": "<b>Independencia:</b> Proyecto independiente no oficial. Las marcas de la UFC son propiedad exclusiva de sus respectivos dueños.",
-        # COOKIES ES
+        "legal_sec4_title": "4. Privacidad y Protección de Datos (RGPD)",
+        "legal_privacy": "UFC Vision no requiere registro de usuario ni almacena datos personales identificables. Se emplean cookies técnicas y de analítica anónima para garantizar la funcionalidad y optimizar el rendimiento.",
+        "legal_sec5_title": "5. Exención de Responsabilidad IA",
+        "disclaimer_ai": "<b>Aviso IA:</b> UFC Vision es una herramienta de apoyo analítico. Las predicciones son meramente informativas y no constituyen asesoramiento financiero ni recomendaciones de apuestas.",
+        "legal_sec6_title": "6. Juego Responsable",
+        "disclaimer_gaming": "<b>Juego Responsable:</b> Las apuestas deportivas conllevan riesgo económico y adicción. Prohibido a menores de 18 años. Si necesita asistencia, consulte con organizaciones especializadas.",
+        "legal_sec7_title": "7. Descargo de Marcas",
+        "disclaimer_trademark": "<b>Marcas Registradas:</b> UFC y marcas derivadas son propiedad de Zuffa, LLC. UFC Vision es un proyecto analítico independiente sin relación comercial con Zuffa, LLC ni UFC.",
+        "legal_sec8_title": "8. Transparencia Publicitaria",
+        "legal_ads": "UFC Vision puede incluir enlaces de patrocinio o afiliación con operadores regulados, siempre identificados de acuerdo con la normativa publicitaria.",
+        "bug_contact": "Aviso de errores o consultas legales: aura.dev.contact@gmail.com",
         "cookie_dialog_title": "🍪 Preferencias de Cookies",
         "cookie_title": "Gestión de Cookies y Privacidad",
         "cookie_desc": "UFC Vision utiliza cookies técnicas esenciales y de medición para optimizar la experiencia.",
@@ -315,7 +304,7 @@ def render_clean_html(html_str):
 
 
 # =========================================================================
-# CONFIGURATION STREAMLIT & STYLES CSS DESIGN SYSTEM PURE WHITE
+# CONFIGURATION STREAMLIT & STYLES CSS DESIGN SYSTEM ULTRA-MODERNE
 # =========================================================================
 
 st.set_page_config(
@@ -329,231 +318,447 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
 
+    :root {
+        --brand-primary: #3D3EEA;
+        --brand-glow: rgba(61, 62, 234, 0.16);
+        --corner-red: #D20A0A;
+        --corner-red-gradient: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+        --corner-blue: #2563EB;
+        --corner-blue-gradient: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+        --emerald-win: #10B981;
+        --slate-dark: #0F172A;
+        --slate-muted: #64748B;
+        --slate-subtle: #94A3B8;
+        --border-card: rgba(226, 232, 240, 0.9);
+        --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.03);
+        --card-hover-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+    }
+
     html, body, [class*="css"] {
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        color: #0F172A;
+        background-color: #F8FAFC !important;
+        background-image: radial-gradient(circle at 50% 0%, rgba(61, 62, 234, 0.035) 0%, transparent 65%) !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
     }
 
     #MainMenu, footer, header, [data-testid="stToolbar"] {
-        visibility: hidden;
-        height: 0%;
-        position: fixed;
+        visibility: hidden !important;
+        height: 0% !important;
+        position: fixed !important;
     }
 
     .main .block-container {
-        max-width: 980px !important;
-        padding-top: 1.5rem !important;
-        padding-bottom: 2rem !important;
+        max-width: 960px !important;
+        padding-top: 1.2rem !important;
+        padding-bottom: 2.5rem !important;
     }
 
+    /* ANIMATION FLUIDE D'APPARITION */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .anim-fade-in {
+        animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* SÉLECTEURS STREAMLIT STYLISÉS CAPSULE MODERNE */
     div[data-testid="stSelectbox"] div[data-baseweb="select"] {
         border-radius: 9999px !important;
-        border: 1px solid #E2E8F0 !important;
-        background-color: #FFFFFF !important;
+        border: 1px solid var(--border-card) !important;
+        background: #FFFFFF !important;
         color: #0F172A !important;
         font-weight: 700 !important;
         font-size: 0.88rem !important;
-        box-shadow: 0 2px 4px rgba(15, 23, 42, 0.03) !important;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    div[data-testid="stSelectbox"] div[data-baseweb="select"]:hover {
+        border-color: #CBD5E1 !important;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06) !important;
     }
 
+    /* BOUTONS STREAMLIT NATIVE EN CAPSULES GLASS */
     div[data-testid="stBaseButton-secondary"] button {
         border-radius: 9999px !important;
-        border: 1px solid #E2E8F0 !important;
-        background-color: #FFFFFF !important;
+        border: 1px solid var(--border-card) !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(12px) !important;
         color: #0F172A !important;
         font-weight: 700 !important;
-        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        font-size: 0.9rem !important;
+        padding: 8px 18px !important;
+        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02) !important;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
     div[data-testid="stBaseButton-secondary"] button:hover {
         border-color: #CBD5E1 !important;
-        background-color: #F8FAFC !important;
-        transform: translateY(-1px);
+        background: #FFFFFF !important;
+        transform: translateY(-1.5px) !important;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06) !important;
     }
 
-    .hero-bubble-text {
-        background: #FFFFFF !important;
-        border: 1px solid #E2E8F0 !important;
-        border-radius: 28px !important;
-        padding: 2.2rem 2.4rem !important;
-        text-align: center !important;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
-        margin-bottom: 2rem !important;
+    /* TOP BARRE / NAVIGATION CAPSULE FLOTTANTE */
+    .top-header-capsule {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
     }
 
-    .stat-pill {
-        background: #FFFFFF !important;
-        border: 1px solid #E2E8F0 !important;
-        border-radius: 24px !important;
-        padding: 1.6rem !important;
-        text-align: center !important;
-        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03) !important;
+    /* BADGE D'ENTÊTE HERO AVEC LOGO COMPACT ET ÉPURÉ */
+    .hero-container-modern {
+        background: #FFFFFF;
+        border: 1px solid var(--border-card);
+        border-radius: 32px;
+        padding: 2.4rem 2rem;
+        text-align: center;
+        box-shadow: var(--card-shadow);
+        margin: 1rem 0 2rem 0;
+        position: relative;
+        overflow: hidden;
     }
-    .stat-val-huge {
-        font-size: 2.8rem;
+    .hero-container-modern::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #3D3EEA 0%, #2563EB 50%, #10B981 100%);
+    }
+
+    .hero-logo-badge {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        object-fit: cover;
+        box-shadow: 0 6px 18px rgba(61, 62, 234, 0.16);
+        border: 2px solid #FFFFFF;
+        margin: 0 auto 14px auto;
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-logo-badge:hover {
+        transform: scale(1.06) rotate(-2deg);
+    }
+
+    .hero-chip-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #F1F5F9;
+        border: 1px solid #E2E8F0;
+        color: #334155;
+        border-radius: 9999px;
+        padding: 4px 12px;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+    .pulse-dot-green {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #10B981;
+        box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+        animation: pulseDot 2s infinite;
+    }
+    @keyframes pulseDot {
+        0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+        70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    .hero-title-modern {
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: #0F172A;
+        letter-spacing: -0.025em;
+        line-height: 1.15;
+        margin: 0 0 10px 0;
+    }
+    .hero-desc-modern {
+        font-size: 1.02rem;
+        font-weight: 500;
+        color: #475569;
+        line-height: 1.65;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+    /* CARTES DE STATISTIQUES ACCUEIL */
+    .stat-card-modern {
+        background: #FFFFFF;
+        border: 1px solid var(--border-card);
+        border-radius: 26px;
+        padding: 1.8rem 1.4rem;
+        text-align: center;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .stat-card-modern:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--card-hover-shadow);
+        border-color: #CBD5E1;
+    }
+    .stat-card-modern::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        right: 20%;
+        height: 3px;
+        border-radius: 9999px;
+        background: #3D3EEA;
+        opacity: 0.85;
+    }
+    .stat-card-green::after {
+        background: #10B981 !important;
+    }
+    .stat-badge-sub {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 3px 10px;
+        border-radius: 9999px;
+        margin-bottom: 10px;
+        background: #F1F5F9;
+        color: #475569;
+    }
+    .stat-num-huge {
+        font-size: 3rem;
         font-weight: 900;
         color: #0F172A;
         line-height: 1;
-        margin-bottom: 8px;
+        letter-spacing: -0.03em;
+        margin-bottom: 6px;
+        font-variant-numeric: tabular-nums;
     }
-    .stat-desc-clean {
-        font-size: 0.85rem;
+    .stat-num-green {
+        color: #10B981 !important;
+    }
+    .stat-label-modern {
+        font-size: 0.82rem;
         font-weight: 700;
-        color: #64748B;
+        color: var(--slate-muted);
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
 
-    .summary-card-pure-white {
+    /* CONTENEUR DE COMBAT & SOIRÉE */
+    .fight-card-modern {
         background: #FFFFFF;
-        border: 1px solid #E2E8F0;
+        border: 1px solid var(--border-card);
         border-radius: 24px;
+        padding: 22px 24px;
+        margin-bottom: 20px;
+        box-shadow: var(--card-shadow);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fight-card-modern:hover {
+        border-color: #CBD5E1;
+        box-shadow: var(--card-hover-shadow);
+        transform: translateY(-2px);
+    }
+
+    .summary-card-modern {
+        background: #FFFFFF;
+        border: 1px solid var(--border-card);
+        border-radius: 28px;
         padding: 24px;
         margin-bottom: 24px;
-        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
+        box-shadow: var(--card-shadow);
     }
 
-    .fight-card-pure-white {
-        background: #FFFFFF;
-        border: 1px solid #E2E8F0;
-        border-radius: 20px;
-        padding: 22px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.02);
-    }
-
-    .legal-card-pure-white {
-        background: #FFFFFF;
-        border: 1px solid #E2E8F0;
-        border-radius: 24px;
-        padding: 32px;
-        margin: 20px 0;
-        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
-        line-height: 1.7;
-        color: #334155;
-    }
-
-    .signal-pill-rec {
-        background-color: #ECFDF5;
-        border: 1px solid #A7F3D0;
-        color: #065F46;
-        border-radius: 9999px;
-        padding: 10px 18px;
-        font-size: 0.95rem;
-        font-weight: 800;
-        text-align: center;
-        margin-top: 14px;
-    }
-    .signal-pill-no {
-        background-color: #FEF2F2;
-        border: 1px solid #FECACA;
-        color: #991B1B;
-        border-radius: 9999px;
-        padding: 10px 18px;
-        font-size: 0.9rem;
-        font-weight: 800;
-        text-align: center;
-        margin-top: 14px;
-    }
-    .signal-pill-wait {
-        background-color: #FFFBEB;
-        border: 1px solid #FDE68A;
-        color: #92400E;
-        border-radius: 9999px;
-        padding: 10px 18px;
-        font-size: 0.9rem;
-        font-weight: 800;
-        text-align: center;
-        margin-top: 14px;
-    }
-    .signal-pill-none {
-        background-color: #F8FAFC;
-        border: 1px solid #E2E8F0;
-        color: #64748B;
-        border-radius: 9999px;
-        padding: 10px 18px;
-        font-size: 0.9rem;
-        font-weight: 800;
-        text-align: center;
-        margin-top: 14px;
-    }
-
-    .result-pill-win {
-        background-color: #ECFDF5;
-        border: 1px solid #A7F3D0;
-        color: #065F46;
-        border-radius: 12px;
-        padding: 10px 16px;
-        font-size: 0.9rem;
-        font-weight: 700;
-        margin-top: 12px;
-    }
-    .result-pill-loss {
-        background-color: #FEF2F2;
-        border: 1px solid #FECACA;
-        color: #991B1B;
-        border-radius: 12px;
-        padding: 10px 16px;
-        font-size: 0.9rem;
-        font-weight: 700;
-        margin-top: 12px;
-    }
-    .result-pill-nobet {
-        background-color: #F8FAFC;
-        border: 1px solid #E2E8F0;
-        color: #64748B;
-        border-radius: 12px;
-        padding: 10px 16px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        margin-top: 12px;
-    }
-
+    /* BADGES DE COMBAT (MAIN EVENT, CO-MAIN) */
     .pill-main-red {
-        background-color: #FEF2F2;
+        background: #FEF2F2;
         border: 1px solid #FCA5A5;
         color: #DC2626;
         border-radius: 9999px;
         padding: 4px 12px;
-        font-size: 0.75rem;
+        font-size: 0.74rem;
         font-weight: 800;
+        letter-spacing: 0.04em;
         display: inline-block;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
     .pill-comain-dark {
-        background-color: #F8FAFC;
+        background: #F8FAFC;
         border: 1px solid #CBD5E1;
         color: #0F172A;
         border-radius: 9999px;
         padding: 4px 12px;
-        font-size: 0.75rem;
+        font-size: 0.74rem;
         font-weight: 800;
+        letter-spacing: 0.04em;
         display: inline-block;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
 
+    /* SIGNAUX DE PRONOSTIC FUTUR */
+    .signal-pill-rec {
+        background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+        border: 1px solid #6EE7B7;
+        color: #065F46;
+        border-radius: 9999px;
+        padding: 11px 20px;
+        font-size: 0.94rem;
+        font-weight: 800;
+        text-align: center;
+        margin-top: 16px;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.12);
+    }
+    .signal-pill-no {
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        color: #64748B;
+        border-radius: 9999px;
+        padding: 10px 18px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 16px;
+    }
+    .signal-pill-wait {
+        background: #FFFBEB;
+        border: 1px solid #FDE68A;
+        color: #92400E;
+        border-radius: 9999px;
+        padding: 10px 18px;
+        font-size: 0.88rem;
+        font-weight: 800;
+        text-align: center;
+        margin-top: 16px;
+    }
+    .signal-pill-none {
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        color: #64748B;
+        border-radius: 9999px;
+        padding: 10px 18px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    /* RÉSULTATS COMBATS PASSÉS */
+    .result-pill-win {
+        background: #ECFDF5;
+        border: 1px solid #A7F3D0;
+        color: #065F46;
+        border-radius: 14px;
+        padding: 11px 18px;
+        font-size: 0.92rem;
+        font-weight: 700;
+        margin-top: 14px;
+    }
+    .result-pill-loss {
+        background: #FEF2F2;
+        border: 1px solid #FECACA;
+        color: #991B1B;
+        border-radius: 14px;
+        padding: 11px 18px;
+        font-size: 0.92rem;
+        font-weight: 700;
+        margin-top: 14px;
+    }
+    .result-pill-nobet {
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        color: #64748B;
+        border-radius: 14px;
+        padding: 11px 18px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-top: 14px;
+    }
+
+    /* ACCORDÉONS ULTRA-MODERNES */
     details.aura-accordion {
         background: #FFFFFF;
-        border: 1px solid #E2E8F0;
-        border-radius: 18px;
-        padding: 16px 20px;
-        margin-bottom: 12px;
-        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+        border: 1px solid var(--border-card);
+        border-radius: 20px;
+        padding: 18px 22px;
+        margin-bottom: 14px;
+        box-shadow: var(--card-shadow);
+        transition: all 0.25s ease;
+    }
+    details.aura-accordion:hover {
+        border-color: #CBD5E1;
     }
     details.aura-accordion summary {
         font-size: 1.05rem;
         font-weight: 700;
         color: #0F172A;
         cursor: pointer;
+        outline: none;
+        user-select: none;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    details.aura-accordion summary::-webkit-details-marker {
+        display: none;
+    }
+    details.aura-accordion summary::after {
+        content: "▾";
+        font-size: 1.1rem;
+        color: #64748B;
+        transition: transform 0.2s ease;
+    }
+    details.aura-accordion[open] summary::after {
+        transform: rotate(180deg);
+        color: var(--brand-primary);
     }
 
-    .footer-aura {
-        text-align: center;
-        padding: 2rem 0 2.5rem 0;
-        color: #94A3B8;
-        font-size: 0.85rem;
-        font-weight: 500;
+    /* BARRES DE PROGRESSION ÉLÉGANTES DES VARIABLES IA */
+    .feat-meter-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 10px 14px;
+        background: #F8FAFC;
+        border-radius: 14px;
+        border: 1px solid #E2E8F0;
+        transition: background 0.2s ease;
+    }
+    .feat-meter-row:hover {
+        background: #F1F5F9;
+    }
+    .feat-bar-bg {
+        flex: 1;
+        height: 6px;
+        background: #E2E8F0;
+        border-radius: 9999px;
+        overflow: hidden;
+        margin: 0 10px;
+    }
+    .feat-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #4F46E5, #3D3EEA);
+        border-radius: 9999px;
     }
 
-    /* CONTENEUR FIXE DE NOM POUR ALIGNEMENT PARFAIT DES BARRES DE POURCENTAGE */
+    /* CONTENEURS D'ALIGNEMENT */
     .fighter-name-box {
         min-height: 2.8rem;
         display: flex;
@@ -563,7 +768,7 @@ st.markdown("""
         margin-bottom: 8px;
     }
 
-    /* GRILLE RESPONSIVE MOBILE POUR LES PANNEAUX DE PERFORMANCE (BILAN GLOBAL & BILAN SOIRÉE) */
+    /* GRILLE RESPONSIVE MOBILE 4 COLS -> 2X2 SUR ÉCRANS < 640PX */
     .perf-stats-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -575,6 +780,32 @@ st.markdown("""
             grid-template-columns: repeat(2, 1fr) !important;
             gap: 16px 8px !important;
         }
+        .hero-title-modern {
+            font-size: 1.8rem !important;
+        }
+        .stat-num-huge {
+            font-size: 2.4rem !important;
+        }
+    }
+
+    .legal-card-modern {
+        background: #FFFFFF;
+        border: 1px solid var(--border-card);
+        border-radius: 28px;
+        padding: 34px 30px;
+        margin: 20px 0;
+        box-shadow: var(--card-shadow);
+        line-height: 1.75;
+        color: #334155;
+    }
+
+    .footer-aura {
+        text-align: center;
+        padding: 2.5rem 0 2rem 0;
+        color: #94A3B8;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -608,7 +839,7 @@ def show_cookie_dialog(t):
 # =========================================================================
 
 def main():
-    # 🌐 SÉLECTEUR DE LANGUE ISOLÉ (Drapeaux discrets en haut à droite)
+    # 🌐 SÉLECTEUR DE LANGUE DISCRET & PERSISTANT
     lang_map = {"🇬🇧": "EN", "🇫🇷": "FR", "🇪🇸": "ES"}
     reverse_lang_map = {"EN": "🇬🇧", "FR": "🇫🇷", "ES": "🇪🇸"}
 
@@ -618,13 +849,16 @@ def main():
     current_lang = st.session_state.get("lang", "EN")
     default_flag = reverse_lang_map.get(current_lang, "🇬🇧")
 
-    selected_flag = st.selectbox(
-        "lang_select_hidden",
-        options=["🇬🇧", "🇫🇷", "🇪🇸"],
-        index=["🇬🇧", "🇫🇷", "🇪🇸"].index(default_flag),
-        label_visibility="collapsed",
-        key="sb_language_flags"
-    )
+    # Barre de commande supérieure : Sélecteur de langue en coin supérieur droit
+    col_top_pad, col_top_lang = st.columns([5.2, 1.2])
+    with col_top_lang:
+        selected_flag = st.selectbox(
+            "lang_select_hidden",
+            options=["🇬🇧", "🇫🇷", "🇪🇸"],
+            index=["🇬🇧", "🇫🇷", "🇪🇸"].index(default_flag),
+            label_visibility="collapsed",
+            key="sb_language_flags"
+        )
 
     new_lang = lang_map[selected_flag]
     if st.session_state.get("lang") != new_lang:
@@ -635,7 +869,7 @@ def main():
     current_lang = st.session_state["lang"]
     t = LANG_DATA.get(current_lang, LANG_DATA["EN"])
 
-    # Session State Router
+    # Router Session State
     if "current_page" not in st.session_state:
         st.session_state["current_page"] = "home"
 
@@ -684,7 +918,7 @@ def main():
     </script>
     """, height=0, width=0)
 
-    # 🍪 SÉCURISATION & PERSISTANCE DU CONSENTEMENT COOKIE (QUERY PARAMS + LOCALSTORAGE)
+    # 🍪 SÉCURISATION & PERSISTANCE DU CONSENTEMENT COOKIE
     if "cookie_consent" in st.query_params:
         st.session_state["cookie_consent"] = st.query_params["cookie_consent"]
         try:
@@ -699,7 +933,6 @@ def main():
         const parentWin = window.parent;
         const urlParams = new URLSearchParams(parentWin.location.search);
 
-        // 1. Sauvegarde & Nettoyage Cookie Consent dans l'URL
         const consent = urlParams.get('cookie_consent');
         if (consent) {{
             parentWin.localStorage.setItem('ufc_cookie_consent', consent);
@@ -716,7 +949,6 @@ def main():
             }}
         }}
 
-        // 2. Persistance de la Langue au Rafraîchissement (F5)
         let currentLang = '{current_lang}';
         if (currentLang) {{
             parentWin.localStorage.setItem('ufc_lang', currentLang);
@@ -729,7 +961,7 @@ def main():
     if not st.session_state.get("cookie_consent") and "cookie_consent" not in st.query_params:
         show_cookie_dialog(t)
 
-    # ⚡ CHARGEMENT PASSIF ULTRA-RAPIDE VIA LA COUCHE SERVICE (SÉPARATION FRONT / BACK PURE)
+    # ⚡ CHARGEMENT PASSIF ULTRA-RAPIDE VIA LA COUCHE SERVICE (0 calcul ML lourd)
     upcoming_cards = get_upcoming_cards()
     past_cards = get_past_cards()
     fin_summary = get_financial_summary()
@@ -739,10 +971,10 @@ def main():
     odds_remaining_mins = odds_age_mins % 60
 
     # 🏛️ BANDEAU DE NAVIGATION PARFAITEMENT CENTRÉ
-    c_pad_l, c_nav_box, c_pad_r = st.columns([0.7, 2.6, 0.7])
+    c_pad_l, c_nav_box, c_pad_r = st.columns([0.6, 3.2, 0.6])
 
     with c_nav_box:
-        c_left, c_center, c_right = st.columns([1.35, 1.0, 1.35])
+        c_left, c_center, c_right = st.columns([1.3, 1.1, 1.3])
 
         with c_left:
             if st.button(t["nav_past"], key="btn_nav_past", use_container_width=True):
@@ -759,7 +991,6 @@ def main():
                 st.session_state["current_page"] = "upcoming"
                 st.rerun()
 
-    # Stylisation dynamique de la pilule active & intégration du logo dans le bouton Accueil
     current_page = st.session_state.get("current_page", "home")
     if current_page == "past":
         active_btn_key = "btn_nav_past"
@@ -774,33 +1005,10 @@ def main():
     <style>
         button[data-testid="stBaseButton-{active_btn_key}"] {{
             border-color: #3D3EEA !important;
-            box-shadow: 0 4px 14px rgba(61, 62, 234, 0.18) !important;
+            background: #FFFFFF !important;
+            box-shadow: 0 4px 16px rgba(61, 62, 234, 0.18) !important;
+            color: #3D3EEA !important;
             font-weight: 800 !important;
-        }}
-
-        div[data-testid="stKey-btn_nav_home"] button,
-        .st-key-btn_nav_home button {{
-            background-image: url("{logo_data_url}") !important;
-            background-size: contain !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-            background-color: #FFFFFF !important;
-            border: 1px solid #E2E8F0 !important;
-            border-radius: 9999px !important;
-            height: 42px !important;
-            min-height: 42px !important;
-            padding: 6px 16px !important;
-        }}
-
-        div[data-testid="stKey-btn_nav_home"] button p,
-        div[data-testid="stKey-btn_nav_home"] button span,
-        div[data-testid="stKey-btn_nav_home"] button div,
-        .st-key-btn_nav_home button p {{
-            opacity: 0 !important;
-            font-size: 0px !important;
-            color: transparent !important;
-            visibility: hidden !important;
-            display: none !important;
         }}
     </style>
     """, unsafe_allow_html=True)
@@ -811,60 +1019,69 @@ def main():
     # PAGE 1 : 🏠 ACCUEIL
     # =========================================================================
     if page == "home":
-        # Bulle 1 : Le logo
+        # HERO SECTION ÉPURÉE : Logo compact, badge de statut et typographie haute précision
         render_clean_html(f"""
-        <div style="background: #FFFFFF !important; border: 1px solid #E2E8F0 !important; border-radius: 36px !important; overflow: hidden !important; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important; margin: 3.5rem auto 2rem auto !important; text-align: center !important;">
-            <img src="{logo_data_url}" alt="UFC Vision Logo" style="width: 100%; height: auto; display: block; border-radius: 36px;">
-        </div>
-        """)
-
-        # Bulle 2 : Le texte de présentation
-        render_clean_html(f"""
-        <div class="hero-bubble-text">
-            <p style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin: 0 0 0.8rem 0;">
+        <div class="hero-container-modern anim-fade-in">
+            <img src="{logo_data_url}" alt="UFC Vision" class="hero-logo-badge">
+            <br>
+            <div class="hero-chip-status">
+                <span class="pulse-dot-green"></span>
+                <span>{t['hero_badge']}</span>
+            </div>
+            <h1 class="hero-title-modern">
                 {t['hero_subtitle']}
-            </p>
-            <p style="font-size: 1.05rem; font-weight: 500; color: #475569; margin: 0 auto; max-width: 780px; line-height: 1.65;">
+            </h1>
+            <p class="hero-desc-modern">
                 {t['hero_description']}
             </p>
         </div>
         """)
 
+        # CARTES DE STATISTIQUES ACCUEIL ULTRA-ÉPURÉES
         col_m1, col_m2 = st.columns(2)
         with col_m1:
             render_clean_html(f"""
-            <div class="stat-pill">
-                <div class="stat-val-huge">69 %</div>
-                <div class="stat-desc-clean">{t['stat_winrate_desc']}</div>
+            <div class="stat-card-modern anim-fade-in">
+                <span class="stat-badge-sub">{t['verified_badge']}</span>
+                <div class="stat-num-huge">69 %</div>
+                <div class="stat-label-modern">{t['stat_winrate_desc']}</div>
             </div>
             """)
 
         with col_m2:
             render_clean_html(f"""
-            <div class="stat-pill">
-                <div class="stat-val-huge">+31 %</div>
-                <div class="stat-desc-clean">{t['stat_roi_desc']}</div>
+            <div class="stat-card-modern stat-card-green anim-fade-in">
+                <span class="stat-badge-sub">{t['cumulative_edge']}</span>
+                <div class="stat-num-huge stat-num-green">+31 %</div>
+                <div class="stat-label-modern">{t['stat_roi_desc']}</div>
             </div>
             """)
 
-        # 📊 ACCORDÉON DES FACTEURS IA LES PLUS IMPORTANTS
+        # 📊 ACCORDÉON DES 20 VARIABLES IA AVEC BARRES DE JAUGE PROGRESSIVES
         feat_importances = get_feature_importances(current_lang)
         feat_items_list = []
+        max_pct = max([p for _, _, p in feat_importances]) if feat_importances else 100.0
+
         for rank, (col, label, pct) in enumerate(feat_importances, 1):
+            bar_width = min(100.0, (pct / max_pct) * 100.0) if max_pct > 0 else 50.0
             feat_items_list.append(f"""
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: #F8FAFC; border-radius: 12px; border: 1px solid #E2E8F0;">
-                <span style="font-weight: 700; color: #0F172A; font-size: 0.9rem;">#{rank} {label}</span>
-                <span style="font-weight: 800; color: #3D3EEA; font-size: 0.92rem;">{pct:.1f}%</span>
+            <div class="feat-meter-row">
+                <span style="font-weight: 800; font-size: 0.8rem; color: #64748B; width: 28px;">#{rank:02d}</span>
+                <span style="font-weight: 700; color: #0F172A; font-size: 0.88rem; flex: 1.2;">{label}</span>
+                <div class="feat-bar-bg">
+                    <div class="feat-bar-fill" style="width: {bar_width:.1f}%;"></div>
+                </div>
+                <span style="font-weight: 800; color: #3D3EEA; font-size: 0.88rem; min-width: 48px; text-align: right;">{pct:.1f}%</span>
             </div>
             """)
         feature_items_html = "\n".join(feat_items_list)
 
         render_clean_html(f"""
-        <div style="margin-top: 3.5rem;">
+        <div style="margin-top: 2.5rem;" class="anim-fade-in">
             <details class="aura-accordion" style="margin-bottom: 1.25rem;">
                 <summary><b>{t['feature_importance_title']}</b></summary>
-                <div style="padding-top: 14px;">
-                    <p style="margin-bottom: 16px; color: #475569; font-size: 0.95rem; line-height: 1.6;">
+                <div style="padding-top: 16px;">
+                    <p style="margin-bottom: 16px; color: #475569; font-size: 0.92rem; line-height: 1.6;">
                         {t['feature_importance_desc']}
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -875,24 +1092,24 @@ def main():
 
             <details class="aura-accordion">
                 <summary><b>{t['faq_title']}</b></summary>
-                <div style="padding-top: 14px; display: flex; flex-direction: column; gap: 14px;">
+                <div style="padding-top: 16px; display: flex; flex-direction: column; gap: 14px;">
                     <div>
                         <div style="font-weight: 800; color: #0F172A; margin-bottom: 4px;">{t['q1']}</div>
-                        <div style="color: #475569; font-size: 0.95rem; line-height: 1.6;">{t['a1']}</div>
+                        <div style="color: #475569; font-size: 0.94rem; line-height: 1.6;">{t['a1']}</div>
                     </div>
                     <div>
                         <div style="font-weight: 800; color: #0F172A; margin-bottom: 4px;">{t['q2']}</div>
-                        <div style="color: #475569; font-size: 0.95rem; line-height: 1.6;">{t['a2']}</div>
+                        <div style="color: #475569; font-size: 0.94rem; line-height: 1.6;">{t['a2']}</div>
                     </div>
                     <div>
                         <div style="font-weight: 800; color: #0F172A; margin-bottom: 4px;">{t['q3']}</div>
-                        <div style="color: #475569; font-size: 0.95rem; line-height: 1.6;">{t['a3']}</div>
+                        <div style="color: #475569; font-size: 0.94rem; line-height: 1.6;">{t['a3']}</div>
                     </div>
                     <div>
                         <div style="font-weight: 800; color: #0F172A; margin-bottom: 4px;">{t['q4']}</div>
-                        <div style="color: #475569; font-size: 0.95rem; line-height: 1.6;">{t['a4']}</div>
+                        <div style="color: #475569; font-size: 0.94rem; line-height: 1.6;">{t['a4']}</div>
                     </div>
-                    <div style="margin-top: 6px; font-weight: 600; color: #3D3EEA; font-size: 0.9rem;">
+                    <div style="margin-top: 6px; font-weight: 700; color: #3D3EEA; font-size: 0.88rem;">
                         {t['faq_contact']}
                     </div>
                 </div>
@@ -906,14 +1123,14 @@ def main():
     elif page == "upcoming":
         st.markdown(f"### {t['upcoming_title']}")
 
-        # Horodatage dynamique
+        # Horodatage dynamique de fraîcheur des cotes
         if odds_age_hours >= 1:
             freshness_str = t["odds_updated_hours"].format(hours=odds_age_hours, mins=odds_remaining_mins)
         else:
             freshness_str = t["odds_updated_mins"].format(mins=odds_age_mins)
 
         render_clean_html(f"""
-        <div style="text-align: right; margin-bottom: 12px; font-size: 0.8rem; font-weight: 600; color: #64748B;">
+        <div style="text-align: right; margin-bottom: 14px; font-size: 0.8rem; font-weight: 700; color: #64748B;">
             {freshness_str}
         </div>
         """)
@@ -955,9 +1172,9 @@ def main():
 
                 if not has_full_data or pct_a is None or pct_b is None:
                     signal_html = f'<div class="signal-pill-none">{t["insufficient_data"]}</div>'
-                    html_card = f"""<div class="fight-card-pure-white">
+                    html_card = f"""<div class="fight-card-modern anim-fade-in">
 {badge_html}
-<h3 style="margin: 8px 0 20px 0; font-size: 1.4rem; font-weight: 800; color: #0F172A;">{f1_raw} vs {f2_raw}</h3>
+<h3 style="margin: 6px 0 16px 0; font-size: 1.35rem; font-weight: 800; color: #0F172A;">{f1_raw} vs {f2_raw}</h3>
 {signal_html}
 </div>"""
                     render_clean_html(html_card)
@@ -974,28 +1191,28 @@ def main():
                 else:
                     signal_html = f'<div class="signal-pill-no">{t["insufficient_confidence"]}</div>'
 
-                html_card = f"""<div class="fight-card-pure-white">
+                html_card = f"""<div class="fight-card-modern anim-fade-in">
 {badge_html}
-<h3 style="margin: 8px 0 20px 0; font-size: 1.4rem; font-weight: 800; color: #0F172A;">{f1_raw} vs {f2_raw}</h3>
+<h3 style="margin: 6px 0 18px 0; font-size: 1.35rem; font-weight: 800; color: #0F172A;">{f1_raw} vs {f2_raw}</h3>
 <div style="display: flex; gap: 20px; margin-bottom: 16px;">
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
 <div class="fighter-name-box">
-    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔴 {f1_raw}</span>
+    <span style="font-size: 0.92rem; font-weight: 800; color: #64748B;">🔴 {f1_raw}</span>
 </div>
-<div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_a:.1f}%</div>
+<div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1; font-variant-numeric: tabular-nums;">{pct_a:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: {odds_color}; margin: 4px 0 8px 0;">{odds_a_str}</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
-<div style="width: {pct_a:.1f}%; background-color: #D20A0A; height: 100%; border-radius: 9999px;"></div>
+<div style="width: {pct_a:.1f}%; background: linear-gradient(90deg, #DC2626 0%, #EF4444 100%); height: 100%; border-radius: 9999px;"></div>
 </div>
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
 <div class="fighter-name-box">
-    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔵 {f2_raw}</span>
+    <span style="font-size: 0.92rem; font-weight: 800; color: #64748B;">🔵 {f2_raw}</span>
 </div>
-<div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_b:.1f}%</div>
+<div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1; font-variant-numeric: tabular-nums;">{pct_b:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: {odds_color}; margin: 4px 0 8px 0;">{odds_b_str}</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
-<div style="width: {pct_b:.1f}%; background-color: #3B82F6; height: 100%; border-radius: 9999px;"></div>
+<div style="width: {pct_b:.1f}%; background: linear-gradient(90deg, #3B82F6 0%, #2563EB 100%); height: 100%; border-radius: 9999px;"></div>
 </div>
 </div>
 </div>
@@ -1004,7 +1221,7 @@ def main():
                 render_clean_html(html_card)
 
     # =========================================================================
-    # PAGE 3 : 📜 COMBATS ANTÉRIEURS (POINT-IN-TIME BACKTEST SANS LEAKAGE)
+    # PAGE 3 : 📜 COMBATS ANTÉRIEURS (POINT-IN-TIME SANS DATA LEAKAGE)
     # =========================================================================
     elif page == "past":
         st.markdown(f"### {t['past_title']}")
@@ -1022,29 +1239,29 @@ def main():
         global_prof_color = "#10B981" if tot_prof >= 0 else "#EF4444"
         global_roi_formatted = f"+{roi_p:.1f}%" if roi_p >= 0 else f"{roi_p:.1f}%"
 
-        html_summary_card = f"""<div class="summary-card-pure-white">
-<div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
+        html_summary_card = f"""<div class="summary-card-modern anim-fade-in">
+<div style="font-size: 0.84rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 18px; text-align: center;">
     {t.get('global_summary_title', '🌐 Global Performance')}
 </div>
 <div class="perf-stats-grid">
 <div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['net_profit']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: {global_prof_color};">{tot_prof:+.2f} €</div>
-<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{t['volume_sub'].format(staked=tot_stake, bets=v_count)}</div>
+<div style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase;">{t['net_profit']}</div>
+<div style="font-size: 1.85rem; font-weight: 900; color: {global_prof_color}; margin-top: 4px; font-variant-numeric: tabular-nums;">{tot_prof:+.2f} €</div>
+<div style="font-size: 0.76rem; font-weight: 600; color: #94A3B8; margin-top: 4px;">{t['volume_sub'].format(staked=tot_stake, bets=v_count)}</div>
 </div>
 <div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['roi_yield']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{global_roi_formatted}</div>
+<div style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase;">{t['roi_yield']}</div>
+<div style="font-size: 1.85rem; font-weight: 900; color: #0F172A; margin-top: 4px; font-variant-numeric: tabular-nums;">{global_roi_formatted}</div>
 </div>
 <div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate_value']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{win_r:.1f}%</div>
-<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{v_won}/{v_count} {t['won_text']}</div>
+<div style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase;">{t['win_rate_value']}</div>
+<div style="font-size: 1.85rem; font-weight: 900; color: #0F172A; margin-top: 4px; font-variant-numeric: tabular-nums;">{win_r:.1f}%</div>
+<div style="font-size: 0.76rem; font-weight: 600; color: #94A3B8; margin-top: 4px;">{v_won}/{v_count} {t['won_text']}</div>
 </div>
 <div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['accuracy_all']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{overall_acc:.1f}%</div>
-<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{tot_correct}/{tot_valid} {t['correct_text']}</div>
+<div style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase;">{t['accuracy_all']}</div>
+<div style="font-size: 1.85rem; font-weight: 900; color: #0F172A; margin-top: 4px; font-variant-numeric: tabular-nums;">{overall_acc:.1f}%</div>
+<div style="font-size: 0.76rem; font-weight: 600; color: #94A3B8; margin-top: 4px;">{tot_correct}/{tot_valid} {t['correct_text']}</div>
 </div>
 </div>
 </div>"""
@@ -1065,7 +1282,7 @@ def main():
             p_card_info = past_cards[selected_past_key]
             p_fights = deduplicate_card_fights(p_card_info.get("fights", []))
 
-            # Métriques de performance pré-calculées par le backend (zéro math dans le frontend)
+            # Métriques de performance pré-calculées par le backend (zéro calcul frontend)
             perf = p_card_info.get("performance", {})
             card_staked = perf.get("staked", 0.0)
             card_profit = perf.get("profit", 0.0)
@@ -1078,29 +1295,29 @@ def main():
             card_total_valid_fights = perf.get("valid_fights", 0)
             card_prof_color = perf.get("prof_color", "#10B981")
 
-            html_card_summary = f"""<div class="summary-card-pure-white" style="margin-top: 12px; margin-bottom: 24px;">
-<div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
+            html_card_summary = f"""<div class="summary-card-modern anim-fade-in" style="margin-top: 14px; margin-bottom: 24px;">
+<div style="font-size: 0.84rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 18px; text-align: center;">
     {t.get('card_summary_title', '📅 Event Performance')}
 </div>
 <div class="perf-stats-grid">
 <div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['net_profit']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: {card_prof_color};">{card_profit:+.2f} €</div>
-<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{t['volume_sub'].format(staked=card_staked, bets=card_vb_count)}</div>
+<div style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase;">{t['net_profit']}</div>
+<div style="font-size: 1.85rem; font-weight: 900; color: {card_prof_color}; margin-top: 4px; font-variant-numeric: tabular-nums;">{card_profit:+.2f} €</div>
+<div style="font-size: 0.76rem; font-weight: 600; color: #94A3B8; margin-top: 4px;">{t['volume_sub'].format(staked=card_staked, bets=card_vb_count)}</div>
 </div>
 <div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['roi_yield']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_roi_formatted}</div>
+<div style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase;">{t['roi_yield']}</div>
+<div style="font-size: 1.85rem; font-weight: 900; color: #0F172A; margin-top: 4px; font-variant-numeric: tabular-nums;">{card_roi_formatted}</div>
 </div>
 <div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['win_rate_value']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_win_rate:.1f}%</div>
-<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{card_vb_won}/{card_vb_count} {t['won_text']}</div>
+<div style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase;">{t['win_rate_value']}</div>
+<div style="font-size: 1.85rem; font-weight: 900; color: #0F172A; margin-top: 4px; font-variant-numeric: tabular-nums;">{card_win_rate:.1f}%</div>
+<div style="font-size: 0.76rem; font-weight: 600; color: #94A3B8; margin-top: 4px;">{card_vb_won}/{card_vb_count} {t['won_text']}</div>
 </div>
 <div>
-<div style="font-size: 0.8rem; font-weight: 700; color: #64748B;">{t['accuracy_all']}</div>
-<div style="font-size: 1.8rem; font-weight: 900; color: #0F172A;">{card_accuracy:.1f}%</div>
-<div style="font-size: 0.78rem; font-weight: 600; color: #64748B; margin-top: 4px;">{card_correct_count}/{card_total_valid_fights} {t['correct_text']}</div>
+<div style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase;">{t['accuracy_all']}</div>
+<div style="font-size: 1.85rem; font-weight: 900; color: #0F172A; margin-top: 4px; font-variant-numeric: tabular-nums;">{card_accuracy:.1f}%</div>
+<div style="font-size: 0.76rem; font-weight: 600; color: #94A3B8; margin-top: 4px;">{card_correct_count}/{card_total_valid_fights} {t['correct_text']}</div>
 </div>
 </div>
 </div>"""
@@ -1138,22 +1355,22 @@ def main():
                     metrics_html = f"""<div style="display: flex; gap: 20px; margin-bottom: 16px;">
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
 <div class="fighter-name-box">
-    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔴 {pf1}</span>
+    <span style="font-size: 0.92rem; font-weight: 800; color: #64748B;">🔴 {pf1}</span>
 </div>
-<div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_a:.1f}%</div>
+<div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1; font-variant-numeric: tabular-nums;">{pct_a:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: #10B981; margin: 4px 0 8px 0;">{odds_a_str}</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
-<div style="width: {pct_a:.1f}%; background-color: #D20A0A; height: 100%; border-radius: 9999px;"></div>
+<div style="width: {pct_a:.1f}%; background: linear-gradient(90deg, #DC2626 0%, #EF4444 100%); height: 100%; border-radius: 9999px;"></div>
 </div>
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
 <div class="fighter-name-box">
-    <span style="font-size: 0.9rem; font-weight: 700; color: #64748B;">🔵 {pf2}</span>
+    <span style="font-size: 0.92rem; font-weight: 800; color: #64748B;">🔵 {pf2}</span>
 </div>
-<div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1;">{pct_b:.1f}%</div>
+<div style="font-size: 2.2rem; font-weight: 900; color: #0F172A; line-height: 1; font-variant-numeric: tabular-nums;">{pct_b:.1f}%</div>
 <div style="font-size: 0.85rem; font-weight: 700; color: #10B981; margin: 4px 0 8px 0;">{odds_b_str}</div>
 <div style="width: 100%; background-color: #E2E8F0; border-radius: 9999px; height: 8px;">
-<div style="width: {pct_b:.1f}%; background-color: #3B82F6; height: 100%; border-radius: 9999px;"></div>
+<div style="width: {pct_b:.1f}%; background: linear-gradient(90deg, #3B82F6 0%, #2563EB 100%); height: 100%; border-radius: 9999px;"></div>
 </div>
 </div>
 </div>"""
@@ -1177,9 +1394,9 @@ def main():
                             max_ev_val = best_ev_f * 100.0
                         res_html = f'<div class="result-pill-nobet">{t["no_bet_eval"].format(ev=f"{max_ev_val:+.1f}")}<br><span style="font-size:0.82rem; color:#64748B;">{t["no_bet_desc"].format(winner=winner or "N/A")}</span></div>'
 
-                html_past_card = f"""<div class="fight-card-pure-white">
+                html_past_card = f"""<div class="fight-card-modern anim-fade-in">
 {badge_html}
-<h3 style="margin: 8px 0 20px 0; font-size: 1.4rem; font-weight: 800; color: #0F172A;">{pf1} vs {pf2}</h3>
+<h3 style="margin: 6px 0 18px 0; font-size: 1.35rem; font-weight: 800; color: #0F172A;">{pf1} vs {pf2}</h3>
 {metrics_html}
 {res_html}
 </div>"""
@@ -1210,33 +1427,33 @@ def main():
         st.markdown(f"### {t['legal_page_title']}")
 
         render_clean_html(f"""
-        <div class="legal-card-pure-white">
-            <h4 style="color: #0F172A; margin-top: 0;">{t['legal_sec1_title']}</h4>
+        <div class="legal-card-modern anim-fade-in">
+            <h4 style="color: #0F172A; margin-top: 0; font-weight: 800;">{t['legal_sec1_title']}</h4>
             <p>{t['legal_publisher']}</p>
 
-            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec2_title']}</h4>
+            <h4 style="color: #0F172A; margin-top: 1.6rem; font-weight: 800;">{t['legal_sec2_title']}</h4>
             <p>{t['legal_hosting']}</p>
 
-            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec3_title']}</h4>
+            <h4 style="color: #0F172A; margin-top: 1.6rem; font-weight: 800;">{t['legal_sec3_title']}</h4>
             <p>{t['legal_ip']}</p>
 
-            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec4_title']}</h4>
+            <h4 style="color: #0F172A; margin-top: 1.6rem; font-weight: 800;">{t['legal_sec4_title']}</h4>
             <p>{t['legal_privacy']}</p>
 
-            <h4 style="color: #0F172A; margin-top: 1.5rem;">{t['legal_sec5_title']}</h4>
+            <h4 style="color: #0F172A; margin-top: 1.6rem; font-weight: 800;">{t['legal_sec5_title']}</h4>
             <p>{t['disclaimer_ai']}</p>
 
-            <h4 style="color: #1E293B; margin-top: 1.5rem;">{t['legal_sec6_title']}</h4>
+            <h4 style="color: #0F172A; margin-top: 1.6rem; font-weight: 800;">{t['legal_sec6_title']}</h4>
             <p>{t['disclaimer_gaming']}</p>
 
-            <h4 style="color: #1E293B; margin-top: 1.5rem;">{t['legal_sec7_title']}</h4>
+            <h4 style="color: #0F172A; margin-top: 1.6rem; font-weight: 800;">{t['legal_sec7_title']}</h4>
             <p>{t['disclaimer_trademark']}</p>
 
-            <h4 style="color: #1E293B; margin-top: 1.5rem;">{t['legal_sec8_title']}</h4>
+            <h4 style="color: #0F172A; margin-top: 1.6rem; font-weight: 800;">{t['legal_sec8_title']}</h4>
             <p>{t['legal_ads']}</p>
 
-            <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 20px 0;">
-            <p style="font-weight: 600; color: #3D3EEA;">{t['bug_contact']}</p>
+            <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 24px 0;">
+            <p style="font-weight: 700; color: #3D3EEA;">{t['bug_contact']}</p>
         </div>
         """)
 
@@ -1245,7 +1462,7 @@ def main():
             st.rerun()
 
     # =========================================================================
-    # FOOTER COMMON (BOUTON MENTIONS LÉGALES TOUT EN BAS & FOOTER)
+    # FOOTER COMMUN (BOUTON MENTIONS LÉGALES TOUT EN BAS & FOOTER)
     # =========================================================================
     st.markdown("<br><br>", unsafe_allow_html=True)
     c_f1, c_f2, c_f3 = st.columns([1, 2, 1])
