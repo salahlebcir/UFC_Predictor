@@ -227,10 +227,75 @@ def get_all_cards_from_cache():
         c_info = cards_map[k]
         c_date = c_info.get("event_date", "")
         is_comp = c_info.get("is_completed", False)
+        fights = deduplicate_card_fights(c_info.get("fights", []))
+        c_info["fights"] = fights
+        has_winners = any(f.get("winner") for f in fights)
 
-        if is_comp or c_date < today_str:
+        # Une carte passée DOIT être terminée et comporter des vainqueurs officiels validés
+        if is_comp and has_winners:
+            # Calcul du sous-bilan financier certifié de la soirée
+            card_staked = 0.0
+            card_profit = 0.0
+            card_vb_count = 0
+            card_vb_won = 0
+            card_correct = 0
+            card_valid = 0
+
+            for f in fights:
+                res_status = f.get("result_status")
+                net_gain = f.get("net_gain", 0.0)
+                winner = f.get("winner")
+                pf1 = f.get("f1", "")
+                pf2 = f.get("f2", "")
+                pct_a = f.get("pct_a")
+                pct_b = f.get("pct_b")
+
+                is_f1_win = bool(winner and fuzzy_match_fighter_name(winner, [pf1], threshold=0.70))
+                is_f2_win = bool(winner and fuzzy_match_fighter_name(winner, [pf2], threshold=0.70))
+                is_void = (
+                    res_status == "VOID" or
+                    not winner or
+                    str(winner).upper().strip() in ["N/A", "NONE", "DRAW/NC", "NC", "CANCELLED", "VOID", "DRAW"] or
+                    (not is_f1_win and not is_f2_win)
+                )
+
+                f["is_void"] = is_void
+                f["is_f1_win"] = is_f1_win
+                f["is_f2_win"] = is_f2_win
+
+                if not is_void and pct_a is not None and pct_b is not None:
+                    card_valid += 1
+                    if (pct_a >= pct_b and is_f1_win) or (pct_b > pct_a and is_f2_win):
+                        card_correct += 1
+
+                if f.get("is_value_bet") and not is_void:
+                    card_staked += 10.0
+                    card_vb_count += 1
+                    if res_status == "WIN" or net_gain > 0:
+                        card_vb_won += 1
+                        card_profit += net_gain
+                    elif res_status == "LOSS" or net_gain < 0:
+                        card_profit += net_gain
+
+            card_roi = (card_profit / card_staked * 100.0) if card_staked > 0 else 0.0
+            card_win_rate = (card_vb_won / card_vb_count * 100.0) if card_vb_count > 0 else 0.0
+            card_acc = (card_correct / card_valid * 100.0) if card_valid > 0 else 0.0
+
+            c_info["performance"] = {
+                "staked": card_staked,
+                "profit": card_profit,
+                "roi_pct": card_roi,
+                "win_rate_pct": card_win_rate,
+                "vb_count": card_vb_count,
+                "vb_won": card_vb_won,
+                "correct_count": card_correct,
+                "valid_fights": card_valid,
+                "accuracy_pct": card_acc,
+                "prof_color": "#10B981" if card_profit >= 0 else "#EF4444",
+                "roi_formatted": f"+{card_roi:.1f}%" if card_roi >= 0 else f"{card_roi:.1f}%"
+            }
             past_cards[k] = c_info
-        else:
+        elif c_date >= today_str:
             upcoming_cards[k] = c_info
 
     past_cards_reversed = collections.OrderedDict(reversed(list(past_cards.items())))

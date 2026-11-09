@@ -36,7 +36,6 @@ from src.services import (
     get_feature_importances,
     deduplicate_card_fights
 )
-from src.utils import fuzzy_match_fighter_name
 
 
 # Helper pour récupérer l'image logo sous forme base64
@@ -1066,52 +1065,18 @@ def main():
             p_card_info = past_cards[selected_past_key]
             p_fights = deduplicate_card_fights(p_card_info.get("fights", []))
 
-            # Calcul spécifique à la soirée sélectionnée
-            card_staked = 0.0
-            card_profit = 0.0
-            card_vb_count = 0
-            card_vb_won = 0
-            card_correct_count = 0
-            card_total_valid_fights = 0
-
-            for fight in p_fights:
-                res_status = fight.get("result_status")
-                net_gain = fight.get("net_gain", 0.0)
-                winner = fight.get("winner")
-                pf1 = fight.get("f1", "")
-                pf2 = fight.get("f2", "")
-                pct_a = fight.get("pct_a")
-                pct_b = fight.get("pct_b")
-
-                is_f1_win = bool(winner and fuzzy_match_fighter_name(winner, [pf1], threshold=0.70))
-                is_f2_win = bool(winner and fuzzy_match_fighter_name(winner, [pf2], threshold=0.70))
-                is_void = (
-                    res_status == "VOID" or
-                    not winner or
-                    str(winner).upper().strip() in ["N/A", "NONE", "DRAW/NC", "NC", "CANCELLED", "VOID", "DRAW"] or
-                    (not is_f1_win and not is_f2_win)
-                )
-
-                if not is_void and pct_a is not None and pct_b is not None:
-                    card_total_valid_fights += 1
-                    if (pct_a >= pct_b and is_f1_win) or (pct_b > pct_a and is_f2_win):
-                        card_correct_count += 1
-
-                if fight.get("is_value_bet") and not is_void:
-                    card_staked += 10.0
-                    card_vb_count += 1
-                    if res_status == "WIN" or net_gain > 0:
-                        card_vb_won += 1
-                        card_profit += net_gain
-                    elif res_status == "LOSS" or net_gain < 0:
-                        card_profit += net_gain
-
-            card_roi = (card_profit / card_staked * 100.0) if card_staked > 0 else 0.0
-            card_win_rate = (card_vb_won / card_vb_count * 100.0) if card_vb_count > 0 else 0.0
-            card_accuracy = (card_correct_count / card_total_valid_fights * 100.0) if card_total_valid_fights > 0 else 0.0
-
-            card_prof_color = "#10B981" if card_profit >= 0 else "#EF4444"
-            card_roi_formatted = f"+{card_roi:.1f}%" if card_roi >= 0 else f"{card_roi:.1f}%"
+            # Métriques de performance pré-calculées par le backend (zéro math dans le frontend)
+            perf = p_card_info.get("performance", {})
+            card_staked = perf.get("staked", 0.0)
+            card_profit = perf.get("profit", 0.0)
+            card_roi_formatted = perf.get("roi_formatted", "+0.0%")
+            card_win_rate = perf.get("win_rate_pct", 0.0)
+            card_vb_count = perf.get("vb_count", 0)
+            card_vb_won = perf.get("vb_won", 0)
+            card_accuracy = perf.get("accuracy_pct", 0.0)
+            card_correct_count = perf.get("correct_count", 0)
+            card_total_valid_fights = perf.get("valid_fights", 0)
+            card_prof_color = perf.get("prof_color", "#10B981")
 
             html_card_summary = f"""<div class="summary-card-pure-white" style="margin-top: 12px; margin-bottom: 24px;">
 <div style="font-size: 0.85rem; font-weight: 800; color: #3D3EEA; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; text-align: center;">
@@ -1193,13 +1158,7 @@ def main():
 </div>
 </div>"""
 
-                is_f1_win = bool(winner and fuzzy_match_fighter_name(winner, [pf1], threshold=0.70))
-                is_f2_win = bool(winner and fuzzy_match_fighter_name(winner, [pf2], threshold=0.70))
-                is_void = (
-                    res_status == "VOID" or
-                    (winner and str(winner).upper().strip() in ["N/A", "NONE", "DRAW/NC", "NC", "CANCELLED", "VOID", "DRAW"]) or
-                    (winner and not is_f1_win and not is_f2_win)
-                )
+                is_void = fight.get("is_void", False)
 
                 if res_status == "VOID" or is_void:
                     res_html = f'<div class="result-pill-nobet">{t["void_pill"]}</div>'

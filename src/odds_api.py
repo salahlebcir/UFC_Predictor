@@ -22,6 +22,7 @@ load_dotenv()
 
 CACHE_FILE_PATH = os.path.join("data", "odds_cache.json")
 CACHE_DURATION_SECONDS = 2 * 3600  # 2 heures en secondes
+MIN_API_INTERVAL_SECONDS = 2 * 3600  # Verrou temporel de sécurité strict (2h = 7200s inviolable)
 ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/mma_mixed_martial_arts/odds/"
 OFFICIAL_UFC_API_URL = "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard"
 
@@ -122,11 +123,13 @@ def match_odds_to_fight(f1: str, f2: str, raw_odds_events: list) -> list:
     return []
 
 
-def get_cached_or_fresh_odds(force_refresh=False):
+def get_cached_or_fresh_odds(force_refresh=False, emergency_bypass=False):
     """
-    STRATÉGIE SERVEUR PASSIF / CLIENT SANS AUCUN APPEL RÉSEAU :
-    1. Si not force_refresh -> Lire STRICTEMENT et EXCLUSIVEMENT le fichier local data/upcoming_odds.json / data/odds_cache.json (0 appel réseau client).
-    2. Si force_refresh=True (tâche de fond / cron / warmup) -> Effectuer 1 SEUL appel API batch à The Odds API et mettre à jour le cache local avec last_updated_utc.
+    STRATÉGIE SERVEUR PASSIF / SÉCURITÉ RATE-LIMIT INVIOLABLE (2 HEURES STRICTES) :
+    1. Si not force_refresh -> Lecture passive locale stricte (0 appel réseau client).
+    2. Si force_refresh=True (worker / cron) -> Contrôle strict du Security Time-Lock :
+       Si le dernier appel API réel date de moins de 7200s (2h), l'appel API sortant est STRICTEMENT
+       BLOQUÉ et REFUSÉ pour sanctuariser le quota The Odds API (max 360 calls/mois sur le quota de 500).
     """
     current_time = time.time()
     cache_file_primary = os.path.join("data", "upcoming_odds.json")
@@ -155,6 +158,23 @@ def get_cached_or_fresh_odds(force_refresh=False):
                 return cache_data["events"], True, max(0.0, age_hours)
         except Exception as e:
             print(f"[!] Erreur de lecture du cache local ({e}).")
+
+    # 2. Contrôle de Cybersécurité : Security Time-Lock 2h (Interdiction absolue d'appels < 2h)
+    if os.path.exists(target_cache_path) and not emergency_bypass:
+        try:
+            with open(target_cache_path, "r", encoding="utf-8") as f:
+                existing_cache = json.load(f)
+            last_ts = existing_cache.get("timestamp", 0)
+            elapsed_sec = current_time - last_ts
+
+            if elapsed_sec < MIN_API_INTERVAL_SECONDS:
+                remaining_mins = int((MIN_API_INTERVAL_SECONDS - elapsed_sec) / 60)
+                age_h = elapsed_sec / 3600.0
+                print(f"   [🔒 SÉCURITÉ ACTIVE] Quota protégé : dernier appel API il y a {int(elapsed_sec/60)} min (< 2h). Prochain appel autorisé dans {remaining_mins} min.")
+                if "events" in existing_cache and len(existing_cache["events"]) > 0:
+                    return existing_cache["events"], True, max(0.0, age_h)
+        except Exception:
+            pass
 
     # Si le fichier local n'existe pas du tout et force_refresh est False, essayer le fichier secondaire
     if not force_refresh and os.path.exists(cache_file_secondary):
