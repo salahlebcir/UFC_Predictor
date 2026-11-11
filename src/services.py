@@ -1,5 +1,5 @@
 """
-UFC Vision — Couche de Service Backend Unifiée (Backend Service Layer)
+MMA Vision — Couche de Service Backend Unifiée (Backend Service Layer)
 Sépare rigoureusement la logique métier et l'inférence ML de la couche de présentation (Frontend).
 Expose des fonctions prêtes à l'emploi pour n'importe quel frontend (Streamlit, API REST FastAPI, Next.js, etc.).
 

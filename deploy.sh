@@ -1,12 +1,12 @@
 #!/bin/bash
 # ==============================================================================
-# UFC Vision — Script de Déploiement Automatique (DigitalOcean)
+# MMA Vision — Script de Déploiement Automatique (DigitalOcean)
 # ==============================================================================
 
 PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd "$PROJECT_DIR" || exit 1
 
-echo "🚀 Début du déploiement de UFC Vision..."
+echo "🚀 Début du déploiement de MMA Vision..."
 
 # 1. Récupérer le dernier code source depuis GitHub (Zéro conflit car les fichiers mutables sont dans .gitignore)
 echo "📥 Récupération du code Git..."
@@ -25,6 +25,6 @@ fi
 # 4. Recharger Nginx et Streamlit
 echo "🔄 Redémarrage des services..."
 sudo systemctl reload nginx 2>/dev/null || true
-sudo systemctl restart ufcvision 2>/dev/null || true
+sudo systemctl restart mmavision 2>/dev/null || sudo systemctl restart ufcvision 2>/dev/null || true
 
 echo "✨ Déploiement terminé avec succès !"

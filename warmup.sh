@@ -1,6 +1,6 @@
 #!/bin/bash
 # ==============================================================================
-# UFC Vision — Script Shell d'Exécution du Warm-up (DigitalOcean Cron / Systemd)
+# MMA Vision — Script Shell d'Exécution du Warm-up (DigitalOcean Cron / Systemd)
 # ==============================================================================
 
 # Obtenir le dossier racine du projet
@@ -21,7 +21,7 @@ fi
 
 # Horodatage
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-echo "[$TIMESTAMP] Executing UFC Vision Warm-up..." >> "$PROJECT_DIR/logs/warmup.log"
+echo "[$TIMESTAMP] Executing MMA Vision Warm-up..." >> "$PROJECT_DIR/logs/warmup.log"
 
 # Exécution du script Python warmup.py
 $PYTHON_EXEC "$PROJECT_DIR/warmup.py" >> "$PROJECT_DIR/logs/warmup.log" 2>&1

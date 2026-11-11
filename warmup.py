@@ -1,5 +1,5 @@
 """
-UFC Vision — Script de Chauffage de Cache (Background Warm-up & Cron Job)
+MMA Vision — Script de Chauffage de Cache (Background Warm-up & Cron Job)
 Exécute en arrière-plan le rafraîchissement autonome de The Odds API,
 la synchronisation de l'historique et le chauffage de l'application Streamlit.
 
@@ -52,13 +52,15 @@ def run_cache_warmup(port=8501, force_refresh=False):
     """
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print("=" * 75)
-    print(f" 🚀 UFC VISION — CHAUFFAGE DE CACHE EN ARRIÈRE-PLAN [{now_str}]")
+    print(f" 🚀 MMA VISION — CHAUFFAGE DE CACHE EN ARRIÈRE-PLAN [{now_str}]")
     print("=" * 75)
 
     # 1. Chauffage des Cotes (TTL 2h strict)
     print("\n [1/4] 🔄 Contrôle et rafraîchissement des cotes (The Odds API)...")
     try:
-        events, from_cache, age_hours = get_cached_or_fresh_odds(force_refresh=force_refresh)
+        # force_refresh=True active la vérification du TTL 2h par le worker
+        # emergency_bypass=force_refresh permet de forcer manuellement si flag --force
+        events, from_cache, age_hours = get_cached_or_fresh_odds(force_refresh=True, emergency_bypass=force_refresh)
         event_count = len(events) if events else 0
         if from_cache:
             print(f"   [✓] Cache local valide (Âge : {age_hours:.2f}h < 2h). 0 appel API consommé.")
@@ -94,7 +96,7 @@ def run_cache_warmup(port=8501, force_refresh=False):
     try:
         req = urllib.request.Request(
             streamlit_url,
-            headers={"User-Agent": "UFCVision-WarmupBot/1.0"}
+            headers={"User-Agent": "MMAVision-WarmupBot/1.0"}
         )
         with urllib.request.urlopen(req, timeout=8) as response:
             if response.status == 200:
@@ -111,7 +113,7 @@ def run_cache_warmup(port=8501, force_refresh=False):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Chauffage de cache autonome pour UFC Vision (Limit strict 2h / Max 360 requêtes par mois)")
+    parser = argparse.ArgumentParser(description="Chauffage de cache autonome pour MMA Vision (Limit strict 2h / Max 360 requêtes par mois)")
     parser.add_argument("--daemon", action="store_true", help="Exécuter en mode démon permanent (toutes les 2h / 7200s)")
     parser.add_argument("--force", action="store_true", help="Forcer le rafraîchissement des cotes même si le cache a moins de 2h")
     parser.add_argument("--interval", type=int, default=7200, help="Intervalle entre les rafraîchissements en secondes (Défaut: 7200s / 2h)")

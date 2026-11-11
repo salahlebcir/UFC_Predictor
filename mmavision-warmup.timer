@@ -1,5 +1,5 @@
 [Unit]
-Description=Run UFC Vision Cache Warm-up strictly every 2 hours (120 minutes - max 360 calls/month)
+Description=Run MMA Vision Cache Warm-up strictly every 2 hours (120 minutes - max 360 calls/month)
 
 [Timer]
 OnBootSec=2min

@@ -1,5 +1,5 @@
 """
-UFC Vision — High-End MMA Analytics & Prediction Platform
+MMA Vision — High-End MMA Analytics & Prediction Platform
 Couche Frontend Découplée Ultra-Moderne (Streamlit).
 Consomme exclusivement la couche de service backend (src.services) en mode 100% passif.
 ZÉRO calcul ML lourd, ZÉRO appel réseau sortant lors des sessions utilisateur.
@@ -38,9 +38,12 @@ from src.services import (
 )
 
 
-# Helper pour récupérer l'image logo sous forme base64
+# Helper pour récupérer l'image logo sous forme base64 (MMA Vision)
 def get_logo_data_url():
-    logo_path = PROJECT_ROOT / "logo.jpg"
+    logo_path = PROJECT_ROOT / "mmavision.jpg"
+    if not logo_path.exists():
+        logo_path = PROJECT_ROOT / "logo.jpg"
+
     if logo_path.exists():
         try:
             with open(logo_path, "rb") as img_f:
@@ -48,7 +51,7 @@ def get_logo_data_url():
                 return f"data:image/jpeg;base64,{encoded}"
         except Exception:
             pass
-    return "https://ufcvision.com/logo.jpg"
+    return "https://mmavision.com/mmavision.jpg"
 
 
 def get_logo_base64():
@@ -57,30 +60,33 @@ def get_logo_base64():
 
 # Helper pour récupérer l'URL Open Graph avec Cache-Busting
 def get_og_image_url():
-    og_path = PROJECT_ROOT / "og-image.jpg"
+    og_path = PROJECT_ROOT / "mmavision.jpg"
+    if not og_path.exists():
+        og_path = PROJECT_ROOT / "og-image.jpg"
+
     if og_path.exists():
         mtime = int(og_path.stat().st_mtime)
-        return f"https://ufcvision.com/og-image.jpg?v={mtime}"
-    return "https://ufcvision.com/og-image.jpg?v=2"
+        return f"https://mmavision.com/mmavision.jpg?v={mtime}"
+    return "https://mmavision.com/mmavision.jpg?v=2"
 
 
 # DICTIONNAIRE CENTRALISÉ DE TRADUCTIONS ET TEXTES JURIDIQUES / FAQ (EN / FR / ES)
 LANG_DATA = {
     "EN": {
-        "page_title": "UFC Vision — MMA Analytics & Predictions",
+        "page_title": "MMA Vision — MMA Analytics & Predictions",
         "nav_past": "📜 Past Fights",
-        "nav_home": "🥊 UFC Vision",
+        "nav_home": "🥊 MMA Vision",
         "nav_upcoming": "🔮 Upcoming Fights",
         "nav_legal": "⚖️ Legal Notice & Privacy Policy",
         "back_home": "← Back to Home",
-        "hero_subtitle": "The Premier UFC Prediction Bot",
-        "hero_description": "UFC Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC. Our model analyzes over 20 statistical factors per matchup based on 10 years of fight history. <b>We are not responsible for your bets; we analyze data and compare it against bookmakers' odds.</b>",
+        "hero_subtitle": "The Premier MMA Prediction Bot",
+        "hero_description": "MMA Vision is an independent project by MMA data enthusiasts, not affiliated with the UFC or any MMA promotion. Our model analyzes over 20 statistical factors per matchup based on 10 years of fight history. <b>We are not responsible for your bets; we analyze data and compare it against bookmakers' odds.</b>",
         "stat_winrate_desc": "Bot Winrate (2015 - 2026)",
         "stat_roi_desc": "Bot ROI (2015 - 2026)",
         "verified_badge": "Verified Track Record",
         "cumulative_edge": "Cumulative Yield",
-        "upcoming_title": "🔮 Upcoming UFC Event Predictions",
-        "select_upcoming_card": "Select an upcoming UFC event:",
+        "upcoming_title": "🔮 Upcoming MMA Event Predictions",
+        "select_upcoming_card": "Select an upcoming MMA event:",
         "odds_updated_hours": "🕒 Odds updated {hours}h {mins}m ago • Auto Sync 2h",
         "odds_updated_mins": "🕒 Odds updated {mins}m ago • Auto Sync 2h",
         "odds_pending": "⏳ Odds Pending • Awaiting Bookmaker Lines",
@@ -90,7 +96,7 @@ LANG_DATA = {
         "past_title": "📜 Past Fights & Historical Track Record",
         "global_summary_title": "🌐 Global Historical Performance",
         "card_summary_title": "📅 Event Historical Performance",
-        "select_past_card": "Select an archived UFC event:",
+        "select_past_card": "Select an archived MMA event:",
         "net_profit": "Net Profit",
         "roi_yield": "ROI / Yield",
         "win_rate_value": "Value Bet Win Rate",
@@ -107,55 +113,55 @@ LANG_DATA = {
         "feature_importance_title": "🧠 Which factors are the most important in our AI model?",
         "feature_importance_desc": "Our predictive AI analyzes differential statistical variables per fight. Here is the exact relative weight of each factor in the model's decision-making process:",
         "faq_title": "💬 Frequently Asked Questions (FAQ)",
-        "q1": "How does UFC Vision predict fights?",
-        "a1": "Our predictive AI algorithm evaluates over 20 differential statistical factors between two fighters (ELO score gaps, strike output, takedown defense rate, win streaks, recent rankings, etc.) built upon 10 years of historical UFC fight data.",
+        "q1": "How does MMA Vision predict fights?",
+        "a1": "Our predictive AI algorithm evaluates over 20 differential statistical factors between two fighters (ELO score gaps, strike output, takedown defense rate, win streaks, recent rankings, etc.) built upon 10 years of historical UFC and MMA fight data.",
         "q2": "What is a 'Value Bet'?",
         "a2": "A Value Bet occurs when our AI's predicted probability of a fighter winning is significantly higher than the probability implied by bookmakers' odds. We only flag bets with an Expected Value (EV) strictly greater than +20.0%, ensuring long-term profitability.",
         "q3": "How often are odds and predictions updated?",
         "a3": "Odds are synchronized every 2 hours via official sports betting data providers. Predictions adapt dynamically as soon as official opening and closing lines are confirmed.",
         "q4": "Are predictions financial advice?",
-        "a4": "No. UFC Vision is an analytical tool built for sports enthusiasts and researchers. Past performance is not indicative of future results. Never bet more than you can comfortably afford to lose.",
+        "a4": "No. MMA Vision is an analytical tool built for sports enthusiasts and researchers. Past performance is not indicative of future results. Never bet more than you can comfortably afford to lose.",
         "faq_contact": "Questions or inquiries? Contact us at: aura.dev.contact@gmail.com",
         "legal_page_title": "⚖️ Legal Notice & Privacy Policy",
         "legal_sec1_title": "1. Site Publisher",
-        "legal_publisher": "<b>Website Name:</b> UFC Vision (ufcvision.com)<br><b>Legal Status:</b> Micro-entrepreneur / Aura Dev<br><b>SIRET:</b> 10542993000016<br><b>Headquarters:</b> Paris, France<br><b>Email:</b> aura.dev.contact@gmail.com",
+        "legal_publisher": "<b>Website Name:</b> MMA Vision (mmavision.com)<br><b>Legal Status:</b> Micro-entrepreneur / Aura Dev<br><b>SIRET:</b> 10542993000016<br><b>Headquarters:</b> Paris, France<br><b>Email:</b> aura.dev.contact@gmail.com",
         "legal_sec2_title": "2. Web Hosting",
         "legal_hosting": "<b>Host:</b> Hostinger International Ltd.<br><b>Address:</b> 61 Lordou Vironos Street, 6023 Larnaca, Cyprus<br><b>Website:</b> https://www.hostinger.com",
         "legal_sec3_title": "3. Intellectual Property",
-        "legal_ip": "<b>Intellectual Property:</b> All Machine Learning models, algorithms, interface designs, and code powering UFC Vision are the exclusive intellectual property of Aura Dev. Automated data scraping or commercial reproduction is strictly prohibited.",
+        "legal_ip": "<b>Intellectual Property:</b> All Machine Learning models, algorithms, interface designs, and code powering MMA Vision are the exclusive intellectual property of Aura Dev. Automated data scraping or commercial reproduction is strictly prohibited.",
         "legal_sec4_title": "4. Privacy & Personal Data (GDPR)",
-        "legal_privacy": "UFC Vision does not require user registration or personal account creation. We do not collect or sell personal identifying information. Anonymous usage telemetry and Google Analytics may be used strictly for performance optimization and technical stability.",
+        "legal_privacy": "MMA Vision does not require user registration or personal account creation. We do not collect or sell personal identifying information. Anonymous usage telemetry and Google Analytics may be used strictly for performance optimization and technical stability.",
         "legal_sec5_title": "5. AI & Statistical Disclaimer",
-        "disclaimer_ai": "<b>AI Disclaimer:</b> UFC Vision is an analytical decision-support tool. Predictions are strictly for informational purposes and do not constitute financial advice or sports betting recommendations. No outcome is guaranteed, and Aura Dev disclaims all liability for losses incurred.",
+        "disclaimer_ai": "<b>AI Disclaimer:</b> MMA Vision is an analytical decision-support tool. Predictions are strictly for informational purposes and do not constitute financial advice or sports betting recommendations. No outcome is guaranteed, and Aura Dev disclaims all liability for losses incurred.",
         "legal_sec6_title": "6. Responsible Gambling Notice",
         "disclaimer_gaming": "<b>Responsible Gambling:</b> Sports betting involves financial risks and potential addiction. Gambling is strictly restricted to individuals of legal age (18+ in most jurisdictions). If you or someone you know is struggling with gambling addiction, please seek support from dedicated helpline organizations.",
         "legal_sec7_title": "7. Non-Affiliation Trademark Disclaimer",
-        "disclaimer_trademark": "<b>Trademark Disclaimer:</b> UFC, Ultimate Fighting Championship, and related marks are registered trademarks of Zuffa, LLC. UFC Vision is an independent analytics project and is not affiliated, endorsed, or associated with the UFC or Zuffa, LLC.",
+        "disclaimer_trademark": "<b>Trademark Disclaimer:</b> UFC, Ultimate Fighting Championship, and related marks are registered trademarks of Zuffa, LLC. MMA Vision is an independent analytics project and is not affiliated, endorsed, or associated with the UFC, Zuffa, LLC, or any MMA organization.",
         "legal_sec8_title": "8. Advertising Disclosure",
-        "legal_ads": "UFC Vision may display commercial sponsorships or contextual affiliate banners. All external advertising links are clearly demarcated in compliance with digital consumer transparency standards.",
+        "legal_ads": "MMA Vision may display commercial sponsorships or contextual affiliate banners. All external advertising links are clearly demarcated in compliance with digital consumer transparency standards.",
         "bug_contact": "Bug reports or legal inquiries: aura.dev.contact@gmail.com",
         "cookie_dialog_title": "🍪 Cookie Preferences",
         "cookie_title": "Cookie Management & Privacy",
-        "cookie_desc": "UFC Vision uses essential technical cookies and anonymous analytics to ensure website stability and optimize performance.",
+        "cookie_desc": "MMA Vision uses essential technical cookies and anonymous analytics to ensure website stability and optimize performance.",
         "cookie_accept": "Accept All",
         "cookie_decline": "Essentials Only",
-        "footer": "UFC Vision © 2026 — All Rights Reserved | Published by Aura Dev (SIRET: 10542993000016)"
+        "footer": "MMA Vision © 2026 — All Rights Reserved | Published by Aura Dev (SIRET: 10542993000016)"
     },
     "FR": {
-        "page_title": "UFC Vision — Pronostics & Analytics MMA",
+        "page_title": "MMA Vision — Pronostics & Analytics MMA",
         "nav_past": "📜 Combats Passés",
-        "nav_home": "🥊 UFC Vision",
+        "nav_home": "🥊 MMA Vision",
         "nav_upcoming": "🔮 Combats Futurs",
         "nav_legal": "⚖️ Mentions Légales & Confidentialité",
         "back_home": "← Retour à l'Accueil",
-        "hero_subtitle": "Le Meilleur Bot de Pronostics UFC",
-        "hero_description": "UFC Vision est un projet indépendant créé par des passionnés de données MMA, non affilié à l'UFC. Notre modèle analyse plus de 20 facteurs statistiques par combat sur 10 ans d'historique. <b>Nous ne sommes pas responsables de vos paris ; nous analysons les données et les comparons aux cotes des bookmakers.</b>",
+        "hero_subtitle": "Le Meilleur Bot de Pronostics MMA",
+        "hero_description": "MMA Vision est un projet indépendant créé par des passionnés de données MMA, non affilié à l'UFC ni à aucune organisation de MMA. Notre modèle analyse plus de 20 facteurs statistiques par combat sur 10 ans d'historique. <b>Nous ne sommes pas responsables de vos paris ; nous analysons les données et les comparons aux cotes des bookmakers.</b>",
         "stat_winrate_desc": "Taux de Victoire du Bot (2015 - 2026)",
         "stat_roi_desc": "ROI du Bot (2015 - 2026)",
         "verified_badge": "Historique Certifié",
         "cumulative_edge": "Rendement Cumulé",
-        "upcoming_title": "🔮 Pronostics des Prochains Événements UFC",
-        "select_upcoming_card": "Sélectionnez un événement UFC à venir :",
+        "upcoming_title": "🔮 Pronostics des Prochains Événements MMA",
+        "select_upcoming_card": "Sélectionnez un événement MMA à venir :",
         "odds_updated_hours": "🕒 Cotes actualisées il y a {hours}h {mins}m • Sync Auto 2h",
         "odds_updated_mins": "🕒 Cotes actualisées il y a {mins}m • Sync Auto 2h",
         "odds_pending": "⏳ Cotes en Attente • En attente des lignes bookmakers",
@@ -165,7 +171,7 @@ LANG_DATA = {
         "past_title": "📜 Combats Passés & Historique des Performances",
         "global_summary_title": "🌐 Bilan Historique Global",
         "card_summary_title": "📅 Bilan Historique de la Soirée",
-        "select_past_card": "Sélectionnez une soirée UFC passée :",
+        "select_past_card": "Sélectionnez une soirée MMA passée :",
         "net_profit": "Bénéfice Net",
         "roi_yield": "Rendement (ROI)",
         "win_rate_value": "Taux de Victoire Value Bets",
@@ -182,55 +188,55 @@ LANG_DATA = {
         "feature_importance_title": "🧠 Quels facteurs sont les plus importants dans notre modèle IA ?",
         "feature_importance_desc": "Notre Intelligence Artificielle analyse des variables statistiques différentielles par combat. Voici le poids exact de chaque facteur dans la prise de décision du modèle :",
         "faq_title": "💬 Foire Aux Questions (FAQ)",
-        "q1": "Comment UFC Vision calcule-t-il ses pronostics ?",
-        "a1": "Notre algorithme d'IA prédictive évalue plus de 20 facteurs statistiques différentiels entre les deux combattants (différentiel de score ELO, volume de frappe, défense de takedown, séries de victoires, classement récent, etc.) entraînés sur 10 ans d'historique UFC.",
+        "q1": "Comment MMA Vision calcule-t-il ses pronostics ?",
+        "a1": "Notre algorithme d'IA prédictive évalue plus de 20 facteurs statistiques différentiels entre les deux combattants (différentiel de score ELO, volume de frappe, défense de takedown, séries de victoires, classement récent, etc.) entraînés sur 10 ans d'historique UFC et MMA.",
         "q2": "Qu'est-ce qu'un 'Value Bet' ?",
         "a2": "Un Value Bet survient lorsque la probabilité calculée par notre IA est significativement plus élevée que la probabilité implicite de la cote proposée par le bookmaker. Nous ne retenons que les paris avec une espérance mathématique strictement supérieure à +20.0%.",
         "q3": "À quelle fréquence les cotes et données sont-elles mises à jour ?",
         "a3": "Les cotes sont synchronisées toutes les 2 heures via les fournisseurs officiels de données sportives. Les pronostics s'adaptent dynamiquement dès publication des cotes d'ouverture et de fermeture.",
         "q4": "Les prédictions constituent-elles un conseil financier ?",
-        "a4": "Non. UFC Vision est un outil d'aide à la décision à vocation purement analytique et statistique. Les performances passées ne préjugent pas des résultats futurs. Ne pariez jamais plus que ce que vous pouvez vous permettre de perdre.",
+        "a4": "Non. MMA Vision est un outil d'aide à la décision à vocation purement analytique et statistique. Les performances passées ne préjugent pas des résultats futurs. Ne pariez jamais plus que ce que vous pouvez vous permettre de perdre.",
         "faq_contact": "Questions ou partenariats ? Écrivez-nous à : aura.dev.contact@gmail.com",
         "legal_page_title": "⚖️ Mentions Légales & Politique de Confidentialité",
         "legal_sec1_title": "1. Éditeur du Site",
-        "legal_publisher": "<b>Nom du site :</b> UFC Vision (ufcvision.com)<br><b>Statut :</b> Micro-entrepreneur / Aura Dev<br><b>SIRET :</b> 10542993000016<br><b>Siège social :</b> Paris, France<br><b>Email :</b> aura.dev.contact@gmail.com",
+        "legal_publisher": "<b>Nom du site :</b> MMA Vision (mmavision.com)<br><b>Statut :</b> Micro-entrepreneur / Aura Dev<br><b>SIRET :</b> 10542993000016<br><b>Siège social :</b> Paris, France<br><b>Email :</b> aura.dev.contact@gmail.com",
         "legal_sec2_title": "2. Hébergement",
         "legal_hosting": "<b>Hébergeur :</b> Hostinger International Ltd.<br><b>Adresse :</b> 61 Lordou Vironos Street, 6023 Larnaca, Chypre<br><b>Site Web :</b> https://www.hostinger.fr",
         "legal_sec3_title": "3. Propriété Intellectuelle",
         "legal_ip": "<b>Propriété Intellectuelle :</b> L'ensemble des modèles de Machine Learning, algorithmes, interfaces graphiques et code source sont la propriété exclusive d'Aura Dev. Toute reproduction ou extraction automatisée est strictement interdite.",
         "legal_sec4_title": "4. Données Personnelles & RGPD",
-        "legal_privacy": "UFC Vision ne propose aucun compte utilisateur et ne collecte aucune donnée personnelle nominative. Seuls des cookies techniques et des traceurs de mesure d'audience anonymes peuvent être utilisés pour assurer la stabilité et les performances.",
+        "legal_privacy": "MMA Vision ne propose aucun compte utilisateur et ne collecte aucune donnée personnelle nominative. Seuls des cookies techniques et des traceurs de mesure d'audience anonymes peuvent être utilisés pour assurer la stabilité et les performances.",
         "legal_sec5_title": "5. Avertissement IA & Données Statistiques",
-        "disclaimer_ai": "<b>Avertissement IA :</b> UFC Vision est un outil d'analyse décisionnelle. Les pronostics n'ont aucune valeur de certitude et ne constituent en aucun cas des conseils en investissement financier ou en paris sportifs.",
+        "disclaimer_ai": "<b>Avertissement IA :</b> MMA Vision est un outil d'analyse décisionnelle. Les pronostics n'ont aucune valeur de certitude et ne constituent en aucun cas des conseils en investissement financier ou en paris sportifs.",
         "legal_sec6_title": "6. Prévention des Jeux d'Argent & Addiction",
         "disclaimer_gaming": "<b>Jeu Responsable :</b> Les paris sportifs comportent des risques d'endettement et d'addiction. Interdit aux mineurs (-18 ans). En cas de difficulté, contactez Joueurs Info Service au 09 74 75 13 13 (appel non surtaxé).",
         "legal_sec7_title": "7. Avertissement de Marque & Non-Affiliation",
-        "disclaimer_trademark": "<b>Marques :</b> UFC, Ultimate Fighting Championship et les noms associés sont des marques déposées de Zuffa, LLC. UFC Vision est un outil d'analyse indépendant et n'est affilié, sponsorisé ni approuvé par l'UFC ou Zuffa, LLC.",
+        "disclaimer_trademark": "<b>Marques :</b> UFC, Ultimate Fighting Championship et les noms associés sont des marques déposées de Zuffa, LLC. MMA Vision est un outil d'analyse indépendant et n'est affilié, sponsorisé ni approuvé par l'UFC, Zuffa, LLC ou toute autre ligue de MMA.",
         "legal_sec8_title": "8. Transparence Publicitaire",
-        "legal_ads": "UFC Vision peut afficher des partenariats commerciaux ou des liens d'affiliation avec des bookmakers légaux. Ces mentions sont toujours clairement identifiées conformément aux exigences légales.",
+        "legal_ads": "MMA Vision peut afficher des partenariats commerciaux ou des liens d'affiliation avec des bookmakers légaux. Ces mentions sont toujours clairement identifiées conformément aux exigences légales.",
         "bug_contact": "Signalement de bug ou contact juridique : aura.dev.contact@gmail.com",
         "cookie_dialog_title": "🍪 Préférences Cookies",
         "cookie_title": "Gestion des Cookies et de la Confidentialité",
-        "cookie_desc": "UFC Vision utilise des cookies techniques indispensables et des outils d'analyse anonymes pour garantir la fluidité de navigation et le suivi des performances.",
+        "cookie_desc": "MMA Vision utilise des cookies techniques indispensables et des outils d'analyse anonymes pour garantir la fluidité de navigation et le suivi des performances.",
         "cookie_accept": "Tout Accepter",
         "cookie_decline": "Essentiels Uniquement",
-        "footer": "UFC Vision © 2026 — Tous droits réservés | Édité par Aura Dev (SIRET : 10542993000016)"
+        "footer": "MMA Vision © 2026 — Tous droits réservés | Édité par Aura Dev (SIRET : 10542993000016)"
     },
     "ES": {
-        "page_title": "UFC Vision — Pronósticos y Analítica MMA",
+        "page_title": "MMA Vision — Pronósticos y Analítica MMA",
         "nav_past": "📜 Peleas Pasadas",
-        "nav_home": "🥊 UFC Vision",
+        "nav_home": "🥊 MMA Vision",
         "nav_upcoming": "🔮 Próximas Peleas",
         "nav_legal": "⚖️ Aviso Legal y Privacidad",
         "back_home": "← Volver al Inicio",
-        "hero_subtitle": "El Mejor Bot de Pronósticos de la UFC",
-        "hero_description": "UFC Vision es un proyecto independiente creado por entusiastas de los datos de MMA, no afiliado a la UFC. Nuestro modelo analiza más de 20 factores estadísticos por combate en 10 años de historial. <b>No somos responsables de sus apuestas; analizamos datos y los comparamos con las casas de apuestas.</b>",
+        "hero_subtitle": "El Mejor Bot de Pronósticos de MMA",
+        "hero_description": "MMA Vision es un proyecto independiente creado por entusiastas de los datos de MMA, no afiliado a la UFC ni a ninguna promoción de MMA. Nuestro modelo analiza más de 20 factores estadísticos por combate en 10 años de historial. <b>No somos responsables de sus apuestas; analizamos datos y los comparamos con las casas de apuestas.</b>",
         "stat_winrate_desc": "Tasa de Acierto del Bot (2015 - 2026)",
         "stat_roi_desc": "ROI del Bot (2015 - 2026)",
         "verified_badge": "Historial Verificado",
         "cumulative_edge": "Rendimiento Acumulado",
-        "upcoming_title": "🔮 Pronósticos de Próximos Eventos UFC",
-        "select_upcoming_card": "Selecciona un evento UFC próximo:",
+        "upcoming_title": "🔮 Pronósticos de Próximos Eventos MMA",
+        "select_upcoming_card": "Selecciona un evento MMA próximo:",
         "odds_updated_hours": "🕒 Cuotas actualizadas hace {hours}h {mins}m • Sync Auto 2h",
         "odds_updated_mins": "🕒 Cuotas actualizadas hace {mins}m • Sync Auto 2h",
         "odds_pending": "⏳ Cuotas Pendientes • Esperando líneas de apertura",
@@ -240,7 +246,7 @@ LANG_DATA = {
         "past_title": "📜 Peleas Pasadas e Historial de Resultados",
         "global_summary_title": "🌐 Balance Histórico Global",
         "card_summary_title": "📅 Balance Histórico de la Velada",
-        "select_past_card": "Selecciona una velada UFC archivada:",
+        "select_past_card": "Selecciona una velada MMA archivada:",
         "net_profit": "Beneficio Neto",
         "roi_yield": "Rendimiento (ROI)",
         "win_rate_value": "Tasa de Victoria en Value Bets",
@@ -257,39 +263,39 @@ LANG_DATA = {
         "feature_importance_title": "🧠 ¿Cuáles son los factores más importantes en nuestro modelo IA?",
         "feature_importance_desc": "Nuestra IA predictiva analiza variables estadísticas diferenciales por combate. Aquí está el peso exacto de cada factor en la toma de decisiones del modelo:",
         "faq_title": "💬 Preguntas Frecuentes (FAQ)",
-        "q1": "¿Cómo predice UFC Vision los combates?",
-        "a1": "Nuestro algoritmo de IA predictiva analiza más de 20 variables estadísticas comparativas entre dos peleadores (diferencial de ELO, golpes por minuto, defensa de derribos, racha de victorias, etc.) basándose en 10 años de datos de la UFC.",
+        "q1": "¿Cómo predice MMA Vision los combates?",
+        "a1": "Nuestro algoritmo de IA predictiva analiza más de 20 variables estadísticas comparativas entre dos peleadores (diferencial de ELO, golpes por minuto, defensa de derribos, racha de victorias, etc.) basándose en 10 años de datos de la UFC y MMA.",
         "q2": "¿Qué es una 'Value Bet'?",
-        "a2": "Una Value Bet ocurre cuando la probabilidad calculada por nuestra IA es significativamente mayor que la probabilidad implícita de la cuota del bookmaker. Solo seleccionamos apuestas con una ventaja matemática superior a +20.0%.",
+        "a2": "Una Value Bet ocurre cuando la probabilidad calculada por nuestra IA es significativement mayor que la probabilidad implícita de la cuota del bookmaker. Solo seleccionamos apuestas con una ventaja matemática superior a +20.0%.",
         "q3": "¿Con qué frecuencia se actualizan las cuotas?",
         "a3": "Las cuotas se actualizan automáticamente cada 2 horas a través de proveedores oficiales de datos. Los pronósticos se ajustan dinámicamente con las cuotas oficiales de cierre.",
         "q4": "¿Son estos pronósticos asesoramiento financiero?",
-        "a4": "No. UFC Vision es una herramienta estadística analítica para aficionados. Los resultados pasados no garantizan beneficios futuros. Nunca apueste dinero que no pueda permitirse perder.",
+        "a4": "No. MMA Vision es una herramienta estadística analítica para aficionados. Los resultados pasados no garantizan beneficios futuros. Nunca apueste dinero que no pueda permitirse perder.",
         "faq_contact": "¿Dudas o consultas? Contáctenos en: aura.dev.contact@gmail.com",
         "legal_page_title": "⚖️ Aviso Legal y Política de Privacidad",
         "legal_sec1_title": "1. Titular del Sitio Web",
-        "legal_publisher": "<b>Sitio Web:</b> UFC Vision (ufcvision.com)<br><b>Titular:</b> Microempresa / Aura Dev<br><b>SIRET:</b> 10542993000016<br><b>Sede:</b> París, Francia<br><b>Email:</b> aura.dev.contact@gmail.com",
+        "legal_publisher": "<b>Sitio Web:</b> MMA Vision (mmavision.com)<br><b>Titular:</b> Microempresa / Aura Dev<br><b>SIRET:</b> 10542993000016<br><b>Sede:</b> París, Francia<br><b>Email:</b> aura.dev.contact@gmail.com",
         "legal_sec2_title": "2. Alojamiento Web",
         "legal_hosting": "<b>Proveedor:</b> Hostinger International Ltd.<br><b>Dirección:</b> 61 Lordou Vironos Street, 6023 Larnaca, Chipre<br><b>Web:</b> https://www.hostinger.es",
         "legal_sec3_title": "3. Propiedad Intelectual",
         "legal_ip": "<b>Propiedad Intelectual:</b> Todos los modelos de Inteligencia Artificial, algoritmos e interfaz pertenecen en exclusiva a Aura Dev. Queda prohibida su extracción automatizada o copia comercial.",
         "legal_sec4_title": "4. Privacidad y Protección de Datos (RGPD)",
-        "legal_privacy": "UFC Vision no requiere registro de usuario ni almacena datos personales identificables. Se emplean cookies técnicas y de analítica anónima para garantizar la funcionalidad y optimizar el rendimiento.",
+        "legal_privacy": "MMA Vision no requiere registro de usuario ni almacena datos personales identificables. Se emplean cookies técnicas y de analítica anónima para garantizar la funcionalidad y optimizar el rendimiento.",
         "legal_sec5_title": "5. Exención de Responsabilidad IA",
-        "disclaimer_ai": "<b>Aviso IA:</b> UFC Vision es una herramienta de apoyo analítico. Las predicciones son meramente informativas y no constituyen asesoramiento financiero ni recomendaciones de apuestas.",
+        "disclaimer_ai": "<b>Aviso IA:</b> MMA Vision es una herramienta de apoyo analítico. Las predicciones son meramente informativas y no constituyen asesoramiento financiero ni recomendaciones de apuestas.",
         "legal_sec6_title": "6. Juego Responsable",
         "disclaimer_gaming": "<b>Juego Responsable:</b> Las apuestas deportivas conllevan riesgo económico y adicción. Prohibido a menores de 18 años. Si necesita asistencia, consulte con organizaciones especializadas.",
         "legal_sec7_title": "7. Descargo de Marcas",
-        "disclaimer_trademark": "<b>Marcas Registradas:</b> UFC y marcas derivadas son propiedad de Zuffa, LLC. UFC Vision es un proyecto analítico independiente sin relación comercial con Zuffa, LLC ni UFC.",
+        "disclaimer_trademark": "<b>Marcas Registradas:</b> UFC y marcas derivadas son propiedad de Zuffa, LLC. MMA Vision es un proyecto analítico independiente sin relación comercial con Zuffa, LLC ni UFC.",
         "legal_sec8_title": "8. Transparencia Publicitaria",
-        "legal_ads": "UFC Vision puede incluir enlaces de patrocinio o afiliación con operadores regulados, siempre identificados de acuerdo con la normativa publicitaria.",
+        "legal_ads": "MMA Vision puede incluir enlaces de patrocinio o afiliación con operadores regulados, siempre identificados de acuerdo con la normativa publicitaria.",
         "bug_contact": "Aviso de errores o consultas legales: aura.dev.contact@gmail.com",
         "cookie_dialog_title": "🍪 Preferencias de Cookies",
         "cookie_title": "Gestión de Cookies y Privacidad",
-        "cookie_desc": "UFC Vision utiliza cookies técnicas esenciales y de medición para optimizar la experiencia.",
+        "cookie_desc": "MMA Vision utiliza cookies técnicas esenciales y de medición para optimizar la experiencia.",
         "cookie_accept": "Aceptar Todas",
         "cookie_decline": "Solo Esenciales",
-        "footer": "UFC Vision © 2026 — Todos los derechos reservados | Publicado por Aura Dev (SIRET: 10542993000016)"
+        "footer": "MMA Vision © 2026 — Todos los derechos reservados | Publicado por Aura Dev (SIRET: 10542993000016)"
     }
 }
 
@@ -305,7 +311,7 @@ def render_clean_html(html_str):
 # =========================================================================
 
 st.set_page_config(
-    page_title="UFC Vision — MMA Analytics & Predictions",
+    page_title="MMA Vision — MMA Analytics & Predictions",
     page_icon="🥊",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -897,21 +903,21 @@ def main():
         width=0
     )
 
-    # 🖼️ INJECTION DES BALISES META OPEN GRAPH DYNAMIQUES
+    # 🖼️ INJECTION DES BALISES META OPEN GRAPH DYNAMIQUES (MMA VISION)
     og_img_url = get_og_image_url()
     st.components.v1.html(f"""
     <script>
     try {{
         const doc = window.parent.document;
         const metaTags = [
-            {{ property: 'og:title', content: 'UFC Vision — MMA Analytics & Predictions' }},
-            {{ property: 'og:description', content: 'Premier UFC Prediction Bot powered by AI.' }},
+            {{ property: 'og:title', content: 'MMA Vision — MMA Analytics & Predictions' }},
+            {{ property: 'og:description', content: 'Premier MMA Prediction Bot powered by AI.' }},
             {{ property: 'og:image', content: '{og_img_url}' }},
-            {{ property: 'og:url', content: 'https://ufcvision.com' }},
+            {{ property: 'og:url', content: 'https://mmavision.com' }},
             {{ property: 'og:type', content: 'website' }},
             {{ name: 'twitter:card', content: 'summary_large_image' }},
-            {{ name: 'twitter:title', content: 'UFC Vision — MMA Analytics & Predictions' }},
-            {{ name: 'twitter:description', content: 'Premier UFC Prediction Bot powered by AI.' }},
+            {{ name: 'twitter:title', content: 'MMA Vision — MMA Analytics & Predictions' }},
+            {{ name: 'twitter:description', content: 'Premier MMA Prediction Bot powered by AI.' }},
             {{ name: 'twitter:image', content: '{og_img_url}' }}
         ];
         metaTags.forEach(t => {{
@@ -946,13 +952,14 @@ def main():
 
         const consent = urlParams.get('cookie_consent');
         if (consent) {{
+            parentWin.localStorage.setItem('mma_cookie_consent', consent);
             parentWin.localStorage.setItem('ufc_cookie_consent', consent);
             urlParams.delete('cookie_consent');
             const cleanSearch = urlParams.toString() ? ('?' + urlParams.toString()) : '';
             const cleanUrl = parentWin.location.pathname + cleanSearch + parentWin.location.hash;
             parentWin.history.replaceState({{}}, parentWin.document.title, cleanUrl);
         }} else {{
-            const savedConsent = parentWin.localStorage.getItem('ufc_cookie_consent');
+            const savedConsent = parentWin.localStorage.getItem('mma_cookie_consent') || parentWin.localStorage.getItem('ufc_cookie_consent');
             if (savedConsent && !urlParams.has('cookie_consent')) {{
                 const url = new URL(parentWin.location.href);
                 url.searchParams.set("cookie_consent", savedConsent);
@@ -962,6 +969,7 @@ def main():
 
         let currentLang = '{current_lang}';
         if (currentLang) {{
+            parentWin.localStorage.setItem('mma_lang', currentLang);
             parentWin.localStorage.setItem('ufc_lang', currentLang);
         }}
     }} catch(e) {{}}
@@ -1040,7 +1048,7 @@ def main():
         # HERO SECTION OUVERTE : Logo compact en apesanteur, typographie percutante, centrage parfait
         render_clean_html(f"""
         <div class="hero-stage-modern anim-fade-in">
-            <img src="{logo_data_url}" alt="UFC Vision" class="hero-logo-avatar">
+            <img src="{logo_data_url}" alt="MMA Vision" class="hero-logo-avatar">
             <h1 class="hero-title-modern">
                 {t['hero_subtitle']}
             </h1>
